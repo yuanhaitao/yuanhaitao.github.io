@@ -9,13 +9,12 @@ redirect_from:
 
 {% include base_path %}
 
-Education
+#### Education
 ======
 * B.S. in the School of Computer Science , Beihang University, 2016
-* M.S. in the Department of Computer Science and Technology, GitHub University, 2019 (expected)
-<!--* Ph.D in Version Control Theory, GitHub University, 2018 (expected)-->
+* M.S. in the Department of Computer Science and Technology, Tsinghua University, 2019 (expected)
 
-Work experience
+#### Work experience
 ======
 * 2015/09-2015/12: Research Assistant
   * The Institute of Intelligent Information Processing, BUAA
@@ -31,29 +30,19 @@ Work experience
   * Assist in solving query optimization problem in ODPS auto data warehouse
   * Supervisor: [Kai Zeng](https://kai-zeng.github.io/)
   
-Skills
+#### Skills
 ======
 * Programming: Python, C++, Java, Scala
 * Library&Framework: Spark, Hadoop, Pytorch, Tensorflow, MaxCompute
 
-Publications
+#### Publications
 ======
   <ul>{% for post in site.publications %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
   
-<!--Talks-->
-<!--======-->
-  <!--<ul>{% for post in site.talks %}-->
-    <!--{% include archive-single-talk-cv.html %}-->
-  <!--{% endfor %}</ul>-->
-  
-<!--Teaching-->
-<!--======-->
-  <!--<ul>{% for post in site.teaching %}-->
-    <!--{% include archive-single-cv.html %}-->
-  <!--{% endfor %}</ul>-->
-  
-<!--Service and leadership-->
-<!--======-->
-<!--* Currently signed in to 43 different slack teams-->
+#### Talks
+======
+  <ul>{% for post in site.talks %}
+    {% include archive-single-talk-cv.html %}
+  {% endfor %}</ul>
