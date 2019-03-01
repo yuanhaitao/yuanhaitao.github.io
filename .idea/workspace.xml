@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d5b0600d-9694-486e-98c2-917c8afcba20" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_publications/2019-4-12-icde.md" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_publications/2019-4-7-icde.md" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_config.yml" afterPath="$PROJECT_DIR$/_config.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_publications/2017-5-14-sigmod.md" afterPath="$PROJECT_DIR$/_publications/2017-5-14-sigmod.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_publications/2019-4-23-dasfaa.md" afterPath="$PROJECT_DIR$/_publications/2019-4-23-dasfaa.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_publications/3-2019-4-12-icde.md" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_publications/2019-4-12-icde.md" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/_publications/2017-5-14-sigmod.md" afterPath="$PROJECT_DIR$/_publications/1-2017-5-14-sigmod.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/_publications/2019-4-23-dasfaa.md" afterPath="$PROJECT_DIR$/_publications/2-2019-4-23-dasfaa.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="yuanhaitao.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,10 +25,10 @@
   <component name="FavoritesManager">
     <favorites_list name="yuanhaitao.github.io">
       <favorite_root url="file://$PROJECT_DIR$/_publications/2017-6-1-sigmod.md" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-      <favorite_root url="file://$PROJECT_DIR$/_publications/2019-4-12-icde.md" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+      <favorite_root url="file://$PROJECT_DIR$/_publications/3-2019-4-12-icde.md" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
     </favorites_list>
     <favorites_list name="pubs">
-      <favorite_root url="file://$PROJECT_DIR$/_publications/2019-4-12-icde.md" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+      <favorite_root url="file://$PROJECT_DIR$/_publications/3-2019-4-12-icde.md" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
     </favorites_list>
   </component>
   <component name="FileEditorManager">
@@ -59,15 +59,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2019-4-12-icde.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/_publications/2019-4-12-icde.md">
+      <file leaf-file-name="3-2019-4-12-icde.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/_publications/3-2019-4-12-icde.md">
           <provider editor-type-id="MarkdownFxPreviewEditor">
             <state />
           </provider>
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="135">
-                <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+              <first_editor relative-caret-position="60">
+                <caret line="4" column="15" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -75,15 +75,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2019-4-23-dasfaa.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_publications/2019-4-23-dasfaa.md">
+      <file leaf-file-name="2-2019-4-23-dasfaa.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_publications/2-2019-4-23-dasfaa.md">
           <provider editor-type-id="MarkdownFxPreviewEditor">
             <state />
           </provider>
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="210">
-                <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+              <first_editor relative-caret-position="45">
+                <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -91,15 +91,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2017-5-14-sigmod.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_publications/2017-5-14-sigmod.md">
+      <file leaf-file-name="1-2017-5-14-sigmod.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_publications/1-2017-5-14-sigmod.md">
           <provider editor-type-id="MarkdownFxPreviewEditor">
             <state />
           </provider>
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="120">
-                <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+              <first_editor relative-caret-position="45">
+                <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -176,6 +176,10 @@
         <option value="$PROJECT_DIR$/_publications/2019-4-23-dasfaa.md" />
         <option value="$PROJECT_DIR$/_config.yml" />
         <option value="$PROJECT_DIR$/_publications/2019-4-7-icde.md" />
+        <option value="$PROJECT_DIR$/_publications/2017-5-14-sigmod-number-3.md" />
+        <option value="$PROJECT_DIR$/_publications/2019-4-12-icde.md" />
+        <option value="$PROJECT_DIR$/_publications/2-2019-4-23-dasfaa.md" />
+        <option value="$PROJECT_DIR$/_publications/1-2017-5-14-sigmod.md" />
       </list>
     </option>
   </component>
@@ -840,12 +844,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1551430008364</updated>
-      <workItem from="1551430011906" duration="11053000" />
+      <workItem from="1551430011906" duration="11576000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11053000" />
+    <option name="totallyTimeSpent" value="11576000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="42" y="23" width="1440" height="877" extended-state="0" />
@@ -1098,42 +1102,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_publications/2019-4-23-dasfaa.md">
+    <entry file="file://$PROJECT_DIR$/_publications/1-2017-5-14-sigmod.md">
       <provider editor-type-id="MarkdownFxPreviewEditor">
         <state />
       </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="210">
-            <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+          <first_editor relative-caret-position="45">
+            <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
             <folding />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_publications/2017-5-14-sigmod.md">
+    <entry file="file://$PROJECT_DIR$/_publications/2-2019-4-23-dasfaa.md">
       <provider editor-type-id="MarkdownFxPreviewEditor">
         <state />
       </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="120">
-            <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <first_editor relative-caret-position="45">
+            <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
             <folding />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_publications/2019-4-12-icde.md">
+    <entry file="file://$PROJECT_DIR$/_publications/3-2019-4-12-icde.md">
       <provider editor-type-id="MarkdownFxPreviewEditor">
         <state />
       </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="135">
-            <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+          <first_editor relative-caret-position="60">
+            <caret line="4" column="15" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
             <folding />
           </first_editor>
           <second_editor />
