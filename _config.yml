@@ -85,16 +85,16 @@ author:
   bio              : "Master Student, Database Group CS@Tsinghua University"
   location         : "Beijing, China"
   employer         :
-  pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
+  pubmed           : # "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    : "https://scholar.google.com/citations?user=xXeSMZQAAAAJ&hl=en"
-  email            :
+  email            :  "yhaitao45@163.com"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
   codepen          :
   dribbble         :
   flickr           :
-  facebook         :
+  facebook         : "袁海涛"
   foursquare       :
   github           : "yuanhaitao"
   google_plus      :
@@ -110,7 +110,7 @@ author:
   tumblr           :
   twitter          : "yhaitao45"
   vine             :
-  weibo            :
+  weibo            : "HatimYoung"
   xing             :
   youtube          :
   wikipedia        :
