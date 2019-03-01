@@ -2,15 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d5b0600d-9694-486e-98c2-917c8afcba20" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/files/dasfaa2019.pdf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/files/sigmod2017.pdf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_publications/2017-5-14-sigmod.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_publications/2019-4-23-dasfaa.md" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/files/paper1.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/files/paper2.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/files/paper3.pdf" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_publications/2019-4-7-icde.md" afterPath="$PROJECT_DIR$/_publications/2019-4-7-icde.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_publications/2019-4-12-icde.md" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_publications/2019-4-7-icde.md" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_config.yml" afterPath="$PROJECT_DIR$/_config.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_publications/2017-5-14-sigmod.md" afterPath="$PROJECT_DIR$/_publications/2017-5-14-sigmod.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_publications/2019-4-23-dasfaa.md" afterPath="$PROJECT_DIR$/_publications/2019-4-23-dasfaa.md" />
     </list>
     <ignored path="yuanhaitao.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,20 +25,14 @@
   <component name="FavoritesManager">
     <favorites_list name="yuanhaitao.github.io">
       <favorite_root url="file://$PROJECT_DIR$/_publications/2017-6-1-sigmod.md" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+      <favorite_root url="file://$PROJECT_DIR$/_publications/2019-4-12-icde.md" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+    </favorites_list>
+    <favorites_list name="pubs">
+      <favorite_root url="file://$PROJECT_DIR$/_publications/2019-4-12-icde.md" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
     </favorites_list>
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="navigation.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_data/navigation.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="about.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_pages/about.md">
           <provider editor-type-id="MarkdownFxPreviewEditor">
@@ -62,22 +52,22 @@
       <file leaf-file-name="_config.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_config.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="104" column="37" selection-start-line="104" selection-start-column="37" selection-end-line="104" selection-end-column="37" />
+            <state relative-caret-position="-720">
+              <caret line="96" column="38" selection-start-line="96" selection-start-column="38" selection-end-line="96" selection-end-column="38" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2019-4-7-icde.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_publications/2019-4-7-icde.md">
+      <file leaf-file-name="2019-4-12-icde.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/_publications/2019-4-12-icde.md">
           <provider editor-type-id="MarkdownFxPreviewEditor">
             <state />
           </provider>
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="90">
-                <caret line="6" column="206" selection-start-line="6" selection-start-column="206" selection-end-line="6" selection-end-column="206" />
+              <first_editor relative-caret-position="135">
+                <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -92,8 +82,8 @@
           </provider>
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="90">
-                <caret line="6" column="251" selection-start-line="6" selection-start-column="251" selection-end-line="6" selection-end-column="251" />
+              <first_editor relative-caret-position="210">
+                <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -101,31 +91,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2017-5-14-sigmod.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="2017-5-14-sigmod.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_publications/2017-5-14-sigmod.md">
           <provider editor-type-id="MarkdownFxPreviewEditor">
             <state />
           </provider>
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="225">
-                <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
-                <folding />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2010-10-01-paper-title-number-2.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/example/2010-10-01-paper-title-number-2.md">
-          <provider editor-type-id="MarkdownFxPreviewEditor">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="105">
-                <caret line="7" column="59" selection-start-line="7" selection-start-column="59" selection-end-line="7" selection-end-column="59" />
+              <first_editor relative-caret-position="120">
+                <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -165,6 +139,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="single.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_layouts/single.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1065">
+              <caret line="84" column="35" selection-start-line="84" selection-start-column="29" selection-end-line="84" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="Git.Settings">
@@ -186,12 +170,12 @@
         <option value="$PROJECT_DIR$/_talks/2014-03-01-talk-3.md" />
         <option value="$PROJECT_DIR$/_posts/2012-08-14-blog-post-1.md" />
         <option value="$PROJECT_DIR$/_publications/2009-10-01-paper-title-number-1.md" />
-        <option value="$PROJECT_DIR$/_config.yml" />
         <option value="$PROJECT_DIR$/_pages/about.md" />
         <option value="$PROJECT_DIR$/_pages/cv.md" />
-        <option value="$PROJECT_DIR$/_publications/2019-4-7-icde.md" />
-        <option value="$PROJECT_DIR$/_publications/2019-4-23-dasfaa.md" />
         <option value="$PROJECT_DIR$/_publications/2017-5-14-sigmod.md" />
+        <option value="$PROJECT_DIR$/_publications/2019-4-23-dasfaa.md" />
+        <option value="$PROJECT_DIR$/_config.yml" />
+        <option value="$PROJECT_DIR$/_publications/2019-4-7-icde.md" />
       </list>
     </option>
   </component>
@@ -304,20 +288,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="_publications" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yuanhaitao.github.io" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yuanhaitao.github.io" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="_posts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -870,12 +840,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1551430008364</updated>
-      <workItem from="1551430011906" duration="9822000" />
+      <workItem from="1551430011906" duration="11053000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9822000" />
+    <option name="totallyTimeSpent" value="11053000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="42" y="23" width="1440" height="877" extended-state="0" />
@@ -1028,7 +998,57 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/_publications/2017-6-1-sigmod.md">
+      <provider editor-type-id="MarkdownFxPreviewEditor">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/_pages/publications.md">
+      <provider editor-type-id="MarkdownFxPreviewEditor">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_layouts/single.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1065">
+          <caret line="84" column="35" selection-start-line="84" selection-start-column="29" selection-end-line="84" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example/2010-10-01-paper-title-number-2.md">
+      <provider editor-type-id="MarkdownFxPreviewEditor">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="105">
+            <caret line="7" column="59" selection-start-line="7" selection-start-column="59" selection-end-line="7" selection-end-column="59" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example/2015-10-01-paper-title-number-3.md">
       <provider editor-type-id="MarkdownFxPreviewEditor">
         <state />
       </provider>
@@ -1056,28 +1076,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="104" column="37" selection-start-line="104" selection-start-column="37" selection-end-line="104" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/example/2010-10-01-paper-title-number-2.md">
-      <provider editor-type-id="MarkdownFxPreviewEditor">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="105">
-            <caret line="7" column="59" selection-start-line="7" selection-start-column="59" selection-end-line="7" selection-end-column="59" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_pages/cv.md">
       <provider editor-type-id="MarkdownFxPreviewEditor">
         <state />
@@ -1092,17 +1090,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_publications/2019-4-7-icde.md">
-      <provider editor-type-id="MarkdownFxPreviewEditor">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="90">
-            <caret line="6" column="206" selection-start-line="6" selection-start-column="206" selection-end-line="6" selection-end-column="206" />
-            <folding />
-          </first_editor>
-          <second_editor />
+    <entry file="file://$PROJECT_DIR$/_config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-720">
+          <caret line="96" column="38" selection-start-line="96" selection-start-column="38" selection-end-line="96" selection-end-column="38" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1112,22 +1104,8 @@
       </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="90">
-            <caret line="6" column="251" selection-start-line="6" selection-start-column="251" selection-end-line="6" selection-end-column="251" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_publications/2017-6-1-sigmod.md">
-      <provider editor-type-id="MarkdownFxPreviewEditor">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <first_editor relative-caret-position="210">
+            <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
             <folding />
           </first_editor>
           <second_editor />
@@ -1140,8 +1118,22 @@
       </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="225">
-            <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+          <first_editor relative-caret-position="120">
+            <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_publications/2019-4-12-icde.md">
+      <provider editor-type-id="MarkdownFxPreviewEditor">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="135">
+            <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
             <folding />
           </first_editor>
           <second_editor />
