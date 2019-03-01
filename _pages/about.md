@@ -9,7 +9,7 @@ redirect_from:
   - /about.html
 ---
 
-My name is Haitao Yuan(袁海涛 in Chinese), a CS master student of [Database Group](http://dbgroup.cs.tsinghua.edu.cn/) at Tsinghua University, under the supervision of [Prof. Guoliang Li](http://dbgroup.cs.tsinghua.edu.cn/ligl/index_cn.html). 
+My name is Haitao Yuan( in Chinese), a CS master student of [Database Group](http://dbgroup.cs.tsinghua.edu.cn/) at Tsinghua University, under the supervision of [Prof. Guoliang Li](http://dbgroup.cs.tsinghua.edu.cn/ligl/index_cn.html). 
 Before that, I have received my BEng from Beihang University in 2016.
 My research interests mainly include Big Data, Database Management, Spatial-Temporal Data, Data Mining, Machine Learning, Deep Learning 
 and Reinforcement Learning.
