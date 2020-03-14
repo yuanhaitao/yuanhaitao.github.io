@@ -10,7 +10,7 @@ locale                   : "en-US"
 title                    : "Rehayto"
 title_separator          : "-"
 name                     : &name "Haitao Yuan"
-description              : &description "Haitao Yuan is a CS master student of Database Group at Tsinghua University, under the supervision of Prof. Guoliang Li. Before that, he received his BEng from Beihang University in 2016."
+description              : &description "Haitao Yuan is a CS Ph.D Candidate of Database Group at Tsinghua University, under the supervision of Prof. Guoliang Li and Prof. Ling Feng. Before that, he received his BEng from Beihang University in 2016."
 url                      : https://yuanhaitao.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "yuanhaitao/yuanhaitao.github.io"
@@ -82,7 +82,7 @@ analytics:
 author:
   name             : "Haitao Yuan"
   avatar           : "yht.jpg"
-  bio              : "Master Student, Database Group CS@Tsinghua University"
+  bio              : "Ph.D candidate, Database Group CS@Tsinghua University"
   location         : "Beijing, China"
   employer         :
   pubmed           : # "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
