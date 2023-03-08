@@ -29,7 +29,7 @@ He previously interned in [HKUST](https://hkust.edu.hk/?cn=1) working with Prof.
 - Faculty (Assistant Professor) in Academic
 - Research Scientist in Industry -->
 
-<!-- **<font color=red>If you are interested in me, contact me via Email or Wechat.</font>** --> -->
+<!-- **<font color=red>If you are interested in me, contact me via Email or Wechat.</font>** -->
 
 Research Interests
 ---
