@@ -7,8 +7,8 @@ redirect_from:
   - /about/
   - /about.html
 ---
-Haitao Yuan is currently a postdoc research fellow working with Prof. [Gao Cong](https://personal.ntu.edu.sg/gaocong/) at [Singtel Cognitive and Artificial Intelligence Lab (SCALE@NTU)](https://www.ntu.edu.sg/scale). Prior to that,  he received his Ph.D. degree in computer science from [Tsinghua University] in June 2021, supervised by Prof. [Guoliang Li](https://dbgroup.cs.tsinghua.edu.cn/ligl/index.html). 
-Besides, Haitao has accumulated for 1.5 year industrial experience in the Technology and Engineering Group of [Baidu](http://home.baidu.com/index.html) and the Digital Research Institute of [ENN](https://www.enn.cn/pageshow?pageId=1440505892360679424). 
+Haitao Yuan is currently a postdoc research fellow working with Prof. [Gao Cong](https://personal.ntu.edu.sg/gaocong/) at [Singtel Cognitive and Artificial Intelligence Lab (SCALE@NTU)](https://www.ntu.edu.sg/scale). Prior to that,  he received his Ph.D. degree in computer science from [Tsinghua University] in June 2021, supervised by Prof. [Guoliang Li](https://dbgroup.cs.tsinghua.edu.cn/ligl/index.html). In addition, Haitao is lucky to have a close academic cooperation link with Prof. [Zhifeng Bao](https://baozhifeng.net/).
+Besides, Haitao has accumulated for 1.5 year industrial experience in the Intelligent Driving Group of [Baidu](http://home.baidu.com/index.html) and the Digital Research Institute of [ENN](https://www.enn.cn/pageshow?pageId=1440505892360679424). 
 
 Haitao's research focuses on spatial-temporal data management, AI-powered spaital database optimization, and time-series data mining. He has published 20+ papers in the top DB (SIGMOD, VLDB, ICDE) and DM (WWW, TKDE) conferences and Journals.
 
@@ -36,11 +36,8 @@ Research Interests
 <!-- + **Data-centric ML**: annotation, augmentation, imbalance, noise, distillation, out-of-distribution, heterogeneity, and privacy. -->
 
 + **Spatial-temporal Data Managment**: trajectory search, trajectory generation.
-
 + **AI-powered Spatial Database Optimization**: materialized view advisor, learned spatial index.
-
 + **Time-series Data Mining**: traffic prediction, travel time estimation.
-
 + **Interdisciplinary Application**: AI4Science (e.g., nuclear fusion, medical diagnosis), and AI4Industry (e.g.,data federated system and anomaly detection).
 
 
@@ -53,6 +50,31 @@ Research Interests
 * **2022-11**: One paper is accepted by ***VLDB 2023***.
 
   
+Work Experience
+------
+
+* 2022/03-: Researcher Fellow
+ * SCALE, NTU
+ * Research on spatial and temporal data management and mining
+ * Supervisor: [Gao Cong](https://personal.ntu.edu.sg/gaocong/)
+
+* 2022/09-2022/02: Researcher
+ * Digital Research Institute, ENN
+ * Research on spatio-temporal data mining in industrial scenarios
+
+
+* 2021/07-2022/08: Senior Algorithm Engineer
+  * BaduMap, IDG, Baidu
+  * Participate in traffic prediction and travel time estimation
+  * Supervisor: [Jizhou Huang](http://ir.hit.edu.cn/~huangjizhou/)
+
+* 2018/07-2019/01: Research Intern
+  * Computing Platform Group, Alibaba
+  * Assist in solving query optimization problem in ODPS auto data warehouse
+  * Supervisor: [Kai Zeng](https://kai-zeng.github.io/)
+
+
+
 Selected Awards
 ------
 2022 ACM SIGMOD China Doctoral Dissertation Award
