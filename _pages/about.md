@@ -37,11 +37,11 @@ Research Interests
 
 + **Spatial-temporal Data Managment**: trajectory search, trajectory generation.
 
-+ **AI-powered Spatial Database Optimization**: materialized view advisor, spatial index selction, learned spatial index.
++ **AI-powered Spatial Database Optimization**: materialized view advisor, learned spatial index.
 
-+ **time-series data mining**: traffic prediction, travel time estimation.
++ **Time-series Data Mining**: traffic prediction, travel time estimation.
 
-+ **Interdisciplinary Application**: AI4Science (e.g., nuclear fusion, medical diagnosis), and AI4Industry (e.g.,federated system and anomaly detection).
++ **Interdisciplinary Application**: AI4Science (e.g., nuclear fusion, medical diagnosis), and AI4Industry (e.g.,data federated system and anomaly detection).
 
 
 
