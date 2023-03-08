@@ -7,10 +7,10 @@ redirect_from:
   - /about/
   - /about.html
 ---
-Haitao Yuan is currently a postdoc research fellow working with Prof. [Gao Cong](https://personal.ntu.edu.sg/gaocong/) at [Singtel Cognitive and Artificial Intelligence Lab (SCALE@NTU)](https://www.ntu.edu.sg/scale). Prior to that,  he received his Ph.D. degree in computer science from [Tsinghua University](https://www.tsinghua.edu.cn/) in June 2021, supervised by Prof. [Guoliang Li](https://dbgroup.cs.tsinghua.edu.cn/ligl/index.html) and Prof. [Ling Feng](https://dblp.org/pid/58/4464.html). Furthermore, Haitao is fortunate to enjoy a close academic collaboration with Prof. [Zhifeng Bao](https://baozhifeng.net/) and Prof. [Ning Liu](https://liucsthu.github.io/).
+Haitao Yuan is currently a postdoc research fellow working with Prof. [Gao Cong](https://personal.ntu.edu.sg/gaocong/) at [Singtel Cognitive and Artificial Intelligence Lab (SCALE@NTU)](https://www.ntu.edu.sg/scale). Prior to that,  he received his Ph.D. degree in computer science from [Tsinghua University](https://www.tsinghua.edu.cn/) in June 2021, supervised by Prof. [Guoliang Li](https://dbgroup.cs.tsinghua.edu.cn/ligl/index.html) and Prof. [Ling Feng](https://dblp.org/pid/58/4464.html). Furthermore, Haitao is fortunate to enjoy a close academic collaboration with Prof. [Zhifeng Bao](https://baozhifeng.net/).
 Besides, Haitao has accumulated for 1.5 year industrial experience in the Intelligent Driving Group of [Baidu](http://home.baidu.com/index.html) and the Digital Research Institute of [ENN](https://www.enn.cn/pageshow?pageId=1440505892360679424). 
 
-Haitao's research focuses on spatial-temporal data management, AI-powered spaital database optimization, and time-series data mining. He has published 10+ papers in the top DB (SIGMOD, VLDB, ICDE) and DM (WWW, TKDE) conferences and Journals.
+Haitao's research focuses on spatial-temporal data management, AI-powered spatial database optimization, and time-series data mining. He has published 10+ papers in the top DB and DM conferences and Journals (SIGMOD, VLDB, ICDE, WWW, TKDE, etc).
 
 Feel free to catch me if interested to discuss ideas or work together. 😜
 
