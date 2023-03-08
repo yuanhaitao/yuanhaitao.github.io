@@ -62,7 +62,7 @@ International Conference on Learning Representations. <br>
 ***ICLR 2022***. 
 <!-- **Wentao Zhang**, Yexin Wang, Zhenbang You, Meng Cao, Ping Huang, Jiulong Shan, Zhi Yang, Bin Cui.<br> -->
 
-1.  *Graph Neural Networks in Recommender Systems: A Survey* [[Paper](https://arxiv.org/abs/2011.02260)][[Code](https://github.com/wusw14/gnn-in-rs)] <br>
+<!-- 1.  *Graph Neural Networks in Recommender Systems: A Survey* [[Paper](https://arxiv.org/abs/2011.02260)][[Code](https://github.com/wusw14/gnn-in-rs)] <br>
 Shiwen Wu, Fei Sun, **Wentao Zhang<sup>#</sup>**, Xu Xie, Bin Cui. <br>
 ACM Computing Survey.<br>
 ***CSUR 2022, CCF-A***. 
@@ -121,7 +121,7 @@ The 37th ACM/SIGAPP Symposium On Applied Computing. <br>
 1.  *RIM: Reliable Influence-based Active Learning on Graphs*  [[Paper](https://arxiv.org/pdf/2110.14854)][[Code](https://github.com/zwt233/RIM)] <br>
 **Wentao Zhang**, Yexin Wang, Zhenbang You, Meng Cao, Ping Huang, Jiulong Shan, Zhi Yang, Bin Cui.<br>
 Thirty-fifth Conference on Neural Information Processing Systems.<br>
-***NeurIPS 2021, CCF-A, <font color=orange>Spotlight Presentation, Acceptance Rate: < 3%</font>***.  -->
+***NeurIPS 2021, CCF-A, <font color=orange>Spotlight Presentation, Acceptance Rate: < 3%</font>***.  --> 
 <!-- **Wentao Zhang**, Yexin Wang, Zhenbang You, Meng Cao, Ping Huang, Jiulong Shan, Zhi Yang, Bin Cui.<br> -->
 
 <!-- 1.  *Node Dependent Local Smoothing for Scalable Graph Learning* [[Paper](https://arxiv.org/pdf/2110.14377)][[Code](https://github.com/zwt233/NDLS)] <br>
@@ -140,7 +140,7 @@ IEEE Transactions on Knowledge and Data Engineering. <br>
 ***TKDE 2021, CCF-A***. 
 <!-- Xupeng Miao<sup>\*</sup>, **Wentao Zhang<sup>\*</sup>**, Yingxia Shao, Bin Cui, Lei Chen, Ce Zhang, Jiawei Jiang<br> -->
 
-1.  *DeGNN: Characterizing and Improving Graph Neural Networks with Graph Decomposition* [[Paper](https://arxiv.org/pdf/1910.04499)][[Code](https://zwt233.github.io/publications/)] <br>
+<!-- 1.  *DeGNN: Characterizing and Improving Graph Neural Networks with Graph Decomposition* [[Paper](https://arxiv.org/pdf/1910.04499)][[Code](https://zwt233.github.io/publications/)] <br>
 Xupeng Miao<sup>\*</sup>, Nezihe Merve Gürel<sup>\*</sup>, **Wentao Zhang<sup>\*</sup>**, ..., Shuai Zhang, Yujing Wang, Bin Cui, Ce Zhang. <br>
 SIGKDD Conference on Knowledge Discovery and Data Mining. <br>
 ***SIGKDD 2021, CCF-A, <font color=orange>Top #1 conference in Data Mining</font>***. 

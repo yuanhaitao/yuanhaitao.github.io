@@ -53,7 +53,7 @@ Research Interests
 Work Experience
 ------
 
-* 2022/03-: Researcher Fellow
+* 2022/03-: Research Fellow
   * SCALE, NTU
   * Research on spatial and temporal data management and mining
   * Supervisor: [Gao Cong](https://personal.ntu.edu.sg/gaocong/)
