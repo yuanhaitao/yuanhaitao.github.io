@@ -70,7 +70,7 @@ Ning Liu, Wei Zhang, Xiuxing Li, **Haitao Yuan**, Jianyong Wang. <br>
 
 2.  *Mathgraph: A knowledge graph for automatically solving mathematical exercises.* <br>
 Tianyu Zhao, ..., **Haitao Yuan**,... <br>
-***DASFAA 2019, CCF-A, Best Paper Award***. 
+***DASFAA 2019, CCF-B, Best Paper Award***. 
 
 <!-- 1.  *Fairness-aware Maximal Biclique Enumeration on Bipartite Graphs.* [To appear] <br>
 Ziqi Yin, Qi Zhang, **Wentao Zhang**, Ronghua Li, Guoren Wang<br>
