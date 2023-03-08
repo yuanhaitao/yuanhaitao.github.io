@@ -8,7 +8,21 @@ author_profile: true
 
 Honors and Awards
 ------
-24. [Rising Star](https://mp.weixin.qq.com/s/Lecza9L8zgZYDPdKpkP2XA) (云帆奖-明日之星), World AI Conference, 2022.
+2022 ACM SIGMOD China Doctoral Dissertation Award
+
+2021 Best Ph.D Thesis of Tsinghua CS
+
+2021 Outstanding Graduate of Beijing
+
+2020 National Scholarship
+
+2020 Innovative Future Scholarship of Tsinghua CS
+
+2019 VMware Scholarship Award
+
+2019 Best Paper Award of ***DASFFA 2019*** 
+
+<!-- 24. [Rising Star](https://mp.weixin.qq.com/s/Lecza9L8zgZYDPdKpkP2XA) (云帆奖-明日之星), World AI Conference, 2022.
 23. 🏆 [Best Student Paper Award](https://www2022.thewebconf.org/awards/) of ***WWW 2022*** (1/1822, the second WWW Best Student Paper from China), 2022
 22. [IVADO Postdoctoral Fellowship](https://ivado.ca/en/scholarships-and-grants/postdoctoral-research-funding/), Canada
 21. [Outstanding Doctoral Dissertation Award](https://grs.pku.edu.cn/xwgz11/xxgk11/xwsy111/364670.htm), Peking University (Sole winner in Computer Software and Theory), 2022
@@ -31,11 +45,11 @@ Honors and Awards
 4. Pacemaker to Merit Student **(Top 1% in PKU)**, 2020
 3. National Scholarship **(Top 1% in PKU)**, 2019
 2. Merit Student **(Top 5% in PKU)**, 2019
-1. Academic Excellence Award **(Top 5% in PKU)**, 2018
+1. Academic Excellence Award **(Top 5% in PKU)**, 2018 -->
 
   
-Competitions
+<!-- Competitions
 ------
 1. Outstanding Winner of the [openGCC contest](https://mp.weixin.qq.com/s/8JX5ymkUt5MvDcHLOjB3Xw) in CCF ChinaSoft **(1/3814)**, 2021
 1. Rank \#1 in [Open Graph Benchmark](https://ogb.stanford.edu/docs/leader_nodeprop/\#ogbn-mag), 2021
-1. Outstanding Winner of the BDIC Big Data Competition **(1/575)**, 2018
+1. Outstanding Winner of the BDIC Big Data Competition **(1/575)**, 2018 -->

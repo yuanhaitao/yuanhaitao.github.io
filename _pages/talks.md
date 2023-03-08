@@ -8,7 +8,7 @@ author_profile: true
 
 I am happy to give a talk if you are interested in my work. 😊  
 
-2022
+<!-- 2022
 ====
 1. Model Degradation Hinders Deep Graph Neural Networks.<br>
   KDD'22, 2022. 08 <br>
@@ -72,4 +72,4 @@ I am happy to give a talk if you are interested in my work. 😊
   Tencent, Virtual, 2021.12  [[Slides](https://github.com/zwt233/Talks/blob/main/Sharing/datafun-GAMLP.pdf)]<br>
 
 1. Graph Attention Multi-Layer Perceptron.《图注意力多层感知器》<br>
-  DataFun, Virtual, 2021.10 [[News](https://mp.weixin.qq.com/s/G--7PlJ9rsTl3bnSSGmbCQ)] [[Slides](https://github.com/zwt233/Talks/blob/main/Sharing/datafun-GAMLP.pdf)]<br>
+  DataFun, Virtual, 2021.10 [[News](https://mp.weixin.qq.com/s/G--7PlJ9rsTl3bnSSGmbCQ)] [[Slides](https://github.com/zwt233/Talks/blob/main/Sharing/datafun-GAMLP.pdf)]<br> -->

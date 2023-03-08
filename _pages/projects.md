@@ -9,7 +9,7 @@ redirect_from:
 
 {% include base_path %}
 
-1.Angel
+<!-- 1.Angel
 ------
 [Angel](https://github.com/Angel-ML/angel) is a high-performance distributed machine learning and graph computing platform based on the philosophy of Parameter Server. It is tuned for performance with big data from Tencent and has a wide range of applicability and stability, demonstrating increasing advantage in handling higher dimension model. Angel is jointly developed by Tencent and Peking University, taking account of both high availability  in industry and innovation in academia.
 
@@ -61,4 +61,15 @@ It owns the following characteristics:
 3. BBO with distributed parallelization.
 4. BBO with multi-fidelity acceleration.
 5. BBO with early stops.
+ -->
 
+1. Ratel
+
+[Ratel](https://dl.acm.org/doi/abs/10.1145/3299869.3320222) is an efficient distributed spatial data management system based on Spark for analyzing large-scale trajectories. We show three kinds of scenarios - bus station planning, route recommendation, and transportation analytics. Demo attendees can interact with a web UI, pose different queries on the dataset, and navigate the query result.
+
+2. DISON
+
+[DISON](https://ieeexplore.ieee.org/document/8731540) is an efficient distributed spatial data managemnet system for trajectory simialrity search and join on road networks. Extensive experiments on real datasets showed that DISON achieved high effectiveness, efficiency, and scalability and outperformed existing solutions significantly.
+
+3. CDB
+[CDB](https://github.com/TsinghuaDatabaseGroup/CDB) is a crowd-powered database system that supports crowd-based query optimizations with focus on join and selection. CDB has fundamental differences from existing systems. First, CDB employs a graph-based query model that provides more fine-grained query optimization. Second, CDB adopts a unified framework to perform the multi-goal optimization based on the graph model. We have implemented our system and deployed it on Amazon Mechanical Turk, CrowdFlower and ChinaCrowd.
