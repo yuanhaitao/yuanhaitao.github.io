@@ -11,12 +11,20 @@ author_profile: true
 
 2023
 ====
-1.  *ProxyBO: Accelerating Neural Architecture Search via Bayesian Optimization with Zero-cost Proxies.* [To appear] <br>
-Yu Shen, Yang Li, Jian Zheng, Peng Yao, Jixiang Li, Sen Yang, Ji Liu, **Wentao Zhang<sup>#</sup>**, Bin Cui. <br>
-Thirty-Seventh AAAI Conference on Artificial Intelligence. <br>
-***AAAI 2023, CCF-A***. 
+1.  *Route Travel Time Estimation on A Road Network Revisited:
+Heterogeneity, Proximity, Periodicity and Dynamicity.* [To appear] <br>
+**Haitao Yuan**, Guoliang Li, Zhifeng Bao. <br>
+***VLDB 2023, CCF-A***. 
 
-1.  *Fairness-aware Maximal Biclique Enumeration on Bipartite Graphs.* [To appear] <br>
+2.  *ELASTIC: Edge Workload Forecasting based on Collaborative Cloud-Edge Deep Learning.* [To appear] <br>
+Yanan Li, **Haitao Yuan<sup>#</sup>**, et al. <br>
+***WWW 2023, CCF-A***. 
+
+3.  *A Deep Generative Model for Trajectory Modeling and Utilization.* [To appear] <br>
+Yong Wang, Kaiyu Li, Guoliang Li, **Haitao Yuan**. <br>
+***VLDB 2023, CCF-A***. 
+
+<!-- 1.  *Fairness-aware Maximal Biclique Enumeration on Bipartite Graphs.* [To appear] <br>
 Ziqi Yin, Qi Zhang, **Wentao Zhang**, Ronghua Li, Guoren Wang<br>
 IEEE International Conference on Data Engineering. <br>
 ***ICDE 2023, CCF-A***. 
@@ -113,10 +121,10 @@ The 37th ACM/SIGAPP Symposium On Applied Computing. <br>
 1.  *RIM: Reliable Influence-based Active Learning on Graphs*  [[Paper](https://arxiv.org/pdf/2110.14854)][[Code](https://github.com/zwt233/RIM)] <br>
 **Wentao Zhang**, Yexin Wang, Zhenbang You, Meng Cao, Ping Huang, Jiulong Shan, Zhi Yang, Bin Cui.<br>
 Thirty-fifth Conference on Neural Information Processing Systems.<br>
-***NeurIPS 2021, CCF-A, <font color=orange>Spotlight Presentation, Acceptance Rate: < 3%</font>***. 
+***NeurIPS 2021, CCF-A, <font color=orange>Spotlight Presentation, Acceptance Rate: < 3%</font>***.  -->
 <!-- **Wentao Zhang**, Yexin Wang, Zhenbang You, Meng Cao, Ping Huang, Jiulong Shan, Zhi Yang, Bin Cui.<br> -->
 
-1.  *Node Dependent Local Smoothing for Scalable Graph Learning* [[Paper](https://arxiv.org/pdf/2110.14377)][[Code](https://github.com/zwt233/NDLS)] <br>
+<!-- 1.  *Node Dependent Local Smoothing for Scalable Graph Learning* [[Paper](https://arxiv.org/pdf/2110.14377)][[Code](https://github.com/zwt233/NDLS)] <br>
 **Wentao Zhang**, Mingyu Yang, Zeang Sheng, Yang Li, Wen Ouyang, Yangyu Tao, Zhi Yang, Bin Cui.<br>
 Thirty-fifth Conference on Neural Information Processing Systems.<br>
 ***NeurIPS 2021, CCF-A, <font color=orange>Spotlight Presentation, Acceptance Rate: < 3%</font>***. 
@@ -216,6 +224,6 @@ arXiv:2108.10097, 2021. (***arXiv preprint***).
 
 1.  *GMLP: Building Scalable and Flexible Graph Neural Networks with Feature-Message Passing* [[Paper](https://arxiv.org/pdf/2104.09880)][[Code](https://github.com/zwt233/PASCA)] <br>
 **Wentao Zhang**, Yu Shen, Zheyu Lin, Yang Li, Xiaosen Li, Wen Ouyang, Yangyu Tao, Zhi Yang, Bin Cui. <br>
-arXiv:2108.00955, 2021. (***arXiv preprint***). 
+arXiv:2108.00955, 2021. (***arXiv preprint***).  -->
   
 
