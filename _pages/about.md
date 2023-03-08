@@ -7,7 +7,7 @@ redirect_from:
   - /about/
   - /about.html
 ---
-Haitao Yuan is currently a postdoc research fellow working with Prof. [Gao Cong](https://personal.ntu.edu.sg/gaocong/) at [Singtel Cognitive and Artificial Intelligence Lab (SCALE@NTU)](https://www.ntu.edu.sg/scale). Prior to that,  he received his Ph.D. degree in computer science from [Tsinghua University](https://www.tsinghua.edu.cn/) in June 2021, supervised by Prof. [Guoliang Li](https://dbgroup.cs.tsinghua.edu.cn/ligl/index.html) and Prof. [Ling Feng](https://dblp.org/pid/58/4464.html). In addition, Haitao is lucky to have a close academic cooperation link with Prof. [Zhifeng Bao](https://baozhifeng.net/), as well as Prof. [Ning Liu](https://liucsthu.github.io/).
+Haitao Yuan is currently a postdoc research fellow working with Prof. [Gao Cong](https://personal.ntu.edu.sg/gaocong/) at [Singtel Cognitive and Artificial Intelligence Lab (SCALE@NTU)](https://www.ntu.edu.sg/scale). Prior to that,  he received his Ph.D. degree in computer science from [Tsinghua University](https://www.tsinghua.edu.cn/) in June 2021, supervised by Prof. [Guoliang Li](https://dbgroup.cs.tsinghua.edu.cn/ligl/index.html) and Prof. [Ling Feng](https://dblp.org/pid/58/4464.html). Furthermore, Haitao is fortunate to enjoy a close academic collaboration with Prof. [Zhifeng Bao](https://baozhifeng.net/) and Prof. [Ning Liu](https://liucsthu.github.io/).
 Besides, Haitao has accumulated for 1.5 year industrial experience in the Intelligent Driving Group of [Baidu](http://home.baidu.com/index.html) and the Digital Research Institute of [ENN](https://www.enn.cn/pageshow?pageId=1440505892360679424). 
 
 Haitao's research focuses on spatial-temporal data management, AI-powered spaital database optimization, and time-series data mining. He has published 10+ papers in the top DB (SIGMOD, VLDB, ICDE) and DM (WWW, TKDE) conferences and Journals.
@@ -53,18 +53,18 @@ Research Interests
 Work Experience
 ------
 
-* 2022/03-: Research Fellow
+* 2023/03-: Research Fellow
   * SCALE, NTU
   * Research on spatial and temporal data management and mining
   * Supervisor: [Gao Cong](https://personal.ntu.edu.sg/gaocong/)
 
-* 2022/09-2022/02: Researcher
+* 2022/09-2023/02: Researcher
   * Digital Research Institute, ENN
   * Research on spatio-temporal data mining in industrial scenarios
 
 
 * 2021/07-2022/08: Senior Algorithm Engineer
-  * BaduMap, IDG, Baidu
+  * BaiduMap, IDG, Baidu
   * Participate in traffic prediction and travel time estimation
   * Supervisor: [Jizhou Huang](http://ir.hit.edu.cn/~huangjizhou/)
 
@@ -83,7 +83,7 @@ Selected Awards
 * 2020 National Scholarship
 * 2020 Innovative Future Scholarship of Tsinghua CS
 * 2019 VMware Scholarship Award
-* 2019 Best Paper Award of DASFAA219
+* 2019 Best Paper Award of DASFAA2019
 
 <!-- 24. [Rising Star](https://mp.weixin.qq.com/s/Lecza9L8zgZYDPdKpkP2XA) (云帆奖-明日之星), World AI Conference, 2022.
 23. 🏆 [Best Student Paper Award](https://www2022.thewebconf.org/awards/) of ***WWW 2022*** **(1/1822,  the second WWW Best Student Paper from China)**, 2022
