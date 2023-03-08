@@ -20,7 +20,7 @@ Honors and Awards
 
 2019 VMware Scholarship Award
 
-2019 Best Paper Award of ***DASFFA 2019*** 
+2019 Best Paper Award of ***DASFAA 2019*** 
 
 <!-- 24. [Rising Star](https://mp.weixin.qq.com/s/Lecza9L8zgZYDPdKpkP2XA) (云帆奖-明日之星), World AI Conference, 2022.
 23. 🏆 [Best Student Paper Award](https://www2022.thewebconf.org/awards/) of ***WWW 2022*** (1/1822, the second WWW Best Student Paper from China), 2022
