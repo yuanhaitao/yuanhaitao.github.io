@@ -7,16 +7,16 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Rehayto"
+title                    : "Wentao Zhang's Homepage"
 title_separator          : "-"
-name                     : &name "Haitao Yuan"
-description              : &description "Haitao Yuan is a CS Ph.D Candidate of Database Group at Tsinghua University, under the supervision of Prof. Guoliang Li and Prof. Ling Feng. Before that, he received his BEng from Beihang University in 2016."
-url                      : https://yuanhaitao.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+name                     : &name "Wentao Zhang"
+description              : &description "Research Fellow@Mila"
+url                      : https://zwt233.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "yuanhaitao/yuanhaitao.github.io"
+repository               : "zwt233.github.io"
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
 breadcrumbs              : false # true, false (default)
-words_per_minute         : 160
+words_per_minute         : 60
 future                   : true
 read_more                : "disabled" # if enabled, adds "Read more" links to excerpts
 talkmap_link             : false #change to true to add link to talkmap on talks page
@@ -80,37 +80,38 @@ analytics:
 
 # Site Author
 author:
-  name             : "Haitao Yuan"
-  avatar           : "yht.jpg"
-  bio              : "Ph.D candidate, Database Group CS@Tsinghua University"
-  location         : "Beijing, China"
+  name             : "Wentao Zhang"
+  avatar           : "wentao3.jpg"
+  bio              : "Research Fellow@Mila"
+  location         : "Mila, Montreal, Canada"
   employer         :
-  pubmed           : # "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
-  googlescholar    : "https://scholar.google.com/citations?user=xXeSMZQAAAAJ&hl=en"
-  email            :  "yhaitao45@163.com"
+  pubmed           :
+  googlescholar    : https://scholar.google.com/citations?user=JE4VON0AAAAJ
+  email            : wentao.zhang@pku.edu.cn
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
   codepen          :
   dribbble         :
   flickr           :
-  facebook         : "100005526647293"
+  facebook         :
   foursquare       :
-  github           : "yuanhaitao"
+  github           : zwt233
   google_plus      :
   keybase          :
   instagram        :
+  impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
-  linkedin         : "海涛-袁-37170410a"
-  orcid            : # "http://orcid.org/yourorcidurl"
+  linkedin         : wentao-zhang-94b267157
+  orcid            :
   pinterest        :
   soundcloud       :
   stackoverflow    : # http://stackoverflow.com/users/123456/username
   steam            :
   tumblr           :
-  twitter          : "yhaitao45"
+  twitter          :
   vine             :
-  weibo            : "3156351041"
+  weibo            :
   xing             :
   youtube          :
   wikipedia        :
@@ -128,22 +129,23 @@ exclude:
   - .bundle
   - .jekyll-assets-cache
   - .sass-cache
-  - assets/js/plugins
-  - assets/js/_main.js
-  - assets/js/vendor
-  - Capfile
   - CHANGELOG
-  - config
+  - Capfile
   - Gemfile
   - Gruntfile.js
-  - gulpfile.js
   - LICENSE
+  - README
+  - Rakefile
+  - assets/js/_main.js
+  - assets/js/plugins
+  - assets/js/vendor
+  - config
+  - gulpfile.js
   - log
   - node_modules
   - package.json
-  - Rakefile
-  - README
   - tmp
+  - vendor
 keep_files:
   - .git
   - .svn
@@ -174,7 +176,7 @@ kramdown:
 # Collections
 collections:
   teaching:
-    output: true
+    output: false
     permalink: /:collection/:path/
   publications:
     output: true
@@ -214,7 +216,7 @@ defaults:
     values:
       layout: single
       author_profile: true
-      share: true
+      share: false
       comments: true
   # _publications
   - scope:
@@ -307,3 +309,5 @@ compress_html:
   clippings: all
   ignore:
     envs: development
+
+theme: jekyll-theme-tactile

@@ -1,55 +1,223 @@
 ---
 permalink: /
-title: "About me"
+title: "About"
 excerpt: "About me"
 author_profile: true
-redirect_from: 
+redirect_from:
   - /about/
   - /about.html
 ---
+Wentao Zhang is currently a postdoc research fellow working with Prof. [Jian Tang](https://jian-tang.com/) at [Montreal Institute for Learning Algorithms (Mila)](https://mila.quebec/en/). Prior to that,  he received his Ph.D. degree in computer science from [Peking University](https://www.pku.edu.cn/) in June 2022, supervised by Prof. [Bin Cui](https://cuibinpku.github.io/). 
+And he worked with Prof. [Lei Chen](http://home.cse.ust.hk/~leichen/) as a visiting scholar at [HKUST](https://hkust.edu.hk/) in 2019.
+Besides, Wentao has accumulated for 4 years industrial experience in the ML & Data Platform Department of [Tencent](https://www.tencent.com/) and the AIML Department of [Apple](https://machinelearning.apple.com/updates/apple-scholars-aiml-2021). 
 
-My name is Haitao Yuan(袁海涛 in Chinese), a CS Ph.D candidate of [Database Group](http://dbgroup.cs.tsinghua.edu.cn/) at Tsinghua University, under the supervision of [Prof. Guoliang Li](http://dbgroup.cs.tsinghua.edu.cn/ligl/index_cn.html) and Prof. Ling Feng. 
-Before that, I have received my BEng from Beihang University in 2016.
-My research interests mainly include Big Data, Database Management, Spatial-Temporal Data, Data Mining, Machine Learning, Deep Learning 
-and Reinforcement Learning.
+Motivated by the industrial demand, Wentao's research focuses on data-centric machine learning, graph machine learning, and machine learning systems. He has published 30+ papers, including 10+ first author papers in the top DB (SIGMOD, VLDB, ICDE), DM (KDD, WWW) and ML (ICML, NeurIPS, ICLR) conferences. Besides, he is the contributor or designer of several system projects, including [Angel](https://github.com/Angel-ML/angel) ![GitHub Repo stars](https://img.shields.io/github/stars/Angel-ML/Angel?style=social), [SGL](https://github.com/PKU-DAIR/SGL) ![GitHub Repo stars](https://img.shields.io/github/stars/PKU-DAIR/SGL?style=social), [MindWare](https://github.com/PKU-DAIR/mindware) ![GitHub Repo stars](https://img.shields.io/github/stars/PKU-DAIR/mindware?style=social), and [OpenBox](https://github.com/PKU-DAIR/open-box) ![GitHub Repo stars](https://img.shields.io/github/stars/PKU-DAIR/open-box?style=social). His research works have been powering several billion-scale applications in Tencent, and some of them have been recognized by multiple prestigious awards, including the [Outstanding Doctoral Dissertation Award](https://grs.pku.edu.cn/xwgz11/xxgk11/xwsy111/364670.htm), and the [Best Student Paper Award](https://www2022.thewebconf.org/awards/) at WWW'22.
 
-<!--This is the front page of a website that is powered by the [academicpages template](https://github.com/academicpages/academicpages.github.io) and hosted on GitHub pages. [GitHub pages](https://pages.github.com) is a free service in which websites are built and hosted from code and data stored in a GitHub repository, automatically updating when a new commit is made to the respository. This template was forked from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/) created by Michael Rose, and then extended to support the kinds of content that academics have: publications, talks, teaching, a portfolio, blog posts, and a dynamically-generated CV. You can fork [this repository](https://github.com/academicpages/academicpages.github.io) right now, modify the configuration and markdown files, add your own PDFs and other content, and have your own site for free, with no ads! An older version of this template powers my own personal website at [stuartgeiger.com](http://stuartgeiger.com), which uses [this Github repository](https://github.com/staeiou/staeiou.github.io).-->
+Feel free to catch me if interested to discuss ideas or work together. 😜
 
-<!--A data-driven personal website-->
-<!--======-->
-<!--Like many other Jekyll-based GitHub Pages templates, academicpages makes you separate the website's content from its form. The content & metadata of your website are in structured markdown files, while various other files constitute the theme, specifying how to transform that content & metadata into HTML pages. You keep these various markdown (.md), YAML (.yml), HTML, and CSS files in a public GitHub repository. Each time you commit and push an update to the repository, the [GitHub pages](https://pages.github.com/) service creates static HTML pages based on these files, which are hosted on GitHub's servers free of charge.-->
+<!-- Wentao Zhang (张文涛) is a fourth year Ph.D. candidate at [PKU](https://www.pku.edu.cn/), now working with [Prof. Bin Cui](http://net.pku.edu.cn/~cuibin/).
+He previously interned in [HKUST](https://hkust.edu.hk/?cn=1) working with Prof. Lei Chen, [Tencent](https://github.com/Angel-ML/angel) working with the Angel team, and [Apple Research](https://machinelearning.apple.com/) working with Meng Cao, Ping Huang and Danny Bickson. -->
 
-<!--Many of the features of dynamic content management systems (like Wordpress) can be achieved in this fashion, using a fraction of the computational resources and with far less vulnerability to hacking and DDoSing. You can also modify the theme to your heart's content without touching the content of your site. If you get to a point where you've broken something in Jekyll/HTML/CSS beyond repair, your markdown files describing your talks, publications, etc. are safe. You can rollback the changes or even delete the repository and start over -- just be sure to save the markdown files! Finally, you can also write scripts that process the structured data on the site, such as [this one](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.ipynb) that analyzes metadata in pages about talks to display [a map of every location you've given a talk](https://academicpages.github.io/talkmap.html).-->
+**Email**: wentao.zhang@mila.quebec
 
-<!--Getting started-->
-<!--======-->
-<!--1. Register a GitHub account if you don't have one and confirm your e-mail (required!)-->
-<!--1. Fork [this repository](https://github.com/academicpages/academicpages.github.io) by clicking the "fork" button in the top right. -->
-<!--1. Go to the repository's settings (rightmost item in the tabs that start with "Code", should be below "Unwatch"). Rename the repository "[your GitHub username].github.io", which will also be your website's URL.-->
-<!--1. Set site-wide configuration and create content & metadata (see below -- also see [this set of diffs](http://archive.is/3TPas) showing what files were changed to set up [an example site](https://getorg-testacct.github.io) for a user with the username "getorg-testacct")-->
-<!--1. Upload any files (like PDFs, .zip files, etc.) to the files/ directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.  -->
-<!--1. Check status by going to the repository settings, in the "GitHub pages" section-->
+**[Wechat (微信)](https://zwt233.github.io/wechat/)**: z1299799152
 
-<!--Site-wide configuration-->
-<!---------->
-<!--The main configuration file for the site is in the base directory in [_config.yml](https://github.com/academicpages/academicpages.github.io/blob/master/_config.yml), which defines the content in the sidebars and other site-wide features. You will need to replace the default variables with ones about yourself and your site's github repository. The configuration file for the top menu is in [_data/navigation.yml](https://github.com/academicpages/academicpages.github.io/blob/master/_data/navigation.yml). For example, if you don't have a portfolio or blog posts, you can remove those items from that navigation.yml file to remove them from the header. -->
+**Office**: 6666 St-Urbain Street, #200. Montreal, QC.
 
-<!--Create content & metadata-->
-<!---------->
-<!--For site content, there is one markdown file for each type of content, which are stored in directories like _publications, _talks, _posts, _teaching, or _pages. For example, each talk is a markdown file in the [_talks directory](https://github.com/academicpages/academicpages.github.io/tree/master/_talks). At the top of each markdown file is structured data in YAML about the talk, which the theme will parse to do lots of cool stuff. The same structured data about a talk is used to generate the list of talks on the [Talks page](https://academicpages.github.io/talks), each [individual page](https://academicpages.github.io/talks/2012-03-01-talk-1) for specific talks, the talks section for the [CV page](https://academicpages.github.io/cv), and the [map of places you've given a talk](https://academicpages.github.io/talkmap.html) (if you run this [python file](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.py) or [Jupyter notebook](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.ipynb), which creates the HTML for the map based on the contents of the _talks directory).-->
+**<font color=red>I’m on job market now!</font>**
 
-<!--**Markdown generator**-->
+<!-- I am looking for the following positions:
+- Faculty (Assistant Professor) in Academic
+- Research Scientist in Industry -->
 
-<!--I have also created [a set of Jupyter notebooks](https://github.com/academicpages/academicpages.github.io/tree/master/markdown_generator-->
-<!--) that converts a CSV containing structured data about talks or presentations into individual markdown files that will be properly formatted for the academicpages template. The sample CSVs in that directory are the ones I used to create my own personal website at stuartgeiger.com. My usual workflow is that I keep a spreadsheet of my publications and talks, then run the code in these notebooks to generate the markdown files, then commit and push them to the GitHub repository.-->
+**<font color=red>If you are interested in me, contact me via Email or Wechat.</font>**
 
-<!--How to edit your site's GitHub repository-->
-<!---------->
-<!--Many people use a git client to create files on their local computer and then push them to GitHub's servers. If you are not familiar with git, you can directly edit these configuration and markdown files directly in the github.com interface. Navigate to a file (like [this one](https://github.com/academicpages/academicpages.github.io/blob/master/_talks/2012-03-01-talk-1.md) and click the pencil icon in the top right of the content preview (to the right of the "Raw | Blame | History" buttons). You can delete a file by clicking the trashcan icon to the right of the pencil icon. You can also create new files or upload files by navigating to a directory and clicking the "Create new file" or "Upload files" buttons. -->
+Research Interests
+---
++ **Data-centric ML**: annotation, augmentation, imbalance, noise, distillation, out-of-distribution, heterogeneity, and privacy.
 
-<!--Example: editing a markdown file for a talk-->
-<!--![Editing a markdown file for a talk](/images/editing-talk.png)-->
++ **Graph ML**: graph neural network, graph representation learning.
 
-<!--For more info-->
-<!---------->
-<!--More info about configuring academicpages can be found in [the guide](https://academicpages.github.io/markdown/). The [guides for the Minimal Mistakes theme](https://mmistakes.github.io/minimal-mistakes/docs/configuration/) (which this theme was forked from) might also be helpful.-->
++ **ML Systems**: large-scale distributed training, AutoML, and data-centric ML platform.
+
++ **Interdisciplinary Application**: AI4Science (e.g., drug and protein), and AI4Industry (e.g.,recommender system and anomaly detection).
+
+A summary of my recent works:
+- **Data-centric ML on graph**: how to prepare high quality and quantity data for graph ML? <br>
+   - Data annotation 
+	    - Better efficiency [[ALG, ***SIGMOD 21***](https://dl.acm.org/doi/10.1145/3448016.3457325)]
+		- Model free [[Grain, ***VLDB 21***](http://vldb.org/pvldb/vol14/p2473-zhang.pdf)]
+	    - Noise handling[[RIM, ***NeurIPS 21***](https://openreview.net/forum?id=CEkbBN_-Ja8), <font color=orange>Spotlight</font>]
+	    - Simplifying the labeling task [[IGP, ***ICLR 22***](https://openreview.net/pdf?id=USC0-nvGPK)]
+   
+	- Feature engineering (Complex model --> better features + simple model)
+	    - Feature/label smoothing + simple model [[NDLS, ***NeurIPS 21***](https://arxiv.org/pdf/2110.14377), <font color=orange>Spotlight</font>]
+	    - Unsupervised and non-parametric feature smoothing [[NAFS, ***ICML 22***](https://arxiv.org/abs/2206.08583)]
+	    - Graph-based MLP deployed at Tencent [[GAMLP, ***KDD 22***](https://arxiv.org/pdf/2108.10097)]
+	    - Inference at large scale [[NAI, ***Arxiv 22***](https://arxiv.org/abs/2211.00495)]
+	    - Experimental evaluation [[AIR, ***KDD 22***](https://arxiv.org/pdf/2108.00955)]
+	- Data distillation 
+	    - Offline distillation [[RDD, ***SIGMOD 20***](https://dl.acm.org/doi/10.1145/3318464.3389706)]
+	    - Online distillation [[ROD, ***KDD 21***](https://arxiv.org/pdf/2107.11789)]
+    
+
+- **ML Systems**:  how to make machine learning faster and easier? <br>
+   -  Distributed ML & AutoML
+	    - Distributed NAS on graph [[PasCa, ***WWW 22***](https://arxiv.org/abs/2203.00638),  <font color=orange>Best Student Paper Award</font>]
+	    - Deep and flexible NAS on graph [[DF-GNAS, ***ICML 22***](https://arxiv.org/abs/2206.08582)]
+	    - Scalable graph learning [[SGL](https://github.com/PKU-DAIR/SGL)]![GitHub Repo stars](https://img.shields.io/github/stars/PKU-DAIR/SGL?style=social)
+	    - Distributed graph learning [[Angel Graph](https://github.com/Angel-ML/angel/blob/master/docs/overview/angel_graph_sona.md)]![GitHub Repo stars](https://img.shields.io/github/stars/Angel-ML/Angel?style=social)
+	    - End-to-End AutoML [[MindWare, ***VLDB 21***](https://arxiv.org/pdf/2107.08861)]![GitHub Repo stars](https://img.shields.io/github/stars/PKU-DAIR/mindware?style=social)
+	    - Black box optimization [[OpenBox, ***KDD 21***](https://arxiv.org/pdf/2106.00421)]![GitHub Repo stars](https://img.shields.io/github/stars/PKU-DAIR/open-box?style=social)
+	    - Large-scale hyper-parameter tuning [[Hyper-Tune, ***VLDB 22***](https://arxiv.org/pdf/2201.06834)]
+	    - Distributed GNN training[[The First Survey of Distributed GNN Training, ***Arxiv 22***](https://arxiv.org/abs/2211.00216)]
+
+
+- **Interdisciplinary Application**:  how to use machine learning in real applications?
+   - AI4Industry 
+	    - GNN-based recommendation [[The First Survey of GNN-based RS, ***CSUR 22***](https://arxiv.org/pdf/2011.02260)]
+	    - GNN-based recommendation system deployed at Taobao [[Zoomer, ***ICDE 22***](https://arxiv.org/abs/2203.12596)]
+	- AI4Science
+	    - Diffusion models [[The First Survey of Diffusion Models, ***Arxiv 22***](https://arxiv.org/abs/2209.00796)]
+	    - AutoML for biology [[AutoDC, ***Bioinformatics 22***](https://academic.oup.com/bioinformatics/article/38/13/3415/6588096)]
+
+
+**<font color=red>What's New</font>**
+------
+* **2022-11**: One paper is accepted by ***AAAI 2023***.
+* **2022-11**: One paper is accepted by ***ICDE 2023***.
+* **2022-10**: One paper is accepted by ***VLDBJ 2022***.
+* **2022-09**: One paper is accepted by ***NeurIPS 2022***.
+* **2022-09**: I am awared [Rising Star](https://mp.weixin.qq.com/s/Lecza9L8zgZYDPdKpkP2XA) (云帆奖-明日之星) in World AI Conference, 2022. 
+* **2022-06**: I am honor to present the [valedictorian](https://mp.weixin.qq.com/s/05TJIrxMcBeDnXoCvYnXbg) for the class of 2022 in CS of PKU.
+* **2022-06**: I receive my Ph.D. degree in computer science from Peking University with [Outstanding Doctoral Dissertation Award](https://grs.pku.edu.cn/xwgz11/xxgk11/xwsy111/364670.htm).
+* **2022-05**: One paper is accepted by the journal ***VLDBJ 2022***.
+* **2022-05**: Four papers are accepted by the conference ***SIGKDD 2022***.
+* **2022-05**: Two papers as first author, have been accepted by ***ICML 2022***.
+* **2022-05**: One paper related to AutoML, has been accepted by ***Bioinformatics 2022***.
+* **2022-04**: 🏆 We win the ***<font color=orange>Best Student Paper Award </font>***  in ***WWW 2022*** !
+* **2022-04**: We release our first version of the scalable graph learning toolkit--[SGL](https://github.com/PKU-DAIR/SGL).
+* **2022-03**: One paper is selected as the Best Paper Award Nominees in ***WWW 2022***. The corresponding PasCa system (integrated into SGL) will be open source next month!
+* **2022-03**: One paper as corresponding author, related to GNN-based Recommendation, has been accepted by the journal ***ACM Computing Survey 2022*** .
+* **2022-01**: One paper related to graph-based recommendation, has been accepted by the conference ***ICDE 2022*** .
+* **2022-01**: One paper as first author, related to graph data annotation, has been accepted by the conference ***ICLR 2022*** .
+* **2022-01**: One paper related to our large scale Hyper-paramater Tuning system, has been accepted by the conference ***VLDB 2022*** .
+* **2022-01**: I accepted the invitation to serve as Program Committee member of the Research Track of ACM ***SIGKDD 2022***.
+* **2022-01**: One paper as first author, related to our scalable graph NAS system, has been accepted by the conference ***WWW 2022*** .
+* **2021-12**: Our OpenBox team won the “Outstanding Winner” at the openGCC contest in [CCF ChinaSoft 2021](https://mp.weixin.qq.com/s/8JX5ymkUt5MvDcHLOjB3Xw). Congratulations!
+* **2021-09**: Two papers as first author, related to scalable graph learning and graph data annotation, have been accepted by the conference ***NeurIPS 2021*** with ***<font color=orange>Spotlight (< 3%)</font>***. 
+* **2021-08**: We propose [GAMLP](https://github.com/PKU-DAIR/GAMLP/blob/main/GAMLP.pdf), a scalable and efficient graph model, which achieves the **top #1** performance in three public and largest ogbn graphs (i.e., ogbn-papers100M, ogbn-products, and ogbn-mag)! See the **leaderboards** [here](https://ogb.stanford.edu/docs/leader_nodeprop/).
+* **2021-07**: One paper as first author, related to large-scale graph data selection, has been accepted by the conference ***VLDB 2021***.
+* **2021-07**: One paper as co-first author, related to deep GNN, has been accepted by the journal ***TKDE 2021***.
+* **2021-06**: One paper as third author, related to our AutoML system -- [VocalnoML](https://github.com/PKU-DAIR/soln-ml), has been accepted by the conference ***VLDB 2021***.
+* **2021-05**: Three papers, related to sparse graph, graph decomposition and our blackbox optimization (BBO) system -- [OpenBox](https://open-box.readthedocs.io/en/latest/), are accepted by the conference ***SIGKDD 2021***.
+* **2021-03**: As the only person in China, I was supported by the [Apple Scholars in AI/ML PhD fellowship](https://machinelearning.apple.com/updates/apple-scholars-aiml-2021). Many thanks to Apple!
+* **2021-03**: One paper as first author has been accepted by the conference ***SIGMOD 2021***. Looking forward to the meeting in Xi'an this summer!  
+
+Contributed Open-source Projects
+------
+* [Angel](https://github.com/Angel-ML/angel): a high-performance distributed machine learning and graph computing platform, jointly designed by Tencent and PKU. ![GitHub stars](https://img.shields.io/github/stars/Angel-ML/Angel.svg)
+<p align="center">
+<img src="/images/angel_logo.png" width="30%"> 
+</p>
+  
+* [SGL](https://github.com/PKU-DAIR/SGL): a scalable graph learning toolkit for extremely large graph datasets. ![GitHub stars](https://img.shields.io/github/stars/PKU-DAIR/SGL.svg)
+
+* [MindWare](https://github.com/PKU-DAIR/mindware): a powerful AutoML system, which automates feature engineering, algorithm selection and hyperparameter tuning. ![GitHub stars](https://img.shields.io/github/stars/PKU-DAIR/mindware.svg)
+<p align="center">
+<img src="/images/mindware.png" width="30%">
+</p>
+
+* [OpenBox](https://github.com/PKU-DAIR/open-box): an efficient open-source system designed for solving generalized black-box optimization (BBO) problems. ![GitHub stars](https://img.shields.io/github/stars/PKU-DAIR/open-box.svg)
+<p align="center">
+<img src="/images/Openbox.png" width="30%">
+</p>
+  
+Selected Awards
+------
+24. [Rising Star](https://mp.weixin.qq.com/s/Lecza9L8zgZYDPdKpkP2XA) (云帆奖-明日之星), World AI Conference, 2022.
+23. 🏆 [Best Student Paper Award](https://www2022.thewebconf.org/awards/) of ***WWW 2022*** **(1/1822,  the second WWW Best Student Paper from China)**, 2022
+22. [IVADO Postdoctoral Fellowship](https://ivado.ca/en/research-community/), Canada
+21. [Outstanding Doctoral Dissertation Award](https://grs.pku.edu.cn/xwgz11/xxgk11/xwsy111/364670.htm), Peking University  **(Sole winner in Computer Software and Theory)**, 2022
+19. [Outstanding Graduate of Beijing](https://xgb.pku.edu.cn/docs/2022-06/20220606163325764115.pdf), China, 2022
+17. Candidate of [May 4th Medal](https://mp.weixin.qq.com/s/AbqR2yFyduYn2PcZYbhXww) **(Each School recommends 1 candidate, highest honor in PKU)**, 2022
+16. [The Big Data Expo Leading Technology Achievement Award](https://mp.weixin.qq.com/s/TlNywcR4pCl1c84KLTpeNA), China International Big Data Industry Expo (Angel Graph project), 2022
+15. Candidate of [People of the Year](https://mp.weixin.qq.com/s/zEcwHYsjqLhTsCDTnS-fsA) **(1 people in EECS, and 42 people in PKU)**, 2021
+14. [Merit Student of Beijing](https://xgb.pku.edu.cn/sylm/133002.htm) **(2 people in EECS, and 58 people in PKU)**, 2021
+13. [Apple PhD Fellowship](https://machinelearning.apple.com/updates/apple-scholars-aiml-2021) **(1 people in China, and 15 people in the world)**, 2021
+11. National Scholarship **(Top 1% in PKU)**, 2019, 2021
+8. [Baidu Scholarship Nominee](http://scholarship.baidu.com/) **(20 people in the world)**, 2021
+  
+Selected Competitions
+------
+1. Outstanding Winner of the [openGCC contest](https://mp.weixin.qq.com/s/8JX5ymkUt5MvDcHLOjB3Xw) in CCF ChinaSoft **(1/3814)**, 2021
+1. Rank \#1 in [Open Graph Benchmark](https://ogb.stanford.edu/docs/leader_nodeprop/\#ogbn-mag), 2021
+1. Outstanding Winner of the BDIC Big Data Competition **(1/575)**, 2018
+
+Program Committee Member and Reviewer
+------
+KDD, ICML, CVPR, WWW, DASFFA, TKDE, TNNLS, PAKDD, Machine Learning etc.
+  
+Invited Talks
+------
+I am happy to give a talk if you are interested in my work. 😊  
+  
+1. Model Degradation Hinders Deep Graph Neural Networks.<br>
+  KDD'22, 2022. 08 <br>
+1. Graph Attention Multi-Layer Perceptron.<br>
+  KDD'22, 2022. 08 <br>
+1. NAFS: A Simple yet Tough-to-beat Baseline for Graph Representation Learning.<br>
+  AI Time [[News](https://mp.weixin.qq.com/s/L8x-2_D6W5JpmsCy_8ZOKQ)]<br>
+  ICML'22, Virtual, 2022. 07 <br>
+  Jiqizhixin, Virtual, 2022. 07 [[News](https://mp.weixin.qq.com/s/ymwyJuQvnpYIVjFuNT3fuQ)][[Slides](https://github.com/zwt233/Talks/blob/main/Sharing/NAFS-ICML-0716.pdf)] <br>
+1. Deep and Flexible Graph Neural Architecture Search.<br>
+  ICML'22, Virtual, 2022. 07 <br>
+  Jiqizhixin, Virtual, 2022. 07  <br>
+1. Towards Large Scale Graph Learning: Data, Model and System.《大规模图学习：数据、模型与系统》<br>
+  THU, Virtual, 2023.02  <br> 
+  PKU, Virtual, 2023.02  <br>
+  SUSTech, 2023.01  <br>
+  HKUST (Guang Zhou), Virtual, 2022.04 [[News](https://mp.weixin.qq.com/s/BNUT9Q4UPMi9cGREOARS9w)] <br>
+  Stanford, Virtual, 2021.11  <br>
+  Mila, Virtual, 2021.9  <br>
+1. Towards Automated Graph Learning. 《自动化图机器学习》 [[Doc](https://github.com/zwt233/Talks/blob/main/Sharing/AutoML-for-Graph-zwt.pdf)] <br>
+  HKUST, Virtual, 2022.11[[News](https://mp.weixin.qq.com/s/ro2BUTP0SNPwTOz1pbcdyw)] <br>
+  NUDT, Virtual, 2022. 07  <br>
+  HUST, 2022. 08 <br>
+  Zhejiang University, 2022. 08 <br>
+1. Information gain propagation a new way to graph active learning with soft labels. 《软标签场景下的图主动学习》<br>
+  AI Time, Virtual, 2022. 06  [[News](https://mp.weixin.qq.com/s/mbirnZPGpQwn6D5j_okeHw)]<br>
+  ICLR'22, Virtual, 2022. 04 <br>
+1. Towards Data-Centric ML.《数据驱动的机器学习》<br>
+  Apple research, 2022. 06 <br> 
+1. valedictorian Speech.《北京大学计算机系2022级毕业生代表致辞》<br>
+  CS of PKU, 2022. 06 [[News](https://mp.weixin.qq.com/s/05TJIrxMcBeDnXoCvYnXbg)] <br>
+1. PaSca: a graph neural architecture search system under the scalable paradigm. 《可扩展性的图神经结构搜索系统》<br>
+  DGL Team, Amazon, Virtual, 2022.07 <br>
+  CSU, Virtual, 2022. 07  <br>
+  CCF, Virtual, 2022.06 [[News](https://www.ccf.org.cn/Media_list/xsfh/2022-06-23/764709.shtml)] [[Slides](https://github.com/zwt233/Talks/tree/main/Sharing/CCF-PaSca.pdf)]<br>
+  DataFun, Virtual, 2022.06 [[Slides](https://github.com/zwt233/Talks/tree/main/Sharing/0625-DataFun-PaSca.pdf)]<br>
+  MLNLP, Virtual, 2022.06 [[News](https://mp.weixin.qq.com/s/3ff5BujHTIGl1jhHe7PTNA)][[Slides](https://github.com/zwt233/Talks/tree/main/Sharing/0625-MLNLP-PaSca.pdf)][[Video](https://www.bilibili.com/video/BV1dv4y1M7hq)]<br>
+  InfoQ, Tencent Cloud, Virtual, 2022.06 [[News](https://mp.weixin.qq.com/s/2gg1jRnd1is9IvmFu0hyNQ)]<br>
+  WWW’22, Virtual, 2022.04 [[Slides](https://github.com/zwt233/Talks/tree/main/Sharing/WWW22-PaSca.pdf)]<br>
+  Data Platform, Tencent, Virtual, 2022.05 <br>
+1. Towards Large-scale Graph Machine Learning. 《大规模图机器学习》 [[Doc](https://github.com/zwt233/Talks/blob/main/Sharing/Scalable-GNN-zwt.pdf)] <br>
+  HKUST, Virtual, 2022. 08 (In Preparing)  <br> 
+  LOGs, Virtual, 2022. 07 [[Video](https://www.bilibili.com/video/BV1GY4y1w736?spm_id_from=333.999.0.0&vd_source=3b29bfbd33d11edf0e22864d965c6699)]  <br> 
+1. How to Do Research? 《浅谈科研》<br>
+  Apple Research, Virtual, 2021.12 <br>
+  PKU, Virtual, 2021.12 [[News-1](https://mp.weixin.qq.com/s/vgmymt_tmAjAVxnuPPfFxQ), [News-2](https://cs.pku.edu.cn/info/1020/3199.htm)] [[Slides](https://github.com/zwt233/Talks/blob/main/Sharing/How-to-Do-Research.pdf)]<br>
+  
+1. The Scalability of Large-scale Graph Machine Learning.《大规模图机器学习的可扩展性》<br>
+  Tencent Big Data, Virtual, 2022.04 <br>
+  NeurIPS, Virtual, 2021.12 <br>
+  4Paradigm, Virtual, 2021.12 <br>
+  AI Drive, 2021.12 [[Video](https://www.bilibili.com/video/BV1sR4y1x7qb?p=1&share_medium=android&share_plat=android&share_session_id=67ffcc9e-d9eb-4e93-a465-ddfd81162842&share_source=WEIXIN&share_tag=s_i&timestamp=1639559499&unique_k=quVdvTS)] [[News](https://mp.weixin.qq.com/s/CVnhxQEFYdI-hsWQma-kLA)] [[Slides](https://github.com/zwt233/Talks/blob/main/Sharing/AI-Drive-NDLS.pdf)]<br>
+1. RIM: Reliable Influence-based Active Learning on Graphs.<br>
+  NeurIPS, Virtual, 2021.12 <br>
+  NeurIPS MeetUp China, 2021.12 [[News](https://mp.weixin.qq.com/s/VhjB8hOqbaS3gQJp6YuKGQ)] [[Slides](https://github.com/zwt233/Talks/blob/main/Sharing/RIM_Poster.pdf)]<br>
+1. A survey of GNN system.《GNN系统调研》<br>
+  Tencent, Virtual, 2021.12  [[Slides](https://github.com/zwt233/Talks/blob/main/Sharing/datafun-GAMLP.pdf)]<br>
+
+1. Graph Attention Multi-Layer Perceptron.《图注意力多层感知器》<br>
+  DataFun, Virtual, 2021.10 [[News](https://mp.weixin.qq.com/s/G--7PlJ9rsTl3bnSSGmbCQ)] [[Slides](https://github.com/zwt233/Talks/blob/main/Sharing/datafun-GAMLP.pdf)]<br>
