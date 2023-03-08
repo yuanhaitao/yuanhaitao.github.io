@@ -47,7 +47,7 @@ Research Interests
 
 **<font color=red>What's New</font>**
 ------
-* **2023-03**: Haitao comes to Singapore, and continue his research as a research fellow at SCALE@NTU.
+* **2023-03**: Haitao comes to Singapore, and starts his research career at SCALE@NTU.
 * **2023-01**: One paper is accepted by ***WWW 2023***.
 * **2022-12**: One paper is accepted by ***VLDB 2023***.
 * **2022-11**: One paper is accepted by ***VLDB 2023***.
@@ -56,11 +56,17 @@ Research Interests
 Selected Awards
 ------
 2022 ACM SIGMOD China Doctoral Dissertation Award
+
 2021 Best Ph.D Thesis of Tsinghua CS
+
 2021 Outstanding Graduate of Beijing
+
 2020 National Scholarship
+
 2020 Innovative Future Scholarship of Tsinghua CS
+
 2019 VMware Scholarship Award
+
 <!-- 24. [Rising Star](https://mp.weixin.qq.com/s/Lecza9L8zgZYDPdKpkP2XA) (云帆奖-明日之星), World AI Conference, 2022.
 23. 🏆 [Best Student Paper Award](https://www2022.thewebconf.org/awards/) of ***WWW 2022*** **(1/1822,  the second WWW Best Student Paper from China)**, 2022
 22. [IVADO Postdoctoral Fellowship](https://ivado.ca/en/research-community/), Canada
