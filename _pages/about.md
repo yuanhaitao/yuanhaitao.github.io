@@ -54,13 +54,13 @@ Work Experience
 ------
 
 * 2022/03-: Researcher Fellow
- * SCALE, NTU
- * Research on spatial and temporal data management and mining
- * Supervisor: [Gao Cong](https://personal.ntu.edu.sg/gaocong/)
+  * SCALE, NTU
+  * Research on spatial and temporal data management and mining
+  * Supervisor: [Gao Cong](https://personal.ntu.edu.sg/gaocong/)
 
 * 2022/09-2022/02: Researcher
- * Digital Research Institute, ENN
- * Research on spatio-temporal data mining in industrial scenarios
+  * Digital Research Institute, ENN
+  * Research on spatio-temporal data mining in industrial scenarios
 
 
 * 2021/07-2022/08: Senior Algorithm Engineer
