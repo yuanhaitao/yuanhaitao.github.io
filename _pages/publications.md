@@ -32,7 +32,7 @@ Yue Han, Guoliang Li, **Haitao Yuan**, Ji Sun. <br>
 
 2.  *Effective Few-Shot Named Entity Linking by Meta-Learning.* <br>
 Xiuxing Li, Zhenyu Li, Zhengyan Zhang, Ning Liu, **Haitao Yuan**, et al. <br>
-***WWW 2023, CCF-A***. 
+***ICDE 2022, CCF-A***. 
 
 3.  *DuETA: Traffic Congestion Propagation Pattern Modeling via Efficient Graph Learning for ETA Prediction at Baidu Maps.* <br>
 Jizhou Huang, Zhengjie Huang,..., **Haitao Yuan**, Haifeng Wang. <br>
@@ -52,25 +52,25 @@ Jizhou Huang, Zhengjie Huang,..., **Haitao Yuan**, Haifeng Wang. <br>
 ====
 1.  *Effective Travel Time Estimation: When Historical Trajectories over Road Networks Matter.* <br>
 **Haitao Yuan**, Guoliang Li, Zhifeng Bao, Ling Feng. <br>
-***SIGMOD, CCF-A***. 
+***SIGMOD 2020, CCF-A***. 
 
 2.  *Automatic View Generation with Deep Learning and Reinforcement Learning.* <br>
 **Haitao Yuan**, Guoliang Li, Ling Feng, Ji Sun, Yue Han. <br>
-***ICDE, CCF-A***. 
+***ICDE 2020, CCF-A***. 
 
 3.  *Coupled Graph Neural Networks for Text-oriented Clinical Diagnosis Inference.* <br>
 Ning Liu, Wei Zhang, Xiuxing Li, **Haitao Yuan**, Jianyong Wang. <br>
-***DASFAA, CCF-B***. 
+***DASFAA 2020, CCF-B***. 
 
 2019
 ====
 1.  *Distributed in-memory trajectory similarity search and join on road network.* <br>
 **Haitao Yuan**, Guoliang Li. <br>
-***ICDE, CCF-A***. 
+***ICDE 2019, CCF-A***. 
 
 2.  *Mathgraph: A knowledge graph for automatically solving mathematical exercises.* <br>
 Tianyu Zhao, ..., **Haitao Yuan**,... <br>
-***DASFAA, CCF-A, Best Paper Award***. 
+***DASFAA 2019, CCF-A, Best Paper Award***. 
 
 <!-- 1.  *Fairness-aware Maximal Biclique Enumeration on Bipartite Graphs.* [To appear] <br>
 Ziqi Yin, Qi Zhang, **Wentao Zhang**, Ronghua Li, Guoren Wang<br>
