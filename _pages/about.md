@@ -13,6 +13,7 @@ Haitao's research focuses on developing innovative technologies that can effecti
 + Developing a scalabl spatio-temporal data storage system
 + Ensuring robust spatio-temporal data curation
 + Creating intelligent spatio-temporal applications
+
 He has published 10+ papers in the top DB/DM conferences and journals (SIGMOD, VLDB, ICDE, WWW, TKDE, etc).
 
 Feel free to catch me if interested to discuss ideas or work together. 😜
