@@ -10,7 +10,7 @@ redirect_from:
 Haitao Yuan is currently a postdoc research fellow working with Prof. [Gao Cong](https://personal.ntu.edu.sg/gaocong/) at [Singtel Cognitive and Artificial Intelligence Lab (SCALE@NTU)](https://www.ntu.edu.sg/scale). Prior to that,  he received his Ph.D. degree in computer science from [Tsinghua University](https://www.tsinghua.edu.cn/) in June 2021, supervised by Prof. [Guoliang Li](https://dbgroup.cs.tsinghua.edu.cn/ligl/index.html) and Prof. [Ling Feng](https://dblp.org/pid/58/4464.html). Furthermore, Haitao is fortunate to enjoy a close academic collaboration with Prof. [Zhifeng Bao](https://baozhifeng.net/). Besides, Haitao has accumulated for 1.5-year industrial experience in the Intelligent Driving Group of [Baidu](http://home.baidu.com/index.html) and the Digital Research Institute of [ENN](https://www.enn.cn/pageshow?pageId=1440505892360679424). 
 
 Haitao's research focuses on developing innovative technologies that can effectively and efficiently utilize spatio-temporal data to benefit people. To achieve this goal, Haitao concentrates on three key research areas: 
-+ Developing a scalabl spatio-temporal data storage system
++ Developing a scalable spatio-temporal data storage system
 + Ensuring robust spatio-temporal data curation
 + Creating intelligent spatio-temporal applications
 
