@@ -39,7 +39,7 @@ Research Interests
 ---
 <!-- + **Data-centric ML**: annotation, augmentation, imbalance, noise, distillation, out-of-distribution, heterogeneity, and privacy. -->
 
-+ **Spatial-temporal Data Managment**: trajectory search, trajectory generation.
++ **Spatio-temporal Data Managment**: trajectory search, trajectory generation.
 + **AI-powered Spatial Database Optimization**: materialized view advisor, learned spatial index.
 + **Time-series Data Mining**: traffic prediction, travel time estimation.
 + **Interdisciplinary Application**: AI4Science (e.g., nuclear fusion, medical diagnosis), and AI4Industry (e.g.,wordload forecasting and anomaly detection).
