@@ -10,14 +10,14 @@ redirect_from:
 Haitao Yuan is currently a postdoc research fellow working with Prof. [Gao Cong](https://personal.ntu.edu.sg/gaocong/) at [Singtel Cognitive and Artificial Intelligence Lab (SCALE@NTU)](https://www.ntu.edu.sg/scale). Prior to that,  he received his Ph.D. degree in computer science from [Tsinghua University](https://www.tsinghua.edu.cn/) in June 2021, supervised by Prof. [Guoliang Li](https://dbgroup.cs.tsinghua.edu.cn/ligl/index.html) and Prof. [Ling Feng](https://dblp.org/pid/58/4464.html). Furthermore, Haitao is fortunate to enjoy a close academic collaboration with Prof. [Zhifeng Bao](https://baozhifeng.net/).
 Besides, Haitao has accumulated for 1.5 year industrial experience in the Intelligent Driving Group of [Baidu](http://home.baidu.com/index.html) and the Digital Research Institute of [ENN](https://www.enn.cn/pageshow?pageId=1440505892360679424). 
 
-Haitao's research focuses on spatial-temporal data management, AI-powered spatial database optimization, and time-series data mining. He has published 10+ papers in the top DB and DM conferences and Journals (SIGMOD, VLDB, ICDE, WWW, TKDE, etc).
+Haitao's research focuses on spatial-temporal data management, AI-powered spatial database optimization, and time-series data mining. He has published 10+ papers in the top DB/DM conferences and journals (SIGMOD, VLDB, ICDE, WWW, TKDE, etc).
 
 Feel free to catch me if interested to discuss ideas or work together. 😜
 
 <!-- Wentao Zhang (张文涛) is a fourth year Ph.D. candidate at [PKU](https://www.pku.edu.cn/), now working with [Prof. Bin Cui](http://net.pku.edu.cn/~cuibin/).
 He previously interned in [HKUST](https://hkust.edu.hk/?cn=1) working with Prof. Lei Chen, [Tencent](https://github.com/Angel-ML/angel) working with the Angel team, and [Apple Research](https://machinelearning.apple.com/) working with Meng Cao, Ping Huang and Danny Bickson. -->
 
-**Email**: yhaitao45@163.com
+**Email**: yhaitao45@163.com / haitao.yuan@ntu.edu.sg
 
 **[Wechat (微信)](https://yuanhaitao.github.io/wechat/)**: 769513564
 
@@ -38,7 +38,7 @@ Research Interests
 + **Spatial-temporal Data Managment**: trajectory search, trajectory generation.
 + **AI-powered Spatial Database Optimization**: materialized view advisor, learned spatial index.
 + **Time-series Data Mining**: traffic prediction, travel time estimation.
-+ **Interdisciplinary Application**: AI4Science (e.g., nuclear fusion, medical diagnosis), and AI4Industry (e.g.,data federated system and anomaly detection).
++ **Interdisciplinary Application**: AI4Science (e.g., nuclear fusion, medical diagnosis), and AI4Industry (e.g.,wordload forecasting and anomaly detection).
 
 
 
