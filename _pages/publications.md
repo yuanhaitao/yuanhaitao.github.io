@@ -6,13 +6,12 @@ author_profile: true
 ---
 {% include base_path %}
 
-<sup>*</sup> indicates equal contribution, 
 <sup>#</sup> indicates corresponding author
 
 2023
 ====
 1.  *Route Travel Time Estimation on A Road Network Revisited:
-Heterogeneity, Proximity, Periodicity and Dynamicity.* [To appear] <br>
+Heterogeneity, Proximity, Periodicity and Dynamicity.* [To appear] [[Paper](https://www.vldb.org/pvldb/vol16/p393-yuan.pdf)][[Code](https://github.com/yuanhaitao/STHR_CODE)] <br>
 **Haitao Yuan**, Guoliang Li, Zhifeng Bao. <br>
 ***VLDB 2023, CCF-A***. 
 
@@ -20,7 +19,7 @@ Heterogeneity, Proximity, Periodicity and Dynamicity.* [To appear] <br>
 Yanan Li, **Haitao Yuan<sup>#</sup>**, et al. <br>
 ***WWW 2023, CCF-A***. 
 
-3.  *A Deep Generative Model for Trajectory Modeling and Utilization.* [To appear] <br>
+3.  *A Deep Generative Model for Trajectory Modeling and Utilization.* [To appear] [[Paper](https://dl.acm.org/doi/abs/10.14778/3574245.3574277)][[Code](https://github.com/wangyong01/MTNet_Code)] <br>
 Yong Wang, Kaiyu Li, Guoliang Li, **Haitao Yuan**. <br>
 ***VLDB 2023, CCF-A***. 
 
