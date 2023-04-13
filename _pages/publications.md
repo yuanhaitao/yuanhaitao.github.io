@@ -23,6 +23,10 @@ Yanan Li, **Haitao Yuan<sup>#</sup>**, Zhe Fu, Xiao Ma, Mengwei Xu, Shangguang W
 Yong Wang, Kaiyu Li, Guoliang Li, **Haitao Yuan**. <br>
 ***VLDB 2023, CCF-A***. 
 
+3.  *Towards Practical Few-shot Federated NLP.* [To appear] [[Paper](https://euromlsys23.hotcrp.com/doc/euromlsys23-final5.pdf)] <br>
+Dongqi Cai, Yaozong Yu, **Haitao Yuan**, Shangguang Wang, Felix Xiaozhu Lin, Mengwei Xu. <br>
+***EuroMLSys 2023***. 
+
 2022
 ====
 1.  *AutoView: An Autonomous Materialized View Management System with Encoder-Reducer.* <br>
