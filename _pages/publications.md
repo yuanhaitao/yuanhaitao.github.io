@@ -15,7 +15,7 @@ Heterogeneity, Proximity, Periodicity and Dynamicity.* [To appear] [[Paper](http
 **Haitao Yuan**, Guoliang Li, Zhifeng Bao. <br>
 ***VLDB 2023, CCF-A***. 
 
-2.  *ELASTIC: Edge Workload Forecasting based on Collaborative Cloud-Edge Deep Learning.* [To appear] <br>
+2.  *ELASTIC: Edge Workload Forecasting based on Collaborative Cloud-Edge Deep Learning.* [To appear] [[Paper](https://xumengwei.github.io/files/WWW23-ELASTIC.pdf)] <br>
 Yanan Li, **Haitao Yuan<sup>#</sup>**, Zhe Fu, Xiao Ma, Mengwei Xu, Shangguang Wang. <br>
 ***WWW 2023, CCF-A***. 
 
