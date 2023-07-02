@@ -25,7 +25,7 @@ He previously interned in [HKUST](https://hkust.edu.hk/?cn=1) working with Prof.
 
 **[Wechat (微信)](https://yuanhaitao.github.io/wechat/)**: 769513564
 
-**Office**: N4 #B3, 50 Nanyang Avenue, Singapore 639798.
+**Office**: N4 #B3a-02, 50 Nanyang Avenue, Singapore 639798.
 
 <!-- **<font color=red>I’m on job market now!</font>**
 
@@ -39,20 +39,20 @@ Research Interests
 ---
 <!-- + **Data-centric ML**: annotation, augmentation, imbalance, noise, distillation, out-of-distribution, heterogeneity, and privacy. -->
 
-+ **Spatio-temporal Data Managment (S&R)**: trajectory search and join, trajectory generation.
++ **Spatio-temporal Data Managment (S&R)**: trajectory search and join, trajectory generation, road network generation.
 + **AI-powered Spatial Database Optimization (S&I)**: materialized view advisor, learned spatial index.
-+ **Time-series Data Mining (I&R)**: traffic prediction, travel time estimation.
-+ **Interdisciplinary Application (I)**: AI4Science (e.g., nuclear fusion, medical diagnosis), and AI4Industry (e.g.,workload forecasting and anomaly detection).
++ **Time-series Data Mining (I&R)**: workload forecasting and anomaly detection.
++ **Interdisciplinary Application (I)**: AI4Transportation (e.g., travel time estimation, traffic prediction) and AI4Science (e.g., medical diagnosis).
 
 
 
 **<font color=red>What's New</font>**
 ------
 * **2023-07**: One paper is accepted by ***VLDB 2023***.
-* **2023-04**: One paper is accepted by ***EuroMLSys 2023***.
+* **2023-04**: One Coauthor paper is accepted by ***EuroMLSys 2023***.
 * **2023-03**: Haitao comes to Singapore, and starts his research career at SCALE@NTU.
 * **2023-01**: One paper is accepted by ***WWW 2023***.
-* **2022-12**: One paper is accepted by ***VLDB 2023***.
+* **2022-12**: One Coauthor paper is accepted by ***VLDB 2023***.
 * **2022-11**: One paper is accepted by ***VLDB 2023***.
 
   
