@@ -6,12 +6,12 @@ author_profile: true
 ---
 {% include base_path %}
 
-<sup>#</sup> indicates corresponding author
+<sup>#</sup> indicates corresponding author, <sup>*</sup> indicates equal contribution.
 
 2023
 ====
 1.  *Automatic Road Extraction with Multi-Source Data Revisited: Completeness, Smoothness and Discrimination* [To appear] [[Code](https://github.com/BubbleSai/DICN)] <br>
-Sai Wang, **Haitao Yuan<sup>#</sup>**, Guoliang Li, Zhifeng Bao. <br>
+Sai Wang<sup>*</sup>, **Haitao Yuan<sup>*</sup><sup>#</sup>**, Zhifeng Bao, Shangguang Wang. <br>
 ***VLDB 2023, CCF-A***. 
 
 2.  *Route Travel Time Estimation on A Road Network Revisited:
