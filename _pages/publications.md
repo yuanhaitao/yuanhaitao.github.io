@@ -31,6 +31,10 @@ Yong Wang, Kaiyu Li, Guoliang Li, **Haitao Yuan**. <br>
 Dongqi Cai, Yaozong Yu, **Haitao Yuan**, Shangguang Wang, Felix Xiaozhu Lin, Mengwei Xu. <br>
 ***EuroMLSys 2023***. 
 
+6.  *An Effective Deep Learning Model for Route Travel Time Estimation on A Road Network* [Invited] [[Paper](http://camps.aptaracorp.com/ACM_PMS/PMS/ACM/ACMTURC23/69/299b2f15-1a90-11ee-b37c-16bb50361d1f/OUT/acmturc23-69.html)] <br>
+**Haitao Yuan** <br>
+***ACM TURC 2023***. 
+
 2022
 ====
 1.  *AutoView: An Autonomous Materialized View Management System with Encoder-Reducer.* <br>
