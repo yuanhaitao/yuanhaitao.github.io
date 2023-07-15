@@ -10,20 +10,24 @@ author_profile: true
 
 2023
 ====
-1.  *Route Travel Time Estimation on A Road Network Revisited:
+1.  *Automatic Road Extraction with Multi-Source Data Revisited: Completeness, Smoothness and Discrimination* [To appear] [[Code](https://github.com/BubbleSai/DICN)] <br>
+Sai Wang, **Haitao Yuan<sup>#</sup>**, Guoliang Li, Zhifeng Bao. <br>
+***VLDB 2023, CCF-A***. 
+
+2.  *Route Travel Time Estimation on A Road Network Revisited:
 Heterogeneity, Proximity, Periodicity and Dynamicity.* [To appear] [[Paper](https://www.vldb.org/pvldb/vol16/p393-yuan.pdf)][[Code](https://github.com/yuanhaitao/STHR_CODE)] <br>
 **Haitao Yuan**, Guoliang Li, Zhifeng Bao. <br>
 ***VLDB 2023, CCF-A***. 
 
-2.  *ELASTIC: Edge Workload Forecasting based on Collaborative Cloud-Edge Deep Learning.* [To appear] [[Paper](https://xumengwei.github.io/files/WWW23-ELASTIC.pdf)] <br>
+3.  *ELASTIC: Edge Workload Forecasting based on Collaborative Cloud-Edge Deep Learning.* [To appear] [[Paper](https://xumengwei.github.io/files/WWW23-ELASTIC.pdf)] <br>
 Yanan Li, **Haitao Yuan<sup>#</sup>**, Zhe Fu, Xiao Ma, Mengwei Xu, Shangguang Wang. <br>
 ***WWW 2023, CCF-A***. 
 
-3.  *A Deep Generative Model for Trajectory Modeling and Utilization.* [To appear] [[Paper](https://dl.acm.org/doi/abs/10.14778/3574245.3574277)][[Code](https://github.com/wangyong01/MTNet_Code)] <br>
+4.  *A Deep Generative Model for Trajectory Modeling and Utilization.* [To appear] [[Paper](https://dl.acm.org/doi/abs/10.14778/3574245.3574277)][[Code](https://github.com/wangyong01/MTNet_Code)] <br>
 Yong Wang, Kaiyu Li, Guoliang Li, **Haitao Yuan**. <br>
 ***VLDB 2023, CCF-A***. 
 
-3.  *Towards Practical Few-shot Federated NLP.* [To appear] [[Paper](https://euromlsys23.hotcrp.com/doc/euromlsys23-final5.pdf)] <br>
+5.  *Towards Practical Few-shot Federated NLP.* [To appear] [[Paper](https://euromlsys23.hotcrp.com/doc/euromlsys23-final5.pdf)] <br>
 Dongqi Cai, Yaozong Yu, **Haitao Yuan**, Shangguang Wang, Felix Xiaozhu Lin, Mengwei Xu. <br>
 ***EuroMLSys 2023***. 
 
