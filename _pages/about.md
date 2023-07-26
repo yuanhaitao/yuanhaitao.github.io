@@ -48,13 +48,13 @@ Research Interests
 
 **<font color=red>What's New</font>**
 ------
-* **2023-07**: One Coauthor paper is accepted by ***IEEE TMC***.
+* **2023-07**: One coauthor paper is accepted by ***IEEE TMC***.
 * **2023-07**: One invited paper is accepted by ***ACM TURC2023***.
 * **2023-07**: One paper is accepted by ***VLDB 2023***.
-* **2023-04**: One Coauthor paper is accepted by ***EuroMLSys 2023***.
+* **2023-04**: One coauthor paper is accepted by ***EuroMLSys 2023***.
 * **2023-03**: Haitao comes to Singapore, and starts his research career at SCALE@NTU.
 * **2023-01**: One paper is accepted by ***WWW 2023***.
-* **2022-12**: One Coauthor paper is accepted by ***VLDB 2023***.
+* **2022-12**: One coauthor paper is accepted by ***VLDB 2023***.
 * **2022-11**: One paper is accepted by ***VLDB 2023***.
 
   
