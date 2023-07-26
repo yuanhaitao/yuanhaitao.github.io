@@ -35,6 +35,10 @@ Dongqi Cai, Yaozong Yu, **Haitao Yuan**, Shangguang Wang, Felix Xiaozhu Lin, Men
 **Haitao Yuan** <br>
 ***ACM TURC 2023***. 
 
+7.  *F3VeTrac: Enabling Fine-grained, Fully-road-covered, and Fully-individual-penetrative Vehicle Trajectory Recovery* <br>
+Zijiang Cao, Dong Zhao, Hanxing Song, **Haitao Yuan**, Qiyue Wang, Huadong Ma <br>
+***IEEE TMC 2023, CCF-A***. 
+
 2022
 ====
 1.  *AutoView: An Autonomous Materialized View Management System with Encoder-Reducer.* <br>
