@@ -8,18 +8,26 @@ author_profile: true
 
 <sup>#</sup> indicates corresponding author, <sup>*</sup> indicates equal contribution.
 
+2024
+====
+1. *Demystifying the QoS and QoE of Edge-hosted Video Streaming Applications in the Wild with SNESet* [To appear] <br>
+Yanan Li, Guangqing Deng, Changming Bai, Jingyu Yang, Gang Wang, Hao Zhang, Jin Bai, **Haitao Yuan<sup>#</sup>**, Mengwei Xu, Shangguang Wang. <br>
+***SIGMOD 2024, CCF-A***. 
+
+
+
 2023
 ====
-1.  *Automatic Road Extraction with Multi-Source Data Revisited: Completeness, Smoothness and Discrimination* [To appear] [[Code](https://github.com/BubbleSai/DICN)] <br>
-Sai Wang<sup>\*</sup>, **Haitao Yuan<sup>\*</sup><sup>#</sup>**, Zhifeng Bao, Shangguang Wang. <br>
+1.  *Automatic Road Extraction with Multi-Source Data Revisited: Completeness, Smoothness and Discrimination.* [[Paper](https://www.vldb.org/pvldb/vol16/p3004-yuan.pdf)][[Code](https://github.com/BubbleSai/DICN)] <br>
+**Haitao Yuan<sup>\*</sup><sup>#</sup>**, Sai Wang<sup>\*</sup>, Zhifeng Bao, Shangguang Wang. <br>
 ***VLDB 2023, CCF-A***. 
 
 2.  *Route Travel Time Estimation on A Road Network Revisited:
-Heterogeneity, Proximity, Periodicity and Dynamicity.* [To appear] [[Paper](https://www.vldb.org/pvldb/vol16/p393-yuan.pdf)][[Code](https://github.com/yuanhaitao/STHR_CODE)] <br>
+Heterogeneity, Proximity, Periodicity and Dynamicity.* [[Paper](https://www.vldb.org/pvldb/vol16/p393-yuan.pdf)][[Code](https://github.com/yuanhaitao/STHR_CODE)] <br>
 **Haitao Yuan**, Guoliang Li, Zhifeng Bao. <br>
 ***VLDB 2023, CCF-A***. 
 
-3.  *ELASTIC: Edge Workload Forecasting based on Collaborative Cloud-Edge Deep Learning.* [To appear] [[Paper](https://xumengwei.github.io/files/WWW23-ELASTIC.pdf)] <br>
+3.  *ELASTIC: Edge Workload Forecasting based on Collaborative Cloud-Edge Deep Learning.* [[Paper](https://xumengwei.github.io/files/WWW23-ELASTIC.pdf)] <br>
 Yanan Li, **Haitao Yuan<sup>#</sup>**, Zhe Fu, Xiao Ma, Mengwei Xu, Shangguang Wang. <br>
 ***WWW 2023, CCF-A***. 
 
