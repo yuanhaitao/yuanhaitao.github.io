@@ -125,9 +125,9 @@ Invited Talks
 I am happy to give a talk if you are interested in my work. 😊  
 
 1. Route Travel Time Estimation on A Road Network Revisited:
-Heterogeneity, Proximity, Periodicity and Dynamicity. PVLDB'23, 2023. 09 [[Video](https://www.bilibili.com/video/BV12z4y1K7QX/?spm_id_from=333.999.list.card_archive.click&vd_source=71ef1a2f4429de71c97aa82e84f03fc2)]  <br> 
+Heterogeneity, Proximity, Periodicity and Dynamicity. PVLDB'23, 2023. 09 [[Slides](https://drive.google.com/file/d/1ofSEwEhsBGwEbys2KRbc8pFL8Cb_Tk6R/view?usp=drive_link)]  <br> 
 
-2. Automatic Road Extraction with Multi-Source Data Revisited: Completeness, Smoothness and Discrimination. PVLDB'23, 2023. 09 [[Video](https://www.bilibili.com/video/BV1Gu4y1y7yM/?spm_id_from=333.999.0.0&vd_source=71ef1a2f4429de71c97aa82e84f03fc2)]  <br> 
+2. Automatic Road Extraction with Multi-Source Data Revisited: Completeness, Smoothness and Discrimination. PVLDB'23, 2023. 09 [[Slides](https://drive.google.com/file/d/14iY0yNe9IWmyHzydNGTPxV43LfSon-e4/view?usp=drive_link)]  <br> 
 
 <!-- 1. Model Degradation Hinders Deep Graph Neural Networks.<br>
   KDD'22, 2022. 08 <br>
