@@ -23,7 +23,7 @@ He previously interned in [HKUST](https://hkust.edu.hk/?cn=1) working with Prof.
 
 **Email**: yhaitao45@163.com / haitao.yuan@ntu.edu.sg
 
-**[Wechat (微信)](https://yuanhaitao.github.io/wechat/)**: 769513564
+<!-- **[Wechat (微信)](https://yuanhaitao.github.io/wechat/)**: 769513564 -->
 
 **Office**: N4 #B3a-02, 50 Nanyang Avenue, Singapore 639798.
 
