@@ -8,7 +8,7 @@ author_profile: true
 
 Honors and Awards
 ------
-2022 ACM SIGMOD China Doctoral Dissertation Award
+2021 ACM SIGMOD China Doctoral Dissertation Award
 
 2021 Best Ph.D Thesis of Tsinghua CS
 
