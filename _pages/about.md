@@ -89,7 +89,7 @@ Work Experience
 
 Selected Awards
 ------
-* 2022 ACM SIGMOD China Doctoral Dissertation Award
+* 2021 ACM SIGMOD China Doctoral Dissertation Award
 * 2021 Best Ph.D Thesis of Tsinghua CS
 * 2021 Outstanding Graduate of Beijing
 * 2020 National Scholarship
