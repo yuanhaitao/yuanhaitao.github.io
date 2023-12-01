@@ -10,11 +10,11 @@ author_profile: true
 
 2024
 ====
-1. *Demystifying the QoS and QoE of Edge-hosted Video Streaming Applications in the Wild with SNESet* [To appear] <br>
+1. *Demystifying the QoS and QoE of Edge-hosted Video Streaming Applications in the Wild with SNESet.* [To appear] <br>
 Yanan Li, Guangqing Deng, Changming Bai, Jingyu Yang, Gang Wang, Hao Zhang, Jin Bai, **Haitao Yuan<sup>#</sup>**, Mengwei Xu, Shangguang Wang. <br>
 ***SIGMOD 2024, CCF-A***. 
 
-2. *GraphRARE: Reinforcement Learning Enhanced Graph Neural Network with Relative Entropy* [To appear] <br>
+2. *GraphRARE: Reinforcement Learning Enhanced Graph Neural Network with Relative Entropy.* [To appear] <br>
 Tianhao Peng, Wenjun Wu, **Haitao Yuan<sup>#</sup>**, Zhifeng Bao, et al. <br>
 ***ICDE 2024, CCF-A***. 
 
@@ -49,6 +49,7 @@ Dongqi Cai, Yaozong Yu, **Haitao Yuan**, Shangguang Wang, Felix Xiaozhu Lin, Men
 Zijian Cao, Dong Zhao, Hanxing Song, **Haitao Yuan**, Qiyue Wang, Huadong Ma. <br>
 ***IEEE TMC 2023, CCF-A***. 
 
+
 2022
 ====
 1.  *AutoView: An Autonomous Materialized View Management System with Encoder-Reducer.* <br>
@@ -62,6 +63,10 @@ Xiuxing Li, Zhenyu Li, Zhengyan Zhang, Ning Liu, **Haitao Yuan**, et al. <br>
 3.  *DuETA: Traffic Congestion Propagation Pattern Modeling via Efficient Graph Learning for ETA Prediction at Baidu Maps.* <br>
 Jizhou Huang, Zhengjie Huang,..., **Haitao Yuan**, Haifeng Wang. <br>
 ***CIKM 2022, CCF-B***. 
+
+4. *Is it fair? Resource allocation for differentiated services on demands.* <br>
+Ran Zhang, Ning Liu, Lei Liu, Wei Zhang, **Haitao Yuan**, Mianxiong Dong, Lizhen Cui. <br>
+***ICWS 2022, CCF-B***. 
 
 2021
 ====
