@@ -14,7 +14,9 @@ author_profile: true
 Yanan Li, Guangqing Deng, Changming Bai, Jingyu Yang, Gang Wang, Hao Zhang, Jin Bai, **Haitao Yuan<sup>#</sup>**, Mengwei Xu, Shangguang Wang. <br>
 ***SIGMOD 2024, CCF-A***. 
 
-
+2. *GraphRARE: Reinforcement Learning Enhanced Graph Neural Network with Relative Entropy* [To appear] <br>
+Tianhao Peng, Wenjun Wu, **Haitao Yuan<sup>#</sup>**, Zhifeng Bao, et al. <br>
+***ICDE 2024, CCF-A***. 
 
 2023
 ====
