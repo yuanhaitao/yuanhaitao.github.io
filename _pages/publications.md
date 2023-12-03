@@ -11,7 +11,7 @@ author_profile: true
 2024
 ====
 1. *Demystifying the QoS and QoE of Edge-hosted Video Streaming Applications in the Wild with SNESet.* [To appear] <br>
-..., **Haitao Yuan<sup>#</sup>**, .... <br>
+..., **Haitao Yuan<sup>#</sup>**, et al. <br>
 ***SIGMOD 2024, CCF-A***. 
 
 2. *GraphRARE: Reinforcement Learning Enhanced Graph Neural Network with Relative Entropy.* [To appear] <br>
