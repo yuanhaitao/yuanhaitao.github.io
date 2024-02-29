@@ -10,28 +10,28 @@ author_profile: true
 
 2024
 ====
-1. *Demystifying the QoS and QoE of Edge-hosted Video Streaming Applications in the Wild with SNESet.* [To appear] <br>
-..., **Haitao Yuan<sup>#</sup>**, et al. <br>
+1. *Demystifying the QoS and QoE of Edge-hosted Video Streaming Applications in the Wild with SNESet.* [[Paper](https://dl.acm.org/doi/10.1145/3626723)][To appear] <br>
+Yanan Li, Guangqing Deng, Changming Bai, Jingyu Yang, Gang Wang, Hao Zhang, Jin Bai, **Haitao Yuan<sup>#</sup>**, Mengwei Xu, Shangguang Wang. <br>
 ***SIGMOD 2024, CCF-A***. 
 
-2. *GraphRARE: Reinforcement Learning Enhanced Graph Neural Network with Relative Entropy.* [To appear] <br>
-..., **Haitao Yuan<sup>#</sup>**, Zhifeng Bao, et al. <br>
+2. *GraphRARE: Reinforcement Learning Enhanced Graph Neural Network with Relative Entropy.* [[Paper](https://arxiv.org/pdf/2312.09708.pdf)][To appear] <br>
+Tianhao Peng, Wenjun Wu, **Haitao Yuan<sup>#</sup>**, Zhifeng Bao, Pengrui Zhao, Xin Yu, Xuetao Lin, Yu liang, Yanjun Pu. <br>
 ***ICDE 2024, CCF-A***. 
 
 2. *Nuhuo: An Effective Estimation Model for Traffic Speed Histogram Imputation on A Road Network.* [To appear] <br>
 **Haitao Yuan**, Gao Cong, Guoliang Li. <br>
-***PVLDB 2024, CCF-A***. 
+***VLDB 2024, CCF-A***. 
 
 2023
 ====
 1.  *Automatic Road Extraction with Multi-Source Data Revisited: Completeness, Smoothness and Discrimination.* [[Paper](https://www.vldb.org/pvldb/vol16/p3004-yuan.pdf)][[Code](https://github.com/BubbleSai/DICN)] <br>
-**Haitao Yuan<sup>\*</sup><sup>#</sup>**, Sai Wang<sup>\*</sup>, Zhifeng Bao, Shangguang Wang. <br>
-***PVLDB 2023, CCF-A***. 
+**Haitao Yuan**, Sai Wang, Zhifeng Bao, Shangguang Wang. <br>
+***VLDB 2023, CCF-A***. 
 
 2.  *Route Travel Time Estimation on A Road Network Revisited:
 Heterogeneity, Proximity, Periodicity and Dynamicity.* [[Paper](https://www.vldb.org/pvldb/vol16/p393-yuan.pdf)][[Code](https://github.com/yuanhaitao/STHR_CODE)] <br>
 **Haitao Yuan**, Guoliang Li, Zhifeng Bao. <br>
-***PVLDB 2023, CCF-A***. 
+***VLDB 2023, CCF-A***. 
 
 3.  *ELASTIC: Edge Workload Forecasting based on Collaborative Cloud-Edge Deep Learning.* [[Paper](https://xumengwei.github.io/files/WWW23-ELASTIC.pdf)] <br>
 Yanan Li, **Haitao Yuan<sup>#</sup>**, Zhe Fu, Xiao Ma, Mengwei Xu, Shangguang Wang. <br>
@@ -39,7 +39,7 @@ Yanan Li, **Haitao Yuan<sup>#</sup>**, Zhe Fu, Xiao Ma, Mengwei Xu, Shangguang W
 
 4.  *A Deep Generative Model for Trajectory Modeling and Utilization.* [To appear] [[Paper](https://dl.acm.org/doi/abs/10.14778/3574245.3574277)][[Code](https://github.com/wangyong01/MTNet_Code)] <br>
 Yong Wang, Kaiyu Li, Guoliang Li, **Haitao Yuan**. <br>
-***PVLDB 2023, CCF-A***. 
+***VLDB 2023, CCF-A***. 
 
 5.  *Towards Practical Few-shot Federated NLP.* [To appear] [[Paper](https://euromlsys23.hotcrp.com/doc/euromlsys23-final5.pdf)] <br>
 Dongqi Cai, Yaozong Yu, **Haitao Yuan**, Shangguang Wang, Felix Xiaozhu Lin, Mengwei Xu. <br>
