@@ -28,8 +28,7 @@ Tianhao Peng, Wenjun Wu, **Haitao Yuan<sup>#</sup>**, Zhifeng Bao, Pengrui Zhao,
 **Haitao Yuan**, Sai Wang, Zhifeng Bao, Shangguang Wang. <br>
 ***VLDB 2023, CCF-A***. 
 
-2.  *Route Travel Time Estimation on A Road Network Revisited:
-Heterogeneity, Proximity, Periodicity and Dynamicity.* [[Paper](https://www.vldb.org/pvldb/vol16/p393-yuan.pdf)][[Code](https://github.com/yuanhaitao/STHR_CODE)] <br>
+2.  *Route Travel Time Estimation on A Road Network Revisited: Heterogeneity, Proximity, Periodicity and Dynamicity.* [[Paper](https://www.vldb.org/pvldb/vol16/p393-yuan.pdf)][[Code](https://github.com/yuanhaitao/STHR_CODE)] <br>
 **Haitao Yuan**, Guoliang Li, Zhifeng Bao. <br>
 ***VLDB 2023, CCF-A***. 
 
@@ -61,11 +60,11 @@ Yue Han, Guoliang Li, **Haitao Yuan**, Ji Sun. <br>
 ***TKDE 2022, CCF-A***. 
 
 2.  *Effective Few-Shot Named Entity Linking by Meta-Learning.* <br>
-Xiuxing Li, Zhenyu Li, Zhengyan Zhang, Ning Liu, **Haitao Yuan**, et al. <br>
+Xiuxing Li, Zhenyu Li, Zhengyan Zhang, Ning Liu, **Haitao Yuan**, Wei Zhang, Zhiyuan Liu, Jianyong Wang. <br>
 ***ICDE 2022, CCF-A***. 
 
 3.  *DuETA: Traffic Congestion Propagation Pattern Modeling via Efficient Graph Learning for ETA Prediction at Baidu Maps.* <br>
-Jizhou Huang, Zhengjie Huang,..., **Haitao Yuan**, Haifeng Wang. <br>
+Jizhou Huang, Zhengjie Huang, Xiaomin Fang, Shikun Feng, Xuyi Chen, Jiaxiang Liu, **Haitao Yuan**, Haifeng Wang. <br>
 ***CIKM 2022, CCF-B***. 
 
 4. *Is it fair? Resource allocation for differentiated services on demands.* <br>
@@ -103,8 +102,17 @@ Ning Liu, Wei Zhang, Xiuxing Li, **Haitao Yuan**, Jianyong Wang. <br>
 ***ICDE 2019, CCF-A***. 
 
 2.  *Mathgraph: A knowledge graph for automatically solving mathematical exercises.* <br>
-Tianyu Zhao, ..., **Haitao Yuan**,... <br>
+Tianyu Zhao, Yan Huang, Songfan Yang, Yuyu Luo, Jianhua Feng, Yong Wang, **Haitao Yuan**, Kang Pan, Kaiyu Li, Haoda Li, Fu Zhu. <br>
 ***DASFAA 2019, CCF-B, Best Paper Award***. 
+
+3.  *Towards Automatic Mathematical Exercise Solving.* <br>
+Tianyu Zhao, Chengliang Chai, Yuyu Luo, Jianhua Feng, Yan Huang, Songfan Yang, **Haitao Yuan**, Haoda Li, Kaiyu Li, Fu Zhu, Kang Pan. <br>
+***DSE, CCF-C***. 
+
+4.  *Towards Automatic Mathematical Exercise Solving.* (Demo) <br>
+Haoda Li, Guoliang Li, Jiayang Liu, **Haitao Yuan**, Haiquan Wang. <br>
+***SIGMOD 2019 CCF-A***. 
+
 
 <!-- 1.  *Fairness-aware Maximal Biclique Enumeration on Bipartite Graphs.* [To appear] <br>
 Ziqi Yin, Qi Zhang, **Wentao Zhang**, Ronghua Li, Guoren Wang<br>
