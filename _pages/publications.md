@@ -18,9 +18,21 @@ Yanan Li, Guangqing Deng, Changming Bai, Jingyu Yang, Gang Wang, Hao Zhang, Jin 
 Tianhao Peng, Wenjun Wu, **Haitao Yuan<sup>#</sup>**, Zhifeng Bao, Pengrui Zhao, Xin Yu, Xuetao Lin, Yu liang, Yanjun Pu. <br>
 ***ICDE 2024, CCF-A***. 
 
-2. *Nuhuo: An Effective Estimation Model for Traffic Speed Histogram Imputation on A Road Network.* [To appear] <br>
+3. *Nuhuo: An Effective Estimation Model for Traffic Speed Histogram Imputation on A Road Network.* [To appear] <br>
 **Haitao Yuan**, Gao Cong, Guoliang Li. <br>
 ***VLDB 2024, CCF-A***. 
+
+4. *ELAKT: Enhancing Locality for Attentive Knowledge Tracing.* [To appear] <br>
+Yanjun Pu, Fang Liu, Rongye Shi, **Haitao Yuan<sup>#</sup>**, Ruibo Chen, Tianhao Peng, Wenjun Wu. <br>
+***TOIS, CCF-A***. 
+
+5. *Towards Effective Next POI Prediction: Spatial and Semantic Augmentation with Remote Sensing Data.* [To appear] <br>
+Nan Jiang, **Haitao Yuan<sup>#</sup>**, Jianing Si, Minxiao Chen, Shangguang Wang. <br>
+***ICDE 2024, CCF-A***. 
+
+6. *STMGF: An Effective Spatial-Temporal Multi-Granularity Framework for Traffic Forecasting.* [To appear] <br>
+Zhengyang Zhao, **Haitao Yuan<sup>#</sup>**, Nan Jiang, Minxiao Chen, Ning Liu, Zengxiang Li. <br>
+***DASFAA 2024, CCF-B***. 
 
 2023
 ====

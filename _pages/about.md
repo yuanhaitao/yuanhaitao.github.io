@@ -50,12 +50,15 @@ Research Interests
 
 **<font color=red>What's New</font>**
 ------
-* **2024-02**: One paper is accepted by ***VLDB 2024***.
-* **2023-12**: One paper is accepted by ***ICDE 2024***.
+* **2024-03**: One research paper is accepted by ***DASFAA 2024***.
+* **2024-03**: One research paper is accepted by ***ICDE 2024***.
+* **2024-03**: One research paper is accepted by ***TOIS***.
+* **2024-02**: One research paper is accepted by ***VLDB 2024***.
+* **2023-12**: One research paper is accepted by ***ICDE 2024***.
 * **2023-08**: One DIA paper is accepted by ***SIGMOD 2024***.
-* **2023-07**: One coauthor paper is accepted by ***IEEE TMC***.
+* **2023-07**: One coauthor research paper is accepted by ***IEEE TMC***.
 * **2023-07**: One invited paper is accepted by ***ACM TURC2023***.
-* **2023-07**: One paper is accepted by ***VLDB 2023***.
+* **2023-07**: One research paper is accepted by ***VLDB 2023***.
 <!-- * **2023-04**: One coauthor paper is accepted by ***EuroMLSys 2023***. -->
 <!-- * **2023-03**: Haitao comes to Singapore, and starts his research career at SCALE@NTU. -->
 <!-- * **2023-01**: One paper is accepted by ***WWW 2023***.-->
