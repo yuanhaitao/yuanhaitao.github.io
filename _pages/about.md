@@ -7,16 +7,16 @@ redirect_from:
   - /about/
   - /about.html
 ---
-Haitao Yuan (袁海涛 in Chinese) is currently a postdoc research fellow working with Prof. [Gao Cong](https://personal.ntu.edu.sg/gaocong/) at [Singtel Cognitive and Artificial Intelligence Lab for Enterprises(SCALE@NTU)](https://www.ntu.edu.sg/scale). Prior to that,  he received his Ph.D. degree in computer science from [Tsinghua University](https://www.tsinghua.edu.cn/), supervised by Prof. [Guoliang Li](https://dbgroup.cs.tsinghua.edu.cn/ligl/index.html) and Prof. [Ling Feng](https://dblp.org/pid/58/4464.html). Furthermore, Haitao is fortunate to enjoy a close academic collaboration with Prof. [Zhifeng Bao](https://baozhifeng.net/). 
+Haitao Yuan (袁海涛 in Chinese) is currently a research fellow working with Prof. [Gao Cong](https://personal.ntu.edu.sg/gaocong/) at [College of Computing and Data Science, NTU](https://www.ntu.edu.sg/computing). Prior to that,  he received his Ph.D. degree in computer science from [Tsinghua University](https://www.tsinghua.edu.cn/), supervised by Prof. [Guoliang Li](https://dbgroup.cs.tsinghua.edu.cn/ligl/index.html) and Prof. [Ling Feng](https://dblp.org/pid/58/4464.html). Furthermore, Haitao is fortunate to enjoy a close academic collaboration with Prof. [Zhifeng Bao](https://baozhifeng.net/). 
 
 <!-- Besides, Haitao has accumulated for 1.5-year industrial experience in the Intelligent Driving Group of [Baidu](http://home.baidu.com/index.html) and the Digital Research Institute of [ENN](https://www.enn.cn/pageshow?pageId=1440505892360679424).  -->
 
-Haitao's research focuses on developing innovative technologies that can effectively and efficiently utilize spatio-temporal data to benefit people. To achieve this goal, Haitao concentrates on three key research areas (**SIR**): 
-+ Developing **S**calable spatio-temporal data storage systems
-+ Creating **I**ntelligent spatio-temporal applications
-+ Ensuring **R**obust spatio-temporal data curation
+Haitao's research focuses on developing innovative technologies that can effectively and efficiently utilize A(AI) and B(Big Data) to benefit people. To achieve this goal, Haitao concentrates on three key research areas (**SIR**): 
++ Building **S**calable data storage systems
++ Creating **I**ntelligent mobile applications
++ Developing **R**obust algorithms and models
 
-He has published 10+ papers in the top DB/DM conferences and journals (SIGMOD, VLDB, ICDE, WWW, TKDE, etc).
+He has published 20+ papers in the top DB/DM conferences and journals (SIGMOD, VLDB, ICDE, WWW, TKDE, etc).
 
 Feel free to catch me if interested to discuss ideas or work together. 😜
 
@@ -42,7 +42,7 @@ Research Interests
 <!-- + **Data-centric ML**: annotation, augmentation, imbalance, noise, distillation, out-of-distribution, heterogeneity, and privacy. -->
 
 + **Spatio-temporal Data Managment (S&R)**: trajectory search and join, trajectory generation, road network generation.
-+ **AI-powered Spatial Database Optimization (S&I)**: materialized view advisor, learned spatial index.
++ **AI-powered Database Optimization (S&I)**: materialized view advisor, query optimization.
 + **Time-series Data Mining (I&R)**: workload forecasting and anomaly detection.
 + **Interdisciplinary Application (I)**: AI4Transportation (e.g., travel time estimation, traffic prediction) and AI4Science (e.g., medical diagnosis).
 
@@ -54,11 +54,11 @@ Research Interests
 * **2024-03**: One research paper is accepted by ***ICDE 2024***.
 * **2024-03**: One research paper is accepted by ***TOIS***.
 * **2024-02**: One research paper is accepted by ***VLDB 2024***.
-* **2023-12**: One research paper is accepted by ***ICDE 2024***.
+<!-- * **2023-12**: One research paper is accepted by ***ICDE 2024***.
 * **2023-08**: One DIA paper is accepted by ***SIGMOD 2024***.
 * **2023-07**: One coauthor research paper is accepted by ***IEEE TMC***.
 * **2023-07**: One invited paper is accepted by ***ACM TURC2023***.
-* **2023-07**: One research paper is accepted by ***VLDB 2023***.
+* **2023-07**: One research paper is accepted by ***VLDB 2023***. -->
 <!-- * **2023-04**: One coauthor paper is accepted by ***EuroMLSys 2023***. -->
 <!-- * **2023-03**: Haitao comes to Singapore, and starts his research career at SCALE@NTU. -->
 <!-- * **2023-01**: One paper is accepted by ***WWW 2023***.-->
