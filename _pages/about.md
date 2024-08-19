@@ -50,7 +50,7 @@ Research Interests
 
 **<font color=red>What's New</font>**
 ------
-* **2024-08**: One research paper is accepted by ***PVLDB 2024***.
+* **2024-08**: One research paper is accepted by ***PVLDB 2025***.
 <!-- * **2024-03**: One research paper is accepted by ***DASFAA 2024***. -->
 * **2024-03**: One research paper is accepted by ***ICDE 2024***.
 <!-- * **2024-03**: One research paper is accepted by ***TOIS***. -->
