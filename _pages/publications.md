@@ -8,21 +8,27 @@ author_profile: true
 
 <sup>#</sup> indicates corresponding author, <sup>*</sup> indicates equal contribution.
 
+2025
+====
+1. *LLM-R2: A Large Language Model Enhanced Rule-based Rewrite System for Boosting Query Efficiency.* [To appear] <br>
+Zhaodonghui Li, **Haitao Yuan<sup>#</sup>**, Huiming Wang, Gao Cong, Lidong Bing <br>
+***VLDB 2025, CCF-A***. 
+
 2024
 ====
-1. *Demystifying the QoS and QoE of Edge-hosted Video Streaming Applications in the Wild with SNESet.* [[Paper](https://dl.acm.org/doi/10.1145/3626723)][To appear] <br>
+1. *Demystifying the QoS and QoE of Edge-hosted Video Streaming Applications in the Wild with SNESet.* [[Paper](https://dl.acm.org/doi/10.1145/3626723)] <br>
 Yanan Li, Guangqing Deng<sup>#</sup>, Changming Bai, Jingyu Yang, Gang Wang, Hao Zhang, Jin Bai, **Haitao Yuan<sup>#</sup>**, Mengwei Xu, Shangguang Wang. <br>
 ***SIGMOD 2024, CCF-A***. 
 
-2. *GraphRARE: Reinforcement Learning Enhanced Graph Neural Network with Relative Entropy.* [[Paper](https://arxiv.org/pdf/2312.09708.pdf)][To appear] <br>
+2. *GraphRARE: Reinforcement Learning Enhanced Graph Neural Network with Relative Entropy.* [[Paper](https://arxiv.org/pdf/2312.09708.pdf)] <br>
 Tianhao Peng, Wenjun Wu<sup>#</sup>, **Haitao Yuan<sup>#</sup>**, Zhifeng Bao, Pengrui Zhao, Xin Yu, Xuetao Lin, Yu liang, Yanjun Pu. <br>
 ***ICDE 2024, CCF-A***. 
 
-3. *Nuhuo: An Effective Estimation Model for Traffic Speed Histogram Imputation on A Road Network.* [To appear] <br>
+3. *Nuhuo: An Effective Estimation Model for Traffic Speed Histogram Imputation on A Road Network.* [[Paper](https://www.vldb.org/pvldb/vol17/p1605-yuan.pdf)][[Code](https://github.com/yuanhaitao/Nuhuo)] <br>
 **Haitao Yuan**, Gao Cong, Guoliang Li. <br>
 ***VLDB 2024, CCF-A***. 
 
-4. *Towards Effective Next POI Prediction: Spatial and Semantic Augmentation with Remote Sensing Data.* [To appear] <br>
+4. *Towards Effective Next POI Prediction: Spatial and Semantic Augmentation with Remote Sensing Data.* [[Paper](https://arxiv.org/pdf/2404.04271)] <br>
 Nan Jiang, **Haitao Yuan<sup>#</sup>**, Jianing Si, Minxiao Chen, Shangguang Wang. <br>
 ***ICDE 2024, CCF-A***. 
 
