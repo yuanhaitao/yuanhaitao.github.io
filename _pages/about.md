@@ -11,12 +11,12 @@ Haitao Yuan (袁海涛 in Chinese) is currently a research fellow working with P
 
 <!-- Besides, Haitao has accumulated for 1.5-year industrial experience in the Intelligent Driving Group of [Baidu](http://home.baidu.com/index.html) and the Digital Research Institute of [ENN](https://www.enn.cn/pageshow?pageId=1440505892360679424).  -->
 
-Haitao's research focuses on developing innovative technologies that can effectively and efficiently utilize A(AI) and B(Big Data) to benefit people. To achieve this goal, Haitao concentrates on three key research areas (**SIR**): 
-+ Building **S**calable data storage systems
-+ Creating **I**ntelligent mobile applications
-+ Developing **R**obust algorithms and models
+Haitao's research focuses on developing innovative technologies that can effectively and efficiently utilize AI (e.g., LLM, GNN, RL) and Big Data (e.g., tabular, text, image and spatio-temporal data) to benefit people in areas such as transportation, healthcare, education, and more. To achieve this goal, Haitao concentrates on three key research areas (**SIR**): 
++ Building **S**calable multi-modal data storage and retrirval systems
++ Creating **I**ntelligent data manipulation and management agents
++ Developing **R**obust prediction and decision models for real-world applications
 
-He has published 20+ papers in the top DB/DM conferences and journals (SIGMOD, VLDB, ICDE, WWW, TKDE, etc).
+He has published 30+ papers in the top DB/DM conferences and journals (SIGMOD, VLDB, ICDE, WWW, TKDE, etc).
 
 Feel free to catch me if interested to discuss ideas or work together. 😜
 
