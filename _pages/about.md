@@ -134,14 +134,17 @@ Invited Talks
 ------
 I am happy to give a talk if you are interested in my work. 😊  
 
-1. Route Travel Time Estimation on A Road Network Revisited:
+- Nuhuo: An Effective Estimation Model for Traffic Speed Histogram Imputation on A Road Network. PVLDB'24, 2024. 08 [[Slides](https://drive.google.com/file/d/1XiT5aIBW5tBQKSB6KAiAXMAzMha95y80/view?usp=drive_link)]  <br> 
+
+
+- Route Travel Time Estimation on A Road Network Revisited:
 Heterogeneity, Proximity, Periodicity and Dynamicity. PVLDB'23, 2023. 09 [[Slides](https://drive.google.com/file/d/1ofSEwEhsBGwEbys2KRbc8pFL8Cb_Tk6R/view?usp=drive_link)]  <br> 
 
-2. Automatic Road Extraction with Multi-Source Data Revisited: Completeness, Smoothness and Discrimination. PVLDB'23, 2023. 09 [[Slides](https://drive.google.com/file/d/14iY0yNe9IWmyHzydNGTPxV43LfSon-e4/view?usp=drive_link)]  <br> 
+- Automatic Road Extraction with Multi-Source Data Revisited: Completeness, Smoothness and Discrimination. PVLDB'23, 2023. 09 [[Slides](https://drive.google.com/file/d/14iY0yNe9IWmyHzydNGTPxV43LfSon-e4/view?usp=drive_link)]  <br> 
 
-3. Deep Learnig for ETA Application on Baidu Map. Beijing University of Posts and Telecommunications. 2022. 05. <br>
+- Deep Learnig for ETA Application on Baidu Map. Beijing University of Posts and Telecommunications. 2022. 05. <br>
 
-4. Big Spatio-temporal Trajectory Data Management and Mining (In Chinese). Renmin University of China, 2022. 01 <br>
+- Big Spatio-temporal Trajectory Data Management and Mining (In Chinese). Renmin University of China, 2022. 01 <br>
 
 
 <!-- 1. Model Degradation Hinders Deep Graph Neural Networks.<br>
