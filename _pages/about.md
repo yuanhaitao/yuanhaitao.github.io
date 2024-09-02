@@ -14,7 +14,7 @@ Haitao Yuan (袁海涛 in Chinese) is currently a research fellow working with P
 Haitao's research focuses on developing innovative database technologies that can effectively and efficiently utilize Big Data (e.g., tabular, text, image, and spatio-temporal data) and AI Models (e.g., LLM, GNN, and RL) to benefit people in areas such as transportation, healthcare, education, and more. To achieve this goal, Haitao concentrates on three key research areas (**SIR**): 
 + Building **S**calable multi-modal data management and retrirval systems
 + Creating **I**ntelligent data manipulation and preparation pipelines
-+ Developing **R**obust decision strategies with data prediction for real-world applications
++ Developing **R**obust data prediction models and decision strategies for real-world applications
 
 He has published 30+ papers in the top DB/DM conferences and journals (SIGMOD, VLDB, ICDE, WWW, TKDE, CIKM, etc).
 
