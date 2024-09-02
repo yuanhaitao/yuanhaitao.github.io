@@ -12,8 +12,8 @@ Haitao Yuan (袁海涛 in Chinese) is currently a research fellow working with P
 <!-- Besides, Haitao has accumulated for 1.5-year industrial experience in the Intelligent Driving Group of [Baidu](http://home.baidu.com/index.html) and the Digital Research Institute of [ENN](https://www.enn.cn/pageshow?pageId=1440505892360679424).  -->
 
 Haitao's research focuses on developing innovative technologies that can effectively and efficiently utilize AI (e.g., LLM, GNN, RL) and Big Data (e.g., tabular, text, image and spatio-temporal data) to benefit people in areas such as transportation, healthcare, education, and more. To achieve this goal, Haitao concentrates on three key research areas (**SIR**): 
-+ Building **S**calable multi-modal data storage and retrirval systems
-+ Creating **I**ntelligent data manipulation and management agents
++ Building **S**calable multi-modal data management and retrirval systems
++ Creating **I**ntelligent data manipulation and preparation agents
 + Developing **R**obust prediction and decision models for real-world applications
 
 He has published 30+ papers in the top DB/DM conferences and journals (SIGMOD, VLDB, ICDE, WWW, TKDE, CIKM, etc).
@@ -41,10 +41,10 @@ Research Interests
 ---
 <!-- + **Data-centric ML**: annotation, augmentation, imbalance, noise, distillation, out-of-distribution, heterogeneity, and privacy. -->
 
-+ **Spatio-temporal Data Managment (S)**: trajectory search and join, trajectory generation, road network generation.
-+ **AI-powered Database Optimization (I)**: materialized view advisor, query optimization.
++ **Spatio-temporal Data Processing (S&I)**: trajectory search and join, trajectory generation, road network generation.
++ **AI-powered Database Optimization (S)**: materialized view advisor, query optimization.
++ **Interdisciplinary Application (I&R)**: AI4Transportation (e.g., travel time estimation, traffic prediction) and AI4Science (e.g., medical diagnosis).
 + **Retrival-augmented Generation(S&I)**: multi-modal RAG, vector database.
-+ **Interdisciplinary Application (R)**: AI4Transportation (e.g., travel time estimation, traffic prediction) and AI4Science (e.g., medical diagnosis).
 
 
 
