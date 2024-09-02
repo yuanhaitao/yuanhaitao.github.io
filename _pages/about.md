@@ -41,9 +41,9 @@ Research Interests
 ---
 <!-- + **Data-centric ML**: annotation, augmentation, imbalance, noise, distillation, out-of-distribution, heterogeneity, and privacy. -->
 
-+ **Spatio-temporal Data Processing (S&I)**: trajectory search and join, trajectory generation, road network generation.
-+ **AI-powered Database Optimization (S)**: materialized view advisor, query optimization.
-+ **Interdisciplinary Application (I&R)**: AI4Transportation (e.g., travel time estimation, traffic prediction) and AI4Science (e.g., medical diagnosis).
++ **Spatio-temporal Data Processing (S&I)**: trajectory search and join, trajectory generation, road network generation, traffic imputation.
++ **AI-powered Database Optimization (S)**: materialized view advisor, query rewrite, index advisor.
++ **Interdisciplinary Application (I&R)**: AI4Transportation (e.g., travel time estimation, traffic prediction), AI4Science (e.g., medical diagnosis) and AI4Education (e.g., mathematical exercise solver, knowledge tracing).
 + **Retrival-augmented Generation(S&I)**: multi-modal RAG, vector database.
 
 
