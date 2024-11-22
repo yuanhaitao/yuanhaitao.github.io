@@ -43,7 +43,7 @@ Research Interests
 
 + **Spatio-temporal Data Preparation and Management (S&I)**: trajectory search and join, trajectory generation, road network generation, traffic imputation.
 + **AI-powered Database Optimization (S&P)**: materialized view advisor, query rewrite, index advisor.
-+ **Interdisciplinary Application (I&P)**: AI4Transportation (e.g., travel time estimation, traffic prediction, POI recommendation), AI4Biomedicine (e.g., medical diagnosis, molecular prediction) and AI4Education (e.g., mathematical exercise solver, knowledge tracing).
++ **Interdisciplinary Application (I&P)**: AI4Transportation (e.g., travel time estimation, traffic prediction, POI recommendation), AI4Healthcare (e.g., medical diagnosis, molecular prediction) and AI4Education (e.g., mathematical exercise solver, knowledge tracing).
 + **Retrival-augmented Generation(S&P)**: multi-modal RAG, vector database.
 
 
