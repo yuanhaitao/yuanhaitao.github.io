@@ -11,10 +11,10 @@ Haitao Yuan (袁海涛 in Chinese) is currently a research fellow working with P
 
 <!-- Besides, Haitao has accumulated for 1.5-year industrial experience in the Intelligent Driving Group of [Baidu](http://home.baidu.com/index.html) and the Digital Research Institute of [ENN](https://www.enn.cn/pageshow?pageId=1440505892360679424).  -->
 
-Haitao's research focuses on developing innovative database technologies that can effectively and efficiently utilize Big Data (e.g., tabular, text, image, and spatio-temporal data) and AI Models (e.g., LLM, GNN, and RL) to benefit people in areas such as transportation, healthcare, education, and more. To achieve this goal, Haitao concentrates on three key research areas (**SIR**): 
+Haitao's research focuses on developing innovative database and machine learning technologies that can effectively and efficiently utilize Big Data (e.g., spatio-temporal, tabular, text, and image data) to benefit people in areas such as transportation, healthcare, education, and more. To achieve this goal, Haitao concentrates on three key research areas (**SIP**): 
 + Building **S**calable multi-modal data management and retrirval systems
 + Creating **I**ntelligent data manipulation and preparation pipelines
-+ Developing **R**obust data prediction models and decision strategies for real-world applications
++ Developing **P**ractical models and algorithms for real-world applications
 
 He has published 30+ papers in the top DB/DM conferences and journals (SIGMOD, VLDB, ICDE, WWW, TKDE, CIKM, etc).
 
@@ -42,9 +42,9 @@ Research Interests
 <!-- + **Data-centric ML**: annotation, augmentation, imbalance, noise, distillation, out-of-distribution, heterogeneity, and privacy. -->
 
 + **Spatio-temporal Data Preparation and Management (S&I)**: trajectory search and join, trajectory generation, road network generation, traffic imputation.
-+ **AI-powered Database Optimization (S)**: materialized view advisor, query rewrite, index advisor.
-+ **Interdisciplinary Application (I&R)**: AI4Transportation (e.g., travel time estimation, traffic prediction), AI4Science (e.g., medical diagnosis) and AI4Education (e.g., mathematical exercise solver, knowledge tracing).
-+ **Retrival-augmented Generation(S&I)**: multi-modal RAG, vector database.
++ **AI-powered Database Optimization (S&P)**: materialized view advisor, query rewrite, index advisor.
++ **Interdisciplinary Application (I&P)**: AI4Transportation (e.g., travel time estimation, traffic prediction, POI recommendation), AI4Biomedicine (e.g., medical diagnosis, molecular prediction) and AI4Education (e.g., mathematical exercise solver, knowledge tracing).
++ **Retrival-augmented Generation(S&P)**: multi-modal RAG, vector database.
 
 
 
