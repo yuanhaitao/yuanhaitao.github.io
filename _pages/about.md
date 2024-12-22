@@ -23,7 +23,7 @@ Feel free to catch me if interested to discuss ideas or work together. 😜
 <!-- Wentao Zhang (张文涛) is a fourth year Ph.D. candidate at [PKU](https://www.pku.edu.cn/), now working with [Prof. Bin Cui](http://net.pku.edu.cn/~cuibin/).
 He previously interned in [HKUST](https://hkust.edu.hk/?cn=1) working with Prof. Lei Chen, [Tencent](https://github.com/Angel-ML/angel) working with the Angel team, and [Apple Research](https://machinelearning.apple.com/) working with Meng Cao, Ping Huang and Danny Bickson. -->
 
-**Email**: yhaitao45@163.com / haitao.yuan@ntu.edu.sg
+**Email**: {first_name}.{last_name}@ntu.edu.sg (first_name is haitao, last_name is yuan)
 
 <!-- **[Wechat (微信)](https://yuanhaitao.github.io/wechat/)**: 769513564 -->
 
