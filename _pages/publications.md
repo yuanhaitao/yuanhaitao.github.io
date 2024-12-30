@@ -14,7 +14,7 @@ author_profile: true
 1. *LLM-R2: A Large Language Model Enhanced Rule-based Rewrite System for Boosting Query Efficiency.* [[Paper](https://arxiv.org/pdf/2404.12872)][[Code](https://github.com/DAMO-NLP-SG/LLM-R2)] <br> Zhaodonghui Li, **Haitao Yuan<sup>#</sup>**, Huiming Wang, Gao Cong, Lidong Bing <br> ***VLDB 2025, CCF-A***. 
 <br>
 
-1. *Effective AOI-level Parcel Volume Prediction: When Lookahead Parcels Matter.* [To appear] <br> Yingfeng Xiang, Jiangyi Fang, Chao Li<sup>#</sup>, **Haitao Yuan<sup>#</sup>**, Yiwei Song, Jiming Chen <br> ***SIGKDD 2025, CCF-A***.
+1. *Effective AOI-level Parcel Volume Prediction: When Lookahead Parcels Matter.* [To appear] <br> Yingfeng Xiang, Jiangyi Fang, Chao Li<sup>#</sup>, **Haitao Yuan<sup>#</sup>**, Yiwei Song, Jiming Chen <br> ***SIGKDD 2025, CCF-A, ADS Track***.
 <br>
 
 1. *MAST: Towards Efficient Analytical Query Processing on Point Cloud Data.* [To appear] <br> Jiangneng Li, **Haitao Yuan**, Gao Cong, Han Mao Kiah, Shuhao Zhang<br> ***SIGMOD 2025, CCF-A***. 
