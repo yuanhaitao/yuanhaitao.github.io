@@ -7,7 +7,7 @@ author_profile: true
 {% include base_path %}
 
 <sup>#</sup> indicates corresponding author, <sup>*</sup> indicates equal contribution.
-<small>*Remark.* I strive to open-source every project I have led whenever possible. However, due to certain objective reasons (e.g., corporate policies or patent requirements), some work remains unavailable for open sourcing.</small>
+<small>*Remark:* I strive to open-source every project I have led whenever possible. However, due to certain objective reasons (e.g., corporate policies or patent requirements), some work remains unavailable for open sourcing.</small>
 
 
 
