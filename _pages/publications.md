@@ -7,6 +7,8 @@ author_profile: true
 {% include base_path %}
 
 <sup>#</sup> indicates corresponding author, <sup>*</sup> indicates equal contribution.
+<small>*Remark.* I strive to open-source every project I have led whenever possible. However, due to certain objective reasons (e.g., corporate policies or patent requirements), some work remains unavailable for open sourcing.</small>
+
 
 
 1. *LLM-R2: A Large Language Model Enhanced Rule-based Rewrite System for Boosting Query Efficiency.* [[Paper](https://arxiv.org/pdf/2404.12872)][[Code](https://github.com/DAMO-NLP-SG/LLM-R2)] <br> Zhaodonghui Li, **Haitao Yuan<sup>#</sup>**, Huiming Wang, Gao Cong, Lidong Bing <br> ***VLDB 2025, CCF-A***. 
