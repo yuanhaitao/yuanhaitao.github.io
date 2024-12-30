@@ -50,6 +50,7 @@ Research Interests
 
 **<font color=red>What's New</font>**
 ------
+* **2024-11**: One ADS paper is accepted by ***SIGKDD 2025***.
 * **2024-11**: One research paper is accepted by ***SIGMOD 2025***.
 * **2024-08**: One research paper is accepted by ***PVLDB 2025***.
 <!-- * **2024-07**: Two research papers are accepted by ***CIKM 2024***. -->
