@@ -57,25 +57,9 @@ author_profile: true
 1.  *F3VeTrac: Enabling Fine-grained, Fully-road-covered, and Fully-individual-penetrative Vehicle Trajectory Recovery.* <br>Zijian Cao, Dong Zhao, Hanxing Song, **Haitao Yuan**, Qiyue Wang, Huadong Ma. <br>***IEEE TMC 2023, CCF-A***. 
 <br>
 
-<!-- 5.  *Towards Practical Few-shot Federated NLP.* [To appear] [[Paper](https://euromlsys23.hotcrp.com/doc/euromlsys23-final5.pdf)] <br>
-Dongqi Cai, Yaozong Yu, **Haitao Yuan**, Shangguang Wang, Felix Xiaozhu Lin, Mengwei Xu. <br>
-***EuroMLSys 2023***. 
-
-6.  *An Effective Deep Learning Model for Route Travel Time Estimation on A Road Network* [Invited] [[Paper](http://camps.aptaracorp.com/ACM_PMS/PMS/ACM/ACMTURC23/69/299b2f15-1a90-11ee-b37c-16bb50361d1f/OUT/acmturc23-69.html)] <br>
-**Haitao Yuan** <br>
-***ACM TURC 2023***. 
-
-7.  *F3VeTrac: Enabling Fine-grained, Fully-road-covered, and Fully-individual-penetrative Vehicle Trajectory Recovery.* <br>
-Zijian Cao, Dong Zhao, Hanxing Song, **Haitao Yuan**, Qiyue Wang, Huadong Ma. <br>
-***IEEE TMC 2023, CCF-A***.  -->
-
-
-
 1.  *AutoView: An Autonomous Materialized View Management System with Encoder-Reducer.* <br>Yue Han, Guoliang Li, **Haitao Yuan**, Ji Sun. <br>***TKDE 2022, CCF-A***.
 <br> 
 
-<!-- 1.  *Effective Few-Shot Named Entity Linking by Meta-Learning.* <br>
-Xiuxing Li, Zhenyu Li, Zhengyan Zhang, Ning Liu, **Haitao Yuan**, Wei Zhang, Zhiyuan Liu, Jianyong Wang. <br>***ICDE 2022, CCF-A***.  -->
 
 1.  *DuETA: Traffic Congestion Propagation Pattern Modeling via Efficient Graph Learning for ETA Prediction at Baidu Maps.* <br>Jizhou Huang, Zhengjie Huang, Xiaomin Fang, Shikun Feng, Xuyi Chen, Jiaxiang Liu, **Haitao Yuan**, Haifeng Wang. <br>***CIKM 2022, CCF-B***. 
 <br>
