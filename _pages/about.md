@@ -55,22 +55,21 @@ Research Interests
 * **2024-11**: One paper is accepted by ***SIGMOD 2025***.
 * **2024-11**: One paper is accepted by ***IEEE TMC 2024***.
 * **2024-08**: One paper is accepted by ***VLDB 2025***.
-<!-- * **2024-07**: Two research papers are accepted by ***CIKM 2024***. -->
+* **2024-07**: Two papers are accepted by ***CIKM 2024***.
 * **2024-06**: Three papers ([[SIGMOD](https://scholar.google.com/citations?hl=en&vq=eng_databasesinformationsystems&view_op=list_hcore&venue=u1CjH9_75_cJ.2024)] and [[ICDE](https://scholar.google.com/citations?hl=en&vq=eng_databasesinformationsystems&view_op=list_hcore&venue=HdCtgB7kxZAJ.2024)]) are selected into 2024 Highly-Cited List (2019-2023).
-<!-- * **2024-03**: One research paper is accepted by ***DASFAA 2024***. -->
+* **2024-03**: One paper is accepted by ***DASFAA 2024***.
 * **2024-03**: One paper is accepted by ***ICDE 2024***.
 * **2024-03**: One paper is accepted by ***ACM TOIS 2024***.
 * **2024-02**: One paper is accepted by ***VLDB 2024***.
-<!-- * **2023-12**: One research paper is accepted by ***ICDE 2024***.-->
-<!-- * **2023-08**: One DIA paper is accepted by ***SIGMOD 2024***. -->
-<!-- * **2023-07**: One coauthor research paper is accepted by ***IEEE TMC***. -->
-<!-- * **2023-07**: One invited paper is accepted by ***ACM TURC2023***. -->
-<!-- * **2023-07**: One research paper is accepted by ***VLDB 2023***.  -->
-<!-- * **2023-04**: One coauthor paper is accepted by ***EuroMLSys 2023***. -->
+<!-- * **2023-12**: One paper is accepted by ***ICDE 2024***.
+* **2023-08**: One paper is accepted by ***SIGMOD 2024***.
+* **2023-07**: One paper is accepted by ***IEEE TMC 2023***.
+* **2023-07**: One invited paper is accepted by ***ACM TURC2023***.
+* **2023-07**: One paper is accepted by ***VLDB 2023***. 
 <!-- * **2023-03**: Haitao comes to Singapore, and starts his research career at SCALE@NTU. -->
-<!-- * **2023-01**: One paper is accepted by ***WWW 2023***.-->
-<!-- * **2022-12**: One coauthor paper is accepted by ***VLDB 2023***. -->
-<!-- * **2022-11**: One paper is accepted by ***VLDB 2023***. -->
+<!-- * **2023-01**: One paper is accepted by ***WWW 2023***.
+* **2022-12**: One paper is accepted by ***VLDB 2023***.
+* **2022-11**: One paper is accepted by ***VLDB 2023***. -->
 
   
 <!-- Work Experience
