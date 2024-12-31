@@ -9,13 +9,14 @@ author_profile: true
 <sup>#</sup> indicates corresponding author, <sup>*</sup> indicates equal contribution.
 <small>*Remark:* I strive to open-source every project I have led whenever possible. However, due to certain objective reasons (e.g., corporate policies or patent requirements), some work remains unavailable for open sourcing.</small>
 
-1. *RLER-TTE: An Efficient and Effective Framework for En Route Travel Time Estimation with Reinforcement Learning.* [To appear] <br> Zhihan Zheng<sup>*</sup>, **Haitao Yuan<sup>*</sup><sup>#</sup>**, Minxiao Chen, Shangguang Wang<br> ***SIGMOD 2025, CCF-A***. 
-<br>
 
 1. *LLM-R2: A Large Language Model Enhanced Rule-based Rewrite System for Boosting Query Efficiency.* [[Paper](https://arxiv.org/pdf/2404.12872)][[Code](https://github.com/DAMO-NLP-SG/LLM-R2)] <br> Zhaodonghui Li, **Haitao Yuan<sup>#</sup>**, Huiming Wang, Gao Cong, Lidong Bing <br> ***VLDB 2025, CCF-A***. 
 <br>
 
 1. *Effective AOI-level Parcel Volume Prediction: When Lookahead Parcels Matter.* [To appear] <br> Yingfeng Xiang, Jiangyi Fang, Chao Li<sup>#</sup>, **Haitao Yuan<sup>#</sup>**, Yiwei Song, Jiming Chen <br> ***SIGKDD 2025, CCF-A, ADS Track***.
+<br>
+
+1. *RLER-TTE: An Efficient and Effective Framework for En Route Travel Time Estimation with Reinforcement Learning.* [To appear] <br> Zhihan Zheng<sup>*</sup>, **Haitao Yuan**<sup>*</sup><sup>#</sup>, Minxiao Chen, Shangguang Wang<br> ***SIGMOD 2025, CCF-A***. 
 <br>
 
 
