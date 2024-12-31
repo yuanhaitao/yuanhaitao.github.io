@@ -50,6 +50,7 @@ Research Interests
 
 **<font color=red>What's New</font>**
 ------
+* **2024-12**: One paper is accepted by ***AAAI 2025***.
 * **2024-11**: Two papers are accepted by ***KDD 2025***.
 * **2024-11**: One paper is accepted by ***SIGMOD 2025***.
 * **2024-11**: One paper is accepted by ***IEEE TMC 2024***.
