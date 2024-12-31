@@ -7,7 +7,7 @@ author_profile: true
 {% include base_path %}
 
 <sup>#</sup> indicates corresponding author, <sup>*</sup> indicates equal contribution.
-<small>*Remark:* I strive to open-source every project I have led whenever possible. However, due to certain objective reasons (e.g., corporate policies or patent requirements), some work remains unavailable for open sourcing.</small>
+<small>*Remark:* I strive to open-source every project I've led whenever possible. However, some work remains unavailable due to certain objective reasons (e.g., corporate policies or patent requirements). I appreciate your understanding.</small>
 
 <!-- 1. *RLER-TTE: An Efficient and Effective Framework for En Route Travel Time Estimation with Reinforcement Learning.* [To appear] <br> Zhihan Zheng<sup>\*</sup>, **Haitao Yuan**<sup>\*</sup><sup>#</sup>, Minxiao Chen, Shangguang Wang<br> ***SIGMOD 2025, CCF-A***. 
 <br> -->

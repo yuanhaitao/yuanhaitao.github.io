@@ -51,12 +51,13 @@ Research Interests
 **<font color=red>What's New</font>**
 ------
 * **2024-11**: Two papers are accepted by ***KDD 2025***.
-* **2024-11**: Two papers are accepted by ***SIGMOD 2025***.
-* **2024-08**: One research paper is accepted by ***VLDB 2025***.
+* **2024-11**: One paper is accepted by ***SIGMOD 2025***.
+* **2024-11**: One paper is accepted by ***IEEE TMC 2024***.
+* **2024-08**: One paper is accepted by ***VLDB 2025***.
 <!-- * **2024-07**: Two research papers are accepted by ***CIKM 2024***. -->
 * **2024-06**: Three papers ([[SIGMOD](https://scholar.google.com/citations?hl=en&vq=eng_databasesinformationsystems&view_op=list_hcore&venue=u1CjH9_75_cJ.2024)] and [[ICDE](https://scholar.google.com/citations?hl=en&vq=eng_databasesinformationsystems&view_op=list_hcore&venue=HdCtgB7kxZAJ.2024)]) are selected into 2024 Highly-Cited List (2019-2023).
 <!-- * **2024-03**: One research paper is accepted by ***DASFAA 2024***. -->
-* **2024-03**: One research paper is accepted by ***ICDE 2024***.
+* **2024-03**: One paper is accepted by ***ICDE 2024***.
 <!-- * **2024-03**: One research paper is accepted by ***TOIS***. -->
 <!-- * **2024-02**: One research paper is accepted by ***PVLDB 2024***. -->
 <!-- * **2023-12**: One research paper is accepted by ***ICDE 2024***.-->
