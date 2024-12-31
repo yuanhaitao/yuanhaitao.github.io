@@ -16,9 +16,9 @@ Haitao's research focuses on developing innovative database and machine learning
 + Creating **I**ntelligent data manipulation and preparation pipelines
 + Developing **P**ractical models and algorithms for real-world applications
 
-He has published 30+ papers in the top DB/DM conferences and journals (SIGMOD, VLDB, ICDE, WWW, TKDE, CIKM, etc).
+He has published 30+ papers in the top DB/DM conferences and journals (SIGMOD, VLDB, ICDE, KDD, WWW, TKDE, CIKM, etc).
 
-Feel free to catch me if interested to discuss ideas or work together. 😜
+<!-- Feel free to catch me if interested to discuss ideas or work together. 😜 -->
 
 <!-- Wentao Zhang (张文涛) is a fourth year Ph.D. candidate at [PKU](https://www.pku.edu.cn/), now working with [Prof. Bin Cui](http://net.pku.edu.cn/~cuibin/).
 He previously interned in [HKUST](https://hkust.edu.hk/?cn=1) working with Prof. Lei Chen, [Tencent](https://github.com/Angel-ML/angel) working with the Angel team, and [Apple Research](https://machinelearning.apple.com/) working with Meng Cao, Ping Huang and Danny Bickson. -->
@@ -50,9 +50,9 @@ Research Interests
 
 **<font color=red>What's New</font>**
 ------
-* **2024-11**: One ADS paper is accepted by ***SIGKDD 2025***.
-* **2024-11**: One research paper is accepted by ***SIGMOD 2025***.
-* **2024-08**: One research paper is accepted by ***PVLDB 2025***.
+* **2024-11**: Two papers are accepted by ***KDD 2025***.
+* **2024-11**: Two papers are accepted by ***SIGMOD 2025***.
+* **2024-08**: One research paper is accepted by ***VLDB 2025***.
 <!-- * **2024-07**: Two research papers are accepted by ***CIKM 2024***. -->
 * **2024-06**: Three papers ([[SIGMOD](https://scholar.google.com/citations?hl=en&vq=eng_databasesinformationsystems&view_op=list_hcore&venue=u1CjH9_75_cJ.2024)] and [[ICDE](https://scholar.google.com/citations?hl=en&vq=eng_databasesinformationsystems&view_op=list_hcore&venue=HdCtgB7kxZAJ.2024)]) are selected into 2024 Highly-Cited List (2019-2023).
 <!-- * **2024-03**: One research paper is accepted by ***DASFAA 2024***. -->
