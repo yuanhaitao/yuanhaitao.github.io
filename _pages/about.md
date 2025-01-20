@@ -52,7 +52,8 @@ Research Interests
 ------
 * **2024-12**: One paper is accepted by ***AAAI 2025***.
 * **2024-11**: Two papers are accepted by ***KDD 2025***.
-* **2024-11**: One paper is accepted by ***SIGMOD 2025***.
+* **2024-11**: Two papers are accepted by ***ICDE 2025***.
+* **2024-11**: Two papers are accepted by ***SIGMOD 2025***.
 * **2024-11**: One paper is accepted by ***IEEE TMC 2024***.
 * **2024-08**: One paper is accepted by ***VLDB 2025***.
 * **2024-07**: Two papers are accepted by ***CIKM 2024***.

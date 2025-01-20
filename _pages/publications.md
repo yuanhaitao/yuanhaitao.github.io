@@ -14,15 +14,14 @@ author_profile: true
 
 <!-- 1. *MAST: Towards Efficient Analytical Query Processing on Point Cloud Data.* [To appear] <br> Jiangneng Li, **Haitao Yuan**, Gao Cong, Han Mao Kiah, Shuhao Zhang<br> ***SIGMOD 2025, CCF-A***. 
 <br> -->
-1. *SOLA-GCL: Subgraph-oriented Learnable Augmentation Method for Graph Contrastive Learning.* [To appear] <br> Tianhao Peng, Xuhong Li, **Haitao Yuan<sup>#</sup>**, Yuchen Li, Haoyi Xiong<sup>#</sup> <br> ***AAAI 2025, CCF-A***. 
-<br>
+<!-- 1. *Effective AOI-level Parcel Volume Prediction: When Lookahead Parcels Matter.* [To appear] <br> Yingfeng Xiang, Jiangyi Fang, Chao Li<sup>#</sup>, **Haitao Yuan<sup>#</sup>**, Yiwei Song, Jiming Chen <br> ***SIGKDD 2025, CCF-A, ADS Track***.
+<br> -->
+
+<!-- 1. *SOLA-GCL: Subgraph-oriented Learnable Augmentation Method for Graph Contrastive Learning.* [To appear] <br> Tianhao Peng, Xuhong Li, **Haitao Yuan<sup>#</sup>**, Yuchen Li, Haoyi Xiong<sup>#</sup> <br> ***AAAI 2025, CCF-A***. 
+<br> -->
 
 1. *LLM-R2: A Large Language Model Enhanced Rule-based Rewrite System for Boosting Query Efficiency.* [[Paper](https://arxiv.org/pdf/2404.12872)][[Code](https://github.com/DAMO-NLP-SG/LLM-R2)] <br> Zhaodonghui Li, **Haitao Yuan<sup>#</sup>**, Huiming Wang, Gao Cong, Lidong Bing <br> ***VLDB 2025, CCF-A***. 
 <br>
-
-1. *Effective AOI-level Parcel Volume Prediction: When Lookahead Parcels Matter.* [To appear] <br> Yingfeng Xiang, Jiangyi Fang, Chao Li<sup>#</sup>, **Haitao Yuan<sup>#</sup>**, Yiwei Song, Jiming Chen <br> ***SIGKDD 2025, CCF-A, ADS Track***.
-<br>
-
 
 1. *Demystifying the QoS and QoE of Edge-hosted Video Streaming Applications in the Wild with SNESet.* [[Paper](https://dl.acm.org/doi/10.1145/3626723)] <br>Yanan Li, Guangqing Deng<sup>#</sup>, Changming Bai, Jingyu Yang, Gang Wang, Hao Zhang, Jin Bai, **Haitao Yuan<sup>#</sup>**, Mengwei Xu, Shangguang Wang. <br> ***SIGMOD 2024, CCF-A***.
 <br> 
