@@ -11,10 +11,10 @@ Haitao Yuan (袁海涛 in Chinese) is currently a research fellow working with P
 
 <!-- Besides, Haitao has accumulated for 1.5-year industrial experience in the Intelligent Driving Group of [Baidu](http://home.baidu.com/index.html) and the Digital Research Institute of [ENN](https://www.enn.cn/pageshow?pageId=1440505892360679424).  -->
 
-Haitao's research focuses on developing innovative database and machine learning technologies that can effectively and efficiently utilize Big Data (e.g., spatio-temporal, tabular, text, and image data) to benefit people in areas such as transportation, healthcare, education, and more. To achieve this goal, Haitao concentrates on three key research fields (**SIP**): 
+Haitao's research focuses on developing innovative database and machine learning technologies that can effectively and efficiently utilize **Spatio-temporal + X (e.g., tabular, text, and image)** data to benefit people in areas such as transportation, healthcare, education, and more. To achieve this goal, Haitao concentrates on three key research fields (**SIP**): 
 + Building **S**calable multi-modal data management and retrieval systems
-+ Creating **I**ntelligent data manipulation and preparation pipelines
-+ Developing **P**ractical models and algorithms for real-world applications
++ Creating **I**ntelligent multi-modal data manipulation and preparation pipelines
++ Developing **P**ractical spatio-temporal related models and algorithms for real-world applications
 
 He has published 30+ papers in the top DB/DM conferences and journals (SIGMOD, VLDB, ICDE, KDD, WWW, TKDE, CIKM, etc).
 
@@ -42,7 +42,7 @@ Research Interests
 <!-- + **Data-centric ML**: annotation, augmentation, imbalance, noise, distillation, out-of-distribution, heterogeneity, and privacy. -->
 
 + **Spatio-temporal Data Preparation and Management (S&I)**: trajectory search and join, trajectory generation, road network generation, traffic imputation.
-+ **AI-powered Database Optimization (S&P)**: materialized view advisor, query rewrite, index advisor.
++ **AI/LLM-powered Database Optimization (S&P)**: materialized view advisor, query rewrite, index advisor.
 + **Spatio-temporal Related/Interdisciplinary Application (I&P)**: AI4Transportation (e.g., travel time estimation, traffic prediction, POI recommendation), AI4Healthcare (e.g., medical diagnosis, molecular prediction) and AI4Education (e.g., mathematical exercise solver, knowledge tracing).
 + **Retrieval-Augmented Generation (S&P)**: cost-aware RAG, multi-modal vector database.
 
