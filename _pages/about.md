@@ -14,7 +14,7 @@ Haitao Yuan (袁海涛 in Chinese) is currently a research fellow working with P
 Haitao's research focuses on developing innovative database and machine learning technologies that can effectively and efficiently utilize **Spatio-temporal + X (e.g., table, text, and image)** data to benefit people in areas such as transportation, healthcare, education, and more. To achieve this goal, Haitao concentrates on three key research fields (**SIP**): 
 + Building **S**calable multi-modal data management and retrieval systems
 + Creating **I**ntelligent multi-modal data manipulation and preparation pipelines
-+ Developing **P**ractical spatio-temporal related models and algorithms for real-world applications
++ Developing **P**ractical spatio-temporal models and algorithms for real-world applications
 
 He has published 30+ papers in the top DB/DM conferences and journals (SIGMOD, VLDB, ICDE, KDD, WWW, TKDE, CIKM, etc).
 
