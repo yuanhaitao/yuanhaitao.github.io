@@ -16,7 +16,7 @@ Haitao's research focuses on developing innovative database and machine learning
 + Creating **I**ntelligent multi-modal data manipulation and preparation pipelines
 + Developing **P**ractical spatio-temporal models and algorithms for real-world applications
 
-He has published 30+ papers in the top DB/DM conferences and journals (SIGMOD, VLDB, ICDE, KDD, WWW, TKDE, CIKM, etc).
+He has published 40+ papers in the top DB/DM conferences and journals (SIGMOD, VLDB, ICDE, KDD, WWW, TKDE, CIKM, etc).
 
 <!-- Feel free to catch me if interested to discuss ideas or work together. 😜 -->
 
@@ -48,7 +48,7 @@ Research Interests
 
 
 
-**<font color=red>What's New</font>**
+<!-- **<font color=red>What's New</font>**
 ------
 * **2024-12**: One paper is accepted by ***AAAI 2025***.
 * **2024-11**: Two papers are accepted by ***KDD 2025***.
@@ -61,7 +61,7 @@ Research Interests
 * **2024-03**: One paper is accepted by ***DASFAA 2024***.
 * **2024-03**: One paper is accepted by ***ICDE 2024***.
 * **2024-03**: One paper is accepted by ***ACM TOIS 2024***.
-* **2024-02**: One paper is accepted by ***VLDB 2024***.
+* **2024-02**: One paper is accepted by ***VLDB 2024***. -->
 <!-- * **2023-12**: One paper is accepted by ***ICDE 2024***. -->
 <!-- * **2023-08**: One paper is accepted by ***SIGMOD 2024***. -->
 <!-- * **2023-07**: One paper is accepted by ***IEEE TMC 2023***. -->
