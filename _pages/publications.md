@@ -7,7 +7,7 @@ author_profile: true
 {% include base_path %}
 
 <sup>#</sup> indicates corresponding author, <sup>*</sup> indicates equal contribution.
-<small>*Remark:* I strive to open-source every project I've led whenever possible. However, some work remains unavailable due to certain objective reasons (e.g., corporate policies or patent requirements). I appreciate your understanding.</small>
+<!-- <small>*Remark:* I strive to open-source every project I've led whenever possible. However, some work remains unavailable due to certain objective reasons (e.g., corporate policies or patent requirements). I appreciate your understanding.</small> -->
 
 
 1. *Effective AOI-level Parcel Volume Prediction: When Lookahead Parcels Matter.* [[Paper](https://openreview.net/pdf?id=2CQETd0fum)] <br> Yingfeng Xiang, Jiangyi Fang, Chao Li<sup>#</sup>, **Haitao Yuan<sup>#</sup>**, Yiwei Song, Jiming Chen <br> ***SIGKDD 2025, CCF-A, ADS Track***.
