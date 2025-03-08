@@ -10,7 +10,7 @@ author_profile: true
 <small>*Remark:* I strive to open-source every project I've led whenever possible. However, some work remains unavailable due to certain objective reasons (e.g., corporate policies or patent requirements). I appreciate your understanding.</small>
 
 
-1. *Effective AOI-level Parcel Volume Prediction: When Lookahead Parcels Matter.* [To appear] <br> Yingfeng Xiang, Jiangyi Fang, Chao Li<sup>#</sup>, **Haitao Yuan<sup>#</sup>**, Yiwei Song, Jiming Chen <br> ***SIGKDD 2025, CCF-A, ADS Track***.
+1. *Effective AOI-level Parcel Volume Prediction: When Lookahead Parcels Matter.* [[Paper](https://openreview.net/pdf?id=2CQETd0fum)] <br> Yingfeng Xiang, Jiangyi Fang, Chao Li<sup>#</sup>, **Haitao Yuan<sup>#</sup>**, Yiwei Song, Jiming Chen <br> ***SIGKDD 2025, CCF-A, ADS Track***.
 <br>
 
 1. *Mitigating Redundancy in Deep Recommender Systems: A Field Importance Distribution Perspective.* [[Paper](https://openreview.net/attachment?id=MKR4ad9Snv&name=pdf)][[Code](https://anonymous.4open.science/r/DFO_KDD)] <br> Xianquan Wang, Likang Wu, Zhi Li, **Haitao Yuan**, Shuanghong Shen, Huibo Xu, Yu Su, Chenyi Lei <br> ***SIGKDD 2025, CCF-A, Research Track***.
