@@ -6,17 +6,17 @@ main:
 #   - title: "Teaching"
 #     url: /teaching/    
     
-  - title: "Projects"
-    url: /projects/    
+  # - title: "Projects"
+  #   url: /projects/    
     
   # - title: "Invited Talks"
   #   url: /talks/   
     
-  - title: "Awards"
-    url: /awards/    
+  # - title: "Awards"
+  #   url: /awards/    
  
-  - title: "CFPs"
-    url: /cfps/
+  # - title: "CFPs"
+  #   url: /cfps/
     
 #   - title: "CV"
 #     url: /cv/
