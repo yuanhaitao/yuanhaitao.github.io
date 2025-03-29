@@ -79,13 +79,13 @@ author_profile: true
 1.  *A survey of traffic prediction: from spatio-temporal data to intelligent transportation.* <br>**Haitao Yuan**, Guoliang Li. <br>***DSE, CCF-C***. 
 <br>
 
-1.  *Effective Travel Time Estimation: When Historical Trajectories over Road Networks Matter.* <br>**Haitao Yuan**, Guoliang Li, Zhifeng Bao, Ling Feng. <br>***SIGMOD 2020, CCF-A***. 
+1.  *Effective Travel Time Estimation: When Historical Trajectories over Road Networks Matter.* <br>**Haitao Yuan**, Guoliang Li, Zhifeng Bao, Ling Feng. <br>***SIGMOD 2020, CCF-A***. <span style="color:red; font-weight:bold;">🏆 SIGMOD 2020 Most Influential Paper (1/15) [[link](https://www.paperdigest.org/2024/09/most-influential-sigmod-papers-2024-09/)] </span>
 <br>
 
-1.  *Automatic View Generation with Deep Learning and Reinforcement Learning.* <br>**Haitao Yuan**, Guoliang Li, Ling Feng, Ji Sun, Yue Han. <br>***ICDE 2020, CCF-A***. 
+1.  *Automatic View Generation with Deep Learning and Reinforcement Learning.* <br>**Haitao Yuan**, Guoliang Li, Ling Feng, Ji Sun, Yue Han. <br>***ICDE 2020, CCF-A***. <span style="color:red; font-weight:bold;">🏆 ICDE 2019-2024 Highly-Cited Papers [[link](https://scholar.google.com/citations?hl=en&view_op=list_hcore&venue=HdCtgB7kxZAJ.2024&vq=eng_databasesinformationsystems&cstart=60)] </span>
 <br>
 
-1.  *Distributed in-memory trajectory similarity search and join on road network.* <br>**Haitao Yuan**, Guoliang Li. <br>***ICDE 2019, CCF-A***. 
+1.  *Distributed in-memory trajectory similarity search and join on road network.* <br>**Haitao Yuan**, Guoliang Li. <br>***ICDE 2019, CCF-A***. <span style="color:red; font-weight:bold;">🏆 ICDE 2019-2024 Highly-Cited Papers [[link](https://scholar.google.com/citations?hl=en&view_op=list_hcore&venue=HdCtgB7kxZAJ.2024&vq=eng_databasesinformationsystems&cstart=20)] </span>
 <br>
 
 1.  *Mathgraph: A knowledge graph for automatically solving mathematical exercises.* <br>Tianyu Zhao, Yan Huang, Songfan Yang, Yuyu Luo, Jianhua Feng, Yong Wang, **Haitao Yuan**, Kang Pan, Kaiyu Li, Haoda Li, Fu Zhu. <br>***DASFAA 2019, CCF-B, Best Paper Award***. 
