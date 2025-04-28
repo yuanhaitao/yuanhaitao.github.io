@@ -139,6 +139,9 @@ Invited Talks
 ------
 I am happy to give a talk if you are interested in my work. 😊  
 
+- Intelligent Management and Analysis of Spatio-temporal Big Data in the Age of Generative AI (In Chinese). SpatialDI'25, 2025. 04 [[Slides](https://drive.google.com/file/d/1uFXpW-EiXz-loGZmaIDnm__Y9DWFKTPI/view?usp=drive_link)]  <br> 
+
+
 - Nuhuo: An Effective Estimation Model for Traffic Speed Histogram Imputation on A Road Network. PVLDB'24, 2024. 08 [[Slides](https://drive.google.com/file/d/1XiT5aIBW5tBQKSB6KAiAXMAzMha95y80/view?usp=drive_link)]  <br> 
 
 
