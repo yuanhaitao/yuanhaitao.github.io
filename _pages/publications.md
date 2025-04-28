@@ -27,8 +27,7 @@ author_profile: true
 1. *RLOMM: An Efficient and Robust Online Map Matching Framework with Reinforcement Learning.* [[Paper](https://arxiv.org/pdf/2502.06825)] <br> Minxiao Chen<sup>\*</sup>, **Haitao Yuan**<sup>\*</sup><sup>#</sup>, Nan Jiang, Zhihan Zheng, Sai Wu, Ao Zhou, Shangguang Wang<br> ***SIGMOD 2025, CCF-A***. 
 <br>
 
-
-1. *RLOMM: An Efficient and Robust Online Map Matching Framework with Reinforcement Learning.* [[Paper](https://arxiv.org/pdf/2502.06825)] <br> Minxiao Chen<sup>\*</sup>, **Haitao Yuan**<sup>\*</sup><sup>#</sup>, Nan Jiang, Zhihan Zheng, Sai Wu, Ao Zhou, Shangguang Wang<br> ***SIGMOD 2025, CCF-A***. 
+1. *SOLA-GCL: Subgraph-oriented Learnable Augmentation Method for Graph Contrastive Learning.* [[Paper](https://openreview.net/pdf?id=UwmqX9J0c2)] <br> Tianhao Peng, Xuhong Li, **Haitao Yuan<sup>#</sup>**, Yuchen Li, Haoyi Xiong<sup>#</sup> <br> ***AAAI 2025, CCF-A***. 
 <br>
 
 1. *Effective AOI-level Parcel Volume Prediction: When Lookahead Parcels Matter.* [[Paper](https://openreview.net/pdf?id=2CQETd0fum)] <br> Yingfeng Xiang, Jiangyi Fang, Chao Li<sup>#</sup>, **Haitao Yuan<sup>#</sup>**, Yiwei Song, Jiming Chen <br> ***SIGKDD 2025, CCF-A, ADS Track***.
@@ -93,8 +92,9 @@ author_profile: true
 1.  *A survey of traffic prediction: from spatio-temporal data to intelligent transportation.* <br>**Haitao Yuan**, Guoliang Li. <br>***DSE, CCF-C***. 
 <br>
 
-1.  *Effective Travel Time Estimation: When Historical Trajectories over Road Networks Matter.* <br>**Haitao Yuan**, Guoliang Li, Zhifeng Bao, Ling Feng. <br>***SIGMOD 2020, CCF-A***. <span style="color:red; font-weight:bold;">🏆 SIGMOD 2020 Most Influential Paper (1/15) [[link](https://www.paperdigest.org/2024/09/most-influential-sigmod-papers-2024-09/)] </span>
+1.  *Effective Travel Time Estimation: When Historical Trajectories over Road Networks Matter.* <br>**Haitao Yuan**, Guoliang Li, Zhifeng Bao, Ling Feng. <br>***SIGMOD 2020, CCF-A***. <span style="color:red; font-weight:bold;">🏆 SIGMOD 2020 Most Influential Paper (14/15) [[link](https://www.paperdigest.org/2024/09/most-influential-sigmod-papers-2024-09/)] </span>  <span style="color:red; font-weight:bold;">🏆 SIGMOD 2019-2024 Highly-Cited Papers [[link](https://scholar.google.com/citations?hl=en&view_op=list_hcore&venue=u1CjH9_75_cJ.2024&vq=eng_databasesinformationsystems&cstart=40)] </span>
 <br>
+
 
 1.  *Automatic View Generation with Deep Learning and Reinforcement Learning.* <br>**Haitao Yuan**, Guoliang Li, Ling Feng, Ji Sun, Yue Han. <br>***ICDE 2020, CCF-A***. <span style="color:red; font-weight:bold;">🏆 ICDE 2019-2024 Highly-Cited Papers [[link](https://scholar.google.com/citations?hl=en&view_op=list_hcore&venue=HdCtgB7kxZAJ.2024&vq=eng_databasesinformationsystems&cstart=60)] </span>
 <br>
@@ -102,7 +102,7 @@ author_profile: true
 1.  *Distributed in-memory trajectory similarity search and join on road network.* <br>**Haitao Yuan**, Guoliang Li. <br>***ICDE 2019, CCF-A***. <span style="color:red; font-weight:bold;">🏆 ICDE 2019-2024 Highly-Cited Papers [[link](https://scholar.google.com/citations?hl=en&view_op=list_hcore&venue=HdCtgB7kxZAJ.2024&vq=eng_databasesinformationsystems&cstart=20)] </span>
 <br>
 
-1.  *Mathgraph: A knowledge graph for automatically solving mathematical exercises.* <br>Tianyu Zhao, Yan Huang, Songfan Yang, Yuyu Luo, Jianhua Feng, Yong Wang, **Haitao Yuan**, Kang Pan, Kaiyu Li, Haoda Li, Fu Zhu. <br>***DASFAA 2019, CCF-B, Best Paper Award***. 
+1.  *Mathgraph: A knowledge graph for automatically solving mathematical exercises.* <br>Tianyu Zhao, Yan Huang, Songfan Yang, Yuyu Luo, Jianhua Feng, Yong Wang, **Haitao Yuan**, Kang Pan, Kaiyu Li, Haoda Li, Fu Zhu. <br>***DASFAA 2019, CCF-B***.  <span style="color:red; font-weight:bold;">🏆 Best Student Paper Award [[link](https://www.dasfaa.net/awards.htm)] </span>
 <br>
 
 1.  *Towards Automatic Mathematical Exercise Solving.* (Demo) <br>Haoda Li, Guoliang Li, Jiayang Liu, **Haitao Yuan**, Haiquan Wang. <br>***SIGMOD 2019 CCF-A***. 
