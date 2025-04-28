@@ -30,7 +30,7 @@ author_profile: true
 1. *SOLA-GCL: Subgraph-oriented Learnable Augmentation Method for Graph Contrastive Learning.* [[Paper](https://openreview.net/pdf?id=UwmqX9J0c2)] <br> Tianhao Peng, Xuhong Li, **Haitao Yuan<sup>#</sup>**, Yuchen Li, Haoyi Xiong<sup>#</sup> <br> ***AAAI 2025, CCF-A***. 
 <br>
 
-1. *Effective AOI-level Parcel Volume Prediction: When Lookahead Parcels Matter.* [[Paper](https://openreview.net/pdf?id=2CQETd0fum)] <br> Yingfeng Xiang, Jiangyi Fang, Chao Li<sup>#</sup>, **Haitao Yuan<sup>#</sup>**, Yiwei Song, Jiming Chen <br> ***SIGKDD 2025, CCF-A, ADS Track***.
+1. *Effective AOI-level Parcel Volume Prediction: When Lookahead Parcels Matter.* [[Paper](https://dl.acm.org/doi/10.1145/3690624.3709441)] <br> Yingfeng Xiang, Jiangyi Fang, Chao Li<sup>#</sup>, **Haitao Yuan<sup>#</sup>**, Yiwei Song, Jiming Chen <br> ***SIGKDD 2025, CCF-A, ADS Track***.
 <br>
 
 1. *RLER-TTE: An Efficient and Effective Framework for En Route Travel Time Estimation with Reinforcement Learning.* [[Paper](https://dl.acm.org/doi/pdf/10.1145/3709721)] <br> Zhihan Zheng<sup>\*</sup>, **Haitao Yuan**<sup>\*</sup><sup>#</sup>, Minxiao Chen, Shangguang Wang<br> ***SIGMOD 2025, CCF-A***. 
