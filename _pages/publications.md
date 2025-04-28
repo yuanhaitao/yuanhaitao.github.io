@@ -21,13 +21,13 @@ author_profile: true
 1. *Having It Both Ways: Single Trajectory Embedding for Similarity Computation with Pairwise Learning.* [To appear] <br> Jianing Si<sup>\*</sup>, **Haitao Yuan**<sup>\*</sup><sup>#</sup>, Xiang Li, Nan Jiang, Xiao Ma, Guoliang Li, Shangguang Wang<br> ***ICDE 2025, CCF-A***. 
 <br>
 
-1. *Towards Robust Trajectory Embedding for Similarity Computation: When Triangle Inequality Violations in Distance Metrics Matter.* [To appear] <br> Jianing Si, **Haitao Yuan**<sup>#</sup>, Nan Jiang, Minxiao Chen, Xiao Ma, Shangguang Wang<br> ***ICDE 2025, CCF-A***. 
+1. *Towards Robust Trajectory Embedding for Similarity Computation: When Triangle Inequality Violations in Distance Metrics Matter.* [[Paper](https://arxiv.org/pdf/2504.10933)] <br> Jianing Si, **Haitao Yuan**<sup>#</sup>, Nan Jiang, Minxiao Chen, Xiao Ma, Shangguang Wang<br> ***ICDE 2025, CCF-A***. 
 <br>
 
 1. *RLOMM: An Efficient and Robust Online Map Matching Framework with Reinforcement Learning.* [[Paper](https://arxiv.org/pdf/2502.06825)] <br> Minxiao Chen<sup>\*</sup>, **Haitao Yuan**<sup>\*</sup><sup>#</sup>, Nan Jiang, Zhihan Zheng, Sai Wu, Ao Zhou, Shangguang Wang<br> ***SIGMOD 2025, CCF-A***. 
 <br>
 
-1. *SOLA-GCL: Subgraph-oriented Learnable Augmentation Method for Graph Contrastive Learning.* [[Paper](https://openreview.net/pdf?id=UwmqX9J0c2)] <br> Tianhao Peng, Xuhong Li, **Haitao Yuan<sup>#</sup>**, Yuchen Li, Haoyi Xiong<sup>#</sup> <br> ***AAAI 2025, CCF-A***. 
+1. *SOLA-GCL: Subgraph-oriented Learnable Augmentation Method for Graph Contrastive Learning.* [[Paper](https://arxiv.org/pdf/2503.10100)] <br> Tianhao Peng, Xuhong Li, **Haitao Yuan<sup>#</sup>**, Yuchen Li, Haoyi Xiong<sup>#</sup> <br> ***AAAI 2025, CCF-A***. 
 <br>
 
 1. *Effective AOI-level Parcel Volume Prediction: When Lookahead Parcels Matter.* [[Paper](https://dl.acm.org/doi/10.1145/3690624.3709441)] <br> Yingfeng Xiang, Jiangyi Fang, Chao Li<sup>#</sup>, **Haitao Yuan<sup>#</sup>**, Yiwei Song, Jiming Chen <br> ***SIGKDD 2025, CCF-A, ADS Track***.
