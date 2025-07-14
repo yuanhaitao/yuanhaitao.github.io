@@ -18,7 +18,16 @@ author_profile: true
 <br> -->
 
 
-1. *Having It Both Ways: Single Trajectory Embedding for Similarity Computation with Pairwise Learning.* [To appear] <br> Jianing Si<sup>\*</sup>, **Haitao Yuan**<sup>\*</sup><sup>#</sup>, Xiang Li, Nan Jiang, Xiao Ma, Guoliang Li, Shangguang Wang<br> ***ICDE 2025, CCF-A***. 
+<!-- 1. *AdaMixT: Adaptive Weighted Mixture of Multi-Scale Expert Transformers for Time Series Forecasting.* [To appear] <br>Huanyao Zhang, Jiaye Lin, **Haitao Yuan**<sup>#</sup>, Wentao Zhang, Guoliang Li<br> ***IJCAI 2025, CCF-A***. 
+<br>
+
+1. *Incomplete Multi-View Drug Recommendation via Multi-Level Representation Learning and Curriculum Learning.* [To appear] <br> Ning Liu, Yunsen Tang, **Haitao Yuan**, Hongtao Lv, Lili Jiang, Zhen Li, Wei Zhang, Jianyong Wang<br> ***KDD 2025, CCF-A, ADS Track***. 
+<br> -->
+
+1. *Having It Both Ways: Single Trajectory Embedding for Similarity Computation with Pairwise Learning.* [[Paper](https://www.computer.org/csdl/proceedings-article/icde/2025/360300a474/26FZzfvpygg)] <br> Jianing Si<sup>\*</sup>, **Haitao Yuan**<sup>\*</sup><sup>#</sup>, Xiang Li, Nan Jiang, Xiao Ma, Guoliang Li, Shangguang Wang<br> ***ICDE 2025, CCF-A***. 
+<br>
+
+1. *Think Twice Before Imputation: Optimizing Data Imputation Order for Machine Learning.* [[Paper](https://www.computer.org/csdl/proceedings-article/icde/2025/360300b362/26FZA1gQAjm)] <br>Jiaxuan Zhang<sup>\*</sup>, **Haitao Yuan**<sup>\*</sup><sup>#</sup>, Jianing Si, Nan Jiang, Shangguang Wang<br> ***ICDE 2025, CCF-A***. 
 <br>
 
 1. *Towards Robust Trajectory Embedding for Similarity Computation: When Triangle Inequality Violations in Distance Metrics Matter.* [[Paper](https://arxiv.org/pdf/2504.10933)] <br> Jianing Si, **Haitao Yuan**<sup>#</sup>, Nan Jiang, Minxiao Chen, Xiao Ma, Shangguang Wang<br> ***ICDE 2025, CCF-A***. 
@@ -30,7 +39,7 @@ author_profile: true
 1. *SOLA-GCL: Subgraph-oriented Learnable Augmentation Method for Graph Contrastive Learning.* [[Paper](https://arxiv.org/pdf/2503.10100)] <br> Tianhao Peng, Xuhong Li, **Haitao Yuan<sup>#</sup>**, Yuchen Li, Haoyi Xiong<sup>#</sup> <br> ***AAAI 2025, CCF-A***. 
 <br>
 
-1. *Effective AOI-level Parcel Volume Prediction: When Lookahead Parcels Matter.* [[Paper](https://dl.acm.org/doi/10.1145/3690624.3709441)] <br> Yingfeng Xiang, Jiangyi Fang, Chao Li<sup>#</sup>, **Haitao Yuan<sup>#</sup>**, Yiwei Song, Jiming Chen <br> ***SIGKDD 2025, CCF-A, ADS Track***.
+1. *Effective AOI-level Parcel Volume Prediction: When Lookahead Parcels Matter.* [[Paper](https://dl.acm.org/doi/10.1145/3690624.3709441)] <br> Yingfeng Xiang, Jiangyi Fang, Chao Li<sup>#</sup>, **Haitao Yuan<sup>#</sup>**, Yiwei Song, Jiming Chen <br> ***KDD 2025, CCF-A, ADS Track***.
 <br>
 
 1. *RLER-TTE: An Efficient and Effective Framework for En Route Travel Time Estimation with Reinforcement Learning.* [[Paper](https://dl.acm.org/doi/pdf/10.1145/3709721)] <br> Zhihan Zheng<sup>\*</sup>, **Haitao Yuan**<sup>\*</sup><sup>#</sup>, Minxiao Chen, Shangguang Wang<br> ***SIGMOD 2025, CCF-A***. 
