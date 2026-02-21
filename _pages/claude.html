@@ -1,0 +1,2012 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude Code 小白教程 - 从零开始学会 AI 编程助手</title>
+<style>
+/* ===== CSS Reset & Base ===== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #0f1117;
+  --bg-card: #1a1d27;
+  --bg-code: #12141c;
+  --bg-sidebar: #161822;
+  --border: #2a2d3a;
+  --text: #e4e4e7;
+  --text-dim: #9ca3af;
+  --text-bright: #ffffff;
+  --accent: #c084fc;
+  --accent-dim: #7c3aed;
+  --accent-glow: rgba(192, 132, 252, 0.15);
+  --green: #4ade80;
+  --green-dim: rgba(74, 222, 128, 0.15);
+  --orange: #fb923c;
+  --orange-dim: rgba(251, 146, 60, 0.15);
+  --red: #f87171;
+  --red-dim: rgba(248, 113, 113, 0.15);
+  --blue: #60a5fa;
+  --blue-dim: rgba(96, 165, 250, 0.15);
+  --yellow: #fbbf24;
+  --radius: 12px;
+  --sidebar-w: 280px;
+  --header-h: 64px;
+}
+
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.8;
+  font-size: 16px;
+  overflow-x: hidden;
+}
+
+/* ===== Header ===== */
+.header {
+  position: fixed; top: 0; left: 0; right: 0;
+  height: var(--header-h);
+  background: rgba(15, 17, 23, 0.85);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+  display: flex; align-items: center;
+  padding: 0 24px;
+  z-index: 1000;
+}
+.header-logo {
+  font-size: 20px; font-weight: 700;
+  background: linear-gradient(135deg, var(--accent), var(--blue));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  display: flex; align-items: center; gap: 10px;
+}
+.header-logo .logo-icon {
+  width: 32px; height: 32px;
+  background: linear-gradient(135deg, var(--accent), var(--blue));
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  color: #fff; font-size: 18px; font-weight: 900;
+  -webkit-text-fill-color: white;
+}
+.header-right {
+  margin-left: auto;
+  display: flex; align-items: center; gap: 16px;
+}
+.menu-btn {
+  display: none;
+  background: none; border: none;
+  color: var(--text); font-size: 24px; cursor: pointer;
+  padding: 4px;
+}
+.progress-bar {
+  position: fixed; top: var(--header-h); left: 0; right: 0;
+  height: 3px; background: var(--border); z-index: 999;
+}
+.progress-fill {
+  height: 100%; width: 0%;
+  background: linear-gradient(90deg, var(--accent), var(--blue));
+  transition: width 0.3s;
+}
+
+/* ===== Sidebar ===== */
+.sidebar {
+  position: fixed; top: var(--header-h); left: 0;
+  width: var(--sidebar-w); height: calc(100vh - var(--header-h));
+  background: var(--bg-sidebar);
+  border-right: 1px solid var(--border);
+  overflow-y: auto; padding: 20px 0;
+  z-index: 900;
+  transition: transform 0.3s ease;
+}
+.sidebar::-webkit-scrollbar { width: 4px; }
+.sidebar::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+.nav-group { margin-bottom: 8px; }
+.nav-group-title {
+  padding: 8px 20px; font-size: 11px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 1.5px;
+  color: var(--text-dim);
+}
+.nav-link {
+  display: flex; align-items: center; gap: 10px;
+  padding: 8px 20px; font-size: 14px;
+  color: var(--text-dim); text-decoration: none;
+  border-left: 3px solid transparent;
+  transition: all 0.2s;
+}
+.nav-link:hover { color: var(--text); background: rgba(255,255,255,0.03); }
+.nav-link.active {
+  color: var(--accent); border-left-color: var(--accent);
+  background: var(--accent-glow);
+}
+.nav-link .nav-icon { font-size: 16px; width: 22px; text-align: center; }
+.nav-link .nav-num {
+  margin-left: auto; font-size: 11px;
+  background: var(--border); border-radius: 10px;
+  padding: 1px 8px; color: var(--text-dim);
+}
+.sidebar-overlay {
+  display: none; position: fixed; inset: 0;
+  background: rgba(0,0,0,0.6); z-index: 899;
+}
+
+/* ===== Main Content ===== */
+.main {
+  margin-left: var(--sidebar-w);
+  margin-top: var(--header-h);
+  padding: 40px 48px 120px;
+  max-width: 920px;
+}
+
+/* ===== Hero ===== */
+.hero {
+  text-align: center;
+  padding: 60px 0 40px;
+}
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--accent-glow);
+  border: 1px solid rgba(192, 132, 252, 0.3);
+  border-radius: 100px; padding: 6px 18px;
+  font-size: 13px; color: var(--accent);
+  margin-bottom: 24px;
+}
+.hero h1 {
+  font-size: 42px; font-weight: 800;
+  line-height: 1.2; margin-bottom: 16px;
+  background: linear-gradient(135deg, var(--text-bright), var(--accent));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+.hero p {
+  font-size: 18px; color: var(--text-dim);
+  max-width: 560px; margin: 0 auto 32px;
+}
+.hero-features {
+  display: flex; justify-content: center; gap: 32px;
+  flex-wrap: wrap;
+}
+.hero-feat {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 14px; color: var(--text-dim);
+}
+.hero-feat .dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--green);
+}
+
+/* ===== Section ===== */
+.section {
+  margin-top: 64px;
+  scroll-margin-top: 80px;
+}
+.section-header {
+  display: flex; align-items: center; gap: 14px;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+}
+.section-num {
+  width: 40px; height: 40px;
+  background: linear-gradient(135deg, var(--accent-dim), var(--accent));
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18px; font-weight: 800; color: #fff;
+  flex-shrink: 0;
+}
+.section-header h2 {
+  font-size: 26px; font-weight: 700;
+  color: var(--text-bright);
+}
+
+/* ===== Cards ===== */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  margin-bottom: 20px;
+}
+.card-warn {
+  border-color: rgba(251, 146, 60, 0.4);
+  background: linear-gradient(135deg, var(--bg-card), rgba(251, 146, 60, 0.05));
+}
+.card-warn::before {
+  content: "⚠️ 重要提示";
+  display: block; font-weight: 700; font-size: 14px;
+  color: var(--orange); margin-bottom: 12px;
+}
+.card-tip {
+  border-color: rgba(74, 222, 128, 0.4);
+  background: linear-gradient(135deg, var(--bg-card), rgba(74, 222, 128, 0.05));
+}
+.card-tip::before {
+  content: "💡 小贴士";
+  display: block; font-weight: 700; font-size: 14px;
+  color: var(--green); margin-bottom: 12px;
+}
+.card-info {
+  border-color: rgba(96, 165, 250, 0.4);
+  background: linear-gradient(135deg, var(--bg-card), rgba(96, 165, 250, 0.05));
+}
+.card-info::before {
+  content: "📖 说明";
+  display: block; font-weight: 700; font-size: 14px;
+  color: var(--blue); margin-bottom: 12px;
+}
+
+/* ===== Steps ===== */
+.steps { counter-reset: step; }
+.step {
+  position: relative;
+  padding-left: 48px;
+  margin-bottom: 32px;
+  counter-increment: step;
+}
+.step::before {
+  content: counter(step);
+  position: absolute; left: 0; top: 2px;
+  width: 32px; height: 32px;
+  background: var(--accent-dim);
+  border: 2px solid var(--accent);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 14px; font-weight: 700; color: var(--accent);
+}
+.step::after {
+  content: "";
+  position: absolute; left: 15px; top: 38px;
+  width: 2px; bottom: -8px;
+  background: var(--border);
+}
+.step:last-child::after { display: none; }
+.step h3 {
+  font-size: 18px; font-weight: 600;
+  color: var(--text-bright);
+  margin-bottom: 8px;
+}
+.step p { color: var(--text-dim); }
+
+/* ===== Code Blocks ===== */
+.code-block {
+  position: relative;
+  background: var(--bg-code);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin: 16px 0;
+  overflow: hidden;
+}
+.code-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 10px 16px;
+  background: rgba(255,255,255,0.03);
+  border-bottom: 1px solid var(--border);
+  font-size: 12px; color: var(--text-dim);
+}
+.code-header .lang-tag {
+  background: var(--accent-glow);
+  color: var(--accent);
+  padding: 2px 10px; border-radius: 6px;
+  font-weight: 600;
+}
+.copy-btn {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid var(--border);
+  color: var(--text-dim);
+  padding: 4px 12px; border-radius: 6px;
+  cursor: pointer; font-size: 12px;
+  transition: all 0.2s;
+}
+.copy-btn:hover { background: rgba(255,255,255,0.15); color: var(--text); }
+.copy-btn.copied { background: var(--green-dim); color: var(--green); border-color: rgba(74, 222, 128, 0.4); }
+.code-body {
+  padding: 16px 20px;
+  overflow-x: auto;
+  font-family: "JetBrains Mono", "Fira Code", "SF Mono", "Cascadia Code", Consolas, monospace;
+  font-size: 13.5px;
+  line-height: 1.7;
+  color: #e4e4e7;
+  white-space: pre;
+}
+.code-body::-webkit-scrollbar { height: 6px; }
+.code-body::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+/* Syntax Colors */
+.code-body .cm { color: #6b7280; } /* comment */
+.code-body .kw { color: #c084fc; } /* keyword */
+.code-body .st { color: #4ade80; } /* string */
+.code-body .fn { color: #60a5fa; } /* function */
+.code-body .vr { color: #fb923c; } /* variable */
+.code-body .op { color: #9ca3af; } /* operator */
+.code-body .nb { color: #fbbf24; } /* number/built-in */
+
+/* ===== Terminal Demo ===== */
+.terminal {
+  background: #0c0e14;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin: 20px 0;
+  overflow: hidden;
+}
+.terminal-bar {
+  display: flex; align-items: center; gap: 8px;
+  padding: 10px 16px;
+  background: rgba(255,255,255,0.03);
+  border-bottom: 1px solid var(--border);
+}
+.terminal-dot { width: 12px; height: 12px; border-radius: 50%; }
+.terminal-dot.r { background: #f87171; }
+.terminal-dot.y { background: #fbbf24; }
+.terminal-dot.g { background: #4ade80; }
+.terminal-title {
+  margin-left: 8px; font-size: 12px; color: var(--text-dim);
+}
+.terminal-body {
+  padding: 16px 20px;
+  font-family: "JetBrains Mono", "Fira Code", Consolas, monospace;
+  font-size: 13.5px; line-height: 1.8;
+  min-height: 120px;
+}
+.terminal-body .prompt { color: var(--green); }
+.terminal-body .cmd { color: var(--text-bright); }
+.terminal-body .output { color: var(--text-dim); }
+.terminal-body .highlight { color: var(--accent); }
+.terminal-body .info { color: var(--blue); }
+.terminal-body .warn { color: var(--orange); }
+.terminal-body .cursor {
+  display: inline-block;
+  width: 8px; height: 16px;
+  background: var(--accent);
+  animation: blink 1s step-end infinite;
+  vertical-align: text-bottom;
+}
+@keyframes blink { 50% { opacity: 0; } }
+
+/* ===== Diagram / Flow ===== */
+.flow-diagram {
+  display: flex; align-items: center; justify-content: center;
+  gap: 8px; flex-wrap: wrap;
+  padding: 24px; margin: 16px 0;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+.flow-box {
+  padding: 12px 20px;
+  background: var(--bg-code);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 14px; font-weight: 600;
+  text-align: center;
+}
+.flow-box.accent {
+  border-color: var(--accent);
+  background: var(--accent-glow);
+  color: var(--accent);
+}
+.flow-arrow {
+  color: var(--text-dim); font-size: 20px;
+}
+
+/* ===== Table ===== */
+.table-wrap {
+  overflow-x: auto;
+  margin: 16px 0;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+table {
+  width: 100%; border-collapse: collapse;
+  font-size: 14px;
+}
+th {
+  background: rgba(255,255,255,0.04);
+  padding: 12px 16px;
+  text-align: left; font-weight: 600;
+  color: var(--text-bright);
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+td {
+  padding: 10px 16px;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  color: var(--text-dim);
+}
+tr:last-child td { border-bottom: none; }
+td code {
+  background: var(--bg-code);
+  padding: 2px 8px; border-radius: 4px;
+  font-size: 13px; color: var(--accent);
+  font-family: "JetBrains Mono", Consolas, monospace;
+}
+
+/* ===== Inline Code ===== */
+p code, li code, h3 code {
+  background: var(--bg-code);
+  border: 1px solid var(--border);
+  padding: 2px 8px; border-radius: 5px;
+  font-size: 13.5px; color: var(--accent);
+  font-family: "JetBrains Mono", Consolas, monospace;
+}
+
+/* ===== Lists ===== */
+ul, ol { padding-left: 24px; margin: 12px 0; }
+li { margin-bottom: 8px; color: var(--text-dim); }
+li strong { color: var(--text); }
+
+/* ===== Tabs ===== */
+.tabs { margin: 16px 0; }
+.tab-buttons {
+  display: flex; gap: 4px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 0;
+}
+.tab-btn {
+  padding: 10px 20px;
+  background: none; border: none;
+  color: var(--text-dim);
+  font-size: 14px; font-weight: 500;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s;
+}
+.tab-btn:hover { color: var(--text); }
+.tab-btn.active {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+.tab-content { display: none; }
+.tab-content.active { display: block; }
+
+/* ===== FAQ / Accordion ===== */
+.faq-item {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+.faq-q {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 16px 20px;
+  background: var(--bg-card);
+  cursor: pointer; font-weight: 600;
+  color: var(--text-bright);
+  transition: background 0.2s;
+}
+.faq-q:hover { background: rgba(255,255,255,0.04); }
+.faq-q .arrow {
+  transition: transform 0.3s;
+  color: var(--text-dim);
+}
+.faq-item.open .faq-q .arrow { transform: rotate(180deg); }
+.faq-a {
+  max-height: 0; overflow: hidden;
+  transition: max-height 0.3s ease;
+  background: var(--bg-code);
+}
+.faq-item.open .faq-a { max-height: 800px; }
+.faq-a-inner { padding: 16px 20px; }
+
+/* ===== Back to Top ===== */
+.back-top {
+  position: fixed; bottom: 32px; right: 32px;
+  width: 44px; height: 44px;
+  background: var(--accent-dim);
+  border: 1px solid rgba(192, 132, 252, 0.4);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--accent); font-size: 20px;
+  cursor: pointer;
+  opacity: 0; transform: translateY(20px);
+  transition: all 0.3s;
+  z-index: 800;
+}
+.back-top.show { opacity: 1; transform: translateY(0); }
+.back-top:hover { background: var(--accent); color: #fff; }
+
+/* ===== Footer ===== */
+.footer {
+  margin-top: 80px;
+  padding: 32px 0;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  color: var(--text-dim);
+  font-size: 14px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+  .sidebar { transform: translateX(-100%); }
+  .sidebar.open { transform: translateX(0); }
+  .sidebar-overlay.open { display: block; }
+  .main { margin-left: 0; padding: 24px 20px 80px; }
+  .menu-btn { display: block; }
+  .hero h1 { font-size: 28px; }
+  .hero-features { gap: 16px; }
+  .flow-diagram { flex-direction: column; }
+  .flow-arrow { transform: rotate(90deg); }
+}
+@media (max-width: 480px) {
+  .hero h1 { font-size: 24px; }
+  .hero p { font-size: 15px; }
+  .section-header h2 { font-size: 20px; }
+  .code-body { font-size: 12px; padding: 12px; }
+  .tab-btn { padding: 8px 12px; font-size: 13px; }
+}
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+  <button class="menu-btn" onclick="toggleSidebar()" aria-label="菜单">☰</button>
+  <div class="header-logo">
+    <div class="logo-icon">C</div>
+    Claude Code 教程
+  </div>
+  <div class="header-right">
+    <span style="font-size:13px;color:var(--text-dim)">小白友好 · 中文版</span>
+  </div>
+</header>
+<div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+
+<!-- Sidebar -->
+<div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleSidebar()"></div>
+<nav class="sidebar" id="sidebar">
+  <div class="nav-group">
+    <div class="nav-group-title">入门</div>
+    <a class="nav-link" href="#intro"><span class="nav-icon">🏠</span>什么是 Claude Code</a>
+    <a class="nav-link" href="#prepare"><span class="nav-icon">📋</span>准备工作</a>
+    <a class="nav-link" href="#install"><span class="nav-icon">📦</span>安装 Claude Code</a>
+    <a class="nav-link" href="#config"><span class="nav-icon">⚙️</span>配置 API（重点）</a>
+  </div>
+  <div class="nav-group">
+    <div class="nav-group-title">使用</div>
+    <a class="nav-link" href="#firstrun"><span class="nav-icon">🚀</span>第一次运行</a>
+    <a class="nav-link" href="#basic"><span class="nav-icon">💬</span>基本对话用法</a>
+    <a class="nav-link" href="#coding"><span class="nav-icon">✏️</span>让 AI 写代码</a>
+    <a class="nav-link" href="#commands"><span class="nav-icon">⌨️</span>常用命令大全</a>
+  </div>
+  <div class="nav-group">
+    <div class="nav-group-title">进阶</div>
+    <a class="nav-link" href="#claudemd"><span class="nav-icon">📝</span>项目记忆 CLAUDE.md</a>
+    <a class="nav-link" href="#models"><span class="nav-icon">🧠</span>切换模型</a>
+    <a class="nav-link" href="#permissions"><span class="nav-icon">🔒</span>权限管理</a>
+    <a class="nav-link" href="#headless"><span class="nav-icon">🤖</span>非交互模式</a>
+    <a class="nav-link" href="#ide"><span class="nav-icon">🖥️</span>IDE 集成</a>
+  </div>
+  <div class="nav-group">
+    <div class="nav-group-title">参考</div>
+    <a class="nav-link" href="#shortcuts"><span class="nav-icon">⚡</span>快捷键速查</a>
+    <a class="nav-link" href="#faq"><span class="nav-icon">❓</span>常见问题</a>
+    <a class="nav-link" href="#glossary"><span class="nav-icon">📚</span>术语表</a>
+  </div>
+</nav>
+
+<!-- Main Content -->
+<main class="main">
+
+  <!-- ============ HERO ============ -->
+  <div class="hero" id="intro">
+    <div class="hero-badge">✨ 2025 最强 AI 编程助手</div>
+    <h1>Claude Code 小白教程</h1>
+    <p>从零开始，手把手教你安装、配置和使用 Claude Code。无需任何基础，跟着做就行。</p>
+    <div class="hero-features">
+      <div class="hero-feat"><div class="dot"></div>自动写代码</div>
+      <div class="hero-feat"><div class="dot"></div>自动改 Bug</div>
+      <div class="hero-feat"><div class="dot"></div>理解整个项目</div>
+      <div class="hero-feat"><div class="dot"></div>命令行操作</div>
+    </div>
+  </div>
+
+  <!-- 通俗介绍 -->
+  <div class="card" style="margin-top:40px">
+    <h3 style="color:var(--text-bright);margin-bottom:12px">🤔 Claude Code 到底是啥？</h3>
+    <p>简单说，Claude Code 就是一个<strong>跑在你终端（命令行）里的 AI 编程助手</strong>。你用文字告诉它你想干什么，它就能帮你：</p>
+    <ul>
+      <li><strong>写代码</strong> — 直接帮你创建文件、写函数</li>
+      <li><strong>改代码</strong> — 帮你修 Bug、重构、优化</li>
+      <li><strong>读代码</strong> — 看懂你的项目结构，回答你关于代码的问题</li>
+      <li><strong>跑命令</strong> — 帮你执行 git、npm 等终端命令</li>
+      <li><strong>做项目</strong> — 从零创建一整个项目</li>
+    </ul>
+    <p style="margin-top:12px">它和 ChatGPT 最大的不同是：<strong>它直接在你电脑上操作文件</strong>，而不只是在网页里聊天。</p>
+  </div>
+
+  <!-- 架构图 -->
+  <div class="flow-diagram">
+    <div class="flow-box">你（终端里打字）</div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-box accent">Claude Code</div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-box">第三方 API 代理</div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-box">Claude AI 模型</div>
+  </div>
+
+  <!-- ============ SECTION: 准备工作 ============ -->
+  <div class="section" id="prepare">
+    <div class="section-header">
+      <div class="section-num">1</div>
+      <h2>准备工作</h2>
+    </div>
+
+    <p>在安装之前，请确保你有以下东西：</p>
+
+    <div class="card">
+      <h3 style="color:var(--text-bright);margin-bottom:16px">📦 你需要准备的东西</h3>
+      <div class="table-wrap">
+        <table>
+          <tr><th>项目</th><th>说明</th><th>怎么获得</th></tr>
+          <tr>
+            <td><strong>电脑</strong></td>
+            <td>macOS / Linux / Windows 都行</td>
+            <td>你正在用的就行</td>
+          </tr>
+          <tr>
+            <td><strong>终端</strong></td>
+            <td>就是命令行工具</td>
+            <td>Mac 自带 Terminal；Windows 用 Git Bash</td>
+          </tr>
+          <tr>
+            <td><strong>Node.js 18+</strong></td>
+            <td>npm 安装方式需要（推荐方式）</td>
+            <td>见下方安装教程</td>
+          </tr>
+          <tr>
+            <td><strong>第三方 API Key</strong></td>
+            <td>用来调用 Claude 模型的密钥</td>
+            <td>向你的第三方 API 代理商获取</td>
+          </tr>
+          <tr>
+            <td><strong>第三方 API 地址</strong></td>
+            <td>代理商提供的 URL 地址</td>
+            <td>向你的第三方 API 代理商获取</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="card card-warn">
+      <p>因为国内无法直接访问 Anthropic 官方服务，所以我们需要通过<strong>第三方 API 代理</strong>来使用 Claude 模型。你需要从代理商那里获得两样东西：</p>
+      <ul>
+        <li><strong>API Key</strong>（一串密钥字符串，类似 <code>sk-ant-xxxx...</code>）</li>
+        <li><strong>API Base URL</strong>（一个网址，类似 <code>https://your-proxy.com</code>）</li>
+      </ul>
+      <p style="margin-top:8px">没有这两样东西，Claude Code 是无法工作的。请先联系你的代理商获取。</p>
+    </div>
+
+    <div class="card card-tip">
+      <p><strong>怎么打开终端？</strong></p>
+      <ul>
+        <li><strong>Mac</strong>：按 <code>Command + 空格</code>，输入 "Terminal"，回车</li>
+        <li><strong>Windows</strong>：安装 <a href="https://git-scm.com/downloads" style="color:var(--accent)">Git for Windows</a>，然后打开 "Git Bash"</li>
+        <li><strong>Linux</strong>：按 <code>Ctrl + Alt + T</code></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ============ SECTION: 安装 ============ -->
+  <div class="section" id="install">
+    <div class="section-header">
+      <div class="section-num">2</div>
+      <h2>安装 Claude Code</h2>
+    </div>
+
+    <div class="card card-warn">
+      <p><strong>国内用户注意！</strong>Claude Code 的官方安装脚本需要访问 <code>claude.ai</code>，该网站在国内<strong>无法直接访问</strong>。但别担心，下面提供了<strong>完全不需要翻墙</strong>的安装方法。</p>
+    </div>
+
+    <!-- Tabs: Install Methods -->
+    <div class="tabs">
+      <div class="tab-buttons">
+        <button class="tab-btn active" onclick="switchTab(event, 'install-npm')">npm 国内镜像（推荐）</button>
+        <button class="tab-btn" onclick="switchTab(event, 'install-github')">GitHub 下载</button>
+        <button class="tab-btn" onclick="switchTab(event, 'install-official')">官方脚本（需翻墙）</button>
+      </div>
+
+      <!-- 方式一：npm 国内镜像（推荐） -->
+      <div class="tab-content active" id="install-npm">
+        <div class="card card-tip">
+          <p><strong>这是国内用户最推荐的方式！</strong>使用国内 npm 镜像，完全不需要翻墙，一条命令搞定。</p>
+        </div>
+
+        <div class="steps">
+          <div class="step">
+            <h3>先安装 Node.js（如果还没有的话）</h3>
+            <p>npm 是 Node.js 自带的包管理器，所以需要先安装 Node.js（版本 18 以上）。</p>
+
+            <div class="tabs">
+              <div class="tab-buttons">
+                <button class="tab-btn active" onclick="switchTab(event, 'node-mac')">Mac</button>
+                <button class="tab-btn" onclick="switchTab(event, 'node-win')">Windows</button>
+                <button class="tab-btn" onclick="switchTab(event, 'node-linux')">Linux</button>
+              </div>
+              <div class="tab-content active" id="node-mac">
+                <p>方法 A：用 Homebrew 安装（推荐）</p>
+                <div class="code-block">
+                  <div class="code-header"><span class="lang-tag">bash</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
+                  <div class="code-body">brew install node</div>
+                </div>
+                <p>方法 B：去 <a href="https://nodejs.org/zh-cn" style="color:var(--accent)">Node.js 中文官网</a> 下载安装包，双击安装。</p>
+              </div>
+              <div class="tab-content" id="node-win">
+                <p>去 <a href="https://nodejs.org/zh-cn" style="color:var(--accent)">Node.js 中文官网</a> 下载 Windows 安装包（.msi），双击安装即可。安装时记得勾选 "Add to PATH"。</p>
+                <p style="margin-top:8px">另外还需要安装 <a href="https://git-scm.com/downloads" style="color:var(--accent)">Git for Windows</a>，因为 Claude Code 在 Windows 上需要 Git Bash 环境。</p>
+              </div>
+              <div class="tab-content" id="node-linux">
+                <div class="code-block">
+                  <div class="code-header"><span class="lang-tag">bash — Ubuntu/Debian</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
+                  <div class="code-body">curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
+sudo apt-get install -y nodejs</div>
+                </div>
+              </div>
+            </div>
+
+            <p style="margin-top:12px">安装好后，验证一下版本：</p>
+            <div class="code-block">
+              <div class="code-header"><span class="lang-tag">bash</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
+              <div class="code-body">node -v   <span class="cm"># 应该显示 v18.x.x 或更高</span>
+npm -v    <span class="cm"># 应该显示 9.x.x 或更高</span></div>
+            </div>
+          </div>
+
+          <div class="step">
+            <h3>用国内镜像安装 Claude Code</h3>
+            <p>这是关键的一步，使用淘宝 npm 镜像源来安装，<strong>完全不需要翻墙</strong>：</p>
+            <div class="code-block">
+              <div class="code-header"><span class="lang-tag">bash — 一条命令搞定</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
+              <div class="code-body">npm install -g @anthropic-ai/claude-code --registry=https://registry.npmmirror.com</div>
+            </div>
+
+            <div class="card card-info" style="margin-top:12px">
+              <p><strong>这条命令做了什么？</strong></p>
+              <ul>
+                <li><code>npm install -g</code> — 全局安装一个包</li>
+                <li><code>@anthropic-ai/claude-code</code> — Claude Code 的 npm 包名</li>
+                <li><code>--registry=https://registry.npmmirror.com</code> — 使用国内淘宝镜像源，不走国外服务器</li>
+              </ul>
+            </div>
+
+            <div class="card card-tip" style="margin-top:12px">
+              <p><strong>想永久使用国内镜像？</strong>可以把镜像源设为默认，以后装任何 npm 包都走国内：</p>
+              <div class="code-block" style="margin-bottom:0">
+                <div class="code-header"><span class="lang-tag">bash</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
+                <div class="code-body">npm config set registry https://registry.npmmirror.com
+
+<span class="cm"># 设置好之后，以后就可以直接用：</span>
+npm install -g @anthropic-ai/claude-code</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="step">
+            <h3>等待安装完成</h3>
+            <p>安装过程可能需要 1-3 分钟（取决于你的网速）。看到类似下面的输出就表示安装成功了：</p>
+            <div class="terminal">
+              <div class="terminal-bar">
+                <div class="terminal-dot r"></div>
+                <div class="terminal-dot y"></div>
+                <div class="terminal-dot g"></div>
+                <span class="terminal-title">Terminal</span>
+              </div>
+              <div class="terminal-body">
+<span class="prompt">$</span> <span class="cmd">npm install -g @anthropic-ai/claude-code --registry=https://registry.npmmirror.com</span>
+
+<span class="output">added 1 package in 45s</span>
+<span class="info">npm warn deprecated @anthropic-ai/claude-code: Use the native installation method</span>
+
+<span class="prompt">$</span> <span class="cursor"></span></div>
+            </div>
+            <div class="card card-info" style="margin-top:8px">
+              <p>看到 <code>warn deprecated</code> 的警告<strong>不用管</strong>！这只是官方建议用另一种安装方式，<strong>并不影响使用</strong>，npm 安装的版本功能完全一样。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 方式二：GitHub 下载 -->
+      <div class="tab-content" id="install-github">
+        <div class="card card-info">
+          <p>GitHub 在国内大部分时候可以访问（速度可能较慢）。你可以直接去 GitHub 下载编译好的二进制文件。</p>
+        </div>
+
+        <div class="steps">
+          <div class="step">
+            <h3>前往 GitHub Releases 页面</h3>
+            <p>在浏览器中打开：<a href="https://github.com/anthropics/claude-code/releases" style="color:var(--accent)" target="_blank">https://github.com/anthropics/claude-code/releases</a></p>
+            <p>找到最新版本，下载对应你系统的文件：</p>
+            <div class="table-wrap">
+              <table>
+                <tr><th>你的系统</th><th>下载哪个文件</th></tr>
+                <tr><td>Mac (Apple 芯片 M1/M2/M3/M4)</td><td><code>claude-code-x.x.x-darwin-arm64.tar.gz</code></td></tr>
+                <tr><td>Mac (Intel 芯片)</td><td><code>claude-code-x.x.x-darwin-x64.tar.gz</code></td></tr>
+                <tr><td>Linux (x64)</td><td><code>claude-code-x.x.x-linux-x64.tar.gz</code></td></tr>
+                <tr><td>Windows (x64)</td><td><code>claude-code-x.x.x-win-x64.exe</code></td></tr>
+              </table>
+            </div>
+          </div>
+
+          <div class="step">
+            <h3>安装二进制文件（Mac/Linux）</h3>
+            <div class="code-block">
+              <div class="code-header"><span class="lang-tag">bash</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
+              <div class="code-body"><span class="cm"># 1. 解压下载的文件（文件名换成你实际下载的）</span>
+tar -xzf claude-code-*-darwin-arm64.tar.gz
+
+<span class="cm"># 2. 移动到系统路径</span>
+sudo mv claude /usr/local/bin/
+
+<span class="cm"># 3. 确保可执行权限</span>
+chmod +x /usr/local/bin/claude</div>
+            </div>
+          </div>
+
+          <div class="step">
+            <h3>Windows 用户</h3>
+            <p>下载 <code>.exe</code> 文件后，把它放到一个方便的位置（如 <code>C:\Program Files\ClaudeCode\</code>），然后将该目录添加到系统 PATH 环境变量中。</p>
+          </div>
+        </div>
+
+        <div class="card card-tip">
+          <p><strong>GitHub 访问慢？</strong>可以试试国内的 GitHub 镜像站来加速下载，或者让已经下载好的朋友直接把文件传给你。</p>
+        </div>
+      </div>
+
+      <!-- 方式三：官方脚本 -->
+      <div class="tab-content" id="install-official">
+        <div class="card card-warn">
+          <p>以下是官方推荐的安装方式，但需要访问 <code>claude.ai</code>，<strong>在国内需要翻墙（VPN/代理）才能执行</strong>。如果你有翻墙工具，可以使用这种方式。</p>
+        </div>
+
+        <div class="tabs">
+          <div class="tab-buttons">
+            <button class="tab-btn active" onclick="switchTab(event, 'official-mac')">Mac / Linux</button>
+            <button class="tab-btn" onclick="switchTab(event, 'official-win')">Windows</button>
+            <button class="tab-btn" onclick="switchTab(event, 'official-brew')">Homebrew</button>
+          </div>
+          <div class="tab-content active" id="official-mac">
+            <div class="code-block">
+              <div class="code-header"><span class="lang-tag">bash</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
+              <div class="code-body">curl -fsSL https://claude.ai/install.sh | bash</div>
+            </div>
+          </div>
+          <div class="tab-content" id="official-win">
+            <p>PowerShell：</p>
+            <div class="code-block">
+              <div class="code-header"><span class="lang-tag">powershell</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
+              <div class="code-body">irm https://claude.ai/install.ps1 | iex</div>
+            </div>
+            <p>CMD：</p>
+            <div class="code-block">
+              <div class="code-header"><span class="lang-tag">cmd</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
+              <div class="code-body">curl -fsSL https://claude.ai/install.cmd -o install.cmd && install.cmd && del install.cmd</div>
+            </div>
+          </div>
+          <div class="tab-content" id="official-brew">
+            <div class="code-block">
+              <div class="code-header"><span class="lang-tag">bash</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
+              <div class="code-body">brew install --cask claude-code</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card card-tip" style="margin-top:12px">
+          <p><strong>小技巧：</strong>如果你只是暂时有翻墙工具，可以只在安装时打开 VPN，安装完毕后关掉就行。Claude Code 日常使用是连接你的<strong>第三方 API 代理</strong>，不需要翻墙。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 验证安装 -->
+    <h3 style="color:var(--text-bright);margin-top:32px;margin-bottom:16px">验证安装成功</h3>
+    <p>无论用哪种方式安装，安装完成后都运行以下命令验证：</p>
+    <div class="steps">
+      <div class="step">
+        <h3>检查版本号</h3>
+        <div class="code-block">
+          <div class="code-header">
+            <span class="lang-tag">bash</span>
+            <button class="copy-btn" onclick="copyCode(this)">复制</button>
+          </div>
+          <div class="code-body">claude -v</div>
+        </div>
+        <div class="terminal">
+          <div class="terminal-bar">
+            <div class="terminal-dot r"></div>
+            <div class="terminal-dot y"></div>
+            <div class="terminal-dot g"></div>
+            <span class="terminal-title">Terminal</span>
+          </div>
+          <div class="terminal-body">
+<span class="prompt">$</span> <span class="cmd">claude -v</span>
+<span class="output">2.1.50</span>    <span class="cm">← 看到版本号就说明安装成功了！</span></div>
+        </div>
+      </div>
+      <div class="step">
+        <h3>运行诊断检查（可选）</h3>
+        <div class="code-block">
+          <div class="code-header">
+            <span class="lang-tag">bash</span>
+            <button class="copy-btn" onclick="copyCode(this)">复制</button>
+          </div>
+          <div class="code-body">claude doctor</div>
+        </div>
+        <p>这个命令会检查你的安装环境是否一切正常。</p>
+      </div>
+    </div>
+
+    <!-- 安装常见问题 -->
+    <div class="card card-warn" style="margin-top:24px">
+      <p><strong>安装遇到问题？</strong></p>
+      <ul>
+        <li><strong>提示 <code>npm: command not found</code></strong> — 说明你还没装 Node.js，先装 Node.js 再来</li>
+        <li><strong>提示 <code>permission denied</code></strong> — 在命令前面加 <code>sudo</code> 重试：<code>sudo npm install -g @anthropic-ai/claude-code</code></li>
+        <li><strong>下载速度很慢</strong> — 确认你加了 <code>--registry=https://registry.npmmirror.com</code> 走国内镜像</li>
+        <li><strong><code>claude -v</code> 提示找不到命令</strong> — 关闭终端重新打开试试，或者检查 npm 的全局 bin 路径是否在 PATH 中</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ============ SECTION: 配置 API ============ -->
+  <div class="section" id="config">
+    <div class="section-header">
+      <div class="section-num">3</div>
+      <h2>配置第三方 API（最重要！）</h2>
+    </div>
+
+    <div class="card card-warn">
+      <p>这一步是整个教程<strong>最关键</strong>的一步！因为我们在国内不能直接登录 Anthropic 账号，所以必须手动配置第三方提供的 API 地址和密钥。<strong>如果这一步没搞对，后面什么都用不了。</strong></p>
+    </div>
+
+    <p>有两种配置方式，推荐使用<strong>方式一（配置文件）</strong>，因为只需要设置一次，以后每次用都自动生效。</p>
+
+    <!-- Tabs: Config Method -->
+    <div class="tabs">
+      <div class="tab-buttons">
+        <button class="tab-btn active" onclick="switchTab(event, 'config-file')">方式一：配置文件（推荐）</button>
+        <button class="tab-btn" onclick="switchTab(event, 'config-env')">方式二：环境变量</button>
+        <button class="tab-btn" onclick="switchTab(event, 'config-shell')">方式三：写入 Shell 配置</button>
+      </div>
+
+      <!-- 方式一 -->
+      <div class="tab-content active" id="config-file">
+        <div class="steps">
+          <div class="step">
+            <h3>创建配置目录</h3>
+            <p>先确保 <code>~/.claude/</code> 目录存在（通常安装后就已经有了）：</p>
+            <div class="code-block">
+              <div class="code-header">
+                <span class="lang-tag">bash</span>
+                <button class="copy-btn" onclick="copyCode(this)">复制</button>
+              </div>
+              <div class="code-body">mkdir -p ~/.claude</div>
+            </div>
+          </div>
+
+          <div class="step">
+            <h3>创建配置文件</h3>
+            <p>用任意文本编辑器创建 <code>~/.claude/settings.json</code> 文件。这里我们用终端命令直接创建：</p>
+            <div class="code-block">
+              <div class="code-header">
+                <span class="lang-tag">bash</span>
+                <button class="copy-btn" onclick="copyCode(this)">复制</button>
+              </div>
+              <div class="code-body">cat > ~/.claude/settings.json << 'EOF'
+{
+  "env": {
+    "ANTHROPIC_API_KEY": "把这里替换成你的API密钥",
+    "ANTHROPIC_BASE_URL": "把这里替换成你的API地址"
+  }
+}
+EOF</div>
+            </div>
+          </div>
+
+          <div class="step">
+            <h3>替换成你自己的信息</h3>
+            <p>打开刚才创建的文件，把里面的内容替换成你自己的真实信息。举个例子：</p>
+            <div class="code-block">
+              <div class="code-header">
+                <span class="lang-tag">json — 示例</span>
+                <button class="copy-btn" onclick="copyCode(this)">复制</button>
+              </div>
+              <div class="code-body">{
+  "env": {
+    "ANTHROPIC_API_KEY": "sk-ant-api03-xxxxxxxxxxxxxxxxxx",
+    "ANTHROPIC_BASE_URL": "https://api.your-proxy.com"
+  }
+}</div>
+            </div>
+            <div class="card card-tip" style="margin-top:12px">
+              <p>你也可以用 <code>nano</code> 或 <code>vim</code> 等编辑器来编辑这个文件：</p>
+              <div class="code-block" style="margin-bottom:0">
+                <div class="code-header"><span class="lang-tag">bash</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
+                <div class="code-body">nano ~/.claude/settings.json</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="step">
+            <h3>验证配置文件</h3>
+            <p>检查一下文件内容是否正确：</p>
+            <div class="code-block">
+              <div class="code-header">
+                <span class="lang-tag">bash</span>
+                <button class="copy-btn" onclick="copyCode(this)">复制</button>
+              </div>
+              <div class="code-body">cat ~/.claude/settings.json</div>
+            </div>
+            <p>确保输出的 JSON 格式正确，API Key 和 URL 都是你自己的真实信息。</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 方式二 -->
+      <div class="tab-content" id="config-env">
+        <p>每次打开终端时手动设置环境变量（关闭终端后失效，适合临时测试）：</p>
+        <div class="code-block">
+          <div class="code-header">
+            <span class="lang-tag">bash</span>
+            <button class="copy-btn" onclick="copyCode(this)">复制</button>
+          </div>
+          <div class="code-body"><span class="cm"># 设置你的 API 密钥</span>
+export ANTHROPIC_API_KEY="sk-ant-api03-xxxxxxxxxxxxxxxxxx"
+
+<span class="cm"># 设置第三方代理的 API 地址</span>
+export ANTHROPIC_BASE_URL="https://api.your-proxy.com"
+
+<span class="cm"># 然后启动 Claude Code</span>
+claude</div>
+        </div>
+        <div class="card card-info">
+          <p>这种方式每次打开新的终端窗口都要重新设置，比较麻烦。如果你只是想先试试能不能用，可以用这种方式。确认可以用了之后建议切换到方式一。</p>
+        </div>
+      </div>
+
+      <!-- 方式三 -->
+      <div class="tab-content" id="config-shell">
+        <p>把环境变量写到你的 Shell 配置文件里，这样每次打开终端都会自动加载：</p>
+
+        <div class="tabs">
+          <div class="tab-buttons">
+            <button class="tab-btn active" onclick="switchTab(event, 'shell-zsh')">Zsh（Mac 默认）</button>
+            <button class="tab-btn" onclick="switchTab(event, 'shell-bash')">Bash</button>
+          </div>
+          <div class="tab-content active" id="shell-zsh">
+            <div class="code-block">
+              <div class="code-header">
+                <span class="lang-tag">bash</span>
+                <button class="copy-btn" onclick="copyCode(this)">复制</button>
+              </div>
+              <div class="code-body"><span class="cm"># 把下面两行加到 ~/.zshrc 文件末尾</span>
+echo 'export ANTHROPIC_API_KEY="你的API密钥"' >> ~/.zshrc
+echo 'export ANTHROPIC_BASE_URL="你的API地址"' >> ~/.zshrc
+
+<span class="cm"># 让配置立即生效</span>
+source ~/.zshrc</div>
+            </div>
+          </div>
+          <div class="tab-content" id="shell-bash">
+            <div class="code-block">
+              <div class="code-header">
+                <span class="lang-tag">bash</span>
+                <button class="copy-btn" onclick="copyCode(this)">复制</button>
+              </div>
+              <div class="code-body"><span class="cm"># 把下面两行加到 ~/.bashrc 文件末尾</span>
+echo 'export ANTHROPIC_API_KEY="你的API密钥"' >> ~/.bashrc
+echo 'export ANTHROPIC_BASE_URL="你的API地址"' >> ~/.bashrc
+
+<span class="cm"># 让配置立即生效</span>
+source ~/.bashrc</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 配置项详解 -->
+    <div class="card" style="margin-top:24px">
+      <h3 style="color:var(--text-bright);margin-bottom:12px">🔑 两个关键配置项详解</h3>
+      <div class="table-wrap">
+        <table>
+          <tr><th>配置项</th><th>含义</th><th>示例值</th></tr>
+          <tr>
+            <td><code>ANTHROPIC_API_KEY</code></td>
+            <td>你的 API 密钥，用来验证你的身份和付费额度</td>
+            <td><code>sk-ant-api03-xxxxx</code></td>
+          </tr>
+          <tr>
+            <td><code>ANTHROPIC_BASE_URL</code></td>
+            <td>第三方代理的 API 服务器地址</td>
+            <td><code>https://api.your-proxy.com</code></td>
+          </tr>
+        </table>
+      </div>
+      <p style="margin-top:12px;color:var(--text-dim)">这两个值都是你的代理商提供的，每个代理商的格式可能不同。请根据你实际拿到的信息填写。</p>
+    </div>
+  </div>
+
+  <!-- ============ SECTION: 第一次运行 ============ -->
+  <div class="section" id="firstrun">
+    <div class="section-header">
+      <div class="section-num">4</div>
+      <h2>第一次运行</h2>
+    </div>
+
+    <div class="steps">
+      <div class="step">
+        <h3>进入你的项目目录</h3>
+        <p>Claude Code 需要在一个项目目录中运行，这样它才能看到你的代码文件。</p>
+        <div class="code-block">
+          <div class="code-header">
+            <span class="lang-tag">bash</span>
+            <button class="copy-btn" onclick="copyCode(this)">复制</button>
+          </div>
+          <div class="code-body"><span class="cm"># 进入你的项目文件夹（换成你自己的路径）</span>
+cd ~/my-project
+
+<span class="cm"># 如果你还没有项目，可以先创建一个测试目录</span>
+mkdir ~/test-project && cd ~/test-project</div>
+        </div>
+      </div>
+
+      <div class="step">
+        <h3>启动 Claude Code</h3>
+        <div class="code-block">
+          <div class="code-header">
+            <span class="lang-tag">bash</span>
+            <button class="copy-btn" onclick="copyCode(this)">复制</button>
+          </div>
+          <div class="code-body">claude</div>
+        </div>
+      </div>
+
+      <div class="step">
+        <h3>看到这个画面说明成功了</h3>
+        <div class="terminal">
+          <div class="terminal-bar">
+            <div class="terminal-dot r"></div>
+            <div class="terminal-dot y"></div>
+            <div class="terminal-dot g"></div>
+            <span class="terminal-title">Terminal — claude</span>
+          </div>
+          <div class="terminal-body">
+<span class="highlight">╭────────────────────────────────────────╮</span>
+<span class="highlight">│</span>     <span class="info">Claude Code</span> <span class="output">v1.x.x</span>                  <span class="highlight">│</span>
+<span class="highlight">│</span>                                        <span class="highlight">│</span>
+<span class="highlight">│</span>  <span class="output">Model:</span> <span class="info">claude-sonnet-4-6</span>              <span class="highlight">│</span>
+<span class="highlight">│</span>  <span class="output">Working directory:</span> ~/test-project     <span class="highlight">│</span>
+<span class="highlight">╰────────────────────────────────────────╯</span>
+
+<span class="output">Tips: Use</span> <span class="info">/help</span> <span class="output">for available commands</span>
+
+<span class="prompt">></span> <span class="cursor"></span></div>
+        </div>
+        <p>出现 <code>></code> 提示符就表示 Claude Code 已经准备好了，可以开始对话了！</p>
+      </div>
+
+      <div class="step">
+        <h3>试着说句话</h3>
+        <p>在 <code>></code> 后面输入你想问的问题，按回车发送：</p>
+        <div class="terminal">
+          <div class="terminal-bar">
+            <div class="terminal-dot r"></div>
+            <div class="terminal-dot y"></div>
+            <div class="terminal-dot g"></div>
+            <span class="terminal-title">Terminal — claude</span>
+          </div>
+          <div class="terminal-body">
+<span class="prompt">></span> <span class="cmd">你好，请用中文介绍一下你自己</span>
+
+<span class="info">Claude:</span> <span class="output">你好！我是 Claude Code，一个运行在终端里的 AI 编程助手。
+我可以帮你：
+• 阅读和理解你的代码
+• 编写新的代码文件
+• 修复代码中的 Bug
+• 执行终端命令
+• 管理 Git 版本控制
+
+有什么我可以帮你的吗？</span>
+
+<span class="prompt">></span> <span class="cursor"></span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card card-tip">
+      <p>如果启动后报错，请检查：</p>
+      <ul>
+        <li>API Key 是否正确（有没有多余的空格或引号）</li>
+        <li>API Base URL 是否正确（注意 <code>https://</code> 不能漏）</li>
+        <li>网络是否正常（能否访问你的代理商地址）</li>
+      </ul>
+      <p>可以运行 <code>/status</code> 命令查看连接状态。</p>
+    </div>
+  </div>
+
+  <!-- ============ SECTION: 基本用法 ============ -->
+  <div class="section" id="basic">
+    <div class="section-header">
+      <div class="section-num">5</div>
+      <h2>基本对话用法</h2>
+    </div>
+
+    <p>Claude Code 的核心用法非常简单：<strong>你打字说话，它来干活。</strong>下面是一些最常用的场景。</p>
+
+    <!-- 场景1 -->
+    <div class="card">
+      <h3 style="color:var(--text-bright);margin-bottom:12px">📖 场景一：让它看懂你的项目</h3>
+      <div class="terminal">
+        <div class="terminal-bar">
+          <div class="terminal-dot r"></div>
+          <div class="terminal-dot y"></div>
+          <div class="terminal-dot g"></div>
+          <span class="terminal-title">Terminal — claude</span>
+        </div>
+        <div class="terminal-body">
+<span class="prompt">></span> <span class="cmd">帮我分析一下这个项目的整体结构和功能</span>
+
+<span class="info">Claude:</span> <span class="output">我来看一下项目结构...</span>
+
+<span class="output">📁 项目结构分析：</span>
+<span class="output">├── src/          — 源代码目录</span>
+<span class="output">│   ├── App.tsx   — 主入口组件（React）</span>
+<span class="output">│   ├── api/      — 后端 API 接口</span>
+<span class="output">│   └── utils/    — 工具函数</span>
+<span class="output">├── package.json  — 项目依赖配置</span>
+<span class="output">└── README.md     — 项目说明文档</span>
+<span class="output"></span>
+<span class="output">这是一个 React + TypeScript 的前端项目，主要功能是...</span></div>
+      </div>
+    </div>
+
+    <!-- 场景2 -->
+    <div class="card">
+      <h3 style="color:var(--text-bright);margin-bottom:12px">🔍 场景二：问具体的代码问题</h3>
+      <div class="terminal">
+        <div class="terminal-bar">
+          <div class="terminal-dot r"></div>
+          <div class="terminal-dot y"></div>
+          <div class="terminal-dot g"></div>
+          <span class="terminal-title">Terminal — claude</span>
+        </div>
+        <div class="terminal-body">
+<span class="prompt">></span> <span class="cmd">src/api/user.ts 这个文件里的 getUserProfile 函数是干嘛的？</span>
+
+<span class="info">Claude:</span> <span class="output">我来读一下这个文件...</span>
+
+<span class="output">`getUserProfile` 函数的作用是根据用户 ID 从后端获取
+用户的个人资料信息。它接收一个 `userId` 参数，然后向
+`/api/users/:id` 发送 GET 请求，返回包含用户名、邮箱、
+头像等信息的对象。</span></div>
+      </div>
+      <div class="card card-tip" style="margin-top:12px">
+        <p>你可以用 <code>@</code> 符号直接引用文件，例如输入 <code>解释一下 @src/api/user.ts</code>，Claude 会自动读取这个文件。</p>
+      </div>
+    </div>
+
+    <!-- 场景3 -->
+    <div class="card">
+      <h3 style="color:var(--text-bright);margin-bottom:12px">🐛 场景三：让它修 Bug</h3>
+      <div class="terminal">
+        <div class="terminal-bar">
+          <div class="terminal-dot r"></div>
+          <div class="terminal-dot y"></div>
+          <div class="terminal-dot g"></div>
+          <span class="terminal-title">Terminal — claude</span>
+        </div>
+        <div class="terminal-body">
+<span class="prompt">></span> <span class="cmd">登录页面点击登录按钮后没有反应，帮我找一下 Bug</span>
+
+<span class="info">Claude:</span> <span class="output">让我检查一下登录相关的代码...</span>
+
+<span class="output">找到问题了！在 `src/pages/Login.tsx` 第 42 行：</span>
+
+<span class="output">```tsx
+// 问题：handleSubmit 函数没有 await 异步调用
+const handleSubmit = (e) => {
+  e.preventDefault();
+  loginAPI(username, password);  // ← 缺少 await
+};
+```</span>
+
+<span class="output">应该改为：</span>
+
+<span class="output">```tsx
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  await loginAPI(username, password);  // ← 加上 await
+};
+```</span>
+
+<span class="warn">要我帮你直接修改这个文件吗？</span></div>
+      </div>
+      <p style="margin-top:12px;color:var(--text-dim)">当 Claude 要修改你的文件时，它会先问你同意不同意。你输入 <code>y</code>（同意）或者 <code>n</code>（拒绝）即可。</p>
+    </div>
+  </div>
+
+  <!-- ============ SECTION: 让 AI 写代码 ============ -->
+  <div class="section" id="coding">
+    <div class="section-header">
+      <div class="section-num">6</div>
+      <h2>让 AI 帮你写代码（实战演示）</h2>
+    </div>
+
+    <p>下面是几个完整的实战例子，展示 Claude Code 有多强大。</p>
+
+    <!-- 例子1 -->
+    <div class="card">
+      <h3 style="color:var(--text-bright);margin-bottom:12px">🌟 实战一：从零创建一个 TODO 应用</h3>
+      <div class="terminal">
+        <div class="terminal-bar">
+          <div class="terminal-dot r"></div>
+          <div class="terminal-dot y"></div>
+          <div class="terminal-dot g"></div>
+          <span class="terminal-title">Terminal — claude</span>
+        </div>
+        <div class="terminal-body">
+<span class="prompt">></span> <span class="cmd">帮我用 HTML + CSS + JavaScript 创建一个漂亮的 TODO 待办事项应用，</span>
+  <span class="cmd">要支持添加、删除、标记完成功能，界面要好看一点</span>
+
+<span class="info">Claude:</span> <span class="output">好的，我来为你创建一个完整的 TODO 应用。</span>
+
+<span class="output">📝 Created  index.html</span>
+<span class="output">📝 Created  style.css</span>
+<span class="output">📝 Created  app.js</span>
+
+<span class="output">✅ 已经创建了 3 个文件：
+• index.html — 页面结构
+• style.css — 样式（渐变背景 + 卡片设计）
+• app.js — 交互逻辑（增删改查 + 本地存储）
+
+你可以用浏览器直接打开 index.html 查看效果。</span></div>
+      </div>
+    </div>
+
+    <!-- 例子2 -->
+    <div class="card">
+      <h3 style="color:var(--text-bright);margin-bottom:12px">🌟 实战二：给现有项目加新功能</h3>
+      <div class="terminal">
+        <div class="terminal-bar">
+          <div class="terminal-dot r"></div>
+          <div class="terminal-dot y"></div>
+          <div class="terminal-dot g"></div>
+          <span class="terminal-title">Terminal — claude</span>
+        </div>
+        <div class="terminal-body">
+<span class="prompt">></span> <span class="cmd">给项目加一个暗黑模式切换功能，点击按钮可以在亮色和暗色主题之间切换</span>
+
+<span class="info">Claude:</span> <span class="output">我来看看项目现有的样式结构...</span>
+
+<span class="output">✏️ Modified  src/App.tsx         (添加了主题切换按钮和逻辑)</span>
+<span class="output">✏️ Modified  src/styles/main.css  (添加了暗色主题 CSS 变量)</span>
+<span class="output">✏️ Modified  src/hooks/index.ts   (新增 useTheme Hook)</span>
+
+<span class="output">✅ 暗黑模式功能已添加！
+• 页面右上角新增了🌙/☀️切换按钮
+• 主题偏好会保存到 localStorage
+• 默认跟随系统主题设置</span></div>
+      </div>
+    </div>
+
+    <!-- 例子3 -->
+    <div class="card">
+      <h3 style="color:var(--text-bright);margin-bottom:12px">🌟 实战三：用自然语言跑命令</h3>
+      <div class="terminal">
+        <div class="terminal-bar">
+          <div class="terminal-dot r"></div>
+          <div class="terminal-dot y"></div>
+          <div class="terminal-dot g"></div>
+          <span class="terminal-title">Terminal — claude</span>
+        </div>
+        <div class="terminal-body">
+<span class="prompt">></span> <span class="cmd">帮我安装项目依赖，然后启动开发服务器</span>
+
+<span class="info">Claude:</span> <span class="output">我来执行安装和启动命令。</span>
+
+<span class="warn">🔧 Will run: npm install</span>
+<span class="output">Allow? (y/n)</span> <span class="cmd">y</span>
+
+<span class="output">added 1247 packages in 32s</span>
+
+<span class="warn">🔧 Will run: npm run dev</span>
+<span class="output">Allow? (y/n)</span> <span class="cmd">y</span>
+
+<span class="output">  VITE v5.x.x  ready in 420 ms</span>
+<span class="output">  ➜  Local:   http://localhost:5173/</span></div>
+      </div>
+      <p style="margin-top:12px;color:var(--text-dim)">注意：执行命令之前 Claude 会征求你的同意，你可以看到它要执行什么命令再决定是否允许。</p>
+    </div>
+  </div>
+
+  <!-- ============ SECTION: 常用命令 ============ -->
+  <div class="section" id="commands">
+    <div class="section-header">
+      <div class="section-num">7</div>
+      <h2>常用命令大全</h2>
+    </div>
+
+    <p>在 Claude Code 的对话框中，以 <code>/</code> 开头的是<strong>内置命令</strong>，用来控制 Claude Code 本身的行为。</p>
+
+    <div class="table-wrap">
+      <table>
+        <tr><th>命令</th><th>功能</th><th>使用场景</th></tr>
+        <tr>
+          <td><code>/help</code></td>
+          <td>显示帮助信息</td>
+          <td>不知道怎么用的时候看看</td>
+        </tr>
+        <tr>
+          <td><code>/status</code></td>
+          <td>查看连接状态、版本、模型信息</td>
+          <td>检查 API 是否连接正常</td>
+        </tr>
+        <tr>
+          <td><code>/model</code></td>
+          <td>切换 AI 模型</td>
+          <td>想换用更快或更强的模型</td>
+        </tr>
+        <tr>
+          <td><code>/clear</code></td>
+          <td>清空当前对话历史</td>
+          <td>想开始新的话题</td>
+        </tr>
+        <tr>
+          <td><code>/compact</code></td>
+          <td>压缩对话历史</td>
+          <td>对话太长、token 用太多时</td>
+        </tr>
+        <tr>
+          <td><code>/cost</code></td>
+          <td>查看本次消耗了多少 token</td>
+          <td>想看看花了多少钱</td>
+        </tr>
+        <tr>
+          <td><code>/init</code></td>
+          <td>初始化项目配置（CLAUDE.md）</td>
+          <td>让 Claude 更了解你的项目</td>
+        </tr>
+        <tr>
+          <td><code>/memory</code></td>
+          <td>编辑记忆文件</td>
+          <td>让 Claude 记住你的偏好</td>
+        </tr>
+        <tr>
+          <td><code>/config</code></td>
+          <td>打开设置界面</td>
+          <td>修改主题、权限、模型等设置</td>
+        </tr>
+        <tr>
+          <td><code>/permissions</code></td>
+          <td>查看和管理权限规则</td>
+          <td>控制 Claude 能做什么</td>
+        </tr>
+        <tr>
+          <td><code>/doctor</code></td>
+          <td>运行诊断检查</td>
+          <td>出问题时排查原因</td>
+        </tr>
+        <tr>
+          <td><code>/vim</code></td>
+          <td>开启 Vim 编辑模式</td>
+          <td>习惯 Vim 操作的用户</td>
+        </tr>
+        <tr>
+          <td><code>/theme</code></td>
+          <td>切换颜色主题</td>
+          <td>想换个好看的界面颜色</td>
+        </tr>
+        <tr>
+          <td><code>/exit</code></td>
+          <td>退出 Claude Code</td>
+          <td>用完了想退出（也可以按 Ctrl+D）</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="card card-tip" style="margin-top:20px">
+      <p><strong>快速执行终端命令：</strong>在对话框中用 <code>!</code> 开头可以直接运行终端命令，不需要 Claude 解读。例如：</p>
+      <div class="code-block" style="margin-bottom:0">
+        <div class="code-header"><span class="lang-tag">输入</span></div>
+        <div class="code-body"><span class="cm"># 直接跑命令，不经过 Claude</span>
+! git status
+! npm test
+! ls -la</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ SECTION: CLAUDE.md ============ -->
+  <div class="section" id="claudemd">
+    <div class="section-header">
+      <div class="section-num">8</div>
+      <h2>项目记忆：CLAUDE.md</h2>
+    </div>
+
+    <p>CLAUDE.md 是一个特殊的文件，相当于给 Claude 的<strong>"项目说明书"</strong>。把它放在项目根目录，Claude 每次启动时都会自动读取。</p>
+
+    <div class="card">
+      <h3 style="color:var(--text-bright);margin-bottom:12px">📝 怎么创建 CLAUDE.md？</h3>
+      <p><strong>最简单的方式 — 让 Claude 帮你创建：</strong></p>
+      <div class="code-block">
+        <div class="code-header">
+          <span class="lang-tag">在 Claude Code 中输入</span>
+        </div>
+        <div class="code-body">/init</div>
+      </div>
+      <p>Claude 会自动扫描你的项目，然后生成一个合适的 CLAUDE.md。</p>
+    </div>
+
+    <div class="card">
+      <h3 style="color:var(--text-bright);margin-bottom:12px">📄 CLAUDE.md 写什么内容？</h3>
+      <p>下面是一个示例模板：</p>
+      <div class="code-block">
+        <div class="code-header">
+          <span class="lang-tag">markdown — CLAUDE.md 示例</span>
+          <button class="copy-btn" onclick="copyCode(this)">复制</button>
+        </div>
+        <div class="code-body"># 我的电商项目
+
+## 项目概述
+这是一个基于 React + Node.js 的电商网站
+
+## 技术栈
+- 前端：React 18 + TypeScript + Tailwind CSS
+- 后端：Node.js + Express + PostgreSQL
+- 测试：Jest + React Testing Library
+
+## 常用命令
+- npm run dev      — 启动前端开发服务器
+- npm run server   — 启动后端服务器
+- npm test         — 运行测试
+- npm run build    — 构建生产版本
+
+## 目录结构
+- src/components/  — React 组件
+- src/pages/       — 页面组件
+- src/api/         — API 调用函数
+- server/routes/   — 后端路由
+- server/models/   — 数据库模型
+
+## 编码规范
+- 使用 TypeScript 严格模式
+- 组件使用函数式写法
+- CSS 使用 Tailwind 类名
+- 变量命名用 camelCase</div>
+      </div>
+    </div>
+
+    <div class="card card-info">
+      <p><strong>记忆层级</strong>（从高到低）：</p>
+      <ul>
+        <li><strong>项目级</strong> <code>./CLAUDE.md</code> — 整个团队共享的项目说明</li>
+        <li><strong>个人级</strong> <code>~/.claude/CLAUDE.md</code> — 你个人的偏好（适用于所有项目）</li>
+        <li><strong>本地级</strong> <code>./CLAUDE.local.md</code> — 你个人在此项目中的偏好（不提交到 Git）</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ============ SECTION: 切换模型 ============ -->
+  <div class="section" id="models">
+    <div class="section-header">
+      <div class="section-num">9</div>
+      <h2>切换 AI 模型</h2>
+    </div>
+
+    <p>Claude 有多个模型可以选择，不同模型各有特点：</p>
+
+    <div class="table-wrap">
+      <table>
+        <tr><th>模型</th><th>特点</th><th>适用场景</th><th>命令</th></tr>
+        <tr>
+          <td><strong>Opus</strong></td>
+          <td>最强大，最聪明</td>
+          <td>复杂问题、架构设计、困难 Bug</td>
+          <td><code>/model opus</code></td>
+        </tr>
+        <tr>
+          <td><strong>Sonnet</strong></td>
+          <td>均衡型，速度与能力兼顾</td>
+          <td>日常编程、代码修改（默认）</td>
+          <td><code>/model sonnet</code></td>
+        </tr>
+        <tr>
+          <td><strong>Haiku</strong></td>
+          <td>最快速，最便宜</td>
+          <td>简单问题、快速查询</td>
+          <td><code>/model haiku</code></td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="card card-tip">
+      <p><strong>快捷切换：</strong>在对话中按 <code>Option+P</code>（Mac）或 <code>Alt+P</code>（Windows/Linux）可以快速切换模型。</p>
+    </div>
+
+    <p>你也可以在启动时指定模型：</p>
+    <div class="code-block">
+      <div class="code-header">
+        <span class="lang-tag">bash</span>
+        <button class="copy-btn" onclick="copyCode(this)">复制</button>
+      </div>
+      <div class="code-body"><span class="cm"># 启动时用 Opus 模型</span>
+claude --model opus
+
+<span class="cm"># 启动时用 Haiku 模型（省钱快速）</span>
+claude --model haiku</div>
+    </div>
+
+    <div class="card card-warn">
+      <p>使用第三方代理时，请确认你的代理商支持哪些模型。不是所有代理都支持全部模型。如果切换后报错，可能是代理商不支持该模型。</p>
+    </div>
+  </div>
+
+  <!-- ============ SECTION: 权限管理 ============ -->
+  <div class="section" id="permissions">
+    <div class="section-header">
+      <div class="section-num">10</div>
+      <h2>权限管理</h2>
+    </div>
+
+    <p>Claude Code 有一套完善的权限系统，可以控制它能做什么、不能做什么。</p>
+
+    <div class="card">
+      <h3 style="color:var(--text-bright);margin-bottom:12px">🔒 权限是怎么工作的？</h3>
+      <p>当 Claude 想要执行某个操作（比如修改文件、运行命令）时，它会先询问你：</p>
+      <div class="terminal">
+        <div class="terminal-bar">
+          <div class="terminal-dot r"></div>
+          <div class="terminal-dot y"></div>
+          <div class="terminal-dot g"></div>
+          <span class="terminal-title">Terminal — claude</span>
+        </div>
+        <div class="terminal-body">
+<span class="warn">🔧 Claude wants to run: npm install axios</span>
+<span class="output">Allow?</span>
+<span class="output">  (y) Yes, allow this once</span>
+<span class="output">  (a) Always allow "npm install *"</span>
+<span class="output">  (n) No, deny this</span>
+<span class="prompt">></span> <span class="cursor"></span></div>
+      </div>
+      <ul style="margin-top:12px">
+        <li><strong>输入 y</strong> — 这次允许</li>
+        <li><strong>输入 a</strong> — 以后同类操作都允许（不再询问）</li>
+        <li><strong>输入 n</strong> — 拒绝</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3 style="color:var(--text-bright);margin-bottom:12px">⚡ 权限模式快速切换</h3>
+      <p>按 <code>Shift+Tab</code> 可以在不同权限模式间切换：</p>
+      <div class="table-wrap">
+        <table>
+          <tr><th>模式</th><th>说明</th></tr>
+          <tr><td><strong>默认模式</strong></td><td>每次操作都会询问你</td></tr>
+          <tr><td><strong>Accept Edits</strong></td><td>自动允许文件编辑，命令还是会问</td></tr>
+          <tr><td><strong>Plan 模式</strong></td><td>Claude 只分析不动手，适合先看看方案</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="card card-tip">
+      <p>在 <code>~/.claude/settings.json</code> 中可以预设权限规则：</p>
+      <div class="code-block" style="margin-bottom:0">
+        <div class="code-header"><span class="lang-tag">json</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
+        <div class="code-body">{
+  "permissions": {
+    "allow": [
+      "Read",
+      "Edit",
+      "Bash(npm run *)",
+      "Bash(git status)",
+      "Bash(git diff *)"
+    ],
+    "deny": [
+      "Bash(rm -rf *)"
+    ]
+  }
+}</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ SECTION: 非交互模式 ============ -->
+  <div class="section" id="headless">
+    <div class="section-header">
+      <div class="section-num">11</div>
+      <h2>非交互模式（脚本化使用）</h2>
+    </div>
+
+    <p>Claude Code 还可以不进入对话模式，直接用命令行参数完成任务，适合集成到脚本或自动化流程中。</p>
+
+    <div class="code-block">
+      <div class="code-header">
+        <span class="lang-tag">bash — 一次性提问</span>
+        <button class="copy-btn" onclick="copyCode(this)">复制</button>
+      </div>
+      <div class="code-body"><span class="cm"># -p 参数：打印模式，问完就退出</span>
+claude -p "这个项目用了什么技术栈？"
+
+<span class="cm"># 管道输入：把文件内容传给 Claude</span>
+cat error.log | claude -p "帮我分析这些错误日志"
+
+<span class="cm"># 指定输出格式为 JSON</span>
+claude -p "列出所有 API 接口" --output-format json
+
+<span class="cm"># 继续上次的对话</span>
+claude -c "上面的问题还有补充吗？"
+
+<span class="cm"># 限制最大回合数和预算</span>
+claude -p "重构这个函数" --max-turns 3 --max-budget-usd 1.00</div>
+    </div>
+  </div>
+
+  <!-- ============ SECTION: IDE 集成 ============ -->
+  <div class="section" id="ide">
+    <div class="section-header">
+      <div class="section-num">12</div>
+      <h2>IDE 集成（VS Code）</h2>
+    </div>
+
+    <p>如果你使用 VS Code，可以安装 Claude Code 插件，在编辑器内直接使用。</p>
+
+    <div class="steps">
+      <div class="step">
+        <h3>安装 VS Code 插件</h3>
+        <p>打开 VS Code，按 <code>Cmd+Shift+X</code>（Mac）或 <code>Ctrl+Shift+X</code>（Windows），搜索 <strong>"Claude Code"</strong>，点击安装。</p>
+      </div>
+      <div class="step">
+        <h3>打开 Claude 面板</h3>
+        <p>安装后在 VS Code 侧边栏会出现 Claude 的图标，点击即可打开对话面板。</p>
+      </div>
+      <div class="step">
+        <h3>享受图形化体验</h3>
+        <p>在 VS Code 中使用 Claude Code 有几个额外好处：</p>
+        <ul>
+          <li>文件修改可以用 <strong>并排对比视图</strong> 查看</li>
+          <li>可以用 <code>@</code> 引用文件时有 <strong>自动补全</strong></li>
+          <li>支持 <strong>多标签对话</strong></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card card-info">
+      <p>VS Code 插件底层还是使用你配置好的 API Key 和 Base URL，所以确保之前的配置已经完成。</p>
+    </div>
+  </div>
+
+  <!-- ============ SECTION: 快捷键 ============ -->
+  <div class="section" id="shortcuts">
+    <div class="section-header">
+      <div class="section-num">13</div>
+      <h2>快捷键速查表</h2>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <tr><th>快捷键</th><th>功能</th></tr>
+        <tr><td><code>Ctrl+C</code></td><td>取消当前输入或停止操作</td></tr>
+        <tr><td><code>Ctrl+D</code></td><td>退出 Claude Code</td></tr>
+        <tr><td><code>Ctrl+L</code></td><td>清屏（保留历史记录）</td></tr>
+        <tr><td><code>Ctrl+J</code></td><td>输入换行（多行输入）</td></tr>
+        <tr><td><code>Shift+Tab</code></td><td>切换权限模式</td></tr>
+        <tr><td><code>Option+P</code> / <code>Alt+P</code></td><td>切换模型</td></tr>
+        <tr><td><code>Option+Enter</code></td><td>输入多行（Mac）</td></tr>
+        <tr><td><code>Esc Esc</code></td><td>回退操作 / 总结对话</td></tr>
+        <tr><td><code>Ctrl+R</code></td><td>搜索历史命令</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- ============ SECTION: FAQ ============ -->
+  <div class="section" id="faq">
+    <div class="section-header">
+      <div class="section-num">14</div>
+      <h2>常见问题</h2>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFAQ(this)">
+        <span>Q：启动后提示 "Authentication failed" 或 "Invalid API Key" 怎么办？</span>
+        <span class="arrow">▼</span>
+      </div>
+      <div class="faq-a"><div class="faq-a-inner">
+        <p>这说明你的 API Key 配置有问题。请检查：</p>
+        <ul>
+          <li>API Key 是否完整复制（前后没有多余的空格或换行）</li>
+          <li>配置文件中 JSON 格式是否正确（注意引号和逗号）</li>
+          <li>API Key 是否还有效（没有过期或被禁用）</li>
+        </ul>
+        <p>运行以下命令检查你的配置：</p>
+        <div class="code-block"><div class="code-header"><span class="lang-tag">bash</span></div><div class="code-body">cat ~/.claude/settings.json</div></div>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFAQ(this)">
+        <span>Q：提示 "Connection refused" 或 "Network error" 怎么办？</span>
+        <span class="arrow">▼</span>
+      </div>
+      <div class="faq-a"><div class="faq-a-inner">
+        <p>这说明无法连接到你的 API 代理地址。请检查：</p>
+        <ul>
+          <li>ANTHROPIC_BASE_URL 是否正确（注意 http/https、端口号）</li>
+          <li>代理服务器是否正常运行</li>
+          <li>网络是否通畅（试试 <code>curl 你的API地址</code>）</li>
+          <li>是否需要设置网络代理（HTTPS_PROXY）</li>
+        </ul>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFAQ(this)">
+        <span>Q：怎么减少 Token 消耗（省钱）？</span>
+        <span class="arrow">▼</span>
+      </div>
+      <div class="faq-a"><div class="faq-a-inner">
+        <ul>
+          <li>使用 <code>/compact</code> 命令定期压缩对话历史</li>
+          <li>用 <code>/clear</code> 清除不需要的对话内容</li>
+          <li>切换到 Haiku 模型（最便宜）处理简单问题</li>
+          <li>用 <code>/cost</code> 查看当前消耗了多少 Token</li>
+          <li>尽量一次把需求说清楚，减少来回对话次数</li>
+        </ul>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFAQ(this)">
+        <span>Q：Claude 修改了我的文件，怎么撤回？</span>
+        <span class="arrow">▼</span>
+      </div>
+      <div class="faq-a"><div class="faq-a-inner">
+        <ul>
+          <li>按两次 <code>Esc</code> 键可以回退最近的修改</li>
+          <li>如果你的项目用了 Git，可以用 <code>git checkout -- 文件名</code> 恢复</li>
+          <li>可以告诉 Claude "撤回你刚才的修改"</li>
+        </ul>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFAQ(this)">
+        <span>Q：Claude 的回复太长被截断了怎么办？</span>
+        <span class="arrow">▼</span>
+      </div>
+      <div class="faq-a"><div class="faq-a-inner">
+        <p>可以输入"继续"或"请接着说"让 Claude 继续未完成的回复。也可以用 <code>/compact</code> 压缩之前的对话来释放上下文空间。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFAQ(this)">
+        <span>Q：如何让 Claude Code 使用中文回复？</span>
+        <span class="arrow">▼</span>
+      </div>
+      <div class="faq-a"><div class="faq-a-inner">
+        <p>Claude 会自动根据你的输入语言来回复。如果你用中文提问，它通常会用中文回答。你也可以在 CLAUDE.md 中加一行规则：</p>
+        <div class="code-block"><div class="code-header"><span class="lang-tag">CLAUDE.md</span></div><div class="code-body">## 语言偏好
+- 所有回复请使用中文</div></div>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFAQ(this)">
+        <span>Q：如何更新 Claude Code？</span>
+        <span class="arrow">▼</span>
+      </div>
+      <div class="faq-a"><div class="faq-a-inner">
+        <p>Claude Code 会自动在后台更新。你也可以手动更新：</p>
+        <div class="code-block"><div class="code-header"><span class="lang-tag">bash</span></div><div class="code-body">claude update</div></div>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- ============ SECTION: 术语表 ============ -->
+  <div class="section" id="glossary">
+    <div class="section-header">
+      <div class="section-num">15</div>
+      <h2>术语表（看不懂的词看这里）</h2>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <tr><th>术语</th><th>白话解释</th></tr>
+        <tr><td><strong>终端 / Terminal</strong></td><td>就是那个黑色的命令行窗口，用来打字执行命令的地方</td></tr>
+        <tr><td><strong>API</strong></td><td>Application Programming Interface，程序之间沟通的"接口"。这里指的是调用 Claude 模型的通道</td></tr>
+        <tr><td><strong>API Key</strong></td><td>一串密码字符串，证明"你有权使用这个 API"</td></tr>
+        <tr><td><strong>Base URL</strong></td><td>API 的服务器地址，就像网站的网址一样</td></tr>
+        <tr><td><strong>Token</strong></td><td>AI 处理文本的单位。大约 1 个中文字 ≈ 2-3 个 Token。Token 越多，费用越高</td></tr>
+        <tr><td><strong>模型 / Model</strong></td><td>AI 的"大脑"。不同模型有不同的能力和速度</td></tr>
+        <tr><td><strong>Opus / Sonnet / Haiku</strong></td><td>Claude 的三种模型，从最强到最快排列</td></tr>
+        <tr><td><strong>代理 / Proxy</strong></td><td>中间人服务，帮你转发请求到 Anthropic 的服务器（因为直接访问不了）</td></tr>
+        <tr><td><strong>环境变量</strong></td><td>操作系统里的一种全局设置，程序可以读取它</td></tr>
+        <tr><td><strong>CLAUDE.md</strong></td><td>项目的"说明书"文件，让 Claude 了解你的项目</td></tr>
+        <tr><td><strong>MCP</strong></td><td>Model Context Protocol，让 Claude 可以连接外部工具（如 GitHub、数据库等）</td></tr>
+        <tr><td><strong>Git</strong></td><td>代码版本管理工具，记录代码的每一次修改</td></tr>
+        <tr><td><strong>npm</strong></td><td>Node.js 的包管理器，用来安装 JavaScript 项目的依赖</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <p>Claude Code 小白教程 · 从零到一 · 中文版</p>
+    <p style="margin-top:8px;font-size:12px;color:var(--text-dim)">本教程内容基于 Claude Code 官方文档整理，仅供学习参考</p>
+  </div>
+
+</main>
+
+<!-- Back to Top -->
+<button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<!-- ===== JavaScript ===== -->
+<script>
+// Sidebar toggle (mobile)
+function toggleSidebar() {
+  document.getElementById('sidebar').classList.toggle('open');
+  document.getElementById('sidebarOverlay').classList.toggle('open');
+}
+
+// Close sidebar on link click (mobile)
+document.querySelectorAll('.nav-link').forEach(link => {
+  link.addEventListener('click', () => {
+    if (window.innerWidth <= 900) toggleSidebar();
+  });
+});
+
+// Tab switching
+function switchTab(e, tabId) {
+  const container = e.target.closest('.tabs');
+  container.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  container.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+  e.target.classList.add('active');
+  document.getElementById(tabId).classList.add('active');
+}
+
+// Copy code
+function copyCode(btn) {
+  const code = btn.closest('.code-block').querySelector('.code-body').textContent;
+  navigator.clipboard.writeText(code).then(() => {
+    btn.textContent = '已复制!';
+    btn.classList.add('copied');
+    setTimeout(() => { btn.textContent = '复制'; btn.classList.remove('copied'); }, 2000);
+  });
+}
+
+// FAQ accordion
+function toggleFAQ(el) {
+  el.closest('.faq-item').classList.toggle('open');
+}
+
+// Scroll progress
+window.addEventListener('scroll', () => {
+  const h = document.documentElement;
+  const pct = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
+  document.getElementById('progressFill').style.width = pct + '%';
+
+  // Back to top
+  const btn = document.getElementById('backTop');
+  btn.classList.toggle('show', h.scrollTop > 400);
+});
+
+// Active nav link on scroll
+const sections = document.querySelectorAll('.section, .hero');
+const navLinks = document.querySelectorAll('.nav-link');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const id = entry.target.id;
+      navLinks.forEach(link => {
+        link.classList.toggle('active', link.getAttribute('href') === '#' + id);
+      });
+    }
+  });
+}, { rootMargin: '-20% 0px -60% 0px' });
+
+sections.forEach(s => { if (s.id) observer.observe(s); });
+</script>
+
+</body>
+</html>
