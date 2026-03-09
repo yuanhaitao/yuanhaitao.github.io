@@ -1261,7 +1261,7 @@ chmod +x /usr/local/bin/claude</div>
               <div class="code-body">cat > ~/.claude/settings.json << 'EOF'
 {
   "env": {
-    "ANTHROPIC_API_KEY": "把这里替换成你的API密钥",
+    "ANTHROPIC_AUTH_TOKEN": "把这里替换成你的API密钥",
     "ANTHROPIC_BASE_URL": "把这里替换成你的API地址"
   }
 }
@@ -1279,7 +1279,7 @@ EOF</div>
               </div>
               <div class="code-body">{
   "env": {
-    "ANTHROPIC_API_KEY": "sk-ant-api03-xxxxxxxxxxxxxxxxxx",
+    "ANTHROPIC_AUTH_TOKEN": "sk-ant-api03-xxxxxxxxxxxxxxxxxx",
     "ANTHROPIC_BASE_URL": "https://api.your-proxy.com"
   }
 }</div>
@@ -1317,7 +1317,7 @@ EOF</div>
             <button class="copy-btn" onclick="copyCode(this)">复制</button>
           </div>
           <div class="code-body"><span class="cm"># 设置你的 API 密钥</span>
-export ANTHROPIC_API_KEY="sk-ant-api03-xxxxxxxxxxxxxxxxxx"
+export ANTHROPIC_AUTH_TOKEN="sk-ant-api03-xxxxxxxxxxxxxxxxxx"
 
 <span class="cm"># 设置第三方代理的 API 地址</span>
 export ANTHROPIC_BASE_URL="https://api.your-proxy.com"
@@ -1346,7 +1346,7 @@ claude</div>
                 <button class="copy-btn" onclick="copyCode(this)">复制</button>
               </div>
               <div class="code-body"><span class="cm"># 把下面两行加到 ~/.zshrc 文件末尾</span>
-echo 'export ANTHROPIC_API_KEY="你的API密钥"' >> ~/.zshrc
+echo 'export ANTHROPIC_AUTH_TOKEN="你的API密钥"' >> ~/.zshrc
 echo 'export ANTHROPIC_BASE_URL="你的API地址"' >> ~/.zshrc
 
 <span class="cm"># 让配置立即生效</span>
@@ -1360,7 +1360,7 @@ source ~/.zshrc</div>
                 <button class="copy-btn" onclick="copyCode(this)">复制</button>
               </div>
               <div class="code-body"><span class="cm"># 把下面两行加到 ~/.bashrc 文件末尾</span>
-echo 'export ANTHROPIC_API_KEY="你的API密钥"' >> ~/.bashrc
+echo 'export ANTHROPIC_AUTH_TOKEN="你的API密钥"' >> ~/.bashrc
 echo 'export ANTHROPIC_BASE_URL="你的API地址"' >> ~/.bashrc
 
 <span class="cm"># 让配置立即生效</span>
@@ -1378,7 +1378,7 @@ source ~/.bashrc</div>
         <table>
           <tr><th>配置项</th><th>含义</th><th>示例值</th></tr>
           <tr>
-            <td><code>ANTHROPIC_API_KEY</code></td>
+            <td><code>ANTHROPIC_AUTH_TOKEN</code></td>
             <td>你的 API 密钥，用来验证你的身份和付费额度</td>
             <td><code>sk-ant-api03-xxxxx</code></td>
           </tr>
