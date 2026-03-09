@@ -558,9 +558,9 @@ li strong { color: var(--text); }
 
   <!-- ============ HERO ============ -->
   <div class="hero" id="intro">
-    <div class="hero-badge">🦞 2026 最火开源 AI Agent</div>
+    <div class="hero-badge">🦞 2026 最火开源 AI Agent · GitHub 24 万星</div>
     <h1>OpenClaw 小白教程</h1>
-    <p>从零开始，手把手教你安装、配置和使用 OpenClaw。在微信/Telegram/WhatsApp 里拥有一个真正能帮你干活的 AI 私人助手。</p>
+    <p>从零开始，手把手教你养一只属于自己的 AI 龙虾管家。发条消息就能帮你干活，不用写代码，会打字就行。</p>
     <div class="hero-features">
       <div class="hero-feat"><div class="dot"></div>替你做事</div>
       <div class="hero-feat"><div class="dot"></div>聊天即操作</div>
@@ -571,37 +571,60 @@ li strong { color: var(--text); }
 
   <!-- 通俗介绍 -->
   <div class="card" style="margin-top:40px">
-    <h3 style="color:var(--text-bright);margin-bottom:12px">🤔 OpenClaw 到底是啥？</h3>
-    <p>简单说，OpenClaw 就是一个<strong>运行在你自己电脑上的 AI 私人助手</strong>。它最大的特点是：<strong>你在聊天软件里给它发消息，它就能帮你操作电脑</strong>。</p>
+    <h3 style="color:var(--text-bright);margin-bottom:12px">🤔 OpenClaw 到底是啥？一句话解释</h3>
+    <p><strong>OpenClaw = 住在你电脑里的 AI 管家</strong>。你用手机给它发消息，它就帮你在电脑上干活。</p>
+    <p style="margin-top:12px">打个比方：</p>
     <ul>
-      <li><strong>帮你处理文件</strong> — 批量重命名、整理、转格式</li>
-      <li><strong>帮你写东西</strong> — 写报告、邮件、代码</li>
-      <li><strong>帮你跑命令</strong> — 在你电脑上执行各种操作</li>
-      <li><strong>帮你上网查资料</strong> — 浏览器自动化搜索和采集</li>
-      <li><strong>帮你做定时任务</strong> — 定期执行某些操作（类似定闹钟）</li>
-      <li><strong>记住你的一切</strong> — 长期记忆，越用越懂你</li>
+      <li>ChatGPT 就像一个<strong>很聪明但没有手的朋友</strong> — 你问它什么它都能回答，但它不能帮你做任何事，只能"动嘴"</li>
+      <li>OpenClaw 就像一个<strong>又聪明又有手的机器人管家</strong> — 不仅能回答问题，还能<strong>直接在你电脑上操作</strong>：整理文件、写文档、发邮件、做表格、甚至帮你写代码</li>
     </ul>
-    <p style="margin-top:12px">它和 ChatGPT 最大的不同：<strong>ChatGPT 只会"说"，OpenClaw 会"做"</strong>。你让它"帮我把邮箱里的发票都整理到一个文件夹"，它真的会帮你做，而不只是告诉你怎么做。</p>
+    <p style="margin-top:12px">具体能帮你做什么？</p>
+    <ul>
+      <li><strong>帮你处理文件</strong> — "帮我把桌面上的文件按类型分类整理"</li>
+      <li><strong>帮你写东西</strong> — "帮我写一篇 800 字的读书笔记"</li>
+      <li><strong>帮你上网查资料</strong> — "帮我搜一下明天的天气预报"</li>
+      <li><strong>帮你做定时任务</strong> — "每天早上 7 点提醒我背单词"</li>
+      <li><strong>记住你的一切</strong> — 越用越懂你，不会忘记你之前说过的话</li>
+    </ul>
+    <p style="margin-top:12px">而且它是<strong>完全免费、开源</strong>的（GitHub 上 24 万星），数据都存在你自己电脑里，不用担心隐私问题。</p>
+  </div>
+
+  <!-- 一分钟理解图 -->
+  <div class="card card-info" style="margin-top:16px">
+    <h3 style="color:var(--text-bright);margin-bottom:12px">🎮 用游戏来理解 OpenClaw</h3>
+    <p>如果你玩过游戏，可以这样理解 OpenClaw 的各个部分：</p>
+    <div class="table-wrap" style="margin-top:12px">
+      <table>
+        <tr><th>OpenClaw 组件</th><th>游戏类比</th><th>白话解释</th></tr>
+        <tr><td><strong>OpenClaw 本体</strong></td><td>游戏角色的身体</td><td>跑在你电脑上的程序，负责接收指令、执行任务</td></tr>
+        <tr><td><strong>AI 模型</strong></td><td>角色的大脑/智力</td><td>让龙虾变聪明的"大脑"，比如 DeepSeek、通义千问</td></tr>
+        <tr><td><strong>Skills 技能</strong></td><td>角色的技能树</td><td>给龙虾"学"新本领，比如收发邮件、浏览网页</td></tr>
+        <tr><td><strong>聊天平台</strong></td><td>和角色对话的窗口</td><td>你通过飞书/钉钉/网页 给龙虾发指令</td></tr>
+        <tr><td><strong>记忆 Memory</strong></td><td>角色的经验值</td><td>用得越多越懂你，会记住你的偏好和习惯</td></tr>
+      </table>
+    </div>
   </div>
 
   <!-- 架构图 -->
   <div class="flow-diagram">
-    <div class="flow-box">你（发聊天消息）</div>
+    <div class="flow-box">你发消息<br><small>"帮我整理文件"</small></div>
     <div class="flow-arrow">→</div>
-    <div class="flow-box">Telegram / WhatsApp 等</div>
+    <div class="flow-box">飞书 / 钉钉 / 网页</div>
     <div class="flow-arrow">→</div>
-    <div class="flow-box accent">OpenClaw Gateway</div>
+    <div class="flow-box accent">🦞 OpenClaw<br><small>你的龙虾管家</small></div>
     <div class="flow-arrow">→</div>
-    <div class="flow-box">AI 大模型</div>
+    <div class="flow-box">AI 大脑<br><small>DeepSeek 等</small></div>
   </div>
 
-  <div class="card card-info">
-    <p><strong>和 Claude Code 有什么区别？</strong></p>
+  <!-- 快速判断要不要用 -->
+  <div class="card card-tip">
+    <h3 style="color:var(--text-bright);margin-bottom:12px">🤷 我适合用 OpenClaw 吗？</h3>
     <ul>
-      <li><strong>Claude Code</strong>：在终端命令行里直接对话，主要面向编程场景</li>
-      <li><strong>OpenClaw</strong>：通过聊天软件（Telegram、WhatsApp 等）对话，面向所有日常场景，是一个全能 AI 管家</li>
+      <li>你想要一个<strong>帮你干活的 AI 助手</strong>，而不只是聊天 → 适合！</li>
+      <li>你经常需要<strong>整理文件、写文档、查资料</strong> → 很适合！</li>
+      <li>你是学生，想让 AI <strong>帮你学习、做笔记、练英语</strong> → 非常适合！</li>
+      <li>你只是想聊天解闷 → 直接用 ChatGPT/豆包就够了</li>
     </ul>
-    <p style="margin-top:8px">如果你主要做编程 → 用 Claude Code；如果你想要一个日常生活全能助手 → 用 OpenClaw。当然两个都用也行！</p>
   </div>
 
   <!-- ============ SECTION: 能帮你做什么 ============ -->
@@ -611,7 +634,34 @@ li strong { color: var(--text); }
       <h2>OpenClaw 能帮你做什么？</h2>
     </div>
 
-    <p>OpenClaw 的 slogan 是 <strong>"The AI that actually does things"（真正帮你做事的 AI）</strong>。下面是一些常见的使用场景：</p>
+    <p>OpenClaw 的 slogan 是 <strong>"The AI that actually does things"（真正帮你做事的 AI）</strong>。不管你是学生、打工人还是自由职业者，它都能帮上忙。下面是一些真实的使用场景：</p>
+
+    <!-- 场景：学生党 -->
+    <div class="card">
+      <h3 style="color:var(--text-bright);margin-bottom:12px">📚 学生党：学习助手</h3>
+      <p>OpenClaw 可以当你的私人家教，帮你学习、做笔记、练英语。</p>
+      <div class="terminal">
+        <div class="terminal-bar">
+          <div class="terminal-dot r"></div>
+          <div class="terminal-dot y"></div>
+          <div class="terminal-dot g"></div>
+          <span class="terminal-title">飞书 — OpenClaw</span>
+        </div>
+        <div class="terminal-body">
+<span class="prompt">你：</span> <span class="cmd">帮我把课本第三章的重点整理成思维导图式的笔记，保存成 PDF</span>
+
+<span class="info">🦞 OpenClaw：</span> <span class="output">好的，我来帮你整理。
+
+📝 已生成"第三章核心知识点笔记.pdf"
+包含：
+• 知识点层级结构（大标题→小标题→要点）
+• 每个知识点的一句话总结
+• 易错点标注和记忆技巧
+
+文件已保存到桌面 ✅</span></div>
+      </div>
+      <p style="margin-top:12px;color:var(--text-dim)">你还可以说："帮我出 10 道这章的选择题测试一下"、"用英语跟我练口语对话"、"帮我解释一下这道数学题的解题思路"。</p>
+    </div>
 
     <!-- 场景：日常助理 -->
     <div class="card">
@@ -729,7 +779,7 @@ li strong { color: var(--text); }
     </div>
 
     <div class="card card-tip">
-      <p><strong>一句话总结：</strong>OpenClaw 就像一个 7x24 小时在线的<strong>私人数字助理</strong>。你在手机上发条消息，它就在你电脑上帮你把事情办了。开源免费，数据都在你自己手里。</p>
+      <p><strong>一句话总结：</strong>OpenClaw 就像一个 7x24 小时在线的<strong>机器人管家</strong>。你在手机上发条消息，它就在你电脑上帮你把事情办了。开源免费，数据都在你自己手里。不需要会写代码，<strong>会打字就能用</strong>。</p>
     </div>
   </div>
 
@@ -740,22 +790,29 @@ li strong { color: var(--text); }
       <h2>命令行入门（完全小白必看）</h2>
     </div>
 
-    <p>OpenClaw 的安装和配置需要用到<strong>命令行（也叫终端 / Terminal）</strong>。如果你从来没用过命令行，别慌，看完这一节就够了。</p>
+    <p>安装 OpenClaw 需要用一小会儿<strong>命令行（也叫终端 / Terminal）</strong>。这可能是你第一次用，但真的非常简单。你只需要用它安装一次，以后日常使用都是在聊天软件/网页里操作的。</p>
 
-    <div class="card">
-      <h3 style="color:var(--text-bright);margin-bottom:12px">🤔 命令行是什么？</h3>
-      <p>命令行就是一个<strong>用打字代替鼠标点击</strong>来操作电脑的工具。你在里面输入一条"命令"，按下回车，电脑就会执行。</p>
-      <p style="margin-top:8px">比如：</p>
-      <ul>
-        <li>你想打开某个文件夹？输 <code>cd 文件夹名</code>（相当于双击文件夹）</li>
-        <li>你想看文件夹里有什么？输 <code>ls</code>（相当于打开文件夹看一眼）</li>
-        <li>你想创建一个新文件夹？输 <code>mkdir 文件夹名</code>（相当于右键→新建文件夹）</li>
-      </ul>
-      <p style="margin-top:8px;color:var(--text-dim)">别怕，你只需要会打开终端和输入几个简单命令就行。安装完 OpenClaw 之后，日常使用都是在聊天软件里操作的。</p>
+    <div class="card card-tip">
+      <p><strong>先深呼吸放松一下！</strong>命令行看起来黑乎乎的很吓人，但它其实特别"笨" — 你不输入东西它什么都不会做。就算你乱打一通也不会弄坏电脑。而且你只需要用它<strong>复制粘贴几条命令</strong>就行，根本不需要记住任何东西。</p>
     </div>
 
     <div class="card">
-      <h3 style="color:var(--text-bright);margin-bottom:12px">📖 怎么打开命令行？</h3>
+      <h3 style="color:var(--text-bright);margin-bottom:12px">🤔 命令行是什么？30 秒看懂</h3>
+      <p>你平时怎么操作电脑？<strong>用鼠标点来点去</strong>对吧。命令行就是另一种操作电脑的方式 — <strong>用打字代替鼠标点击</strong>。</p>
+      <p style="margin-top:12px">举个例子，同样是"打开桌面上的一个文件夹"：</p>
+      <div class="table-wrap" style="margin-top:8px">
+        <table>
+          <tr><th>操作</th><th>鼠标党的做法</th><th>命令行的做法</th></tr>
+          <tr><td>打开文件夹</td><td>双击文件夹图标</td><td>输入 <code>cd 文件夹名</code></td></tr>
+          <tr><td>看看里面有啥</td><td>打开文件夹看一眼</td><td>输入 <code>ls</code></td></tr>
+          <tr><td>新建文件夹</td><td>右键 → 新建文件夹</td><td>输入 <code>mkdir 文件夹名</code></td></tr>
+        </table>
+      </div>
+      <p style="margin-top:12px;color:var(--text-dim)">是不是没那么可怕？而且你只需要会<strong>复制粘贴</strong>就行，不需要手打。</p>
+    </div>
+
+    <div class="card">
+      <h3 style="color:var(--text-bright);margin-bottom:12px">📖 第一步：打开命令行（跟着做，10 秒搞定）</h3>
       <div class="tabs">
         <div class="tab-buttons">
           <button class="tab-btn active" onclick="switchTab(event, 'open-term-mac')">Mac</button>
@@ -763,15 +820,26 @@ li strong { color: var(--text); }
           <button class="tab-btn" onclick="switchTab(event, 'open-term-linux')">Linux</button>
         </div>
         <div class="tab-content active" id="open-term-mac">
-          <p>按 <code>Command + 空格</code>，输入 <strong>Terminal</strong>（或"终端"），按回车即可打开。</p>
-          <p style="margin-top:8px">也可以打开 <strong>访达</strong> → <strong>应用程序</strong> → <strong>实用工具</strong> → 双击 <strong>终端</strong>。</p>
+          <p><strong>最快方式（3 秒）：</strong></p>
+          <ol>
+            <li>同时按下键盘上的 <code>Command</code>（⌘）键和<code>空格</code>键</li>
+            <li>屏幕中间会弹出一个搜索框</li>
+            <li>输入 <code>Terminal</code>（或者输"终端"也行）</li>
+            <li>按回车 → 一个黑/白色的窗口弹出来了，这就是命令行！</li>
+          </ol>
+          <p style="margin-top:8px">也可以打开 <strong>访达(Finder)</strong> → <strong>应用程序</strong> → <strong>实用工具</strong> → 双击 <strong>终端(Terminal)</strong>。</p>
         </div>
         <div class="tab-content" id="open-term-win">
-          <p>推荐安装 <a href="https://git-scm.com/downloads" style="color:var(--accent)">Git for Windows</a>，然后使用 <strong>Git Bash</strong>。</p>
-          <p style="margin-top:8px">或者按 <code>Win + X</code>，选择 <strong>"Windows Terminal"</strong> 或 <strong>"PowerShell"</strong>。</p>
+          <p><strong>推荐方式：安装 Git Bash</strong>（OpenClaw 在 Windows 上推荐用这个）</p>
+          <ol>
+            <li>去 <a href="https://git-scm.com/downloads" style="color:var(--accent)">git-scm.com/downloads</a> 下载安装 Git for Windows</li>
+            <li>安装时<strong>一路点"Next"</strong>用默认设置就行</li>
+            <li>安装完后，在桌面右键 → 你会看到"Git Bash Here" → 点它就打开了</li>
+          </ol>
+          <p style="margin-top:8px"><strong>备选方式：</strong>在键盘上按 <code>Win</code> 键，输入 <code>PowerShell</code>，点击打开。</p>
         </div>
         <div class="tab-content" id="open-term-linux">
-          <p>按 <code>Ctrl + Alt + T</code> 打开终端。或在应用菜单中搜索 "Terminal"。</p>
+          <p>同时按下 <code>Ctrl + Alt + T</code> 就打开了。或者在应用菜单中搜索 "Terminal"。</p>
         </div>
       </div>
     </div>
@@ -802,7 +870,22 @@ li strong { color: var(--text); }
     </div>
 
     <div class="card card-tip">
-      <p><strong>看到 <code>$</code> 或 <code>%</code> 符号？</strong> 那是命令行的"提示符"，表示"我准备好了"。你<strong>不需要输入</strong>这个符号，直接输入后面的命令就行。输错了按 <code>Ctrl + C</code> 取消。</p>
+      <p><strong>看到 <code>$</code> 或 <code>%</code> 符号？</strong> 那是命令行在跟你说"我准备好了，你可以输入了"。你<strong>不需要自己打</strong>这个符号，只打后面的内容就行。</p>
+    </div>
+
+    <div class="card card-warn">
+      <p><strong>怕输错？完全不用怕！</strong></p>
+      <ul>
+        <li><strong>输错了</strong> → 按 <code>Ctrl + C</code> 取消，重新来</li>
+        <li><strong>屏幕乱了</strong> → 输入 <code>clear</code> 清屏</li>
+        <li><strong>卡住了</strong> → 按 <code>Ctrl + C</code> 强制停止</li>
+        <li><strong>想退出</strong> → 输入 <code>exit</code> 或直接关掉窗口</li>
+      </ul>
+      <p style="margin-top:8px">命令行不会因为你输错而弄坏电脑。最坏的情况就是报错，然后你重新输就好了。放心大胆地试！</p>
+    </div>
+
+    <div class="card card-info">
+      <p><strong>好消息：</strong>你只需要用命令行<strong>安装这一次</strong>。装好之后，日常使用 OpenClaw 都是在网页/聊天软件里操作的，再也不用碰命令行了（除非你想）。</p>
     </div>
   </div>
 
@@ -813,7 +896,7 @@ li strong { color: var(--text); }
       <h2>准备工作</h2>
     </div>
 
-    <p>在安装之前，请确保你有以下东西：</p>
+    <p>别被下面的列表吓到 — 大部分东西你<strong>已经有了</strong>，或者安装过程会<strong>自动帮你搞定</strong>。</p>
 
     <div class="card">
       <h3 style="color:var(--text-bright);margin-bottom:16px">📦 你需要准备的东西</h3>
@@ -866,6 +949,16 @@ li strong { color: var(--text); }
     <div class="section-header">
       <div class="section-num">2</div>
       <h2>安装 OpenClaw</h2>
+    </div>
+
+    <div class="card card-tip" style="margin-bottom:20px">
+      <p><strong>给纯小白的最短路径（3 步搞定）：</strong></p>
+      <ol>
+        <li>打开终端（上面教过了）</li>
+        <li>复制下面"一键脚本"里的那<strong>一条命令</strong>，粘贴到终端里，按回车</li>
+        <li>等 2-5 分钟，跟着弹出来的向导选就行</li>
+      </ol>
+      <p style="margin-top:8px">就这么简单。下面是详细说明，遇到问题再看。</p>
     </div>
 
     <div class="tabs">
@@ -1052,7 +1145,11 @@ cd openclaw
     </div>
 
     <div class="card card-warn">
-      <p>安装完成后会自动进入 <code>openclaw onboard</code> 配置向导。这一步决定了 OpenClaw 用哪个 AI 大脑、通过哪个聊天平台和你沟通。<strong>跟着向导一步一步来就行。</strong></p>
+      <p>安装完成后会自动进入 <code>openclaw onboard</code> 配置向导。这是一个<strong>交互式的问答流程</strong> — 它问你问题，你选答案，就像填问卷一样简单。跟着走就行，选错了也没关系，以后随时可以重新配。</p>
+    </div>
+
+    <div class="card card-info" style="margin-bottom:16px">
+      <p><strong>小白最快通关路线：</strong>风险提示选 Yes → 安装模式选 QuickStart → AI 模型选 Qwen（不需要 API Key）→ 聊天平台选 None → Skills 跳过 → 完成！全程 1 分钟。</p>
     </div>
 
     <div class="steps">
@@ -1137,8 +1234,8 @@ cd openclaw
     </div>
 
     <div class="card">
-      <h3 style="color:var(--text-bright);margin-bottom:12px">🎉 配置完成后，试着发句话</h3>
-      <p>打开你配置好的聊天软件（比如 Telegram），找到你的 OpenClaw Bot，发一条消息：</p>
+      <h3 style="color:var(--text-bright);margin-bottom:12px">🎉 恭喜你成功养了一只 AI 龙虾！</h3>
+      <p>打开浏览器，访问 <code>http://localhost:18789</code>（或者打开你配置好的聊天软件），试着发句话：</p>
       <div class="terminal">
         <div class="terminal-bar">
           <div class="terminal-dot r"></div>
@@ -1161,7 +1258,20 @@ cd openclaw
 
 有什么需要帮忙的吗？</span></div>
       </div>
-      <p style="margin-top:12px">看到回复就说明一切配置正确，可以开始使用了！</p>
+      <p style="margin-top:12px">看到回复就说明一切配置正确，你的龙虾管家已经上线了！</p>
+    </div>
+
+    <div class="card" style="margin-top:16px">
+      <h3 style="color:var(--text-bright);margin-bottom:12px">🎯 接下来可以试试这些指令</h3>
+      <p>不知道跟龙虾说什么？试试复制下面这些发给它：</p>
+      <ul>
+        <li><strong>试试文件操作：</strong>"帮我看看桌面上有哪些文件"</li>
+        <li><strong>试试写东西：</strong>"帮我写一首关于春天的诗，保存到桌面"</li>
+        <li><strong>试试查信息：</strong>"今天是几号星期几？"</li>
+        <li><strong>试试做任务：</strong>"帮我创建一个叫 test 的文件夹，里面放一个 hello.txt 文件，内容写'你好世界'"</li>
+        <li><strong>试试学习助手：</strong>"用简单的语言给我解释一下什么是光合作用"</li>
+      </ul>
+      <p style="margin-top:12px;color:var(--text-dim)">基本上你能想到的，都可以试着让它帮你做。它做不到的会告诉你，不会假装能做。</p>
     </div>
 
     <div class="card">
@@ -1344,7 +1454,7 @@ openclaw gateway restart</div>
       <h2>技能（Skills）</h2>
     </div>
 
-    <p>Skills 是 OpenClaw 的"超能力模块"。每个 Skill 让 OpenClaw 多一项本领。</p>
+    <p>Skills 是 OpenClaw 的"超能力模块"。还记得前面的游戏类比吗？Skills 就是<strong>技能树</strong> — 每学一个新技能，龙虾就多一项本领。</p>
 
     <div class="card">
       <h3 style="color:var(--text-bright);margin-bottom:12px">🧩 什么是 Skill？</h3>
@@ -2064,6 +2174,34 @@ docker exec -it openclaw openclaw onboard</div>
 
     <div class="faq-item">
       <div class="faq-q" onclick="toggleFAQ(this)">
+        <span>Q：我完全不会编程，能用 OpenClaw 吗？</span>
+        <span class="arrow">▼</span>
+      </div>
+      <div class="faq-a"><div class="faq-a-inner">
+        <p><strong>完全可以！</strong>OpenClaw 的日常使用就是发消息聊天，和用微信一样简单。你说"帮我整理桌面文件"，它就去帮你整理。不需要写任何代码。唯一需要用到命令行的就是安装那一次，跟着教程复制粘贴就行。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFAQ(this)">
+        <span>Q：我是初中生/高中生，可以用来干嘛？</span>
+        <span class="arrow">▼</span>
+      </div>
+      <div class="faq-a"><div class="faq-a-inner">
+        <p>太多了！比如：</p>
+        <ul>
+          <li><strong>学习助手</strong>：帮你整理笔记、出练习题、解释难题、翻译英语</li>
+          <li><strong>写作帮手</strong>：帮你改作文、写读书笔记、做 PPT 大纲</li>
+          <li><strong>学编程</strong>：让它教你写 Python 小游戏，边玩边学</li>
+          <li><strong>做小项目</strong>：帮你做个人网页、小工具、数据分析</li>
+          <li><strong>定时提醒</strong>：每天提醒你背单词、做作业</li>
+        </ul>
+        <p style="margin-top:8px">而且这些全都免费。用通义千问的免费额度就够日常学习用好几个月。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFAQ(this)">
         <span>Q：OpenClaw 和 Clawdbot / Moltbot 是什么关系？</span>
         <span class="arrow">▼</span>
       </div>
@@ -2175,7 +2313,7 @@ docker exec -it openclaw openclaw onboard</div>
 
   <!-- Footer -->
   <div class="footer">
-    <p>OpenClaw 小白教程 · 从零到一 · 中文版</p>
+    <p>🦞 OpenClaw 小白教程 · 初中生都能看懂 · 中文版</p>
     <p style="margin-top:8px;font-size:12px;color:var(--text-dim)">本教程内容基于 OpenClaw 官方文档及社区资料整理，仅供学习参考</p>
     <p style="margin-top:4px;font-size:12px;color:var(--text-dim)">GitHub: <a href="https://github.com/openclaw/openclaw" style="color:var(--accent)">github.com/openclaw/openclaw</a> · 官方文档: <a href="https://docs.openclaw.ai" style="color:var(--accent)">docs.openclaw.ai</a></p>
   </div>
