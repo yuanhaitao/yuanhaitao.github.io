@@ -1320,57 +1320,320 @@ openclaw skills install weather-skill</div>
   <div class="section" id="models">
     <div class="section-header">
       <div class="section-num">7</div>
-      <h2>配置 AI 模型</h2>
+      <h2>配置 AI 模型（重点！）</h2>
     </div>
 
-    <p>OpenClaw 支持接入多种 AI 模型。你可以随时切换"大脑"。</p>
+    <p>OpenClaw 本身只是一个"身体"，它需要一个"AI 大脑"才能工作。这个大脑就是 AI 模型，你需要通过 API 接口来接入。下面介绍两种方案：<strong>白嫖免费资源</strong>和<strong>使用第三方付费 API</strong>。</p>
+
+    <div class="flow-diagram">
+      <div class="flow-box">你发消息</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-box accent">OpenClaw</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-box">AI 模型 API</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-box">返回回复</div>
+    </div>
 
     <div class="tabs">
       <div class="tab-buttons">
-        <button class="tab-btn active" onclick="switchTab(event, 'model-deepseek')">DeepSeek（推荐）</button>
-        <button class="tab-btn" onclick="switchTab(event, 'model-qwen')">通义千问</button>
-        <button class="tab-btn" onclick="switchTab(event, 'model-claude')">Claude / GPT</button>
+        <button class="tab-btn active" onclick="switchTab(event, 'model-free')">方案一：免费资源</button>
+        <button class="tab-btn" onclick="switchTab(event, 'model-paid')">方案二：第三方付费 API</button>
       </div>
 
-      <div class="tab-content active" id="model-deepseek">
-        <div class="steps">
-          <div class="step">
-            <h3>获取 DeepSeek API Key</h3>
-            <p>去 <a href="https://platform.deepseek.com" style="color:var(--accent)">platform.deepseek.com</a> 注册账号，在"API Keys"页面创建一个 Key。需要先充值（最低 10 元就够用很久）。</p>
+      <!-- ====== 方案一：免费资源 ====== -->
+      <div class="tab-content active" id="model-free">
+        <div class="card card-tip">
+          <p><strong>适合谁？</strong>不想花钱、想先试试效果、或者对隐私要求极高的用户。</p>
+        </div>
+
+        <h3 style="color:var(--text-bright);margin-top:24px;margin-bottom:16px">选项 1：Ollama — 本地运行大模型（完全免费）</h3>
+        <div class="card">
+          <p><a href="https://ollama.com" style="color:var(--accent)">Ollama</a> 让你在自己电脑上跑开源大模型，<strong>不花一分钱，不需要联网，数据完全不出本地</strong>。</p>
+          <div class="card card-warn" style="margin-top:12px">
+            <p><strong>硬件要求：</strong>本地跑大模型需要一定的硬件配置。8GB 内存可以跑 7B 参数的小模型（如 Qwen2.5 7B），16GB+ 内存可以跑 14B-32B 的中型模型，效果更好。有独显（NVIDIA/Apple Silicon）会快很多。</p>
           </div>
-          <div class="step">
-            <h3>配置到 OpenClaw</h3>
-            <div class="code-block">
-              <div class="code-header"><span class="lang-tag">bash</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
-              <div class="code-body">openclaw config set 'models.providers.deepseek' --json '{
+          <div class="steps">
+            <div class="step">
+              <h3>安装 Ollama</h3>
+              <div class="tabs">
+                <div class="tab-buttons">
+                  <button class="tab-btn active" onclick="switchTab(event, 'ollama-mac')">Mac</button>
+                  <button class="tab-btn" onclick="switchTab(event, 'ollama-linux')">Linux</button>
+                </div>
+                <div class="tab-content active" id="ollama-mac">
+                  <p>去 <a href="https://ollama.com/download" style="color:var(--accent)">ollama.com/download</a> 下载 Mac 版安装包，双击安装即可。</p>
+                </div>
+                <div class="tab-content" id="ollama-linux">
+                  <div class="code-block">
+                    <div class="code-header"><span class="lang-tag">bash</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
+                    <div class="code-body">curl -fsSL https://ollama.com/install.sh | sh</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="step">
+              <h3>下载一个模型</h3>
+              <div class="code-block">
+                <div class="code-header"><span class="lang-tag">bash</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
+                <div class="code-body"><span class="cm"># 推荐：通义千问 7B（中文效果好，内存要求低）</span>
+ollama pull qwen2.5:7b
+
+<span class="cm"># 或者：Llama 3.1 8B（英文效果好）</span>
+ollama pull llama3.1:8b
+
+<span class="cm"># 内存够大的话可以拉更大的模型，效果更好</span>
+ollama pull qwen2.5:32b</div>
+              </div>
+              <p style="margin-top:8px;color:var(--text-dim)">第一次下载需要几分钟到几十分钟，取决于网速和模型大小。</p>
+            </div>
+            <div class="step">
+              <h3>配置 OpenClaw 使用 Ollama</h3>
+              <p>Ollama 安装后会在本地 <code>http://localhost:11434</code> 启动一个兼容 OpenAI 格式的 API 服务。</p>
+              <div class="code-block">
+                <div class="code-header"><span class="lang-tag">bash</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
+                <div class="code-body">openclaw config set 'models.providers.ollama' --json '{
+  "baseUrl": "http://localhost:11434/v1",
+  "apiKey": "ollama",
+  "models": {
+    "default": "qwen2.5:7b"
+  }
+}'</div>
+              </div>
+              <p style="margin-top:8px;color:var(--text-dim)"><code>apiKey</code> 随便填什么都行（Ollama 不需要认证），但不能留空。</p>
+            </div>
+            <div class="step">
+              <h3>验证一下</h3>
+              <div class="code-block">
+                <div class="code-header"><span class="lang-tag">bash</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
+                <div class="code-body"><span class="cm"># 确认 Ollama 在运行</span>
+ollama list
+
+<span class="cm"># 重启 OpenClaw 让配置生效</span>
+openclaw gateway restart</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h3 style="color:var(--text-bright);margin-top:32px;margin-bottom:16px">选项 2：通义千问 Qwen — 官方免费额度</h3>
+        <div class="card">
+          <p>阿里云的<strong>通义千问（Qwen）</strong>提供了<strong>免费的 API 调用额度</strong>，新用户注册就送，个人日常使用完全够用。不需要本地硬件，云端运行，效果很好。</p>
+          <div class="steps">
+            <div class="step">
+              <h3>获取免费 API Key</h3>
+              <p>去 <a href="https://dashscope.console.aliyun.com" style="color:var(--accent)">阿里云百炼平台</a> 注册账号（支付宝/淘宝账号直接登录），在控制台的 <strong>"API-KEY 管理"</strong> 页面创建一个 Key。</p>
+            </div>
+            <div class="step">
+              <h3>配置到 OpenClaw</h3>
+              <p>如果在 onboard 向导中选了 Qwen，它会自动跳转到登录页面授权，不需要手动操作。如果需要手动配置：</p>
+              <div class="code-block">
+                <div class="code-header"><span class="lang-tag">bash</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
+                <div class="code-body">openclaw config set 'models.providers.qwen' --json '{
+  "baseUrl": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+  "apiKey": "sk-你的阿里云API Key",
+  "models": {
+    "default": "qwen-plus"
+  }
+}'</div>
+              </div>
+            </div>
+          </div>
+          <div class="card card-tip" style="margin-top:12px">
+            <p><strong>可选模型：</strong><code>qwen-turbo</code>（最快最便宜）、<code>qwen-plus</code>（均衡推荐）、<code>qwen-max</code>（最强但贵）。免费额度下建议用 <code>qwen-plus</code>。</p>
+          </div>
+        </div>
+
+        <h3 style="color:var(--text-bright);margin-top:32px;margin-bottom:16px">选项 3：其他免费资源</h3>
+        <div class="card">
+          <div class="table-wrap">
+            <table>
+              <tr><th>平台</th><th>免费额度</th><th>说明</th></tr>
+              <tr>
+                <td><strong>SiliconFlow 硅基流动</strong></td>
+                <td>注册送额度，部分模型永久免费</td>
+                <td>聚合了多种开源模型（Qwen、DeepSeek、Llama 等），注册即用，<a href="https://siliconflow.cn" style="color:var(--accent)">siliconflow.cn</a></td>
+              </tr>
+              <tr>
+                <td><strong>Groq</strong></td>
+                <td>免费调用开源模型（有速率限制）</td>
+                <td>速度极快，适合跑 Llama、Mixtral 等开源模型，<a href="https://console.groq.com" style="color:var(--accent)">console.groq.com</a></td>
+              </tr>
+              <tr>
+                <td><strong>Google Gemini</strong></td>
+                <td>免费层有一定调用额度</td>
+                <td>Google AI Studio 提供 Gemini 模型的免费 API，<a href="https://aistudio.google.com" style="color:var(--accent)">aistudio.google.com</a></td>
+              </tr>
+            </table>
+          </div>
+          <p style="margin-top:12px;color:var(--text-dim)">这些平台都提供兼容 OpenAI 格式的 API，配置方法和上面类似，把 <code>baseUrl</code> 和 <code>apiKey</code> 替换成对应平台的即可。</p>
+        </div>
+
+        <div class="card card-info" style="margin-top:16px">
+          <p><strong>总结：免费方案怎么选？</strong></p>
+          <ul>
+            <li>追求隐私、不想联网 → <strong>Ollama 本地模型</strong></li>
+            <li>想省事、不折腾 → <strong>通义千问免费额度</strong></li>
+            <li>想免费试多种模型 → <strong>SiliconFlow / Groq</strong></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ====== 方案二：第三方付费 API ====== -->
+      <div class="tab-content" id="model-paid">
+        <div class="card card-info">
+          <p><strong>适合谁？</strong>愿意花一点钱换更好的效果，或需要长时间稳定使用的用户。付费 API 通常更快、更稳定、模型更强。</p>
+        </div>
+
+        <h3 style="color:var(--text-bright);margin-top:24px;margin-bottom:16px">选项 1：DeepSeek（国内首选，性价比极高）</h3>
+        <div class="card">
+          <p>DeepSeek 是国内最受欢迎的 AI 模型之一，<strong>价格极低</strong>（日常使用大概几毛钱一天），中文效果很好，国内直连不需要翻墙。</p>
+          <div class="steps">
+            <div class="step">
+              <h3>注册并充值</h3>
+              <p>去 <a href="https://platform.deepseek.com" style="color:var(--accent)">platform.deepseek.com</a> 注册账号，在"API Keys"页面创建一个 Key。需要先充值，最低 <strong>10 元</strong>就够用很久。</p>
+            </div>
+            <div class="step">
+              <h3>配置到 OpenClaw</h3>
+              <div class="code-block">
+                <div class="code-header"><span class="lang-tag">bash</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
+                <div class="code-body">openclaw config set 'models.providers.deepseek' --json '{
   "baseUrl": "https://api.deepseek.com",
-  "apiKey": "你的DeepSeek API Key",
+  "apiKey": "sk-你的DeepSeek API Key",
   "models": {
     "default": "deepseek-chat",
     "reasoning": "deepseek-reasoner"
   }
 }'</div>
+              </div>
             </div>
           </div>
+          <div class="card card-warn" style="margin-top:12px">
+            <p><strong>注意：</strong>模型 ID 必须使用 <code>deepseek-chat</code>（对话）或 <code>deepseek-reasoner</code>（推理），不要自己改名字。账户余额必须大于 0。</p>
+          </div>
         </div>
-        <div class="card card-warn" style="margin-top:12px">
-          <p><strong>注意：</strong>模型 ID 必须使用 <code>deepseek-chat</code>，不要自己改名字，否则会调用失败。账户余额必须大于 0。</p>
-        </div>
-      </div>
 
-      <div class="tab-content" id="model-qwen">
-        <div class="card card-tip">
-          <p><strong>最省心的选择！</strong>如果在 onboard 向导中选了 Qwen，它会自动跳转到登录页面授权，不需要手动输入 API Key。</p>
+        <h3 style="color:var(--text-bright);margin-top:32px;margin-bottom:16px">选项 2：OpenRouter（一个 Key 用所有模型）</h3>
+        <div class="card">
+          <p><a href="https://openrouter.ai" style="color:var(--accent)">OpenRouter</a> 是一个 <strong>AI 模型聚合平台</strong>，注册一个账号就能调用 Claude、GPT、Gemini、Llama、DeepSeek 等几十种模型，非常方便。</p>
+          <div class="steps">
+            <div class="step">
+              <h3>注册并获取 API Key</h3>
+              <p>去 <a href="https://openrouter.ai/keys" style="color:var(--accent)">openrouter.ai/keys</a> 注册账号，创建一个 API Key。可以用 Google 账号直接登录。充值支持信用卡和加密货币。</p>
+            </div>
+            <div class="step">
+              <h3>配置到 OpenClaw</h3>
+              <div class="code-block">
+                <div class="code-header"><span class="lang-tag">bash</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
+                <div class="code-body">openclaw config set 'models.providers.openrouter' --json '{
+  "baseUrl": "https://openrouter.ai/api/v1",
+  "apiKey": "sk-or-v1-你的OpenRouter API Key",
+  "models": {
+    "default": "anthropic/claude-sonnet-4"
+  }
+}'</div>
+              </div>
+              <p style="margin-top:8px">想换模型？只需要改 <code>default</code> 后面的模型名字就行：</p>
+              <div class="table-wrap" style="margin-top:12px">
+                <table>
+                  <tr><th>模型 ID</th><th>说明</th><th>参考价格</th></tr>
+                  <tr><td><code>anthropic/claude-sonnet-4</code></td><td>Claude 最新版，综合能力强</td><td>中等</td></tr>
+                  <tr><td><code>openai/gpt-4o</code></td><td>GPT-4o，速度快</td><td>中等</td></tr>
+                  <tr><td><code>google/gemini-2.5-pro</code></td><td>Google 最新模型</td><td>中等</td></tr>
+                  <tr><td><code>deepseek/deepseek-chat</code></td><td>DeepSeek（通过 OpenRouter 调用）</td><td>便宜</td></tr>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="card card-tip" style="margin-top:12px">
+            <p><strong>OpenRouter 的好处：</strong>你不需要分别去 Anthropic、OpenAI、Google 各注册一个账号，一个 OpenRouter 账号就能用所有模型。而且国内通常可以直连（部分模型可能需要代理）。</p>
+          </div>
         </div>
-        <p style="margin-top:12px">如果需要手动配置，去 <a href="https://dashscope.console.aliyun.com" style="color:var(--accent)">阿里云百炼平台</a> 获取 API Key，然后在 onboard 中选择 Qwen 并输入。</p>
-      </div>
 
-      <div class="tab-content" id="model-claude">
-        <p>如果你有 Anthropic 或 OpenAI 的 API Key（可能需要翻墙或使用代理），在 onboard 向导中选择 Claude 或 OpenAI，输入对应的 API Key 即可。</p>
-        <div class="card card-info" style="margin-top:12px">
-          <p>如果你已经在用第三方 API 代理来跑 Claude Code，同样的 API Key 和 Base URL 通常也可以用在 OpenClaw 上。</p>
+        <h3 style="color:var(--text-bright);margin-top:32px;margin-bottom:16px">选项 3：官方 API（Claude / GPT）</h3>
+        <div class="card">
+          <p>如果你想直接使用 Anthropic（Claude）或 OpenAI（GPT）的官方 API，效果最好但价格较高，且通常需要翻墙。</p>
+          <div class="tabs">
+            <div class="tab-buttons">
+              <button class="tab-btn active" onclick="switchTab(event, 'official-claude')">Claude (Anthropic)</button>
+              <button class="tab-btn" onclick="switchTab(event, 'official-openai')">GPT (OpenAI)</button>
+            </div>
+            <div class="tab-content active" id="official-claude">
+              <p>去 <a href="https://console.anthropic.com" style="color:var(--accent)">console.anthropic.com</a> 注册并获取 API Key。</p>
+              <div class="code-block">
+                <div class="code-header"><span class="lang-tag">bash</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
+                <div class="code-body">openclaw config set 'models.providers.anthropic' --json '{
+  "baseUrl": "https://api.anthropic.com",
+  "apiKey": "sk-ant-你的Anthropic API Key",
+  "models": {
+    "default": "claude-sonnet-4-20250514"
+  }
+}'</div>
+              </div>
+            </div>
+            <div class="tab-content" id="official-openai">
+              <p>去 <a href="https://platform.openai.com" style="color:var(--accent)">platform.openai.com</a> 注册并获取 API Key。</p>
+              <div class="code-block">
+                <div class="code-header"><span class="lang-tag">bash</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
+                <div class="code-body">openclaw config set 'models.providers.openai' --json '{
+  "baseUrl": "https://api.openai.com/v1",
+  "apiKey": "sk-你的OpenAI API Key",
+  "models": {
+    "default": "gpt-4o"
+  }
+}'</div>
+              </div>
+            </div>
+          </div>
+          <div class="card card-info" style="margin-top:12px">
+            <p><strong>国内用户注意：</strong>访问 Anthropic 和 OpenAI 的官方 API 通常需要翻墙。如果你已经在用第三方代理跑 Claude Code，同样的 API Key 和 Base URL 也可以用在 OpenClaw 上。</p>
+          </div>
+        </div>
+
+        <h3 style="color:var(--text-bright);margin-top:32px;margin-bottom:16px">选项 4：其他第三方 API 代理</h3>
+        <div class="card">
+          <p>国内有很多第三方 API 代理服务，它们转发你的请求到 OpenAI / Anthropic 的服务器，让你<strong>不用翻墙</strong>就能用 Claude 和 GPT。</p>
+          <div class="card card-warn" style="margin-top:12px">
+            <p><strong>安全提醒：</strong>使用第三方代理意味着你的对话内容会经过代理服务器。请选择<strong>口碑好、运营时间长</strong>的代理，避免数据泄露风险。</p>
+          </div>
+          <p style="margin-top:12px">配置方法都是一样的，只需要把 <code>baseUrl</code> 改成代理提供的地址：</p>
+          <div class="code-block">
+            <div class="code-header"><span class="lang-tag">bash — 通用模板</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
+            <div class="code-body">openclaw config set 'models.providers.proxy' --json '{
+  "baseUrl": "https://api.你的代理域名.com",
+  "apiKey": "代理给你的API Key",
+  "models": {
+    "default": "代理支持的模型名"
+  }
+}'</div>
+          </div>
+        </div>
+
+        <div class="card card-info" style="margin-top:16px">
+          <p><strong>总结：付费方案怎么选？</strong></p>
+          <ul>
+            <li>国内用户、追求性价比 → <strong>DeepSeek</strong>（10 元用很久）</li>
+            <li>想一个账号用所有模型 → <strong>OpenRouter</strong></li>
+            <li>追求最强效果、不差钱 → <strong>官方 Claude / GPT API</strong></li>
+            <li>不想翻墙用 Claude / GPT → <strong>第三方 API 代理</strong></li>
+          </ul>
         </div>
       </div>
+    </div>
+
+    <!-- 通用配置说明 -->
+    <div class="card" style="margin-top:24px">
+      <h3 style="color:var(--text-bright);margin-bottom:12px">🔧 配置完成后别忘了重启</h3>
+      <p>无论选哪种方案，改完配置都要重启 OpenClaw 才能生效：</p>
+      <div class="code-block">
+        <div class="code-header"><span class="lang-tag">bash</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
+        <div class="code-body">openclaw gateway restart</div>
+      </div>
+      <p style="margin-top:8px">然后在聊天软件里发一条消息测试，收到回复就说明配置成功了。</p>
+    </div>
+
+    <div class="card card-tip" style="margin-top:16px">
+      <p><strong>可以同时配置多个模型吗？</strong>可以！你可以配多个 provider，然后在对话中用命令切换。比如日常用 DeepSeek 省钱，遇到复杂问题切换到 Claude 处理。</p>
     </div>
   </div>
 
