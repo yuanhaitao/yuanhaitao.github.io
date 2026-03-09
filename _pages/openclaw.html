@@ -832,13 +832,13 @@ li strong { color: var(--text); }
           </tr>
           <tr>
             <td><strong>AI 模型的 API Key</strong></td>
-            <td>让 AI 工作的密钥</td>
-            <td>DeepSeek / 通义千问 / Claude 等</td>
+            <td>让 AI 工作的"钥匙"</td>
+            <td>DeepSeek / 通义千问 / 硅基流动等（详见下方<a href="#models" style="color:var(--accent)">配置 AI 模型</a>章节）</td>
           </tr>
           <tr>
             <td><strong>聊天软件账号</strong></td>
             <td>用来和 OpenClaw 对话</td>
-            <td>Telegram（推荐）/ WhatsApp / 飞书</td>
+            <td>飞书（推荐）/ 钉钉 / 微信 / Web UI</td>
           </tr>
         </table>
       </div>
@@ -847,9 +847,13 @@ li strong { color: var(--text); }
     <div class="card card-tip">
       <p><strong>国内用户推荐方案：</strong></p>
       <ul>
-        <li><strong>AI 模型</strong>：选 <strong>DeepSeek</strong>（性价比最高）或 <strong>通义千问 Qwen</strong>（免费额度多）</li>
-        <li><strong>聊天平台</strong>：选 <strong>Telegram</strong>（最简单、国内可用）或 <strong>飞书</strong>（国内办公常用）</li>
+        <li><strong>AI 模型</strong>：选 <strong>通义千问 Qwen</strong>（有免费额度，最省心）或 <strong>DeepSeek</strong>（10 元用很久，性价比最高）</li>
+        <li><strong>聊天平台</strong>：选 <strong>飞书</strong>（设置简单）或 <strong>钉钉</strong>（大部分人都有），也可以先用 <strong>Web UI</strong>（浏览器直接用，不需要任何额外配置）</li>
       </ul>
+    </div>
+
+    <div class="card card-info">
+      <p><strong>没有翻墙工具也完全没问题！</strong>本教程的所有操作都基于国内可直接访问的服务，不需要 VPN 或代理。AI 模型用国产的（DeepSeek、通义千问），聊天平台用国内的（飞书、钉钉、微信），全程畅通无阻。</p>
     </div>
 
     <div class="card card-warn">
@@ -1102,13 +1106,15 @@ cd openclaw
 
       <div class="step">
         <h3>选择聊天平台</h3>
-        <p>选择你想通过哪个聊天软件和 OpenClaw 对话：</p>
+        <p>选择你想通过哪个聊天软件和 OpenClaw 对话（国内用户推荐）：</p>
         <ul>
-          <li><strong>Telegram</strong> — 最推荐，设置最简单</li>
-          <li><strong>WhatsApp</strong> — 扫码绑定即可</li>
-          <li><strong>飞书</strong> — 国内办公常用</li>
-          <li><strong>None</strong> — 先跳过，之后再配（可以通过 Web UI 使用）</li>
+          <li><strong>飞书（Lark）</strong> — 国内推荐，Bot 设置简单</li>
+          <li><strong>钉钉（DingTalk）</strong> — 大部分人都有，企业常用</li>
+          <li><strong>None</strong> — <strong>先跳过也行！</strong>后面可以直接用浏览器打开 Web UI 使用，完全不需要配聊天软件</li>
         </ul>
+        <div class="card card-tip" style="margin-top:12px">
+          <p><strong>小白建议：</strong>如果你不想折腾聊天平台配置，直接选 <strong>None</strong>。安装完成后用浏览器访问 <code>http://localhost:18789</code> 就能用了，和网页版 ChatGPT 一样方便。等熟悉了再去配飞书/钉钉也不迟。</p>
+        </div>
       </div>
 
       <div class="step">
@@ -1185,81 +1191,149 @@ cd openclaw
       <h2>接入聊天平台</h2>
     </div>
 
-    <p>OpenClaw 支持<strong>非常多</strong>的聊天平台。下面介绍最常用的几个：</p>
+    <p>OpenClaw 支持多种聊天平台。国内用户不需要翻墙，下面的方案都可以直接用。</p>
+
+    <div class="card card-tip" style="margin-bottom:20px">
+      <p><strong>最简单的方式：先用 Web UI！</strong>OpenClaw 安装完成后自带一个网页界面，在浏览器打开 <code>http://localhost:18789</code> 就能直接对话，<strong>不需要配任何聊天平台</strong>。等你用熟了，再考虑接入飞书/钉钉，这样出门在外也能用手机控制 AI。</p>
+    </div>
 
     <div class="tabs">
       <div class="tab-buttons">
-        <button class="tab-btn active" onclick="switchTab(event, 'ch-telegram')">Telegram（推荐）</button>
-        <button class="tab-btn" onclick="switchTab(event, 'ch-whatsapp')">WhatsApp</button>
+        <button class="tab-btn active" onclick="switchTab(event, 'ch-webui')">Web UI（最简单）</button>
         <button class="tab-btn" onclick="switchTab(event, 'ch-feishu')">飞书</button>
+        <button class="tab-btn" onclick="switchTab(event, 'ch-dingtalk')">钉钉</button>
+        <button class="tab-btn" onclick="switchTab(event, 'ch-wechat')">微信</button>
       </div>
 
-      <div class="tab-content active" id="ch-telegram">
-        <p>Telegram 是最适合 OpenClaw 的平台，设置最简单。</p>
+      <div class="tab-content active" id="ch-webui">
+        <p>Web UI 是 OpenClaw 自带的网页界面，<strong>不需要任何额外配置</strong>，安装完就能用。</p>
         <div class="steps">
           <div class="step">
-            <h3>创建 Telegram Bot</h3>
-            <p>在 Telegram 中搜索 <strong>@BotFather</strong>，发送 <code>/newbot</code>，按提示操作：</p>
-            <ul>
-              <li>输入 Bot 名称（例如：<code>我的AI助手</code>）</li>
-              <li>输入 Bot 用户名（必须以 <code>bot</code> 结尾，例如：<code>myai_assistant_bot</code>）</li>
-              <li>BotFather 会给你一个 <strong>Bot Token</strong>（一串数字和字母），复制保存好</li>
-            </ul>
-          </div>
-          <div class="step">
-            <h3>配置到 OpenClaw</h3>
-            <p>如果在 onboard 向导中已经配置过，这步可以跳过。否则运行：</p>
+            <h3>打开浏览器</h3>
+            <p>在浏览器地址栏输入：</p>
             <div class="code-block">
-              <div class="code-header"><span class="lang-tag">bash</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
-              <div class="code-body">openclaw config set 'channels.telegram.botToken' '你的Bot Token'</div>
-            </div>
-            <p>然后重启 Gateway：</p>
-            <div class="code-block">
-              <div class="code-header"><span class="lang-tag">bash</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
-              <div class="code-body">openclaw gateway restart</div>
+              <div class="code-header"><span class="lang-tag">浏览器地址栏</span></div>
+              <div class="code-body">http://localhost:18789</div>
             </div>
           </div>
           <div class="step">
-            <h3>开始使用</h3>
-            <p>在 Telegram 中搜索你刚创建的 Bot，发送 <code>/start</code>，然后就可以正常对话了！</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="tab-content" id="ch-whatsapp">
-        <p>WhatsApp 使用 WhatsApp Web 协议（Baileys），需要扫码绑定。</p>
-        <div class="steps">
-          <div class="step">
-            <h3>在 onboard 中选择 WhatsApp</h3>
-            <p>向导会显示一个 <strong>QR 码</strong>，用你手机的 WhatsApp 扫描即可绑定。</p>
+            <h3>输入 Token 认证</h3>
+            <p>首次访问需要输入 Token。这个 Token 在你安装 OpenClaw 完成时会在终端里显示，类似这样：</p>
+            <div class="code-block">
+              <div class="code-header"><span class="lang-tag">终端输出示例</span></div>
+              <div class="code-body"><span class="output">Web UI: http://localhost:18789?token=abc123def456</span></div>
+            </div>
+            <p style="margin-top:8px">直接点击那个带 <code>?token=xxx</code> 的完整链接，或者手动复制 token 粘贴到页面上。</p>
           </div>
           <div class="step">
-            <h3>开始使用</h3>
-            <p>绑定后，你在 WhatsApp 中给 OpenClaw 发消息就能收到回复了。</p>
+            <h3>开始对话</h3>
+            <p>进入后就是一个聊天界面，和网页版 ChatGPT 差不多。直接打字发消息就行！</p>
           </div>
         </div>
-        <div class="card card-warn" style="margin-top:12px">
-          <p>官方建议 WhatsApp 使用<strong>单独的手机号</strong>，避免影响你的日常 WhatsApp 使用。</p>
+        <div class="card card-info" style="margin-top:12px">
+          <p><strong>想在手机上用？</strong>如果你的电脑和手机在同一个 WiFi 下，可以用手机浏览器访问 <code>http://电脑内网IP:18789</code>。电脑的内网 IP 可以在终端输入 <code>ifconfig | grep "inet "</code>（Mac/Linux）查看，通常是 <code>192.168.x.x</code> 开头的。</p>
         </div>
       </div>
 
       <div class="tab-content" id="ch-feishu">
-        <p>飞书（Lark）适合国内办公用户。需要在飞书开放平台创建自建应用。</p>
+        <p>飞书（Lark）适合国内用户。需要在飞书开放平台创建一个"机器人应用"。下面是<strong>保姆级教程</strong>：</p>
         <div class="steps">
           <div class="step">
-            <h3>创建飞书应用</h3>
-            <p>登录 <a href="https://open.feishu.cn" style="color:var(--accent)">飞书开放平台</a>，创建一个自建应用，获取 App ID 和 App Secret。</p>
+            <h3>注册飞书开放平台</h3>
+            <p>打开 <a href="https://open.feishu.cn" style="color:var(--accent)">open.feishu.cn</a>，用你的飞书账号登录。如果还没有飞书账号，先去 <a href="https://www.feishu.cn" style="color:var(--accent)">feishu.cn</a> 注册一个（手机号就能注册，免费的）。</p>
+          </div>
+          <div class="step">
+            <h3>创建应用</h3>
+            <p>登录后，点击 <strong>"创建企业自建应用"</strong>：</p>
+            <ul>
+              <li>应用名称：随便写，比如 <code>我的AI助手</code></li>
+              <li>应用描述：随便写，比如 <code>OpenClaw AI Agent</code></li>
+              <li>创建完成后，你会看到 <strong>App ID</strong> 和 <strong>App Secret</strong>，把它们复制保存好</li>
+            </ul>
+          </div>
+          <div class="step">
+            <h3>开启机器人能力</h3>
+            <p>在应用详情页面，左侧菜单找到 <strong>"添加应用能力"</strong>，点击 <strong>"机器人"</strong> 开启。</p>
           </div>
           <div class="step">
             <h3>配置到 OpenClaw</h3>
-            <p>在 onboard 向导中选择飞书，按提示输入 App ID、App Secret 等信息。</p>
+            <div class="code-block">
+              <div class="code-header"><span class="lang-tag">bash</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
+              <div class="code-body"><span class="cm"># 配置飞书 App ID</span>
+openclaw config set 'channels.lark.appId' '你的App ID'
+
+<span class="cm"># 配置飞书 App Secret</span>
+openclaw config set 'channels.lark.appSecret' '你的App Secret'
+
+<span class="cm"># 重启让配置生效</span>
+openclaw gateway restart</div>
+            </div>
           </div>
+          <div class="step">
+            <h3>发布应用并测试</h3>
+            <p>回到飞书开放平台，点击 <strong>"版本管理与发布"</strong>，创建一个版本并发布。发布后在飞书里搜索你的机器人名字，就可以发消息对话了！</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-content" id="ch-dingtalk">
+        <p>钉钉（DingTalk）适合大部分国内用户，几乎人人都有钉钉账号。</p>
+        <div class="steps">
+          <div class="step">
+            <h3>进入钉钉开放平台</h3>
+            <p>打开 <a href="https://open.dingtalk.com" style="color:var(--accent)">open.dingtalk.com</a>，用钉钉账号登录。</p>
+          </div>
+          <div class="step">
+            <h3>创建机器人应用</h3>
+            <p>点击 <strong>"应用开发"</strong> → <strong>"企业内部开发"</strong> → <strong>"创建应用"</strong>：</p>
+            <ul>
+              <li>应用名称：比如 <code>AI助手</code></li>
+              <li>创建后获取 <strong>AppKey</strong> 和 <strong>AppSecret</strong></li>
+              <li>在 <strong>"消息推送"</strong> 设置中，开启消息接收地址</li>
+            </ul>
+          </div>
+          <div class="step">
+            <h3>配置到 OpenClaw</h3>
+            <div class="code-block">
+              <div class="code-header"><span class="lang-tag">bash</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
+              <div class="code-body"><span class="cm"># 配置钉钉</span>
+openclaw config set 'channels.dingtalk.appKey' '你的AppKey'
+openclaw config set 'channels.dingtalk.appSecret' '你的AppSecret'
+
+<span class="cm"># 重启</span>
+openclaw gateway restart</div>
+            </div>
+          </div>
+          <div class="step">
+            <h3>测试</h3>
+            <p>在钉钉里搜索你创建的机器人名字，发送一条消息测试。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-content" id="ch-wechat">
+        <p>微信是国内最常用的聊天工具，但接入方式相对复杂一些。</p>
+        <div class="card card-warn" style="margin-top:12px;margin-bottom:16px">
+          <p><strong>注意：</strong>微信官方没有开放个人聊天机器人接口，OpenClaw 通过 <strong>Web 微信协议</strong>接入。这种方式有封号风险（微信可能检测到自动化行为），建议使用<strong>小号</strong>。</p>
+        </div>
+        <div class="steps">
+          <div class="step">
+            <h3>在 onboard 向导中选择 WeChat</h3>
+            <p>向导会显示一个二维码，用你的<strong>微信小号</strong>扫码登录即可绑定。</p>
+          </div>
+          <div class="step">
+            <h3>发消息测试</h3>
+            <p>用你的<strong>大号</strong>给小号发消息，小号（OpenClaw）会自动回复。也可以把小号拉进群聊，在群里 @它 来使用。</p>
+          </div>
+        </div>
+        <div class="card card-tip" style="margin-top:12px">
+          <p><strong>替代方案：</strong>如果不想冒微信封号风险，可以用企业微信（有官方机器人 API），或者直接用 Web UI + 飞书/钉钉的方案。</p>
         </div>
       </div>
     </div>
 
     <div class="card card-info" style="margin-top:20px">
-      <p><strong>OpenClaw 还支持这些平台：</strong>Discord、Slack、Signal、iMessage、Google Chat、Microsoft Teams、Matrix、IRC、LINE、Mattermost 等 20+ 个平台。详情见 <a href="https://docs.openclaw.ai" style="color:var(--accent)">官方文档</a>。</p>
+      <p><strong>OpenClaw 还支持这些平台（部分需要翻墙）：</strong>Telegram、WhatsApp、Discord、Slack、Signal、iMessage、Microsoft Teams、LINE 等 20+ 个平台。详情见 <a href="https://docs.openclaw.ai" style="color:var(--accent)">官方文档</a>。</p>
     </div>
   </div>
 
@@ -1323,36 +1397,209 @@ openclaw skills install weather-skill</div>
       <h2>配置 AI 模型（重点！）</h2>
     </div>
 
-    <p>OpenClaw 本身只是一个"身体"，它需要一个"AI 大脑"才能工作。这个大脑就是 AI 模型，你需要通过 API 接口来接入。下面介绍两种方案：<strong>白嫖免费资源</strong>和<strong>使用第三方付费 API</strong>。</p>
+    <p>OpenClaw 本身只是一个"身体"，它需要一个 <strong>AI 大脑</strong>才能工作。你需要给它接一个"大脑"，也就是 AI 大模型。</p>
 
-    <div class="flow-diagram">
-      <div class="flow-box">你发消息</div>
-      <div class="flow-arrow">→</div>
-      <div class="flow-box accent">OpenClaw</div>
-      <div class="flow-arrow">→</div>
-      <div class="flow-box">AI 模型 API</div>
-      <div class="flow-arrow">→</div>
-      <div class="flow-box">返回回复</div>
+    <div class="card" style="margin-top:16px">
+      <h3 style="color:var(--text-bright);margin-bottom:12px">🤔 先搞懂：什么是 API Key？</h3>
+      <p>你可以把 API Key 理解为一把<strong>"钥匙"</strong>。AI 大模型（比如 DeepSeek、通义千问）运行在云端服务器上，你需要一把钥匙才能用它。这把钥匙就是 API Key —— 一串像密码一样的字符串。</p>
+      <p style="margin-top:8px">流程是这样的：</p>
+      <div class="flow-diagram">
+        <div class="flow-box">你发消息</div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-box accent">OpenClaw<br><small>带着你的 API Key</small></div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-box">AI 模型服务器<br><small>验证钥匙，返回回答</small></div>
+      </div>
+      <p style="margin-top:8px;color:var(--text-dim)">所以你需要做两件事：<strong>1) 去 AI 平台注册获取 API Key</strong>；<strong>2) 把 API Key 填到 OpenClaw 的配置里</strong>。下面手把手教你。</p>
     </div>
 
     <div class="tabs">
       <div class="tab-buttons">
-        <button class="tab-btn active" onclick="switchTab(event, 'model-free')">方案一：免费资源</button>
-        <button class="tab-btn" onclick="switchTab(event, 'model-paid')">方案二：第三方付费 API</button>
+        <button class="tab-btn active" onclick="switchTab(event, 'model-free')">方案一：免费白嫖（不花钱）</button>
+        <button class="tab-btn" onclick="switchTab(event, 'model-paid')">方案二：付费 API（效果更好）</button>
       </div>
 
       <!-- ====== 方案一：免费资源 ====== -->
       <div class="tab-content active" id="model-free">
         <div class="card card-tip">
-          <p><strong>适合谁？</strong>不想花钱、想先试试效果、或者对隐私要求极高的用户。</p>
+          <p><strong>适合谁？</strong>先想免费试试、不想花钱、或者对隐私要求极高的用户。以下所有方案<strong>国内都能直接用，不需要翻墙</strong>。</p>
         </div>
 
-        <h3 style="color:var(--text-bright);margin-top:24px;margin-bottom:16px">选项 1：Ollama — 本地运行大模型（完全免费）</h3>
+        <!-- ======== 免费选项 1: 通义千问 ======== -->
+        <h3 style="color:var(--text-bright);margin-top:24px;margin-bottom:16px">选项 1：通义千问 Qwen — 新手首选，注册就送免费额度</h3>
         <div class="card">
-          <p><a href="https://ollama.com" style="color:var(--accent)">Ollama</a> 让你在自己电脑上跑开源大模型，<strong>不花一分钱，不需要联网，数据完全不出本地</strong>。</p>
-          <div class="card card-warn" style="margin-top:12px">
-            <p><strong>硬件要求：</strong>本地跑大模型需要一定的硬件配置。8GB 内存可以跑 7B 参数的小模型（如 Qwen2.5 7B），16GB+ 内存可以跑 14B-32B 的中型模型，效果更好。有独显（NVIDIA/Apple Silicon）会快很多。</p>
+          <p>阿里云的<strong>通义千问（Qwen）</strong>提供了<strong>免费的 API 调用额度</strong>。注册就送，个人日常使用完全够用。不需要装任何东西，云端运行，效果很好，<strong>国内直连，速度快</strong>。</p>
+
+          <div class="card card-info" style="margin-top:12px">
+            <p><strong>免费额度有多少？</strong>新用户注册通常会送 100 万～数百万 Token 的免费额度（具体以平台最新活动为准）。日常聊天使用的话，够你免费用好几个月。</p>
           </div>
+
+          <div class="steps">
+            <div class="step">
+              <h3>打开阿里云百炼平台</h3>
+              <p>在浏览器中打开：<a href="https://bailian.console.aliyun.com" style="color:var(--accent)">bailian.console.aliyun.com</a></p>
+              <p style="margin-top:8px">如果你有<strong>支付宝</strong>或<strong>淘宝</strong>账号，可以直接扫码登录，不需要额外注册。没有的话用手机号注册一个阿里云账号也很快。</p>
+            </div>
+
+            <div class="step">
+              <h3>开通百炼服务</h3>
+              <p>首次登录会提示你"开通百炼大模型服务"，点<strong>同意</strong>并<strong>开通</strong>就行（免费开通，不会扣钱）。</p>
+            </div>
+
+            <div class="step">
+              <h3>创建 API Key</h3>
+              <p>开通后，在页面左上角或左侧菜单找到 <strong>"API-KEY 管理"</strong>（也可能叫"API Key"），点进去：</p>
+              <ul>
+                <li>点 <strong>"创建新的 API-KEY"</strong></li>
+                <li>系统会生成一串以 <code>sk-</code> 开头的字符串，<strong>这就是你的 API Key</strong></li>
+                <li><strong>重要：</strong>复制保存好！这个 Key 只会显示一次，关掉页面就看不到了。建议先粘贴到记事本里</li>
+              </ul>
+              <div class="card card-warn" style="margin-top:12px">
+                <p><strong>API Key 是你的"密码"，不要泄露给别人！</strong>谁拿到这个 Key 就能用你的额度调用 AI。不要发到群里、不要截图发朋友圈。</p>
+              </div>
+            </div>
+
+            <div class="step">
+              <h3>把 API Key 配置到 OpenClaw</h3>
+              <p>回到终端，输入下面的命令。<strong>注意把 <code>sk-你的API Key</code> 替换成你刚才复制的那串真实的 Key</strong>：</p>
+              <div class="code-block">
+                <div class="code-header"><span class="lang-tag">bash</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
+                <div class="code-body">openclaw config set 'models.providers.qwen' --json '{
+  "baseUrl": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+  "apiKey": "sk-你的API Key",
+  "models": {
+    "default": "qwen-plus"
+  }
+}'</div>
+              </div>
+
+              <div class="card card-tip" style="margin-top:12px">
+                <p><strong>逐行解释这个命令：</strong></p>
+                <ul>
+                  <li><code>baseUrl</code> — AI 模型服务器的地址，这里是阿里云的地址，<strong>不要改</strong></li>
+                  <li><code>apiKey</code> — 你刚才在阿里云创建的那串 Key，<strong>替换成你自己的</strong></li>
+                  <li><code>default</code> — 使用哪个模型，<code>qwen-plus</code> 是性价比最高的选择</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="step">
+              <h3>重启 OpenClaw 并测试</h3>
+              <div class="code-block">
+                <div class="code-header"><span class="lang-tag">bash</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
+                <div class="code-body">openclaw gateway restart</div>
+              </div>
+              <p style="margin-top:8px">然后去 Web UI（<code>http://localhost:18789</code>）或者聊天软件里发一条消息，收到回复就说明配置成功了！</p>
+            </div>
+          </div>
+
+          <div class="card card-info" style="margin-top:12px">
+            <p><strong>通义千问有哪些模型可以选？</strong></p>
+            <div class="table-wrap" style="margin-top:8px">
+              <table>
+                <tr><th>模型名</th><th>特点</th><th>建议</th></tr>
+                <tr>
+                  <td><code>qwen-turbo</code></td>
+                  <td>速度最快，便宜</td>
+                  <td>简单对话、快速回复</td>
+                </tr>
+                <tr>
+                  <td><code>qwen-plus</code></td>
+                  <td>速度和效果兼顾</td>
+                  <td><strong>推荐！日常使用首选</strong></td>
+                </tr>
+                <tr>
+                  <td><code>qwen-max</code></td>
+                  <td>效果最好，速度较慢</td>
+                  <td>处理复杂任务时用</td>
+                </tr>
+              </table>
+            </div>
+            <p style="margin-top:8px;color:var(--text-dim)">想换模型？把上面命令里的 <code>qwen-plus</code> 改成别的模型名就行。</p>
+          </div>
+        </div>
+
+        <!-- ======== 免费选项 2: 硅基流动 ======== -->
+        <h3 style="color:var(--text-bright);margin-top:32px;margin-bottom:16px">选项 2：硅基流动 SiliconFlow — 多种免费模型随便用</h3>
+        <div class="card">
+          <p><a href="https://siliconflow.cn" style="color:var(--accent)">硅基流动（SiliconFlow）</a>是国内的 AI 模型聚合平台，<strong>注册就送额度</strong>，而且有些模型<strong>永久免费</strong>。一个账号就能用 DeepSeek、Qwen、Llama 等多种模型。<strong>国内直连，不需要翻墙。</strong></p>
+
+          <div class="steps">
+            <div class="step">
+              <h3>注册账号</h3>
+              <p>打开 <a href="https://cloud.siliconflow.cn" style="color:var(--accent)">cloud.siliconflow.cn</a>，用手机号注册，非常简单。注册完成后会自动赠送免费额度。</p>
+            </div>
+
+            <div class="step">
+              <h3>创建 API Key</h3>
+              <p>登录后，在左侧菜单找到 <strong>"API 密钥"</strong>，点 <strong>"新建 API 密钥"</strong>，复制保存好生成的 Key。</p>
+            </div>
+
+            <div class="step">
+              <h3>配置到 OpenClaw</h3>
+              <div class="code-block">
+                <div class="code-header"><span class="lang-tag">bash</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
+                <div class="code-body">openclaw config set 'models.providers.siliconflow' --json '{
+  "baseUrl": "https://api.siliconflow.cn/v1",
+  "apiKey": "sk-你的SiliconFlow API Key",
+  "models": {
+    "default": "deepseek-ai/DeepSeek-V3"
+  }
+}'</div>
+              </div>
+            </div>
+
+            <div class="step">
+              <h3>重启并测试</h3>
+              <div class="code-block">
+                <div class="code-header"><span class="lang-tag">bash</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
+                <div class="code-body">openclaw gateway restart</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card card-tip" style="margin-top:12px">
+            <p><strong>硅基流动上有哪些免费/便宜模型？</strong></p>
+            <div class="table-wrap" style="margin-top:8px">
+              <table>
+                <tr><th>模型名</th><th>说明</th><th>价格</th></tr>
+                <tr>
+                  <td><code>deepseek-ai/DeepSeek-V3</code></td>
+                  <td>DeepSeek 最新版，中文效果好</td>
+                  <td>极便宜</td>
+                </tr>
+                <tr>
+                  <td><code>Qwen/Qwen2.5-7B-Instruct</code></td>
+                  <td>通义千问 7B 版</td>
+                  <td>免费</td>
+                </tr>
+                <tr>
+                  <td><code>THUDM/glm-4-9b-chat</code></td>
+                  <td>智谱 GLM-4</td>
+                  <td>免费</td>
+                </tr>
+              </table>
+            </div>
+            <p style="margin-top:8px;color:var(--text-dim)">具体哪些模型免费以平台最新列表为准，登录后在"模型广场"可以看到。</p>
+          </div>
+        </div>
+
+        <!-- ======== 免费选项 3: Ollama 本地 ======== -->
+        <h3 style="color:var(--text-bright);margin-top:32px;margin-bottom:16px">选项 3：Ollama — 在自己电脑上跑 AI（完全离线）</h3>
+        <div class="card">
+          <p><a href="https://ollama.com" style="color:var(--accent)">Ollama</a> 让你在自己电脑上运行开源大模型，<strong>完全免费、完全离线、数据不出本地</strong>。适合对隐私要求极高、或者网络条件不好的用户。</p>
+
+          <div class="card card-warn" style="margin-top:12px">
+            <p><strong>硬件要求比较高！</strong>本地跑 AI 需要较好的电脑配置：</p>
+            <ul>
+              <li><strong>8GB 内存</strong> — 勉强能跑 7B 小模型，效果一般，回复慢</li>
+              <li><strong>16GB 内存</strong> — 可以跑 7B-14B 模型，效果还行</li>
+              <li><strong>32GB+ 内存</strong> — 可以跑 32B 模型，效果很好</li>
+              <li>有 <strong>Apple M 系列芯片</strong>（MacBook Air M1/M2/M3/M4）或 <strong>NVIDIA 显卡</strong> 会快很多</li>
+            </ul>
+            <p style="margin-top:8px">如果你的电脑配置不高，建议用上面的通义千问或硅基流动方案（云端运行，对电脑没要求）。</p>
+          </div>
+
           <div class="steps">
             <div class="step">
               <h3>安装 Ollama</h3>
@@ -1360,9 +1607,11 @@ openclaw skills install weather-skill</div>
                 <div class="tab-buttons">
                   <button class="tab-btn active" onclick="switchTab(event, 'ollama-mac')">Mac</button>
                   <button class="tab-btn" onclick="switchTab(event, 'ollama-linux')">Linux</button>
+                  <button class="tab-btn" onclick="switchTab(event, 'ollama-win')">Windows</button>
                 </div>
                 <div class="tab-content active" id="ollama-mac">
-                  <p>去 <a href="https://ollama.com/download" style="color:var(--accent)">ollama.com/download</a> 下载 Mac 版安装包，双击安装即可。</p>
+                  <p>去 <a href="https://ollama.com/download" style="color:var(--accent)">ollama.com/download</a> 下载 Mac 版安装包（.dmg 文件），双击打开，把 Ollama 拖到"应用程序"文件夹即可。</p>
+                  <p style="margin-top:8px;color:var(--text-dim)">安装完成后，在启动台（Launchpad）里打开 Ollama，它会在菜单栏出现一个小图标，说明已经在后台运行了。</p>
                 </div>
                 <div class="tab-content" id="ollama-linux">
                   <div class="code-block">
@@ -1370,26 +1619,29 @@ openclaw skills install weather-skill</div>
                     <div class="code-body">curl -fsSL https://ollama.com/install.sh | sh</div>
                   </div>
                 </div>
+                <div class="tab-content" id="ollama-win">
+                  <p>去 <a href="https://ollama.com/download" style="color:var(--accent)">ollama.com/download</a> 下载 Windows 版安装包（.exe 文件），双击运行安装。</p>
+                </div>
               </div>
             </div>
+
             <div class="step">
-              <h3>下载一个模型</h3>
+              <h3>下载一个 AI 模型</h3>
+              <p>打开终端，运行以下命令下载模型（第一次需要下载几个 GB 的文件，耐心等待）：</p>
               <div class="code-block">
-                <div class="code-header"><span class="lang-tag">bash</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
-                <div class="code-body"><span class="cm"># 推荐：通义千问 7B（中文效果好，内存要求低）</span>
+                <div class="code-header"><span class="lang-tag">bash — 选一个运行即可</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
+                <div class="code-body"><span class="cm"># 推荐：通义千问 7B（4.7GB，中文效果好，8GB 内存就能跑）</span>
 ollama pull qwen2.5:7b
 
-<span class="cm"># 或者：Llama 3.1 8B（英文效果好）</span>
-ollama pull llama3.1:8b
-
-<span class="cm"># 内存够大的话可以拉更大的模型，效果更好</span>
-ollama pull qwen2.5:32b</div>
+<span class="cm"># 电脑好的话试试 14B 版本（9GB，效果更好，需要 16GB 内存）</span>
+ollama pull qwen2.5:14b</div>
               </div>
-              <p style="margin-top:8px;color:var(--text-dim)">第一次下载需要几分钟到几十分钟，取决于网速和模型大小。</p>
+              <p style="margin-top:8px;color:var(--text-dim)">下载完成后可以先试试效果：输入 <code>ollama run qwen2.5:7b</code>，然后直接打字对话。输入 <code>/bye</code> 退出。</p>
             </div>
+
             <div class="step">
               <h3>配置 OpenClaw 使用 Ollama</h3>
-              <p>Ollama 安装后会在本地 <code>http://localhost:11434</code> 启动一个兼容 OpenAI 格式的 API 服务。</p>
+              <p>Ollama 安装后会在你电脑本地启动一个 API 服务（地址是 <code>http://localhost:11434</code>），OpenClaw 可以直接连上去用：</p>
               <div class="code-block">
                 <div class="code-header"><span class="lang-tag">bash</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
                 <div class="code-body">openclaw config set 'models.providers.ollama' --json '{
@@ -1400,81 +1652,30 @@ ollama pull qwen2.5:32b</div>
   }
 }'</div>
               </div>
-              <p style="margin-top:8px;color:var(--text-dim)"><code>apiKey</code> 随便填什么都行（Ollama 不需要认证），但不能留空。</p>
+              <p style="margin-top:8px;color:var(--text-dim)"><code>apiKey</code> 这里随便填什么都行（本地运行不需要密钥），但不能留空，所以写个 <code>ollama</code> 占位。</p>
             </div>
+
             <div class="step">
-              <h3>验证一下</h3>
+              <h3>重启并测试</h3>
               <div class="code-block">
                 <div class="code-header"><span class="lang-tag">bash</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
-                <div class="code-body"><span class="cm"># 确认 Ollama 在运行</span>
+                <div class="code-body"><span class="cm"># 确认 Ollama 在运行（应该能看到你下载的模型）</span>
 ollama list
 
-<span class="cm"># 重启 OpenClaw 让配置生效</span>
+<span class="cm"># 重启 OpenClaw</span>
 openclaw gateway restart</div>
               </div>
+              <p style="margin-top:8px">去 Web UI 发条消息试试，能收到回复就说明成功了！本地模型回复速度取决于你的电脑配置，可能需要等几秒到几十秒。</p>
             </div>
           </div>
         </div>
 
-        <h3 style="color:var(--text-bright);margin-top:32px;margin-bottom:16px">选项 2：通义千问 Qwen — 官方免费额度</h3>
-        <div class="card">
-          <p>阿里云的<strong>通义千问（Qwen）</strong>提供了<strong>免费的 API 调用额度</strong>，新用户注册就送，个人日常使用完全够用。不需要本地硬件，云端运行，效果很好。</p>
-          <div class="steps">
-            <div class="step">
-              <h3>获取免费 API Key</h3>
-              <p>去 <a href="https://dashscope.console.aliyun.com" style="color:var(--accent)">阿里云百炼平台</a> 注册账号（支付宝/淘宝账号直接登录），在控制台的 <strong>"API-KEY 管理"</strong> 页面创建一个 Key。</p>
-            </div>
-            <div class="step">
-              <h3>配置到 OpenClaw</h3>
-              <p>如果在 onboard 向导中选了 Qwen，它会自动跳转到登录页面授权，不需要手动操作。如果需要手动配置：</p>
-              <div class="code-block">
-                <div class="code-header"><span class="lang-tag">bash</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
-                <div class="code-body">openclaw config set 'models.providers.qwen' --json '{
-  "baseUrl": "https://dashscope.aliyuncs.com/compatible-mode/v1",
-  "apiKey": "sk-你的阿里云API Key",
-  "models": {
-    "default": "qwen-plus"
-  }
-}'</div>
-              </div>
-            </div>
-          </div>
-          <div class="card card-tip" style="margin-top:12px">
-            <p><strong>可选模型：</strong><code>qwen-turbo</code>（最快最便宜）、<code>qwen-plus</code>（均衡推荐）、<code>qwen-max</code>（最强但贵）。免费额度下建议用 <code>qwen-plus</code>。</p>
-          </div>
-        </div>
-
-        <h3 style="color:var(--text-bright);margin-top:32px;margin-bottom:16px">选项 3：其他免费资源</h3>
-        <div class="card">
-          <div class="table-wrap">
-            <table>
-              <tr><th>平台</th><th>免费额度</th><th>说明</th></tr>
-              <tr>
-                <td><strong>SiliconFlow 硅基流动</strong></td>
-                <td>注册送额度，部分模型永久免费</td>
-                <td>聚合了多种开源模型（Qwen、DeepSeek、Llama 等），注册即用，<a href="https://siliconflow.cn" style="color:var(--accent)">siliconflow.cn</a></td>
-              </tr>
-              <tr>
-                <td><strong>Groq</strong></td>
-                <td>免费调用开源模型（有速率限制）</td>
-                <td>速度极快，适合跑 Llama、Mixtral 等开源模型，<a href="https://console.groq.com" style="color:var(--accent)">console.groq.com</a></td>
-              </tr>
-              <tr>
-                <td><strong>Google Gemini</strong></td>
-                <td>免费层有一定调用额度</td>
-                <td>Google AI Studio 提供 Gemini 模型的免费 API，<a href="https://aistudio.google.com" style="color:var(--accent)">aistudio.google.com</a></td>
-              </tr>
-            </table>
-          </div>
-          <p style="margin-top:12px;color:var(--text-dim)">这些平台都提供兼容 OpenAI 格式的 API，配置方法和上面类似，把 <code>baseUrl</code> 和 <code>apiKey</code> 替换成对应平台的即可。</p>
-        </div>
-
-        <div class="card card-info" style="margin-top:16px">
+        <div class="card card-info" style="margin-top:24px">
           <p><strong>总结：免费方案怎么选？</strong></p>
           <ul>
-            <li>追求隐私、不想联网 → <strong>Ollama 本地模型</strong></li>
-            <li>想省事、不折腾 → <strong>通义千问免费额度</strong></li>
-            <li>想免费试多种模型 → <strong>SiliconFlow / Groq</strong></li>
+            <li>最省心，什么都不懂就选这个 → <strong>通义千问</strong>（支付宝登录就行）</li>
+            <li>想免费试多种模型 → <strong>硅基流动</strong>（一个平台用多种模型）</li>
+            <li>不想联网、隐私第一 → <strong>Ollama</strong>（需要电脑配置好）</li>
           </ul>
         </div>
       </div>
@@ -1482,81 +1683,141 @@ openclaw gateway restart</div>
       <!-- ====== 方案二：第三方付费 API ====== -->
       <div class="tab-content" id="model-paid">
         <div class="card card-info">
-          <p><strong>适合谁？</strong>愿意花一点钱换更好的效果，或需要长时间稳定使用的用户。付费 API 通常更快、更稳定、模型更强。</p>
+          <p><strong>适合谁？</strong>愿意花一点小钱换更好的效果，或者需要长期稳定使用的用户。以下前两个方案<strong>国内直连，不需要翻墙</strong>。</p>
         </div>
 
-        <h3 style="color:var(--text-bright);margin-top:24px;margin-bottom:16px">选项 1：DeepSeek（国内首选，性价比极高）</h3>
+        <!-- ======== 付费选项 1: DeepSeek ======== -->
+        <h3 style="color:var(--text-bright);margin-top:24px;margin-bottom:16px">选项 1：DeepSeek — 国内首选，10 元用很久</h3>
         <div class="card">
-          <p>DeepSeek 是国内最受欢迎的 AI 模型之一，<strong>价格极低</strong>（日常使用大概几毛钱一天），中文效果很好，国内直连不需要翻墙。</p>
+          <p>DeepSeek 是国内最火的 AI 模型之一，<strong>效果很好，价格极低</strong>（日常聊天大概几毛钱一天），国内直连，速度快。</p>
+
           <div class="steps">
             <div class="step">
-              <h3>注册并充值</h3>
-              <p>去 <a href="https://platform.deepseek.com" style="color:var(--accent)">platform.deepseek.com</a> 注册账号，在"API Keys"页面创建一个 Key。需要先充值，最低 <strong>10 元</strong>就够用很久。</p>
+              <h3>注册 DeepSeek 开放平台</h3>
+              <p>在浏览器打开 <a href="https://platform.deepseek.com" style="color:var(--accent)">platform.deepseek.com</a>，用手机号注册一个账号。</p>
             </div>
+
+            <div class="step">
+              <h3>充值</h3>
+              <p>登录后点击左侧 <strong>"充值"</strong>，最低充 <strong>10 元</strong>。支持支付宝/微信支付。10 元正常使用的话能用好几个月。</p>
+            </div>
+
+            <div class="step">
+              <h3>创建 API Key</h3>
+              <p>点击左侧菜单的 <strong>"API Keys"</strong>，然后点 <strong>"创建 API Key"</strong>：</p>
+              <ul>
+                <li>名称随便写，比如 <code>openclaw</code></li>
+                <li>创建后会显示一串以 <code>sk-</code> 开头的字符串</li>
+                <li><strong>立刻复制保存！</strong>关掉就看不到了</li>
+              </ul>
+            </div>
+
             <div class="step">
               <h3>配置到 OpenClaw</h3>
+              <p>把下面命令里的 <code>sk-你的API Key</code> 替换成你刚才复制的 Key，然后在终端运行：</p>
               <div class="code-block">
                 <div class="code-header"><span class="lang-tag">bash</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
                 <div class="code-body">openclaw config set 'models.providers.deepseek' --json '{
   "baseUrl": "https://api.deepseek.com",
-  "apiKey": "sk-你的DeepSeek API Key",
+  "apiKey": "sk-你的API Key",
   "models": {
     "default": "deepseek-chat",
     "reasoning": "deepseek-reasoner"
   }
 }'</div>
               </div>
+              <div class="card card-tip" style="margin-top:12px">
+                <p><strong>两个模型的区别：</strong></p>
+                <ul>
+                  <li><code>deepseek-chat</code> — 日常对话用，速度快，便宜</li>
+                  <li><code>deepseek-reasoner</code> — 遇到数学、逻辑、编程等需要深度思考的问题时用，效果更好但更贵</li>
+                </ul>
+              </div>
             </div>
-          </div>
-          <div class="card card-warn" style="margin-top:12px">
-            <p><strong>注意：</strong>模型 ID 必须使用 <code>deepseek-chat</code>（对话）或 <code>deepseek-reasoner</code>（推理），不要自己改名字。账户余额必须大于 0。</p>
-          </div>
-        </div>
 
-        <h3 style="color:var(--text-bright);margin-top:32px;margin-bottom:16px">选项 2：OpenRouter（一个 Key 用所有模型）</h3>
-        <div class="card">
-          <p><a href="https://openrouter.ai" style="color:var(--accent)">OpenRouter</a> 是一个 <strong>AI 模型聚合平台</strong>，注册一个账号就能调用 Claude、GPT、Gemini、Llama、DeepSeek 等几十种模型，非常方便。</p>
-          <div class="steps">
             <div class="step">
-              <h3>注册并获取 API Key</h3>
-              <p>去 <a href="https://openrouter.ai/keys" style="color:var(--accent)">openrouter.ai/keys</a> 注册账号，创建一个 API Key。可以用 Google 账号直接登录。充值支持信用卡和加密货币。</p>
-            </div>
-            <div class="step">
-              <h3>配置到 OpenClaw</h3>
+              <h3>重启并测试</h3>
               <div class="code-block">
                 <div class="code-header"><span class="lang-tag">bash</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
-                <div class="code-body">openclaw config set 'models.providers.openrouter' --json '{
-  "baseUrl": "https://openrouter.ai/api/v1",
-  "apiKey": "sk-or-v1-你的OpenRouter API Key",
-  "models": {
-    "default": "anthropic/claude-sonnet-4"
-  }
-}'</div>
+                <div class="code-body">openclaw gateway restart</div>
               </div>
-              <p style="margin-top:8px">想换模型？只需要改 <code>default</code> 后面的模型名字就行：</p>
-              <div class="table-wrap" style="margin-top:12px">
-                <table>
-                  <tr><th>模型 ID</th><th>说明</th><th>参考价格</th></tr>
-                  <tr><td><code>anthropic/claude-sonnet-4</code></td><td>Claude 最新版，综合能力强</td><td>中等</td></tr>
-                  <tr><td><code>openai/gpt-4o</code></td><td>GPT-4o，速度快</td><td>中等</td></tr>
-                  <tr><td><code>google/gemini-2.5-pro</code></td><td>Google 最新模型</td><td>中等</td></tr>
-                  <tr><td><code>deepseek/deepseek-chat</code></td><td>DeepSeek（通过 OpenRouter 调用）</td><td>便宜</td></tr>
-                </table>
-              </div>
+              <p style="margin-top:8px">发消息测试，收到回复就成功了！</p>
             </div>
           </div>
-          <div class="card card-tip" style="margin-top:12px">
-            <p><strong>OpenRouter 的好处：</strong>你不需要分别去 Anthropic、OpenAI、Google 各注册一个账号，一个 OpenRouter 账号就能用所有模型。而且国内通常可以直连（部分模型可能需要代理）。</p>
+
+          <div class="card card-warn" style="margin-top:12px">
+            <p><strong>常见问题：</strong></p>
+            <ul>
+              <li><strong>报错 "Insufficient Balance"</strong> → 余额不足，去充值</li>
+              <li><strong>报错 "Invalid API Key"</strong> → Key 复制错了，重新复制粘贴</li>
+              <li><strong>模型名不要改！</strong>必须写 <code>deepseek-chat</code>，不要自己编名字</li>
+            </ul>
           </div>
         </div>
 
-        <h3 style="color:var(--text-bright);margin-top:32px;margin-bottom:16px">选项 3：官方 API（Claude / GPT）</h3>
+        <!-- ======== 付费选项 2: 其他国产模型 ======== -->
+        <h3 style="color:var(--text-bright);margin-top:32px;margin-bottom:16px">选项 2：其他国产 AI 模型</h3>
         <div class="card">
-          <p>如果你想直接使用 Anthropic（Claude）或 OpenAI（GPT）的官方 API，效果最好但价格较高，且通常需要翻墙。</p>
+          <p>除了 DeepSeek 和通义千问，国内还有很多优秀的 AI 模型可以选择，都能<strong>国内直连</strong>：</p>
+
+          <div class="table-wrap" style="margin-top:12px">
+            <table>
+              <tr><th>平台</th><th>模型</th><th>特点</th><th>注册地址</th></tr>
+              <tr>
+                <td><strong>智谱 AI</strong></td>
+                <td>GLM-4</td>
+                <td>清华出品，综合能力强</td>
+                <td><a href="https://open.bigmodel.cn" style="color:var(--accent)">open.bigmodel.cn</a></td>
+              </tr>
+              <tr>
+                <td><strong>月之暗面</strong></td>
+                <td>Kimi / Moonshot</td>
+                <td>长文本专家，能处理超长文档</td>
+                <td><a href="https://platform.moonshot.cn" style="color:var(--accent)">platform.moonshot.cn</a></td>
+              </tr>
+              <tr>
+                <td><strong>百度</strong></td>
+                <td>文心一言 ERNIE</td>
+                <td>百度出品，中文理解好</td>
+                <td><a href="https://cloud.baidu.com/product/wenxinworkshop" style="color:var(--accent)">百度智能云</a></td>
+              </tr>
+              <tr>
+                <td><strong>零一万物</strong></td>
+                <td>Yi</td>
+                <td>李开复创办，性价比高</td>
+                <td><a href="https://platform.lingyiwanwu.com" style="color:var(--accent)">platform.lingyiwanwu.com</a></td>
+              </tr>
+            </table>
+          </div>
+
+          <p style="margin-top:16px">这些平台的配置方法都一样，只需要替换 <code>baseUrl</code>、<code>apiKey</code> 和模型名。比如智谱 AI：</p>
+          <div class="code-block">
+            <div class="code-header"><span class="lang-tag">bash — 智谱 AI 配置示例</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
+            <div class="code-body">openclaw config set 'models.providers.zhipu' --json '{
+  "baseUrl": "https://open.bigmodel.cn/api/paas/v4",
+  "apiKey": "你的智谱API Key",
+  "models": {
+    "default": "glm-4-flash"
+  }
+}'</div>
+          </div>
+          <p style="margin-top:8px;color:var(--text-dim)">每个平台的 <code>baseUrl</code> 和模型名请以各平台官方文档为准。</p>
+        </div>
+
+        <!-- ======== 付费选项 3: 国外模型（需翻墙） ======== -->
+        <h3 style="color:var(--text-bright);margin-top:32px;margin-bottom:16px">选项 3：国外模型 — Claude / GPT（需要翻墙）</h3>
+        <div class="card">
+          <div class="card card-warn" style="margin-bottom:16px">
+            <p><strong>以下内容需要翻墙才能操作。</strong>如果你没有翻墙工具，请跳过这部分，用上面的国产模型方案就好。国产模型的效果已经非常好了！</p>
+          </div>
+
+          <p>如果你有翻墙条件，想用 Claude（Anthropic）或 GPT（OpenAI）这些国外顶级模型，有两种方式：</p>
+
+          <h4 style="color:var(--text-bright);margin-top:16px;margin-bottom:12px">方式 A：直接用官方 API（需翻墙 + 外币信用卡）</h4>
           <div class="tabs">
             <div class="tab-buttons">
-              <button class="tab-btn active" onclick="switchTab(event, 'official-claude')">Claude (Anthropic)</button>
-              <button class="tab-btn" onclick="switchTab(event, 'official-openai')">GPT (OpenAI)</button>
+              <button class="tab-btn active" onclick="switchTab(event, 'official-claude')">Claude</button>
+              <button class="tab-btn" onclick="switchTab(event, 'official-openai')">GPT</button>
             </div>
             <div class="tab-content active" id="official-claude">
               <p>去 <a href="https://console.anthropic.com" style="color:var(--accent)">console.anthropic.com</a> 注册并获取 API Key。</p>
@@ -1564,7 +1825,7 @@ openclaw gateway restart</div>
                 <div class="code-header"><span class="lang-tag">bash</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
                 <div class="code-body">openclaw config set 'models.providers.anthropic' --json '{
   "baseUrl": "https://api.anthropic.com",
-  "apiKey": "sk-ant-你的Anthropic API Key",
+  "apiKey": "sk-ant-你的API Key",
   "models": {
     "default": "claude-sonnet-4-20250514"
   }
@@ -1577,7 +1838,7 @@ openclaw gateway restart</div>
                 <div class="code-header"><span class="lang-tag">bash</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
                 <div class="code-body">openclaw config set 'models.providers.openai' --json '{
   "baseUrl": "https://api.openai.com/v1",
-  "apiKey": "sk-你的OpenAI API Key",
+  "apiKey": "sk-你的API Key",
   "models": {
     "default": "gpt-4o"
   }
@@ -1585,20 +1846,15 @@ openclaw gateway restart</div>
               </div>
             </div>
           </div>
-          <div class="card card-info" style="margin-top:12px">
-            <p><strong>国内用户注意：</strong>访问 Anthropic 和 OpenAI 的官方 API 通常需要翻墙。如果你已经在用第三方代理跑 Claude Code，同样的 API Key 和 Base URL 也可以用在 OpenClaw 上。</p>
-          </div>
-        </div>
 
-        <h3 style="color:var(--text-bright);margin-top:32px;margin-bottom:16px">选项 4：其他第三方 API 代理</h3>
-        <div class="card">
-          <p>国内有很多第三方 API 代理服务，它们转发你的请求到 OpenAI / Anthropic 的服务器，让你<strong>不用翻墙</strong>就能用 Claude 和 GPT。</p>
+          <h4 style="color:var(--text-bright);margin-top:24px;margin-bottom:12px">方式 B：通过第三方 API 代理（不需翻墙，但需要注意安全）</h4>
+          <p>国内有些第三方服务商帮你转发请求到 OpenAI/Anthropic 的服务器，让你<strong>不翻墙也能用 Claude 和 GPT</strong>。</p>
           <div class="card card-warn" style="margin-top:12px">
-            <p><strong>安全提醒：</strong>使用第三方代理意味着你的对话内容会经过代理服务器。请选择<strong>口碑好、运营时间长</strong>的代理，避免数据泄露风险。</p>
+            <p><strong>安全提醒：</strong>你的对话内容会经过代理服务器，存在数据泄露风险。请选择<strong>口碑好、运营时间长</strong>的代理，不要用来聊敏感内容。</p>
           </div>
-          <p style="margin-top:12px">配置方法都是一样的，只需要把 <code>baseUrl</code> 改成代理提供的地址：</p>
+          <p style="margin-top:12px">配置方法和上面一样，只是把 <code>baseUrl</code> 改成代理给你的地址：</p>
           <div class="code-block">
-            <div class="code-header"><span class="lang-tag">bash — 通用模板</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
+            <div class="code-header"><span class="lang-tag">bash — 第三方代理模板</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
             <div class="code-body">openclaw config set 'models.providers.proxy' --json '{
   "baseUrl": "https://api.你的代理域名.com",
   "apiKey": "代理给你的API Key",
@@ -1607,15 +1863,16 @@ openclaw gateway restart</div>
   }
 }'</div>
           </div>
+          <p style="margin-top:8px;color:var(--text-dim)">如果你已经在用第三方代理跑 Claude Code，同样的 API Key 和 Base URL 通常也可以直接用在 OpenClaw 上。</p>
         </div>
 
-        <div class="card card-info" style="margin-top:16px">
+        <div class="card card-info" style="margin-top:24px">
           <p><strong>总结：付费方案怎么选？</strong></p>
           <ul>
-            <li>国内用户、追求性价比 → <strong>DeepSeek</strong>（10 元用很久）</li>
-            <li>想一个账号用所有模型 → <strong>OpenRouter</strong></li>
-            <li>追求最强效果、不差钱 → <strong>官方 Claude / GPT API</strong></li>
-            <li>不想翻墙用 Claude / GPT → <strong>第三方 API 代理</strong></li>
+            <li>国内、追求性价比 → <strong>DeepSeek</strong>（10 元用几个月）</li>
+            <li>国内、想试更多模型 → <strong>智谱 / Kimi / 硅基流动</strong></li>
+            <li>能翻墙、想用最强模型 → <strong>Claude / GPT 官方 API</strong></li>
+            <li>不能翻墙、但想用 Claude / GPT → <strong>第三方 API 代理</strong></li>
           </ul>
         </div>
       </div>
@@ -1629,11 +1886,22 @@ openclaw gateway restart</div>
         <div class="code-header"><span class="lang-tag">bash</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
         <div class="code-body">openclaw gateway restart</div>
       </div>
-      <p style="margin-top:8px">然后在聊天软件里发一条消息测试，收到回复就说明配置成功了。</p>
+      <p style="margin-top:8px">然后去 Web UI（<code>http://localhost:18789</code>）发一条消息测试，收到回复就说明配置成功了！</p>
     </div>
 
     <div class="card card-tip" style="margin-top:16px">
-      <p><strong>可以同时配置多个模型吗？</strong>可以！你可以配多个 provider，然后在对话中用命令切换。比如日常用 DeepSeek 省钱，遇到复杂问题切换到 Claude 处理。</p>
+      <p><strong>可以同时配置多个模型吗？</strong>可以！你可以配多个 provider，然后在对话中切换。比如日常用 DeepSeek 省钱，遇到复杂问题切换到通义千问 Max 处理。</p>
+    </div>
+
+    <div class="card card-warn" style="margin-top:16px">
+      <p><strong>配置出问题了？排查清单：</strong></p>
+      <ul>
+        <li><strong>确认 API Key 是否正确</strong> — 重新去平台复制一遍，注意不要多复制空格</li>
+        <li><strong>确认 baseUrl 是否正确</strong> — 每个平台的地址不一样，不要搞混</li>
+        <li><strong>确认模型名是否正确</strong> — 要用平台官方提供的模型名，不要自己编</li>
+        <li><strong>确认账户有余额</strong> — 付费平台需要先充值</li>
+        <li><strong>运行诊断命令</strong> — <code>openclaw doctor --fix</code> 可以帮你自动排查问题</li>
+      </ul>
     </div>
   </div>
 
