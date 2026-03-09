@@ -561,6 +561,8 @@ li strong { color: var(--text); }
   <div class="nav-group">
     <div class="nav-group-title">入门</div>
     <a class="nav-link" href="#intro"><span class="nav-icon">🏠</span>什么是 Claude Code</a>
+    <a class="nav-link" href="#usecases"><span class="nav-icon">💡</span>能帮你做什么</a>
+    <a class="nav-link" href="#terminal-basics"><span class="nav-icon">🖥️</span>命令行入门</a>
     <a class="nav-link" href="#prepare"><span class="nav-icon">📋</span>准备工作</a>
     <a class="nav-link" href="#install"><span class="nav-icon">📦</span>安装 Claude Code</a>
     <a class="nav-link" href="#config"><span class="nav-icon">⚙️</span>配置 API（重点）</a>
@@ -607,15 +609,15 @@ li strong { color: var(--text); }
   <!-- 通俗介绍 -->
   <div class="card" style="margin-top:40px">
     <h3 style="color:var(--text-bright);margin-bottom:12px">🤔 Claude Code 到底是啥？</h3>
-    <p>简单说，Claude Code 就是一个<strong>跑在你终端（命令行）里的 AI 编程助手</strong>。你用文字告诉它你想干什么，它就能帮你：</p>
+    <p>简单说，Claude Code 就是一个<strong>跑在你终端（命令行）里的 AI 助手</strong>。你用文字告诉它你想干什么，它就能帮你：</p>
     <ul>
-      <li><strong>写代码</strong> — 直接帮你创建文件、写函数</li>
-      <li><strong>改代码</strong> — 帮你修 Bug、重构、优化</li>
-      <li><strong>读代码</strong> — 看懂你的项目结构，回答你关于代码的问题</li>
-      <li><strong>跑命令</strong> — 帮你执行 git、npm 等终端命令</li>
-      <li><strong>做项目</strong> — 从零创建一整个项目</li>
+      <li><strong>写代码 / 改代码</strong> — 直接在你电脑上创建、修改文件</li>
+      <li><strong>处理文档</strong> — 批量整理文件、转格式、生成报告</li>
+      <li><strong>分析数据</strong> — 处理 Excel/CSV、做统计分析</li>
+      <li><strong>自动化任务</strong> — 帮你执行终端命令，替代重复操作</li>
+      <li><strong>从零做项目</strong> — 一句话就能创建一整个应用</li>
     </ul>
-    <p style="margin-top:12px">它和 ChatGPT 最大的不同是：<strong>它直接在你电脑上操作文件</strong>，而不只是在网页里聊天。</p>
+    <p style="margin-top:12px">它和 ChatGPT 最大的不同是：<strong>它直接在你电脑上操作文件</strong>，而不只是在网页里聊天。你说"帮我把这 100 个文件重命名"，它真的会帮你改，而不只是告诉你怎么改。</p>
   </div>
 
   <!-- 架构图 -->
@@ -627,6 +629,271 @@ li strong { color: var(--text); }
     <div class="flow-box">第三方 API 代理</div>
     <div class="flow-arrow">→</div>
     <div class="flow-box">Claude AI 模型</div>
+  </div>
+
+  <!-- ============ SECTION: 能帮你做什么 ============ -->
+  <div class="section" id="usecases">
+    <div class="section-header">
+      <div class="section-num">✦</div>
+      <h2>Claude Code 能帮你做什么？</h2>
+    </div>
+
+    <p>很多人以为 Claude Code 只能写代码，其实不然。它是一个<strong>全能型的 AI 助手</strong>，几乎任何需要"操作文件 + 动脑"的任务它都能帮忙。下面是一些常见的办公场景：</p>
+
+    <!-- 场景：文档写作 -->
+    <div class="card">
+      <h3 style="color:var(--text-bright);margin-bottom:12px">📝 文档写作与编辑</h3>
+      <p>无论是写周报、写方案、还是翻译文档，Claude Code 都能直接帮你创建和修改文件。</p>
+      <div class="terminal">
+        <div class="terminal-bar">
+          <div class="terminal-dot r"></div>
+          <div class="terminal-dot y"></div>
+          <div class="terminal-dot g"></div>
+          <span class="terminal-title">Terminal — claude</span>
+        </div>
+        <div class="terminal-body">
+<span class="prompt">></span> <span class="cmd">帮我写一份本周工作周报，内容包括：完成了用户系统重构、</span>
+  <span class="cmd">修复了 3 个线上 Bug、参加了产品评审会议。保存为 weekly-report.md</span>
+
+<span class="info">Claude:</span> <span class="output">好的，我来帮你生成周报。</span>
+<span class="output">📝 Created  weekly-report.md</span>
+<span class="output">✅ 周报已生成，包含工作概述、详细成果和下周计划。</span></div>
+      </div>
+      <p style="margin-top:12px;color:var(--text-dim)">类似的还可以：写会议纪要、写邮件草稿、写项目方案、翻译英文文档等。</p>
+    </div>
+
+    <!-- 场景：数据处理 -->
+    <div class="card">
+      <h3 style="color:var(--text-bright);margin-bottom:12px">📊 数据处理与分析</h3>
+      <p>有 CSV 或 Excel 数据需要处理？Claude Code 可以直接帮你写脚本分析。</p>
+      <div class="terminal">
+        <div class="terminal-bar">
+          <div class="terminal-dot r"></div>
+          <div class="terminal-dot y"></div>
+          <div class="terminal-dot g"></div>
+          <span class="terminal-title">Terminal — claude</span>
+        </div>
+        <div class="terminal-body">
+<span class="prompt">></span> <span class="cmd">帮我分析 sales_data.csv 这个文件，统计每个月的销售额，</span>
+  <span class="cmd">然后生成一个汇总表格保存为 summary.csv</span>
+
+<span class="info">Claude:</span> <span class="output">让我先看看数据结构...</span>
+<span class="output">📝 Created  analyze.py (Python 分析脚本)</span>
+<span class="output">🔧 Will run: python analyze.py</span>
+<span class="output">📝 Created  summary.csv</span>
+<span class="output">✅ 分析完成！共处理 2,847 条数据，按月汇总结果已保存。</span></div>
+      </div>
+    </div>
+
+    <!-- 场景：文件批量操作 -->
+    <div class="card">
+      <h3 style="color:var(--text-bright);margin-bottom:12px">📂 文件批量操作</h3>
+      <p>需要批量重命名、整理、移动文件？用自然语言告诉 Claude 就行。</p>
+      <div class="terminal">
+        <div class="terminal-bar">
+          <div class="terminal-dot r"></div>
+          <div class="terminal-dot y"></div>
+          <div class="terminal-dot g"></div>
+          <span class="terminal-title">Terminal — claude</span>
+        </div>
+        <div class="terminal-body">
+<span class="prompt">></span> <span class="cmd">把 photos 文件夹里的所有图片按拍摄日期重命名，格式为</span>
+  <span class="cmd">2024-01-15_001.jpg 这样的</span>
+
+<span class="info">Claude:</span> <span class="output">我来看看文件夹里有哪些图片...</span>
+<span class="output">找到 156 张图片，正在读取 EXIF 日期信息...</span>
+<span class="output">✅ 已完成！156 张图片全部按日期重命名。</span></div>
+      </div>
+    </div>
+
+    <!-- 场景：网页制作 -->
+    <div class="card">
+      <h3 style="color:var(--text-bright);margin-bottom:12px">🌐 快速制作网页</h3>
+      <p>需要一个活动页面、个人简历网站、或者产品展示页？一句话搞定。</p>
+      <div class="terminal">
+        <div class="terminal-bar">
+          <div class="terminal-dot r"></div>
+          <div class="terminal-dot y"></div>
+          <div class="terminal-dot g"></div>
+          <span class="terminal-title">Terminal — claude</span>
+        </div>
+        <div class="terminal-body">
+<span class="prompt">></span> <span class="cmd">帮我做一个个人简历网页，暗黑主题，要好看，包含我的基本信息、</span>
+  <span class="cmd">工作经历和技能展示，保存为 resume.html</span>
+
+<span class="info">Claude:</span> <span class="output">好的，我来为你设计一个现代风格的简历网页。</span>
+<span class="output">📝 Created  resume.html</span>
+<span class="output">✅ 简历网页已创建！直接用浏览器打开 resume.html 即可预览。</span></div>
+      </div>
+    </div>
+
+    <!-- 场景：学习编程 -->
+    <div class="card">
+      <h3 style="color:var(--text-bright);margin-bottom:12px">🎓 辅助学习</h3>
+      <p>想学编程但不知道从哪开始？Claude Code 就是最好的老师，边学边练。</p>
+      <div class="terminal">
+        <div class="terminal-bar">
+          <div class="terminal-dot r"></div>
+          <div class="terminal-dot y"></div>
+          <div class="terminal-dot g"></div>
+          <span class="terminal-title">Terminal — claude</span>
+        </div>
+        <div class="terminal-body">
+<span class="prompt">></span> <span class="cmd">我是 Python 初学者，帮我写一个猜数字小游戏，并且在代码里</span>
+  <span class="cmd">加上详细的中文注释，让我能看懂每一行</span>
+
+<span class="info">Claude:</span> <span class="output">没问题！我来写一个带详细注释的猜数字游戏。</span>
+<span class="output">📝 Created  guess_number.py</span>
+<span class="output">每一行代码都加了中文注释，你可以运行 python guess_number.py 来玩。</span></div>
+      </div>
+    </div>
+
+    <!-- 总结卡片 -->
+    <div class="card card-tip">
+      <p><strong>总结一下：</strong>Claude Code 的核心能力就是<strong>"听你说话 → 操作你的文件"</strong>。所以只要是跟文件打交道的事情，都可以试试让它帮忙。你不需要会写代码，只要会说话就行。</p>
+    </div>
+  </div>
+
+  <!-- ============ SECTION: 命令行入门 ============ -->
+  <div class="section" id="terminal-basics">
+    <div class="section-header">
+      <div class="section-num">0</div>
+      <h2>命令行入门（完全小白必看）</h2>
+    </div>
+
+    <p>Claude Code 是一个运行在<strong>命令行（也叫终端 / Terminal）</strong>里的工具。如果你从来没用过命令行，别慌，看完这一节就够了。</p>
+
+    <div class="card">
+      <h3 style="color:var(--text-bright);margin-bottom:12px">🤔 命令行是什么？</h3>
+      <p>命令行就是一个<strong>用打字代替鼠标点击</strong>来操作电脑的工具。你在里面输入一条"命令"，按下回车，电脑就会执行。</p>
+      <p style="margin-top:8px">比如：</p>
+      <ul>
+        <li>你想打开某个文件夹？在命令行里输 <code>cd 文件夹名</code> 就行（相当于双击文件夹）</li>
+        <li>你想看文件夹里有什么？输 <code>ls</code> 就行（相当于打开文件夹看一眼）</li>
+        <li>你想创建一个新文件夹？输 <code>mkdir 文件夹名</code> 就行（相当于右键→新建文件夹）</li>
+      </ul>
+      <p style="margin-top:8px;color:var(--text-dim)">是不是没那么可怕？其实你只需要会打开它就行，剩下的都可以让 Claude Code 帮你做。</p>
+    </div>
+
+    <div class="card">
+      <h3 style="color:var(--text-bright);margin-bottom:12px">📖 怎么打开命令行？</h3>
+      <div class="tabs">
+        <div class="tab-buttons">
+          <button class="tab-btn active" onclick="switchTab(event, 'open-term-mac')">Mac</button>
+          <button class="tab-btn" onclick="switchTab(event, 'open-term-win')">Windows</button>
+          <button class="tab-btn" onclick="switchTab(event, 'open-term-linux')">Linux</button>
+        </div>
+        <div class="tab-content active" id="open-term-mac">
+          <div class="steps">
+            <div class="step">
+              <h3>方法一：用 Spotlight 搜索（最快）</h3>
+              <p>按 <code>Command + 空格</code>，输入 <strong>Terminal</strong>（或"终端"），按回车即可打开。</p>
+            </div>
+            <div class="step">
+              <h3>方法二：从应用程序打开</h3>
+              <p>打开 <strong>访达(Finder)</strong> → <strong>应用程序</strong> → <strong>实用工具</strong> → 双击 <strong>终端(Terminal)</strong>。</p>
+            </div>
+          </div>
+          <div class="card card-tip" style="margin-top:12px">
+            <p><strong>推荐：</strong>你也可以下载 <a href="https://iterm2.com" style="color:var(--accent)">iTerm2</a>，它是 Mac 上更好用的终端工具，免费的。不过自带的 Terminal 完全够用。</p>
+          </div>
+        </div>
+        <div class="tab-content" id="open-term-win">
+          <div class="steps">
+            <div class="step">
+              <h3>推荐方式：安装 Git Bash</h3>
+              <p>Claude Code 在 Windows 上需要 Git Bash 环境。去 <a href="https://git-scm.com/downloads" style="color:var(--accent)">git-scm.com</a> 下载安装 Git for Windows。</p>
+              <p style="margin-top:8px">安装时<strong>一路点"Next"</strong>用默认设置就行。安装完后，在桌面或开始菜单找到 <strong>Git Bash</strong> 打开。</p>
+            </div>
+            <div class="step">
+              <h3>备选方式：Windows Terminal</h3>
+              <p>按 <code>Win + X</code>，选择 <strong>"Windows Terminal"</strong> 或 <strong>"PowerShell"</strong>。但注意部分命令和 Mac/Linux 不同。</p>
+            </div>
+          </div>
+        </div>
+        <div class="tab-content" id="open-term-linux">
+          <p>大部分 Linux 发行版按 <code>Ctrl + Alt + T</code> 就能打开终端。</p>
+          <p>或者在应用菜单中搜索 "Terminal"。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3 style="color:var(--text-bright);margin-bottom:12px">⌨️ 你只需要记住的 5 个命令</h3>
+      <p>以下命令足够你使用 Claude Code 了，其他的都可以让 Claude 帮你执行。</p>
+      <div class="table-wrap">
+        <table>
+          <tr><th>命令</th><th>作用</th><th>举例</th></tr>
+          <tr>
+            <td><code>cd 目录名</code></td>
+            <td>进入某个文件夹</td>
+            <td><code>cd ~/Desktop</code> 进入桌面</td>
+          </tr>
+          <tr>
+            <td><code>ls</code></td>
+            <td>查看当前文件夹里有什么</td>
+            <td><code>ls</code> 列出所有文件和文件夹</td>
+          </tr>
+          <tr>
+            <td><code>pwd</code></td>
+            <td>显示你现在在哪个文件夹</td>
+            <td><code>pwd</code> → <code>/Users/zhangsan/Desktop</code></td>
+          </tr>
+          <tr>
+            <td><code>mkdir 名字</code></td>
+            <td>创建新文件夹</td>
+            <td><code>mkdir my-project</code> 创建项目文件夹</td>
+          </tr>
+          <tr>
+            <td><code>claude</code></td>
+            <td>启动 Claude Code！</td>
+            <td>安装好之后输入 <code>claude</code> 即可开始</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3 style="color:var(--text-bright);margin-bottom:12px">🎬 命令行操作演示</h3>
+      <p>下面演示一个典型的流程：打开终端 → 进入项目 → 启动 Claude Code</p>
+      <div class="terminal">
+        <div class="terminal-bar">
+          <div class="terminal-dot r"></div>
+          <div class="terminal-dot y"></div>
+          <div class="terminal-dot g"></div>
+          <span class="terminal-title">Terminal</span>
+        </div>
+        <div class="terminal-body">
+<span class="cm"># 第 1 步：看看自己在哪里</span>
+<span class="prompt">$</span> <span class="cmd">pwd</span>
+<span class="output">/Users/zhangsan</span>
+
+<span class="cm"># 第 2 步：进入桌面</span>
+<span class="prompt">$</span> <span class="cmd">cd Desktop</span>
+
+<span class="cm"># 第 3 步：创建一个项目文件夹</span>
+<span class="prompt">$</span> <span class="cmd">mkdir my-project</span>
+
+<span class="cm"># 第 4 步：进入项目文件夹</span>
+<span class="prompt">$</span> <span class="cmd">cd my-project</span>
+
+<span class="cm"># 第 5 步：启动 Claude Code（安装好之后才能用）</span>
+<span class="prompt">$</span> <span class="cmd">claude</span>
+<span class="highlight">╭────────────────────────────────╮</span>
+<span class="highlight">│</span>     <span class="info">Claude Code</span> <span class="output">ready!</span>        <span class="highlight">│</span>
+<span class="highlight">╰────────────────────────────────╯</span>
+<span class="prompt">></span> <span class="cursor"></span></div>
+      </div>
+    </div>
+
+    <div class="card card-info">
+      <p><strong>看到 <code>$</code> 或 <code>%</code> 符号是什么意思？</strong></p>
+      <p>这是命令行的"提示符"，表示"我准备好了，你可以输入命令了"。你<strong>不需要自己打</strong>这个符号，直接输入命令就行。本教程中 <code>$</code> 后面的内容才是你需要输入的。</p>
+    </div>
+
+    <div class="card card-tip">
+      <p><strong>小白贴心提示：</strong>如果你在命令行里输错了，不用怕！按 <code>Ctrl + C</code> 可以取消当前操作，再重新输入就行。命令行不会因为你输错而弄坏电脑。</p>
+    </div>
   </div>
 
   <!-- ============ SECTION: 准备工作 ============ -->
@@ -682,12 +949,7 @@ li strong { color: var(--text); }
     </div>
 
     <div class="card card-tip">
-      <p><strong>怎么打开终端？</strong></p>
-      <ul>
-        <li><strong>Mac</strong>：按 <code>Command + 空格</code>，输入 "Terminal"，回车</li>
-        <li><strong>Windows</strong>：安装 <a href="https://git-scm.com/downloads" style="color:var(--accent)">Git for Windows</a>，然后打开 "Git Bash"</li>
-        <li><strong>Linux</strong>：按 <code>Ctrl + Alt + T</code></li>
-      </ul>
+      <p><strong>还不知道怎么打开终端？</strong>请先看上面的 <a href="#terminal-basics" style="color:var(--accent)">命令行入门</a> 章节，里面有详细的图文教程。</p>
     </div>
   </div>
 
