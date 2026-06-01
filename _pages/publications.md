@@ -24,6 +24,27 @@ author_profile: true
 1. *Incomplete Multi-View Drug Recommendation via Multi-Level Representation Learning and Curriculum Learning.* [To appear] <br> Ning Liu, Yunsen Tang, **Haitao Yuan**, Hongtao Lv, Lili Jiang, Zhen Li, Wei Zhang, Jianyong Wang<br> ***KDD 2025, CCF-A, ADS Track***. 
 <br> -->
 
+1. *GoodTP: An Effective Data Selection Framework for Enhancing Trajectory Similarity Learning via Monte Carlo Tree Search.*  <br> **Haitao Yuan**, Gao Cong<br> ***SIGMOD 2026, CCF-A***. 
+<br>
+
+1. *GeoKGM: A Multimodal Large Language Model for Zero-Shot Knowledge Graph Completion in Geospatial Databases.*  <br> Zhihang Zheng, **Haitao Yuan**<sup>#</sup>, Minxiao Chen, Nan Jiang, Haoning Wang, Shangguang Wang<br> ***SIGMOD 2026, CCF-A***. 
+<br>
+
+1. *CARROT: A Learned Cost-Constrained Retrieval Optimization System for RAG.*  <br> Ziting Wang,  **Haitao Yuan**<sup>#</sup>, Wei Dong, Gao Cong, Feifei Li <br> ***ICDE 2026, CCF-A***. 
+<br>
+
+1. *FedCurrMM: A Federated Map Matching Framework with Curriculum-aware Client Selection.*  <br> Minxiao Chen, **Haitao Yuan**<sup>#</sup>, Haoning Wang, Nan Jiang, Zhihan Zheng, Ao Zhou, Shangguang Wang<br> ***ICDE 2026, CCF-A***. 
+<br>
+
+1. *G2PRO: Gradient-guided Graph Prompt Optimization for LLM-based POI Recommendation.*  <br> Nan Jiang, **Haitao Yuan**<sup>#</sup>, Tianjun Wei, Yingpeng Du, Jianing Si, Minxiao Chen, Jie Zhang, Zhu Sun<br> ***KDD 2026, CCF-A***. 
+<br>
+
+1. *R2GCurL: Reinforced Robust Knowledge Tracing via Dynamic Graph Curriculum Learning.*  <br> Tianhao Peng, Ynajun Pu, Y Zhang, Y Li, Jian Ren, Jie Luo, K. Zhang,  **Haitao Yuan**<sup>#</sup>, et al.<br> ***TOIS 2026, CCF-A***. 
+<br>
+
+1. *Having It Both Ways: Single Trajectory Embedding for Similarity Computation with Pairwise Learning.* [[Paper](https://www.computer.org/csdl/proceedings-article/icde/2025/360300a474/26FZzfvpygg)] <br> Jianing Si<sup>\*</sup>, **Haitao Yuan**<sup>\*</sup><sup>#</sup>, Xiang Li, Nan Jiang, Xiao Ma, Guoliang Li, Shangguang Wang<br> ***ICDE 2025, CCF-A***. 
+<br>
+
 1. *Having It Both Ways: Single Trajectory Embedding for Similarity Computation with Pairwise Learning.* [[Paper](https://www.computer.org/csdl/proceedings-article/icde/2025/360300a474/26FZzfvpygg)] <br> Jianing Si<sup>\*</sup>, **Haitao Yuan**<sup>\*</sup><sup>#</sup>, Xiang Li, Nan Jiang, Xiao Ma, Guoliang Li, Shangguang Wang<br> ***ICDE 2025, CCF-A***. 
 <br>
 
