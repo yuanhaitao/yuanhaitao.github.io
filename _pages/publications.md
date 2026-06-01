@@ -36,10 +36,10 @@ author_profile: true
 1. *FedCurrMM: A Federated Map Matching Framework with Curriculum-aware Client Selection.*  <br> Minxiao Chen, **Haitao Yuan**<sup>#</sup>, Haoning Wang, Nan Jiang, Zhihan Zheng, Ao Zhou, Shangguang Wang<br> ***ICDE 2026, CCF-A***. 
 <br>
 
-1. *G2PRO: Gradient-guided Graph Prompt Optimization for LLM-based POI Recommendation.*  <br> Nan Jiang, **Haitao Yuan**<sup>#</sup>, Tianjun Wei, Yingpeng Du, Jianing Si, Minxiao Chen, Jie Zhang, Zhu Sun<br> ***KDD 2026, CCF-A***. 
+1. *G2PRO: Gradient-guided Graph Prompt Optimization for LLM-based POI Recommendation.*  <br> Nan Jiang, **Haitao Yuan**<sup>#</sup>, Tianjun Wei, Yingpeng Du, Jianing Si, Minxiao Chen, Jie Zhang, Zhu Sun<sup>#</sup><br> ***KDD 2026, CCF-A***. 
 <br>
 
-1. *R2GCurL: Reinforced Robust Knowledge Tracing via Dynamic Graph Curriculum Learning.*  <br> Tianhao Peng, Ynajun Pu, Y Zhang, Y Li, Jian Ren, Jie Luo, K. Zhang,  **Haitao Yuan**<sup>#</sup>, et al.<br> ***TOIS 2026, CCF-A***. 
+1. *R2GCurL: Reinforced Robust Knowledge Tracing via Dynamic Graph Curriculum Learning.*  <br> Tianhao Peng, Ynajun Pu, Y Zhang, Y Li, Jian Ren, Jie Luo<sup>#</sup>, K. Zhang,  **Haitao Yuan**<sup>#</sup>, et al.<br> ***TOIS 2026, CCF-A***. 
 <br>
 
 1. *Having It Both Ways: Single Trajectory Embedding for Similarity Computation with Pairwise Learning.* [[Paper](https://www.computer.org/csdl/proceedings-article/icde/2025/360300a474/26FZzfvpygg)] <br> Jianing Si<sup>\*</sup>, **Haitao Yuan**<sup>\*</sup><sup>#</sup>, Xiang Li, Nan Jiang, Xiao Ma, Guoliang Li, Shangguang Wang<br> ***ICDE 2025, CCF-A***. 
