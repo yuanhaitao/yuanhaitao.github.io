@@ -24,49 +24,49 @@ author_profile: true
 1. *Incomplete Multi-View Drug Recommendation via Multi-Level Representation Learning and Curriculum Learning.* [To appear] <br> Ning Liu, Yunsen Tang, **Haitao Yuan**, Hongtao Lv, Lili Jiang, Zhen Li, Wei Zhang, Jianyong Wang<br> ***KDD 2025, CCF-A, ADS Track***. 
 <br> -->
 
-1. *GoodTP: An Effective Data Selection Framework for Enhancing Trajectory Similarity Learning via Monte Carlo Tree Search.*  <br> **Haitao Yuan**, Gao Cong<br> ***SIGMOD 2026, CCF-A***. 
+1. <a id="pub-sigmod26-goodtp"></a>*GoodTP: An Effective Data Selection Framework for Enhancing Trajectory Similarity Learning via Monte Carlo Tree Search.*  <br> **Haitao Yuan**, Gao Cong<br> ***SIGMOD 2026, CCF-A***. 
 <br>
 
-1. *GeoKGM: A Multimodal Large Language Model for Zero-Shot Knowledge Graph Completion in Geospatial Databases.*  <br> Zhihang Zheng, **Haitao Yuan**<sup>#</sup>, Minxiao Chen, Nan Jiang, Haoning Wang, Shangguang Wang<br> ***SIGMOD 2026, CCF-A***. 
+1. <a id="pub-sigmod26-geokgm"></a>*GeoKGM: A Multimodal Large Language Model for Zero-Shot Knowledge Graph Completion in Geospatial Databases.*  <br> Zhihang Zheng, **Haitao Yuan**<sup>#</sup>, Minxiao Chen, Nan Jiang, Haoning Wang, Shangguang Wang<br> ***SIGMOD 2026, CCF-A***. 
 <br>
 
-1. *CARROT: A Learned Cost-Constrained Retrieval Optimization System for RAG.*  <br> Ziting Wang,  **Haitao Yuan**<sup>#</sup>, Wei Dong, Gao Cong, Feifei Li <br> ***ICDE 2026, CCF-A***. 
+1. <a id="pub-icde26-carrot"></a>*CARROT: A Learned Cost-Constrained Retrieval Optimization System for RAG.*  <br> Ziting Wang,  **Haitao Yuan**<sup>#</sup>, Wei Dong, Gao Cong, Feifei Li <br> ***ICDE 2026, CCF-A***. 
 <br>
 
-1. *FedCurrMM: A Federated Map Matching Framework with Curriculum-aware Client Selection.*  <br> Minxiao Chen, **Haitao Yuan**<sup>#</sup>, Haoning Wang, Nan Jiang, Zhihan Zheng, Ao Zhou, Shangguang Wang<br> ***ICDE 2026, CCF-A***. 
+1. <a id="pub-icde26-fedcurrmm"></a>*FedCurrMM: A Federated Map Matching Framework with Curriculum-aware Client Selection.*  <br> Minxiao Chen, **Haitao Yuan**<sup>#</sup>, Haoning Wang, Nan Jiang, Zhihan Zheng, Ao Zhou, Shangguang Wang<br> ***ICDE 2026, CCF-A***. 
 <br>
 
-1. *G2PRO: Gradient-guided Graph Prompt Optimization for LLM-based POI Recommendation.*  <br> Nan Jiang, **Haitao Yuan**<sup>#</sup>, Tianjun Wei, Yingpeng Du, Jianing Si, Minxiao Chen, Jie Zhang, Zhu Sun<sup>#</sup><br> ***KDD 2026, CCF-A***. 
+1. <a id="pub-kdd26-g2pro"></a>*G2PRO: Gradient-guided Graph Prompt Optimization for LLM-based POI Recommendation.*  <br> Nan Jiang, **Haitao Yuan**<sup>#</sup>, Tianjun Wei, Yingpeng Du, Jianing Si, Minxiao Chen, Jie Zhang, Zhu Sun<sup>#</sup><br> ***KDD 2026, CCF-A***. 
 <br>
 
-1. *R2GCurL: Reinforced Robust Knowledge Tracing via Dynamic Graph Curriculum Learning.*  <br> Tianhao Peng, Ynajun Pu, Y Zhang, Y Li, Jian Ren, Jie Luo<sup>#</sup>, K. Zhang,  **Haitao Yuan**<sup>#</sup>, et al.<br> ***TOIS 2026, CCF-A***. 
+1. <a id="pub-tois26-r2gcurl"></a>*R2GCurL: Reinforced Robust Knowledge Tracing via Dynamic Graph Curriculum Learning.*  <br> Tianhao Peng, Ynajun Pu, Y Zhang, Y Li, Jian Ren, Jie Luo<sup>#</sup>, K. Zhang,  **Haitao Yuan**<sup>#</sup>, et al.<br> ***TOIS 2026, CCF-A***. 
 <br>
 
-1. *Having It Both Ways: Single Trajectory Embedding for Similarity Computation with Pairwise Learning.* [[Paper](https://www.computer.org/csdl/proceedings-article/icde/2025/360300a474/26FZzfvpygg)] <br> Jianing Si<sup>\*</sup>, **Haitao Yuan**<sup>\*</sup><sup>#</sup>, Xiang Li, Nan Jiang, Xiao Ma, Guoliang Li, Shangguang Wang<br> ***ICDE 2025, CCF-A***. 
+1. <a id="pub-icde25-hib"></a>*Having It Both Ways: Single Trajectory Embedding for Similarity Computation with Pairwise Learning.* [[Paper](https://www.computer.org/csdl/proceedings-article/icde/2025/360300a474/26FZzfvpygg)] <br> Jianing Si<sup>\*</sup>, **Haitao Yuan**<sup>\*</sup><sup>#</sup>, Xiang Li, Nan Jiang, Xiao Ma, Guoliang Li, Shangguang Wang<br> ***ICDE 2025, CCF-A***. 
 <br>
 
-1. *Think Twice Before Imputation: Optimizing Data Imputation Order for Machine Learning.* [[Paper](https://www.computer.org/csdl/proceedings-article/icde/2025/360300b362/26FZA1gQAjm)] <br>Jiaxuan Zhang<sup>\*</sup>, **Haitao Yuan**<sup>\*</sup><sup>#</sup>, Jianing Si, Nan Jiang, Shangguang Wang<br> ***ICDE 2025, CCF-A***. 
+1. <a id="pub-icde25-think"></a>*Think Twice Before Imputation: Optimizing Data Imputation Order for Machine Learning.* [[Paper](https://www.computer.org/csdl/proceedings-article/icde/2025/360300b362/26FZA1gQAjm)] <br>Jiaxuan Zhang<sup>\*</sup>, **Haitao Yuan**<sup>\*</sup><sup>#</sup>, Jianing Si, Nan Jiang, Shangguang Wang<br> ***ICDE 2025, CCF-A***. 
 <br>
 
-1. *Towards Robust Trajectory Embedding for Similarity Computation: When Triangle Inequality Violations in Distance Metrics Matter.* [[Paper](https://arxiv.org/pdf/2504.10933)] <br> Jianing Si, **Haitao Yuan**<sup>#</sup>, Nan Jiang, Minxiao Chen, Xiao Ma, Shangguang Wang<br> ***ICDE 2025, CCF-A***. 
+1. <a id="pub-icde25-robusttraj"></a>*Towards Robust Trajectory Embedding for Similarity Computation: When Triangle Inequality Violations in Distance Metrics Matter.* [[Paper](https://arxiv.org/pdf/2504.10933)] <br> Jianing Si, **Haitao Yuan**<sup>#</sup>, Nan Jiang, Minxiao Chen, Xiao Ma, Shangguang Wang<br> ***ICDE 2025, CCF-A***. 
 <br>
 
-1. *RLOMM: An Efficient and Robust Online Map Matching Framework with Reinforcement Learning.* [[Paper](https://arxiv.org/pdf/2502.06825)] <br> Minxiao Chen<sup>\*</sup>, **Haitao Yuan**<sup>\*</sup><sup>#</sup>, Nan Jiang, Zhihan Zheng, Sai Wu, Ao Zhou, Shangguang Wang<br> ***SIGMOD 2025, CCF-A***. 
+1. <a id="pub-sigmod25-rlomm"></a>*RLOMM: An Efficient and Robust Online Map Matching Framework with Reinforcement Learning.* [[Paper](https://arxiv.org/pdf/2502.06825)] <br> Minxiao Chen<sup>\*</sup>, **Haitao Yuan**<sup>\*</sup><sup>#</sup>, Nan Jiang, Zhihan Zheng, Sai Wu, Ao Zhou, Shangguang Wang<br> ***SIGMOD 2025, CCF-A***. 
 <br>
 
 1. *SOLA-GCL: Subgraph-oriented Learnable Augmentation Method for Graph Contrastive Learning.* [[Paper](https://arxiv.org/pdf/2503.10100)] <br> Tianhao Peng, Xuhong Li, **Haitao Yuan<sup>#</sup>**, Yuchen Li, Haoyi Xiong<sup>#</sup> <br> ***AAAI 2025, CCF-A***. 
 <br>
 
-1. *Effective AOI-level Parcel Volume Prediction: When Lookahead Parcels Matter.* [[Paper](https://dl.acm.org/doi/10.1145/3690624.3709441)] <br> Yingfeng Xiang, Jiangyi Fang, Chao Li<sup>#</sup>, **Haitao Yuan<sup>#</sup>**, Yiwei Song, Jiming Chen <br> ***KDD 2025, CCF-A, ADS Track***.
+1. <a id="pub-kdd25-parcel"></a>*Effective AOI-level Parcel Volume Prediction: When Lookahead Parcels Matter.* [[Paper](https://dl.acm.org/doi/10.1145/3690624.3709441)] <br> Yingfeng Xiang, Jiangyi Fang, Chao Li<sup>#</sup>, **Haitao Yuan<sup>#</sup>**, Yiwei Song, Jiming Chen <br> ***KDD 2025, CCF-A, ADS Track***.
 <br>
 
-1. *RLER-TTE: An Efficient and Effective Framework for En Route Travel Time Estimation with Reinforcement Learning.* [[Paper](https://dl.acm.org/doi/pdf/10.1145/3709721)] <br> Zhihan Zheng<sup>\*</sup>, **Haitao Yuan**<sup>\*</sup><sup>#</sup>, Minxiao Chen, Shangguang Wang<br> ***SIGMOD 2025, CCF-A***. 
+1. <a id="pub-sigmod25-rlertte"></a>*RLER-TTE: An Efficient and Effective Framework for En Route Travel Time Estimation with Reinforcement Learning.* [[Paper](https://dl.acm.org/doi/pdf/10.1145/3709721)] <br> Zhihan Zheng<sup>\*</sup>, **Haitao Yuan**<sup>\*</sup><sup>#</sup>, Minxiao Chen, Shangguang Wang<br> ***SIGMOD 2025, CCF-A***. 
 <br>
 
-1. *MAST: Towards Efficient Analytical Query Processing on Point Cloud Data.* [[Paper](https://dl.acm.org/doi/pdf/10.1145/3709702)] <br> Jiangneng Li, **Haitao Yuan**, Gao Cong, Han Mao Kiah, Shuhao Zhang<br> ***SIGMOD 2025, CCF-A***.
+1. <a id="pub-sigmod25-mast"></a>*MAST: Towards Efficient Analytical Query Processing on Point Cloud Data.* [[Paper](https://dl.acm.org/doi/pdf/10.1145/3709702)] <br> Jiangneng Li, **Haitao Yuan**, Gao Cong, Han Mao Kiah, Shuhao Zhang<br> ***SIGMOD 2025, CCF-A***.
 <br>
 
-1. *LLM-R2: A Large Language Model Enhanced Rule-based Rewrite System for Boosting Query Efficiency.* [[Paper](https://arxiv.org/pdf/2404.12872)][[Code](https://github.com/DAMO-NLP-SG/LLM-R2)] <br> Zhaodonghui Li, **Haitao Yuan<sup>#</sup>**, Huiming Wang, Gao Cong, Lidong Bing <br> ***VLDB 2025, CCF-A***. 
+1. <a id="pub-vldb25-llmr2"></a>*LLM-R2: A Large Language Model Enhanced Rule-based Rewrite System for Boosting Query Efficiency.* [[Paper](https://arxiv.org/pdf/2404.12872)][[Code](https://github.com/DAMO-NLP-SG/LLM-R2)] <br> Zhaodonghui Li, **Haitao Yuan<sup>#</sup>**, Huiming Wang, Gao Cong, Lidong Bing <br> ***VLDB 2025, CCF-A***. 
 <br>
 
 1. *Demystifying the QoS and QoE of Edge-hosted Video Streaming Applications in the Wild with SNESet.* [[Paper](https://dl.acm.org/doi/10.1145/3626723)] <br>Yanan Li, Guangqing Deng<sup>#</sup>, Changming Bai, Jingyu Yang, Gang Wang, Hao Zhang, Jin Bai, **Haitao Yuan<sup>#</sup>**, Mengwei Xu, Shangguang Wang. <br> ***SIGMOD 2024, CCF-A***.
@@ -75,64 +75,64 @@ author_profile: true
 1. *GraphRARE: Reinforcement Learning Enhanced Graph Neural Network with Relative Entropy.* [[Paper](https://arxiv.org/pdf/2312.09708.pdf)] <br>Tianhao Peng, Wenjun Wu<sup>#</sup>, **Haitao Yuan<sup>#</sup>**, Zhifeng Bao, Pengrui Zhao, Xin Yu, Xuetao Lin, Yu liang, Yanjun Pu. <br>***ICDE 2024, CCF-A***. 
 <br>
 
-1. *Nuhuo: An Effective Estimation Model for Traffic Speed Histogram Imputation on A Road Network.* [[Paper](https://www.vldb.org/pvldb/vol17/p1605-yuan.pdf)][[Code](https://github.com/yuanhaitao/Nuhuo)] <br>**Haitao Yuan**, Gao Cong, Guoliang Li. <br>***VLDB 2024, CCF-A***. 
+1. <a id="pub-vldb24-nuhuo"></a>*Nuhuo: An Effective Estimation Model for Traffic Speed Histogram Imputation on A Road Network.* [[Paper](https://www.vldb.org/pvldb/vol17/p1605-yuan.pdf)][[Code](https://github.com/yuanhaitao/Nuhuo)] <br>**Haitao Yuan**, Gao Cong, Guoliang Li. <br>***VLDB 2024, CCF-A***. 
 <br>
 
 
-1. *Towards Effective Next POI Prediction: Spatial and Semantic Augmentation with Remote Sensing Data.* [[Paper](https://arxiv.org/pdf/2404.04271)] <br>Nan Jiang, **Haitao Yuan<sup>#</sup>**, Jianing Si, Minxiao Chen, Shangguang Wang. <br>***ICDE 2024, CCF-A***. 
+1. <a id="pub-icde24-nextpoi"></a>*Towards Effective Next POI Prediction: Spatial and Semantic Augmentation with Remote Sensing Data.* [[Paper](https://arxiv.org/pdf/2404.04271)] <br>Nan Jiang, **Haitao Yuan<sup>#</sup>**, Jianing Si, Minxiao Chen, Shangguang Wang. <br>***ICDE 2024, CCF-A***. 
 <br>
 
-1.  *ELAKT: Enhancing Locality for Attentive Knowledge Tracing.* <br>Yanjun Pu, Fang Liu, Rongye Shi<sup>#</sup>, **Haitao Yuan<sup>#</sup>**, Ruibo Chen, Tianhao Peng, Wenjun Wu. <br>***ACM TOIS 2024, CCF-A***.
+1.  <a id="pub-tois24-elakt"></a>*ELAKT: Enhancing Locality for Attentive Knowledge Tracing.* <br>Yanjun Pu, Fang Liu, Rongye Shi<sup>#</sup>, **Haitao Yuan<sup>#</sup>**, Ruibo Chen, Tianhao Peng, Wenjun Wu. <br>***ACM TOIS 2024, CCF-A***.
 <br>
 
-1.  *Urban Traffic Accident Risk Prediction Revisited: Regionality, Proximity, Similarity and Sparsity.* <br>Minxiao Chen, **Haitao Yuan<sup>#</sup>**, Nan Jiang, Zhifeng Bao, Shangguang Wang. <br>***CIKM 2024, CCF-B***. 
+1.  <a id="pub-cikm24-traffacc"></a>*Urban Traffic Accident Risk Prediction Revisited: Regionality, Proximity, Similarity and Sparsity.* <br>Minxiao Chen, **Haitao Yuan<sup>#</sup>**, Nan Jiang, Zhifeng Bao, Shangguang Wang. <br>***CIKM 2024, CCF-B***. 
 <br>
 
-1.  *STMGF: An Effective Spatial-Temporal Multi-granularity Framework for Traffic Forecasting.* <br>Zhengyang Zhao, **Haitao Yuan<sup>#</sup>**, Nan Jiang, Minxiao Chen, Ning Liu<sup>#</sup>, Zengxiang Li. <br>***DASFAA 2024, CCF-B***. 
+1.  <a id="pub-dasfaa24-stmgf"></a>*STMGF: An Effective Spatial-Temporal Multi-granularity Framework for Traffic Forecasting.* <br>Zhengyang Zhao, **Haitao Yuan<sup>#</sup>**, Nan Jiang, Minxiao Chen, Ning Liu<sup>#</sup>, Zengxiang Li. <br>***DASFAA 2024, CCF-B***. 
 <br>
 
-1.  *Automatic Road Extraction with Multi-Source Data Revisited: Completeness, Smoothness and Discrimination.* [[Paper](https://www.vldb.org/pvldb/vol16/p3004-yuan.pdf)][[Code](https://github.com/BubbleSai/DICN)] <br>**Haitao Yuan**, Sai Wang, Zhifeng Bao, Shangguang Wang. <br>***VLDB 2023, CCF-A***. 
+1.  <a id="pub-vldb23-roadext"></a>*Automatic Road Extraction with Multi-Source Data Revisited: Completeness, Smoothness and Discrimination.* [[Paper](https://www.vldb.org/pvldb/vol16/p3004-yuan.pdf)][[Code](https://github.com/BubbleSai/DICN)] <br>**Haitao Yuan**, Sai Wang, Zhifeng Bao, Shangguang Wang. <br>***VLDB 2023, CCF-A***. 
 <br>
 
-1.  *Route Travel Time Estimation on A Road Network Revisited: Heterogeneity, Proximity, Periodicity and Dynamicity.* [[Paper](https://www.vldb.org/pvldb/vol16/p393-yuan.pdf)][[Code](https://github.com/yuanhaitao/STHR_CODE)] <br>**Haitao Yuan**, Guoliang Li, Zhifeng Bao. <br>***VLDB 2023, CCF-A***. 
+1.  <a id="pub-vldb23-rttree"></a>*Route Travel Time Estimation on A Road Network Revisited: Heterogeneity, Proximity, Periodicity and Dynamicity.* [[Paper](https://www.vldb.org/pvldb/vol16/p393-yuan.pdf)][[Code](https://github.com/yuanhaitao/STHR_CODE)] <br>**Haitao Yuan**, Guoliang Li, Zhifeng Bao. <br>***VLDB 2023, CCF-A***. 
 <br>
 
-1.  *A Deep Generative Model for Trajectory Modeling and Utilization.* [To appear] [[Paper](https://dl.acm.org/doi/abs/10.14778/3574245.3574277)][[Code](https://github.com/wangyong01/MTNet_Code)] <br>Yong Wang, Kaiyu Li, Guoliang Li, **Haitao Yuan**. <br>***VLDB 2023, CCF-A***. 
+1.  <a id="pub-vldb23-trajgen"></a>*A Deep Generative Model for Trajectory Modeling and Utilization.* [To appear] [[Paper](https://dl.acm.org/doi/abs/10.14778/3574245.3574277)][[Code](https://github.com/wangyong01/MTNet_Code)] <br>Yong Wang, Kaiyu Li, Guoliang Li, **Haitao Yuan**. <br>***VLDB 2023, CCF-A***. 
 <br>
 
 1.  *ELASTIC: Edge Workload Forecasting based on Collaborative Cloud-Edge Deep Learning.* [[Paper](https://xumengwei.github.io/files/WWW23-ELASTIC.pdf)] <br>Yanan Li, **Haitao Yuan<sup>#</sup>**, Zhe Fu, Xiao Ma<sup>#</sup>, Mengwei Xu, Shangguang Wang. <br>***WWW 2023, CCF-A***. 
 <br>
 
-1.  *F3VeTrac: Enabling Fine-grained, Fully-road-covered, and Fully-individual-penetrative Vehicle Trajectory Recovery.* <br>Zijian Cao, Dong Zhao, Hanxing Song, **Haitao Yuan**, Qiyue Wang, Huadong Ma. <br>***IEEE TMC 2023, CCF-A***. 
+1.  <a id="pub-tmc23-f3vetrac"></a>*F3VeTrac: Enabling Fine-grained, Fully-road-covered, and Fully-individual-penetrative Vehicle Trajectory Recovery.* <br>Zijian Cao, Dong Zhao, Hanxing Song, **Haitao Yuan**, Qiyue Wang, Huadong Ma. <br>***IEEE TMC 2023, CCF-A***. 
 <br>
 
-1.  *AutoView: An Autonomous Materialized View Management System with Encoder-Reducer.* <br>Yue Han, Guoliang Li, **Haitao Yuan**, Ji Sun. <br>***TKDE 2022, CCF-A***.
+1.  <a id="pub-tkde22-autoview"></a>*AutoView: An Autonomous Materialized View Management System with Encoder-Reducer.* <br>Yue Han, Guoliang Li, **Haitao Yuan**, Ji Sun. <br>***TKDE 2022, CCF-A***.
 <br> 
 
 
-1.  *DuETA: Traffic Congestion Propagation Pattern Modeling via Efficient Graph Learning for ETA Prediction at Baidu Maps.* <br>Jizhou Huang, Zhengjie Huang, Xiaomin Fang, Shikun Feng, Xuyi Chen, Jiaxiang Liu, **Haitao Yuan**, Haifeng Wang. <br>***CIKM 2022, CCF-B***. 
+1.  <a id="pub-cikm22-dueta"></a>*DuETA: Traffic Congestion Propagation Pattern Modeling via Efficient Graph Learning for ETA Prediction at Baidu Maps.* <br>Jizhou Huang, Zhengjie Huang, Xiaomin Fang, Shikun Feng, Xuyi Chen, Jiaxiang Liu, **Haitao Yuan**, Haifeng Wang. <br>***CIKM 2022, CCF-B***. 
 <br>
 
-1.  *An Effective Joint Prediction Model for Travel Demands and Traffic Flows.*<br>**Haitao Yuan**, Guoliang Li, Zhifeng Bao, Ling Feng. <br>***ICDE 2021, CCF-A***. 
+1.  <a id="pub-icde21-joint"></a>*An Effective Joint Prediction Model for Travel Demands and Traffic Flows.*<br>**Haitao Yuan**, Guoliang Li, Zhifeng Bao, Ling Feng. <br>***ICDE 2021, CCF-A***. 
 <br>
 
-1.  *A survey of traffic prediction: from spatio-temporal data to intelligent transportation.* <br>**Haitao Yuan**, Guoliang Li. <br>***DSE, CCF-C***. 
+1.  <a id="pub-dse-trafsurvey"></a>*A survey of traffic prediction: from spatio-temporal data to intelligent transportation.* <br>**Haitao Yuan**, Guoliang Li. <br>***DSE, CCF-C***. 
 <br>
 
-1.  *Effective Travel Time Estimation: When Historical Trajectories over Road Networks Matter.* <br>**Haitao Yuan**, Guoliang Li, Zhifeng Bao, Ling Feng. <br>***SIGMOD 2020, CCF-A***. <span style="color:red; font-weight:bold;">🏆 SIGMOD 2020 Most Influential Paper (14/15) [[link](https://www.paperdigest.org/2024/09/most-influential-sigmod-papers-2024-09/)] </span>  <span style="color:red; font-weight:bold;">🏆 SIGMOD 2019-2024 Highly-Cited Papers [[link](https://scholar.google.com/citations?hl=en&view_op=list_hcore&venue=u1CjH9_75_cJ.2024&vq=eng_databasesinformationsystems&cstart=40)] </span>
+1.  <a id="pub-sigmod20-tte"></a>*Effective Travel Time Estimation: When Historical Trajectories over Road Networks Matter.* <br>**Haitao Yuan**, Guoliang Li, Zhifeng Bao, Ling Feng. <br>***SIGMOD 2020, CCF-A***. <span style="color:red; font-weight:bold;">🏆 SIGMOD 2020 Most Influential Paper (14/15) [[link](https://www.paperdigest.org/2024/09/most-influential-sigmod-papers-2024-09/)] </span>  <span style="color:red; font-weight:bold;">🏆 SIGMOD 2019-2024 Highly-Cited Papers [[link](https://scholar.google.com/citations?hl=en&view_op=list_hcore&venue=u1CjH9_75_cJ.2024&vq=eng_databasesinformationsystems&cstart=40)] </span>
 <br>
 
 
-1.  *Automatic View Generation with Deep Learning and Reinforcement Learning.* <br>**Haitao Yuan**, Guoliang Li, Ling Feng, Ji Sun, Yue Han. <br>***ICDE 2020, CCF-A***. <span style="color:red; font-weight:bold;">🏆 ICDE 2019-2024 Highly-Cited Papers [[link](https://scholar.google.com/citations?hl=en&view_op=list_hcore&venue=HdCtgB7kxZAJ.2024&vq=eng_databasesinformationsystems&cstart=60)] </span>
+1.  <a id="pub-icde20-viewgen"></a>*Automatic View Generation with Deep Learning and Reinforcement Learning.* <br>**Haitao Yuan**, Guoliang Li, Ling Feng, Ji Sun, Yue Han. <br>***ICDE 2020, CCF-A***. <span style="color:red; font-weight:bold;">🏆 ICDE 2019-2024 Highly-Cited Papers [[link](https://scholar.google.com/citations?hl=en&view_op=list_hcore&venue=HdCtgB7kxZAJ.2024&vq=eng_databasesinformationsystems&cstart=60)] </span>
 <br>
 
-1.  *Distributed in-memory trajectory similarity search and join on road network.* <br>**Haitao Yuan**, Guoliang Li. <br>***ICDE 2019, CCF-A***. <span style="color:red; font-weight:bold;">🏆 ICDE 2019-2024 Highly-Cited Papers [[link](https://scholar.google.com/citations?hl=en&view_op=list_hcore&venue=HdCtgB7kxZAJ.2024&vq=eng_databasesinformationsystems&cstart=20)] </span>
+1.  <a id="pub-icde19-trajsim"></a>*Distributed in-memory trajectory similarity search and join on road network.* <br>**Haitao Yuan**, Guoliang Li. <br>***ICDE 2019, CCF-A***. <span style="color:red; font-weight:bold;">🏆 ICDE 2019-2024 Highly-Cited Papers [[link](https://scholar.google.com/citations?hl=en&view_op=list_hcore&venue=HdCtgB7kxZAJ.2024&vq=eng_databasesinformationsystems&cstart=20)] </span>
 <br>
 
-1.  *Mathgraph: A knowledge graph for automatically solving mathematical exercises.* <br>Tianyu Zhao, Yan Huang, Songfan Yang, Yuyu Luo, Jianhua Feng, Yong Wang, **Haitao Yuan**, Kang Pan, Kaiyu Li, Haoda Li, Fu Zhu. <br>***DASFAA 2019, CCF-B***.  <span style="color:red; font-weight:bold;">🏆 Best Student Paper Award [[link](https://www.dasfaa.net/awards.htm)] </span>
+1.  <a id="pub-dasfaa19-mathgraph"></a>*Mathgraph: A knowledge graph for automatically solving mathematical exercises.* <br>Tianyu Zhao, Yan Huang, Songfan Yang, Yuyu Luo, Jianhua Feng, Yong Wang, **Haitao Yuan**, Kang Pan, Kaiyu Li, Haoda Li, Fu Zhu. <br>***DASFAA 2019, CCF-B***.  <span style="color:red; font-weight:bold;">🏆 Best Student Paper Award [[link](https://www.dasfaa.net/awards.htm)] </span>
 <br>
 
-1.  *Towards Automatic Mathematical Exercise Solving.* (Demo) <br>Haoda Li, Guoliang Li, Jiayang Liu, **Haitao Yuan**, Haiquan Wang. <br>***SIGMOD 2019 CCF-A***. 
+1.  <a id="pub-sigmod19-mathdemo"></a>*Towards Automatic Mathematical Exercise Solving.* (Demo) <br>Haoda Li, Guoliang Li, Jiayang Liu, **Haitao Yuan**, Haiquan Wang. <br>***SIGMOD 2019 CCF-A***. 
 
 <!-- 4.  *Towards Automatic Mathematical Exercise Solving.* <br>
 Tianyu Zhao, Chengliang Chai, Yuyu Luo, Jianhua Feng, Yan Huang, Songfan Yang, **Haitao Yuan**, Haoda Li, Kaiyu Li, Fu Zhu, Kang Pan. <br>
