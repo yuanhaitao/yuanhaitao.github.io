@@ -133,13 +133,26 @@ Selected Awards
 1. Rank \#1 in [Open Graph Benchmark](https://ogb.stanford.edu/docs/leader_nodeprop/\#ogbn-mag), 2021
 1. Outstanding Winner of the BDIC Big Data Competition **(1/575)**, 2018 -->
 
-Program Committee Member and Reviewer
+Program Committee Member
 ------
-KDD, ICDE, CIKM, WWWJ etc.
+- 2026: VLDB, ICDE, KDD, ICML, ICLR, SIGSPATIAL
+- 2025: VLDB, KDD, ICML, ICLR, NuerIPS
+- 2025: ICDE, KDD
+
+Journal Reviewer
+------
+- IEEE Transactions on Knowledge and Data Engineering
+- IEEE Transactions on Mobile Computing
   
 Invited Talks
 ------
 I am happy to give a talk if you are interested in my work. 😊  
+
+- GoodTP: An Effective Data Selection Framework for Enhancing Trajectory Similarity Learning via Monte Carlo Tree Search. SIGMOD'26, 2026. 06 [[Slides](https://drive.google.com/file/d/1-H9A8uRRC7cMT-q5pnhBrXs0HID6IQtt/view?usp=sharing)]  <br> 
+
+- GeoKGM: A Multimodal Large Language Model for Zero-Shot
+Knowledge Graph Completion in Geospatial Databases. SIGMOD'26, 2026. 06 [[Slides](https://drive.google.com/file/d/1v9G-Gu3mX0IXzSuNuTQRiStyZMQoAwG-/view?usp=sharing)]  <br> 
+
 
 - Intelligent Management and Analysis of Spatio-temporal Big Data in the Age of Generative AI (In Chinese). SpatialDI'25, 2025. 04 [[Slides](https://drive.google.com/file/d/1uFXpW-EiXz-loGZmaIDnm__Y9DWFKTPI/view?usp=drive_link)]  <br> 
 
