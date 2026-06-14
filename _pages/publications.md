@@ -45,9 +45,6 @@ author_profile: true
 1. *Having It Both Ways: Single Trajectory Embedding for Similarity Computation with Pairwise Learning.* [[Paper](https://www.computer.org/csdl/proceedings-article/icde/2025/360300a474/26FZzfvpygg)] <br> Jianing Si<sup>\*</sup>, **Haitao Yuan**<sup>\*</sup><sup>#</sup>, Xiang Li, Nan Jiang, Xiao Ma, Guoliang Li, Shangguang Wang<br> ***ICDE 2025, CCF-A***. 
 <br>
 
-1. *Having It Both Ways: Single Trajectory Embedding for Similarity Computation with Pairwise Learning.* [[Paper](https://www.computer.org/csdl/proceedings-article/icde/2025/360300a474/26FZzfvpygg)] <br> Jianing Si<sup>\*</sup>, **Haitao Yuan**<sup>\*</sup><sup>#</sup>, Xiang Li, Nan Jiang, Xiao Ma, Guoliang Li, Shangguang Wang<br> ***ICDE 2025, CCF-A***. 
-<br>
-
 1. *Think Twice Before Imputation: Optimizing Data Imputation Order for Machine Learning.* [[Paper](https://www.computer.org/csdl/proceedings-article/icde/2025/360300b362/26FZA1gQAjm)] <br>Jiaxuan Zhang<sup>\*</sup>, **Haitao Yuan**<sup>\*</sup><sup>#</sup>, Jianing Si, Nan Jiang, Shangguang Wang<br> ***ICDE 2025, CCF-A***. 
 <br>
 
@@ -88,10 +85,10 @@ author_profile: true
 1.  *ELAKT: Enhancing Locality for Attentive Knowledge Tracing.* <br>Yanjun Pu, Fang Liu, Rongye Shi<sup>#</sup>, **Haitao Yuan<sup>#</sup>**, Ruibo Chen, Tianhao Peng, Wenjun Wu. <br>***ACM TOIS 2024, CCF-A***.
 <br>
 
-1.  Urban Traffic Accident Risk Prediction Revisited: Regionality, Proximity, Similarity and Sparsity.* <br>Minxiao Chen, **Haitao Yuan<sup>#</sup>**, Nan Jiang, Zhifeng Bao, Shangguang Wang. <br>***CIKM 2024, CCF-B***. 
+1.  *Urban Traffic Accident Risk Prediction Revisited: Regionality, Proximity, Similarity and Sparsity.* <br>Minxiao Chen, **Haitao Yuan<sup>#</sup>**, Nan Jiang, Zhifeng Bao, Shangguang Wang. <br>***CIKM 2024, CCF-B***. 
 <br>
 
-1.  STMGF: An Effective Spatial-Temporal Multi-granularity Framework for Traffic Forecasting.* <br>Zhengyang Zhao, **Haitao Yuan<sup>#</sup>**, Nan Jiang, Minxiao Chen, Ning Liu<sup>#</sup>, Zengxiang Li. <br>***DASFAA 2024, CCF-B***. 
+1.  *STMGF: An Effective Spatial-Temporal Multi-granularity Framework for Traffic Forecasting.* <br>Zhengyang Zhao, **Haitao Yuan<sup>#</sup>**, Nan Jiang, Minxiao Chen, Ning Liu<sup>#</sup>, Zengxiang Li. <br>***DASFAA 2024, CCF-B***. 
 <br>
 
 1.  *Automatic Road Extraction with Multi-Source Data Revisited: Completeness, Smoothness and Discrimination.* [[Paper](https://www.vldb.org/pvldb/vol16/p3004-yuan.pdf)][[Code](https://github.com/BubbleSai/DICN)] <br>**Haitao Yuan**, Sai Wang, Zhifeng Bao, Shangguang Wang. <br>***VLDB 2023, CCF-A***. 
