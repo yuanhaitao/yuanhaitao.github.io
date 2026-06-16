@@ -16,7 +16,7 @@ Haitao's research focuses on developing innovative database and machine learning
 + Creating **I**ntelligent multi-modal data manipulation and preparation pipelines
 + Developing **P**ractical spatio-temporal models and algorithms for real-world applications
 
-He has published 40+ papers in the top DB/DM conferences and journals (SIGMOD, VLDB, ICDE, KDD, WWW, TKDE, CIKM, etc).
+He has published 60+ papers in the top DB/DM conferences and journals (SIGMOD, VLDB, ICDE, KDD, WWW, TKDE, CIKM, etc).
 
 <!-- Feel free to catch me if interested to discuss ideas or work together. 😜 -->
 
@@ -44,8 +44,8 @@ Research Interests
 <!-- + **Data-centric ML**: annotation, augmentation, imbalance, noise, distillation, out-of-distribution, heterogeneity, and privacy. -->
 
 + **Spatio-temporal Data Preparation and Management (S&I)**: trajectory search and join — [SIGMOD'26 (a)](/publications/#pub-sigmod26-goodtp), [ICDE'25 (a)](/publications/#pub-icde25-hib), [ICDE'25 (c)](/publications/#pub-icde25-robusttraj), [ICDE'19](/publications/#pub-icde19-trajsim); trajectory generation — [VLDB'23 (b)](/publications/#pub-vldb23-trajgen), [TMC'23](/publications/#pub-tmc23-f3vetrac); road network generation — [VLDB'23 (a)](/publications/#pub-vldb23-roadext); traffic imputation — [VLDB'24](/publications/#pub-vldb24-nuhuo); data imputation — [ICDE'25 (b)](/publications/#pub-icde25-think); map matching — [ICDE'26](/publications/#pub-icde26-fedcurrmm), [SIGMOD'25 (a)](/publications/#pub-sigmod25-rlomm); point cloud data management — [SIGMOD'25 (b)](/publications/#pub-sigmod25-mast); geospatial knowledge graph completion — [SIGMOD'26 (b)](/publications/#pub-sigmod26-geokgm).
-+ **AI/LLM-powered Database Optimization (S&P)**: materialized view advisor — [TKDE'22](/publications/#pub-tkde22-autoview), [ICDE'20](/publications/#pub-icde20-viewgen); query rewrite — [VLDB'25](/publications/#pub-vldb25-llmr2); index advisor.
 + **Spatio-temporal Related/Interdisciplinary Application (I&P)**: AI4Transportation (e.g., travel time estimation — [SIGMOD'25](/publications/#pub-sigmod25-rlertte), [VLDB'23](/publications/#pub-vldb23-rttree), [CIKM'22](/publications/#pub-cikm22-dueta), [SIGMOD'20](/publications/#pub-sigmod20-tte); traffic prediction — [KDD'25](/publications/#pub-kdd25-parcel), [CIKM'24](/publications/#pub-cikm24-traffacc), [DASFAA'24](/publications/#pub-dasfaa24-stmgf), [ICDE'21](/publications/#pub-icde21-joint), [DSE](/publications/#pub-dse-trafsurvey); POI recommendation — [KDD'26](/publications/#pub-kdd26-g2pro), [ICDE'24](/publications/#pub-icde24-nextpoi)), AI4Healthcare (e.g., medical diagnosis, molecular prediction) and AI4Education (e.g., mathematical exercise solver — [DASFAA'19](/publications/#pub-dasfaa19-mathgraph), [SIGMOD'19](/publications/#pub-sigmod19-mathdemo); knowledge tracing — [TOIS'26](/publications/#pub-tois26-r2gcurl), [TOIS'24](/publications/#pub-tois24-elakt)).
++ **AI/LLM-powered Database Optimization (S&P)**: materialized view advisor — [TKDE'22](/publications/#pub-tkde22-autoview), [ICDE'20](/publications/#pub-icde20-viewgen); query rewrite — [VLDB'25](/publications/#pub-vldb25-llmr2); index advisor.
 + **Retrieval-Augmented Generation (S&P)**: cost-aware RAG — [ICDE'26](/publications/#pub-icde26-carrot); multi-modal vector database.
 
 
