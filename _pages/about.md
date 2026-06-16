@@ -137,7 +137,7 @@ Program Committee Member
 ------
 - 2026: VLDB, ICDE, KDD, ICML, ICLR, SIGSPATIAL
 - 2025: VLDB, KDD, ICML, ICLR, NuerIPS
-- 2025: ICDE, KDD
+- 2024: ICDE, KDD
 
 Journal Reviewer
 ------
