@@ -1,0 +1,2272 @@
+---
+layout: null
+title: "Codex 小白教程"
+permalink: /codex/
+---
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Codex 小白教程 - 从零开始学会 OpenAI 编程助手</title>
+<style>
+/* ===== CSS Reset & Base ===== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #0d1117;
+  --bg-card: #161b22;
+  --bg-code: #0d1117;
+  --bg-sidebar: #12161d;
+  --border: #263140;
+  --text: #e6edf3;
+  --text-dim: #9ca3af;
+  --text-bright: #ffffff;
+  --accent: #19c37d;
+  --accent-dim: #0d8a5a;
+  --accent-glow: rgba(25, 195, 125, 0.15);
+  --green: #4ade80;
+  --green-dim: rgba(74, 222, 128, 0.15);
+  --orange: #fb923c;
+  --orange-dim: rgba(251, 146, 60, 0.15);
+  --red: #f87171;
+  --red-dim: rgba(248, 113, 113, 0.15);
+  --blue: #38bdf8;
+  --blue-dim: rgba(56, 189, 248, 0.15);
+  --yellow: #fbbf24;
+  --radius: 12px;
+  --sidebar-w: 280px;
+  --header-h: 64px;
+}
+
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.8;
+  font-size: 16px;
+  overflow-x: hidden;
+}
+
+/* ===== Header ===== */
+.header {
+  position: fixed; top: 0; left: 0; right: 0;
+  height: var(--header-h);
+  background: rgba(13, 17, 23, 0.85);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+  display: flex; align-items: center;
+  padding: 0 24px;
+  z-index: 1000;
+}
+.header-logo {
+  font-size: 20px; font-weight: 700;
+  background: linear-gradient(135deg, var(--accent), var(--blue));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  display: flex; align-items: center; gap: 10px;
+}
+.header-logo .logo-icon {
+  width: 32px; height: 32px;
+  background: linear-gradient(135deg, var(--accent), var(--blue));
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  color: #fff; font-size: 16px; font-weight: 900;
+  -webkit-text-fill-color: white;
+}
+.header-right {
+  margin-left: auto;
+  display: flex; align-items: center; gap: 16px;
+}
+.menu-btn {
+  display: none;
+  background: none; border: none;
+  color: var(--text); font-size: 24px; cursor: pointer;
+  padding: 4px;
+}
+.progress-bar {
+  position: fixed; top: var(--header-h); left: 0; right: 0;
+  height: 3px; background: var(--border); z-index: 999;
+}
+.progress-fill {
+  height: 100%; width: 0%;
+  background: linear-gradient(90deg, var(--accent), var(--blue));
+  transition: width 0.3s;
+}
+
+/* ===== Sidebar ===== */
+.sidebar {
+  position: fixed; top: var(--header-h); left: 0;
+  width: var(--sidebar-w); height: calc(100vh - var(--header-h));
+  background: var(--bg-sidebar);
+  border-right: 1px solid var(--border);
+  overflow-y: auto; padding: 20px 0;
+  z-index: 900;
+  transition: transform 0.3s ease;
+}
+.sidebar::-webkit-scrollbar { width: 4px; }
+.sidebar::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+.nav-group { margin-bottom: 8px; }
+.nav-group-title {
+  padding: 8px 20px; font-size: 11px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 1.5px;
+  color: var(--text-dim);
+}
+.nav-link {
+  display: flex; align-items: center; gap: 10px;
+  padding: 8px 20px; font-size: 14px;
+  color: var(--text-dim); text-decoration: none;
+  border-left: 3px solid transparent;
+  transition: all 0.2s;
+}
+.nav-link:hover { color: var(--text); background: rgba(255,255,255,0.03); }
+.nav-link.active {
+  color: var(--accent); border-left-color: var(--accent);
+  background: var(--accent-glow);
+}
+.nav-link .nav-icon { font-size: 16px; width: 22px; text-align: center; }
+.nav-link .nav-num {
+  margin-left: auto; font-size: 11px;
+  background: var(--border); border-radius: 10px;
+  padding: 1px 8px; color: var(--text-dim);
+}
+.sidebar-overlay {
+  display: none; position: fixed; inset: 0;
+  background: rgba(0,0,0,0.6); z-index: 899;
+}
+
+/* ===== Main Content ===== */
+.main {
+  margin-left: var(--sidebar-w);
+  margin-top: var(--header-h);
+  padding: 40px 48px 120px;
+  max-width: 920px;
+}
+
+/* ===== Hero ===== */
+.hero {
+  text-align: center;
+  padding: 60px 0 40px;
+}
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--accent-glow);
+  border: 1px solid rgba(25, 195, 125, 0.3);
+  border-radius: 100px; padding: 6px 18px;
+  font-size: 13px; color: var(--accent);
+  margin-bottom: 24px;
+}
+.hero h1 {
+  font-size: 42px; font-weight: 800;
+  line-height: 1.2; margin-bottom: 16px;
+  background: linear-gradient(135deg, var(--text-bright), var(--accent));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+.hero p {
+  font-size: 18px; color: var(--text-dim);
+  max-width: 560px; margin: 0 auto 32px;
+}
+.hero-features {
+  display: flex; justify-content: center; gap: 32px;
+  flex-wrap: wrap;
+}
+.hero-feat {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 14px; color: var(--text-dim);
+}
+.hero-feat .dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--green);
+}
+
+/* ===== Section ===== */
+.section {
+  margin-top: 64px;
+  scroll-margin-top: 80px;
+}
+.section-header {
+  display: flex; align-items: center; gap: 14px;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+}
+.section-num {
+  width: 40px; height: 40px;
+  background: linear-gradient(135deg, var(--accent-dim), var(--accent));
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18px; font-weight: 800; color: #fff;
+  flex-shrink: 0;
+}
+.section-header h2 {
+  font-size: 26px; font-weight: 700;
+  color: var(--text-bright);
+}
+
+/* ===== Cards ===== */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  margin-bottom: 20px;
+}
+.card-warn {
+  border-color: rgba(251, 146, 60, 0.4);
+  background: linear-gradient(135deg, var(--bg-card), rgba(251, 146, 60, 0.05));
+}
+.card-warn::before {
+  content: "⚠️ 重要提示";
+  display: block; font-weight: 700; font-size: 14px;
+  color: var(--orange); margin-bottom: 12px;
+}
+.card-tip {
+  border-color: rgba(74, 222, 128, 0.4);
+  background: linear-gradient(135deg, var(--bg-card), rgba(74, 222, 128, 0.05));
+}
+.card-tip::before {
+  content: "💡 小贴士";
+  display: block; font-weight: 700; font-size: 14px;
+  color: var(--green); margin-bottom: 12px;
+}
+.card-info {
+  border-color: rgba(56, 189, 248, 0.4);
+  background: linear-gradient(135deg, var(--bg-card), rgba(56, 189, 248, 0.05));
+}
+.card-info::before {
+  content: "📖 说明";
+  display: block; font-weight: 700; font-size: 14px;
+  color: var(--blue); margin-bottom: 12px;
+}
+
+/* ===== Steps ===== */
+.steps { counter-reset: step; }
+.step {
+  position: relative;
+  padding-left: 48px;
+  margin-bottom: 32px;
+  counter-increment: step;
+}
+.step::before {
+  content: counter(step);
+  position: absolute; left: 0; top: 2px;
+  width: 32px; height: 32px;
+  background: var(--accent-dim);
+  border: 2px solid var(--accent);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 14px; font-weight: 700; color: #fff;
+}
+.step::after {
+  content: "";
+  position: absolute; left: 15px; top: 38px;
+  width: 2px; bottom: -8px;
+  background: var(--border);
+}
+.step:last-child::after { display: none; }
+.step h3 {
+  font-size: 18px; font-weight: 600;
+  color: var(--text-bright);
+  margin-bottom: 8px;
+}
+.step p { color: var(--text-dim); }
+
+/* ===== Code Blocks ===== */
+.code-block {
+  position: relative;
+  background: var(--bg-code);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin: 16px 0;
+  overflow: hidden;
+}
+.code-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 10px 16px;
+  background: rgba(255,255,255,0.03);
+  border-bottom: 1px solid var(--border);
+  font-size: 12px; color: var(--text-dim);
+}
+.code-header .lang-tag {
+  background: var(--accent-glow);
+  color: var(--accent);
+  padding: 2px 10px; border-radius: 6px;
+  font-weight: 600;
+}
+.copy-btn {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid var(--border);
+  color: var(--text-dim);
+  padding: 4px 12px; border-radius: 6px;
+  cursor: pointer; font-size: 12px;
+  transition: all 0.2s;
+}
+.copy-btn:hover { background: rgba(255,255,255,0.15); color: var(--text); }
+.copy-btn.copied { background: var(--green-dim); color: var(--green); border-color: rgba(74, 222, 128, 0.4); }
+.code-body {
+  padding: 16px 20px;
+  overflow-x: auto;
+  font-family: "JetBrains Mono", "Fira Code", "SF Mono", "Cascadia Code", Consolas, monospace;
+  font-size: 13.5px;
+  line-height: 1.7;
+  color: #e6edf3;
+  white-space: pre;
+}
+.code-body::-webkit-scrollbar { height: 6px; }
+.code-body::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+/* Syntax Colors */
+.code-body .cm { color: #6b7280; } /* comment */
+.code-body .kw { color: #19c37d; } /* keyword */
+.code-body .st { color: #4ade80; } /* string */
+.code-body .fn { color: #38bdf8; } /* function */
+.code-body .vr { color: #fb923c; } /* variable */
+.code-body .op { color: #9ca3af; } /* operator */
+.code-body .nb { color: #fbbf24; } /* number/built-in */
+
+/* ===== Terminal Demo ===== */
+.terminal {
+  background: #090c10;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin: 20px 0;
+  overflow: hidden;
+}
+.terminal-bar {
+  display: flex; align-items: center; gap: 8px;
+  padding: 10px 16px;
+  background: rgba(255,255,255,0.03);
+  border-bottom: 1px solid var(--border);
+}
+.terminal-dot { width: 12px; height: 12px; border-radius: 50%; }
+.terminal-dot.r { background: #f87171; }
+.terminal-dot.y { background: #fbbf24; }
+.terminal-dot.g { background: #4ade80; }
+.terminal-title {
+  margin-left: 8px; font-size: 12px; color: var(--text-dim);
+}
+.terminal-body {
+  padding: 16px 20px;
+  font-family: "JetBrains Mono", "Fira Code", Consolas, monospace;
+  font-size: 13.5px; line-height: 1.8;
+  min-height: 120px;
+}
+.terminal-body .prompt { color: var(--green); }
+.terminal-body .cmd { color: var(--text-bright); }
+.terminal-body .output { color: var(--text-dim); }
+.terminal-body .highlight { color: var(--accent); }
+.terminal-body .info { color: var(--blue); }
+.terminal-body .warn { color: var(--orange); }
+.terminal-body .cursor {
+  display: inline-block;
+  width: 8px; height: 16px;
+  background: var(--accent);
+  animation: blink 1s step-end infinite;
+  vertical-align: text-bottom;
+}
+@keyframes blink { 50% { opacity: 0; } }
+
+/* ===== Diagram / Flow ===== */
+.flow-diagram {
+  display: flex; align-items: center; justify-content: center;
+  gap: 8px; flex-wrap: wrap;
+  padding: 24px; margin: 16px 0;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+.flow-box {
+  padding: 12px 20px;
+  background: var(--bg-code);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 14px; font-weight: 600;
+  text-align: center;
+}
+.flow-box.accent {
+  border-color: var(--accent);
+  background: var(--accent-glow);
+  color: var(--accent);
+}
+.flow-arrow {
+  color: var(--text-dim); font-size: 20px;
+}
+
+/* ===== Table ===== */
+.table-wrap {
+  overflow-x: auto;
+  margin: 16px 0;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+table {
+  width: 100%; border-collapse: collapse;
+  font-size: 14px;
+}
+th {
+  background: rgba(255,255,255,0.04);
+  padding: 12px 16px;
+  text-align: left; font-weight: 600;
+  color: var(--text-bright);
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+td {
+  padding: 10px 16px;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  color: var(--text-dim);
+}
+tr:last-child td { border-bottom: none; }
+td code {
+  background: var(--bg-code);
+  padding: 2px 8px; border-radius: 4px;
+  font-size: 13px; color: var(--accent);
+  font-family: "JetBrains Mono", Consolas, monospace;
+}
+
+/* ===== Inline Code ===== */
+p code, li code, h3 code {
+  background: var(--bg-code);
+  border: 1px solid var(--border);
+  padding: 2px 8px; border-radius: 5px;
+  font-size: 13.5px; color: var(--accent);
+  font-family: "JetBrains Mono", Consolas, monospace;
+}
+
+/* ===== Lists ===== */
+ul, ol { padding-left: 24px; margin: 12px 0; }
+li { margin-bottom: 8px; color: var(--text-dim); }
+li strong { color: var(--text); }
+
+/* ===== Tabs ===== */
+.tabs { margin: 16px 0; }
+.tab-buttons {
+  display: flex; gap: 4px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 0;
+}
+.tab-btn {
+  padding: 10px 20px;
+  background: none; border: none;
+  color: var(--text-dim);
+  font-size: 14px; font-weight: 500;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s;
+}
+.tab-btn:hover { color: var(--text); }
+.tab-btn.active {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+.tab-content { display: none; }
+.tab-content.active { display: block; }
+
+/* ===== FAQ / Accordion ===== */
+.faq-item {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+.faq-q {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 16px 20px;
+  background: var(--bg-card);
+  cursor: pointer; font-weight: 600;
+  color: var(--text-bright);
+  transition: background 0.2s;
+}
+.faq-q:hover { background: rgba(255,255,255,0.04); }
+.faq-q .arrow {
+  transition: transform 0.3s;
+  color: var(--text-dim);
+}
+.faq-item.open .faq-q .arrow { transform: rotate(180deg); }
+.faq-a {
+  max-height: 0; overflow: hidden;
+  transition: max-height 0.3s ease;
+  background: var(--bg-code);
+}
+.faq-item.open .faq-a { max-height: 800px; }
+.faq-a-inner { padding: 16px 20px; }
+
+/* ===== Back to Top ===== */
+.back-top {
+  position: fixed; bottom: 32px; right: 32px;
+  width: 44px; height: 44px;
+  background: var(--accent-dim);
+  border: 1px solid rgba(25, 195, 125, 0.4);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  color: #fff; font-size: 20px;
+  cursor: pointer;
+  opacity: 0; transform: translateY(20px);
+  transition: all 0.3s;
+  z-index: 800;
+}
+.back-top.show { opacity: 1; transform: translateY(0); }
+.back-top:hover { background: var(--accent); color: #fff; }
+
+/* ===== Footer ===== */
+.footer {
+  margin-top: 80px;
+  padding: 32px 0;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  color: var(--text-dim);
+  font-size: 14px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+  .sidebar { transform: translateX(-100%); }
+  .sidebar.open { transform: translateX(0); }
+  .sidebar-overlay.open { display: block; }
+  .main { margin-left: 0; padding: 24px 20px 80px; }
+  .menu-btn { display: block; }
+  .hero h1 { font-size: 28px; }
+  .hero-features { gap: 16px; }
+  .flow-diagram { flex-direction: column; }
+  .flow-arrow { transform: rotate(90deg); }
+}
+@media (max-width: 480px) {
+  .hero h1 { font-size: 24px; }
+  .hero p { font-size: 15px; }
+  .section-header h2 { font-size: 20px; }
+  .code-body { font-size: 12px; padding: 12px; }
+  .tab-btn { padding: 8px 12px; font-size: 13px; }
+}
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+  <button class="menu-btn" onclick="toggleSidebar()" aria-label="菜单">☰</button>
+  <div class="header-logo">
+    <div class="logo-icon">&gt;_</div>
+    Codex 教程
+  </div>
+  <div class="header-right">
+    <span style="font-size:13px;color:var(--text-dim)">小白友好 · 中文版</span>
+  </div>
+</header>
+<div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+
+<!-- Sidebar -->
+<div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleSidebar()"></div>
+<nav class="sidebar" id="sidebar">
+  <div class="nav-group">
+    <div class="nav-group-title">入门</div>
+    <a class="nav-link" href="#intro"><span class="nav-icon">🏠</span>什么是 Codex</a>
+    <a class="nav-link" href="#usecases"><span class="nav-icon">💡</span>能帮你做什么</a>
+    <a class="nav-link" href="#terminal-basics"><span class="nav-icon">🖥️</span>命令行入门</a>
+    <a class="nav-link" href="#prepare"><span class="nav-icon">📋</span>准备工作</a>
+    <a class="nav-link" href="#install"><span class="nav-icon">📦</span>安装 Codex</a>
+    <a class="nav-link" href="#config"><span class="nav-icon">⚙️</span>配置 API（重点）</a>
+  </div>
+  <div class="nav-group">
+    <div class="nav-group-title">使用</div>
+    <a class="nav-link" href="#firstrun"><span class="nav-icon">🚀</span>第一次运行</a>
+    <a class="nav-link" href="#basic"><span class="nav-icon">💬</span>基本对话用法</a>
+    <a class="nav-link" href="#coding"><span class="nav-icon">✏️</span>让 AI 写代码</a>
+    <a class="nav-link" href="#commands"><span class="nav-icon">⌨️</span>常用命令大全</a>
+  </div>
+  <div class="nav-group">
+    <div class="nav-group-title">进阶</div>
+    <a class="nav-link" href="#agentsmd"><span class="nav-icon">📝</span>项目记忆 AGENTS.md</a>
+    <a class="nav-link" href="#models"><span class="nav-icon">🧠</span>切换模型</a>
+    <a class="nav-link" href="#permissions"><span class="nav-icon">🔒</span>审批与沙箱</a>
+    <a class="nav-link" href="#headless"><span class="nav-icon">🤖</span>非交互模式</a>
+    <a class="nav-link" href="#ide"><span class="nav-icon">🖥️</span>IDE 集成</a>
+  </div>
+  <div class="nav-group">
+    <div class="nav-group-title">参考</div>
+    <a class="nav-link" href="#shortcuts"><span class="nav-icon">⚡</span>快捷键速查</a>
+    <a class="nav-link" href="#faq"><span class="nav-icon">❓</span>常见问题</a>
+    <a class="nav-link" href="#glossary"><span class="nav-icon">📚</span>术语表</a>
+  </div>
+</nav>
+
+<!-- Main Content -->
+<main class="main">
+
+  <!-- ============ HERO ============ -->
+  <div class="hero" id="intro">
+    <div class="hero-badge">✨ OpenAI 官方开源编程助手</div>
+    <h1>Codex 小白教程</h1>
+    <p>从零开始，手把手教你安装、配置和使用 OpenAI Codex。无需任何基础，跟着做就行。</p>
+    <div class="hero-features">
+      <div class="hero-feat"><div class="dot"></div>自动写代码</div>
+      <div class="hero-feat"><div class="dot"></div>自动改 Bug</div>
+      <div class="hero-feat"><div class="dot"></div>理解整个项目</div>
+      <div class="hero-feat"><div class="dot"></div>命令行操作</div>
+    </div>
+  </div>
+
+  <!-- 通俗介绍 -->
+  <div class="card" style="margin-top:40px">
+    <h3 style="color:var(--text-bright);margin-bottom:12px">🤔 Codex 到底是啥？</h3>
+    <p>简单说，Codex 就是 OpenAI 出的一个<strong>跑在你终端（命令行）里的 AI 编程助手</strong>。你用文字告诉它你想干什么，它就能帮你：</p>
+    <ul>
+      <li><strong>写代码 / 改代码</strong> — 直接在你电脑上创建、修改文件</li>
+      <li><strong>处理文档</strong> — 批量整理文件、转格式、生成报告</li>
+      <li><strong>分析数据</strong> — 处理 Excel/CSV、做统计分析</li>
+      <li><strong>自动化任务</strong> — 帮你执行终端命令，替代重复操作</li>
+      <li><strong>从零做项目</strong> — 一句话就能创建一整个应用</li>
+    </ul>
+    <p style="margin-top:12px">它和 ChatGPT 网页版最大的不同是：<strong>它直接在你电脑上操作文件、运行命令</strong>，而不只是在网页里聊天。你说"帮我把这 100 个文件重命名"，它真的会帮你改，而不只是告诉你怎么改。</p>
+    <p style="margin-top:12px;color:var(--text-dim)">如果你听说过 Claude Code、Cursor 这类工具，Codex 就是 OpenAI 家对标它们的产品，同样是开源、免费下载的命令行工具。</p>
+  </div>
+
+  <!-- 架构图 -->
+  <div class="flow-diagram">
+    <div class="flow-box">你（终端里打字）</div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-box accent">Codex CLI</div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-box">你的中转站</div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-box">GPT 模型</div>
+  </div>
+
+  <!-- ============ SECTION: 能帮你做什么 ============ -->
+  <div class="section" id="usecases">
+    <div class="section-header">
+      <div class="section-num">✦</div>
+      <h2>Codex 能帮你做什么？</h2>
+    </div>
+
+    <p>很多人以为 Codex 只能写代码，其实不然。它是一个<strong>全能型的 AI 助手</strong>，几乎任何需要"操作文件 + 动脑"的任务它都能帮忙。下面是一些常见的办公场景：</p>
+
+    <!-- 场景：文档写作 -->
+    <div class="card">
+      <h3 style="color:var(--text-bright);margin-bottom:12px">📝 文档写作与编辑</h3>
+      <p>无论是写周报、写方案、还是翻译文档，Codex 都能直接帮你创建和修改文件。</p>
+      <div class="terminal">
+        <div class="terminal-bar">
+          <div class="terminal-dot r"></div>
+          <div class="terminal-dot y"></div>
+          <div class="terminal-dot g"></div>
+          <span class="terminal-title">Terminal — codex</span>
+        </div>
+        <div class="terminal-body">
+<span class="prompt">▌</span> <span class="cmd">帮我写一份本周工作周报，内容包括：完成了用户系统重构、</span>
+  <span class="cmd">修复了 3 个线上 Bug、参加了产品评审会议。保存为 weekly-report.md</span>
+
+<span class="info">codex</span> <span class="output">好的，我来帮你生成周报。</span>
+<span class="output">📝 新建  weekly-report.md</span>
+<span class="output">✅ 周报已生成，包含工作概述、详细成果和下周计划。</span></div>
+      </div>
+      <p style="margin-top:12px;color:var(--text-dim)">类似的还可以：写会议纪要、写邮件草稿、写项目方案、翻译英文文档等。</p>
+    </div>
+
+    <!-- 场景：数据处理 -->
+    <div class="card">
+      <h3 style="color:var(--text-bright);margin-bottom:12px">📊 数据处理与分析</h3>
+      <p>有 CSV 或 Excel 数据需要处理？Codex 可以直接帮你写脚本分析。</p>
+      <div class="terminal">
+        <div class="terminal-bar">
+          <div class="terminal-dot r"></div>
+          <div class="terminal-dot y"></div>
+          <div class="terminal-dot g"></div>
+          <span class="terminal-title">Terminal — codex</span>
+        </div>
+        <div class="terminal-body">
+<span class="prompt">▌</span> <span class="cmd">帮我分析 sales_data.csv 这个文件，统计每个月的销售额，</span>
+  <span class="cmd">然后生成一个汇总表格保存为 summary.csv</span>
+
+<span class="info">codex</span> <span class="output">让我先看看数据结构...</span>
+<span class="output">📝 新建  analyze.py (Python 分析脚本)</span>
+<span class="output">🔧 运行: python analyze.py</span>
+<span class="output">📝 新建  summary.csv</span>
+<span class="output">✅ 分析完成！共处理 2,847 条数据，按月汇总结果已保存。</span></div>
+      </div>
+    </div>
+
+    <!-- 场景：文件批量操作 -->
+    <div class="card">
+      <h3 style="color:var(--text-bright);margin-bottom:12px">📂 文件批量操作</h3>
+      <p>需要批量重命名、整理、移动文件？用自然语言告诉 Codex 就行。</p>
+      <div class="terminal">
+        <div class="terminal-bar">
+          <div class="terminal-dot r"></div>
+          <div class="terminal-dot y"></div>
+          <div class="terminal-dot g"></div>
+          <span class="terminal-title">Terminal — codex</span>
+        </div>
+        <div class="terminal-body">
+<span class="prompt">▌</span> <span class="cmd">把 photos 文件夹里的所有图片按拍摄日期重命名，格式为</span>
+  <span class="cmd">2024-01-15_001.jpg 这样的</span>
+
+<span class="info">codex</span> <span class="output">我来看看文件夹里有哪些图片...</span>
+<span class="output">找到 156 张图片，正在读取 EXIF 日期信息...</span>
+<span class="output">✅ 已完成！156 张图片全部按日期重命名。</span></div>
+      </div>
+    </div>
+
+    <!-- 场景：网页制作 -->
+    <div class="card">
+      <h3 style="color:var(--text-bright);margin-bottom:12px">🌐 快速制作网页</h3>
+      <p>需要一个活动页面、个人简历网站、或者产品展示页？一句话搞定。</p>
+      <div class="terminal">
+        <div class="terminal-bar">
+          <div class="terminal-dot r"></div>
+          <div class="terminal-dot y"></div>
+          <div class="terminal-dot g"></div>
+          <span class="terminal-title">Terminal — codex</span>
+        </div>
+        <div class="terminal-body">
+<span class="prompt">▌</span> <span class="cmd">帮我做一个个人简历网页，暗黑主题，要好看，包含我的基本信息、</span>
+  <span class="cmd">工作经历和技能展示，保存为 resume.html</span>
+
+<span class="info">codex</span> <span class="output">好的，我来为你设计一个现代风格的简历网页。</span>
+<span class="output">📝 新建  resume.html</span>
+<span class="output">✅ 简历网页已创建！直接用浏览器打开 resume.html 即可预览。</span></div>
+      </div>
+    </div>
+
+    <!-- 场景：学习编程 -->
+    <div class="card">
+      <h3 style="color:var(--text-bright);margin-bottom:12px">🎓 辅助学习</h3>
+      <p>想学编程但不知道从哪开始？Codex 就是最好的老师，边学边练。</p>
+      <div class="terminal">
+        <div class="terminal-bar">
+          <div class="terminal-dot r"></div>
+          <div class="terminal-dot y"></div>
+          <div class="terminal-dot g"></div>
+          <span class="terminal-title">Terminal — codex</span>
+        </div>
+        <div class="terminal-body">
+<span class="prompt">▌</span> <span class="cmd">我是 Python 初学者，帮我写一个猜数字小游戏，并且在代码里</span>
+  <span class="cmd">加上详细的中文注释，让我能看懂每一行</span>
+
+<span class="info">codex</span> <span class="output">没问题！我来写一个带详细注释的猜数字游戏。</span>
+<span class="output">📝 新建  guess_number.py</span>
+<span class="output">每一行代码都加了中文注释，你可以运行 python guess_number.py 来玩。</span></div>
+      </div>
+    </div>
+
+    <!-- 总结卡片 -->
+    <div class="card card-tip">
+      <p><strong>总结一下：</strong>Codex 的核心能力就是<strong>"听你说话 → 操作你的文件"</strong>。所以只要是跟文件打交道的事情，都可以试试让它帮忙。你不需要会写代码，只要会说话就行。</p>
+    </div>
+  </div>
+
+  <!-- ============ SECTION: 命令行入门 ============ -->
+  <div class="section" id="terminal-basics">
+    <div class="section-header">
+      <div class="section-num">0</div>
+      <h2>命令行入门（完全小白必看）</h2>
+    </div>
+
+    <p>Codex 是一个运行在<strong>命令行（也叫终端 / Terminal）</strong>里的工具。如果你从来没用过命令行，别慌，看完这一节就够了。</p>
+
+    <div class="card">
+      <h3 style="color:var(--text-bright);margin-bottom:12px">🤔 命令行是什么？</h3>
+      <p>命令行就是一个<strong>用打字代替鼠标点击</strong>来操作电脑的工具。你在里面输入一条"命令"，按下回车，电脑就会执行。</p>
+      <p style="margin-top:8px">比如：</p>
+      <ul>
+        <li>你想打开某个文件夹？在命令行里输 <code>cd 文件夹名</code> 就行（相当于双击文件夹）</li>
+        <li>你想看文件夹里有什么？输 <code>ls</code> 就行（相当于打开文件夹看一眼）</li>
+        <li>你想创建一个新文件夹？输 <code>mkdir 文件夹名</code> 就行（相当于右键→新建文件夹）</li>
+      </ul>
+      <p style="margin-top:8px;color:var(--text-dim)">是不是没那么可怕？其实你只需要会打开它就行，剩下的都可以让 Codex 帮你做。</p>
+    </div>
+
+    <div class="card">
+      <h3 style="color:var(--text-bright);margin-bottom:12px">📖 怎么打开命令行？</h3>
+      <div class="tabs">
+        <div class="tab-buttons">
+          <button class="tab-btn active" onclick="switchTab(event, 'open-term-mac')">Mac</button>
+          <button class="tab-btn" onclick="switchTab(event, 'open-term-win')">Windows</button>
+          <button class="tab-btn" onclick="switchTab(event, 'open-term-linux')">Linux</button>
+        </div>
+        <div class="tab-content active" id="open-term-mac">
+          <div class="steps">
+            <div class="step">
+              <h3>方法一：用 Spotlight 搜索（最快）</h3>
+              <p>按 <code>Command + 空格</code>，输入 <strong>Terminal</strong>（或"终端"），按回车即可打开。</p>
+            </div>
+            <div class="step">
+              <h3>方法二：从应用程序打开</h3>
+              <p>打开 <strong>访达(Finder)</strong> → <strong>应用程序</strong> → <strong>实用工具</strong> → 双击 <strong>终端(Terminal)</strong>。</p>
+            </div>
+          </div>
+          <div class="card card-tip" style="margin-top:12px">
+            <p><strong>推荐：</strong>你也可以下载 <a href="https://iterm2.com" style="color:var(--accent)">iTerm2</a>，它是 Mac 上更好用的终端工具，免费的。不过自带的 Terminal 完全够用。</p>
+          </div>
+        </div>
+        <div class="tab-content" id="open-term-win">
+          <div class="steps">
+            <div class="step">
+              <h3>推荐方式：安装 Git Bash</h3>
+              <p>Codex 在 Windows 上推荐配合 WSL2 或 Git Bash 使用。先去 <a href="https://git-scm.com/downloads" style="color:var(--accent)">git-scm.com</a> 下载安装 Git for Windows。</p>
+              <p style="margin-top:8px">安装时<strong>一路点"Next"</strong>用默认设置就行。安装完后，在桌面或开始菜单找到 <strong>Git Bash</strong> 打开。</p>
+            </div>
+            <div class="step">
+              <h3>更佳方式：WSL2（适合进阶）</h3>
+              <p>Codex 在 Windows 上对 <strong>WSL2</strong>（Windows 里的 Linux 子系统）支持最好。以管理员身份打开 PowerShell，运行 <code>wsl --install</code> 即可安装。</p>
+            </div>
+          </div>
+        </div>
+        <div class="tab-content" id="open-term-linux">
+          <p>大部分 Linux 发行版按 <code>Ctrl + Alt + T</code> 就能打开终端。</p>
+          <p>或者在应用菜单中搜索 "Terminal"。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3 style="color:var(--text-bright);margin-bottom:12px">⌨️ 你只需要记住的 5 个命令</h3>
+      <p>以下命令足够你使用 Codex 了，其他的都可以让 Codex 帮你执行。</p>
+      <div class="table-wrap">
+        <table>
+          <tr><th>命令</th><th>作用</th><th>举例</th></tr>
+          <tr>
+            <td><code>cd 目录名</code></td>
+            <td>进入某个文件夹</td>
+            <td><code>cd ~/Desktop</code> 进入桌面</td>
+          </tr>
+          <tr>
+            <td><code>ls</code></td>
+            <td>查看当前文件夹里有什么</td>
+            <td><code>ls</code> 列出所有文件和文件夹</td>
+          </tr>
+          <tr>
+            <td><code>pwd</code></td>
+            <td>显示你现在在哪个文件夹</td>
+            <td><code>pwd</code> → <code>/Users/zhangsan/Desktop</code></td>
+          </tr>
+          <tr>
+            <td><code>mkdir 名字</code></td>
+            <td>创建新文件夹</td>
+            <td><code>mkdir my-project</code> 创建项目文件夹</td>
+          </tr>
+          <tr>
+            <td><code>codex</code></td>
+            <td>启动 Codex！</td>
+            <td>安装好之后输入 <code>codex</code> 即可开始</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3 style="color:var(--text-bright);margin-bottom:12px">🎬 命令行操作演示</h3>
+      <p>下面演示一个典型的流程：打开终端 → 进入项目 → 启动 Codex</p>
+      <div class="terminal">
+        <div class="terminal-bar">
+          <div class="terminal-dot r"></div>
+          <div class="terminal-dot y"></div>
+          <div class="terminal-dot g"></div>
+          <span class="terminal-title">Terminal</span>
+        </div>
+        <div class="terminal-body">
+<span class="cm"># 第 1 步：看看自己在哪里</span>
+<span class="prompt">$</span> <span class="cmd">pwd</span>
+<span class="output">/Users/zhangsan</span>
+
+<span class="cm"># 第 2 步：进入桌面</span>
+<span class="prompt">$</span> <span class="cmd">cd Desktop</span>
+
+<span class="cm"># 第 3 步：创建一个项目文件夹</span>
+<span class="prompt">$</span> <span class="cmd">mkdir my-project</span>
+
+<span class="cm"># 第 4 步：进入项目文件夹</span>
+<span class="prompt">$</span> <span class="cmd">cd my-project</span>
+
+<span class="cm"># 第 5 步：启动 Codex（安装好之后才能用）</span>
+<span class="prompt">$</span> <span class="cmd">codex</span>
+<span class="highlight">╭────────────────────────────────╮</span>
+<span class="highlight">│</span>     <span class="info">OpenAI Codex</span> <span class="output">ready!</span>       <span class="highlight">│</span>
+<span class="highlight">╰────────────────────────────────╯</span>
+<span class="prompt">▌</span> <span class="cursor"></span></div>
+      </div>
+    </div>
+
+    <div class="card card-info">
+      <p><strong>看到 <code>$</code> 或 <code>%</code> 符号是什么意思？</strong></p>
+      <p>这是命令行的"提示符"，表示"我准备好了，你可以输入命令了"。你<strong>不需要自己打</strong>这个符号，直接输入命令就行。本教程中 <code>$</code> 后面的内容才是你需要输入的。</p>
+    </div>
+
+    <div class="card card-tip">
+      <p><strong>小白贴心提示：</strong>如果你在命令行里输错了，不用怕！按 <code>Ctrl + C</code> 可以取消当前操作，再重新输入就行。命令行不会因为你输错而弄坏电脑。</p>
+    </div>
+  </div>
+
+  <!-- ============ SECTION: 准备工作 ============ -->
+  <div class="section" id="prepare">
+    <div class="section-header">
+      <div class="section-num">1</div>
+      <h2>准备工作</h2>
+    </div>
+
+    <p>在安装之前，请确保你有以下东西：</p>
+
+    <div class="card">
+      <h3 style="color:var(--text-bright);margin-bottom:16px">📦 你需要准备的东西</h3>
+      <div class="table-wrap">
+        <table>
+          <tr><th>项目</th><th>说明</th><th>怎么获得</th></tr>
+          <tr>
+            <td><strong>电脑</strong></td>
+            <td>macOS / Linux / Windows 都行</td>
+            <td>你正在用的就行</td>
+          </tr>
+          <tr>
+            <td><strong>终端</strong></td>
+            <td>就是命令行工具</td>
+            <td>Mac 自带 Terminal；Windows 用 Git Bash / WSL2</td>
+          </tr>
+          <tr>
+            <td><strong>Node.js 18+</strong></td>
+            <td>npm 安装方式需要（推荐方式）</td>
+            <td>见下方安装教程</td>
+          </tr>
+          <tr>
+            <td><strong>中转站 API Key</strong></td>
+            <td>用来调用 GPT 模型的密钥</td>
+            <td>你自己搭的中转站后台获取</td>
+          </tr>
+          <tr>
+            <td><strong>中转站 API 地址</strong></td>
+            <td>中转站的 Base URL（通常到 /v1）</td>
+            <td>你自己搭的中转站后台获取</td>
+          </tr>
+          <tr>
+            <td><strong>CC Switch</strong></td>
+            <td>管理中转站配置的图形化工具（推荐）</td>
+            <td>官网 ccswitch.io 免费下载</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="card card-warn">
+      <p>因为国内无法直接访问 OpenAI 官方服务，所以我们需要通过<strong>中转站</strong>来使用 GPT 模型。你需要从中转站后台拿到两样东西：</p>
+      <ul>
+        <li><strong>API Key</strong>（一串密钥字符串，类似 <code>sk-xxxx...</code>）</li>
+        <li><strong>API Base URL</strong>（一个网址，本站为 <code>http://159.223.78.34:28046/v1</code>）</li>
+      </ul>
+      <p style="margin-top:8px">没有这两样东西，Codex 是无法工作的。拿到之后，用 <strong>CC Switch</strong> 填进去即可（见 <a href="#config" style="color:var(--accent)">配置章节</a>）。</p>
+    </div>
+
+    <div class="card card-info">
+      <p><strong>我有 ChatGPT Plus/Pro 账号，可以直接用吗？</strong></p>
+      <p>可以！Codex 原生支持用 ChatGPT 账号登录（<code>codex login</code>），额度直接算在你的订阅里，无需中转站。但登录过程需要访问 OpenAI 官网，<strong>国内需要全程翻墙</strong>。本教程主要讲不用翻墙的 <strong>CC Switch + 中转站</strong> 方式，各方式详见 <a href="#config" style="color:var(--accent)">配置章节</a>。</p>
+    </div>
+
+    <div class="card card-tip">
+      <p><strong>还不知道怎么打开终端？</strong>请先看上面的 <a href="#terminal-basics" style="color:var(--accent)">命令行入门</a> 章节，里面有详细的图文教程。</p>
+    </div>
+  </div>
+
+  <!-- ============ SECTION: 安装 ============ -->
+  <div class="section" id="install">
+    <div class="section-header">
+      <div class="section-num">2</div>
+      <h2>安装 Codex</h2>
+    </div>
+
+    <!-- Tabs: Install Methods -->
+    <div class="tabs">
+      <div class="tab-buttons">
+        <button class="tab-btn active" onclick="switchTab(event, 'install-npm')">npm 安装（推荐）</button>
+        <button class="tab-btn" onclick="switchTab(event, 'install-brew')">Homebrew（Mac）</button>
+        <button class="tab-btn" onclick="switchTab(event, 'install-github')">GitHub 下载</button>
+      </div>
+
+      <!-- 方式一：npm -->
+      <div class="tab-content active" id="install-npm">
+        <div class="card card-tip">
+          <p><strong>这是最推荐、最通用的方式！</strong>配合国内 npm 镜像源，完全不需要翻墙，一条命令搞定。</p>
+        </div>
+
+        <div class="steps">
+          <div class="step">
+            <h3>先安装 Node.js（如果还没有的话）</h3>
+            <p>npm 是 Node.js 自带的包管理器，所以需要先安装 Node.js（版本 18 以上）。</p>
+
+            <div class="tabs">
+              <div class="tab-buttons">
+                <button class="tab-btn active" onclick="switchTab(event, 'node-mac')">Mac</button>
+                <button class="tab-btn" onclick="switchTab(event, 'node-win')">Windows</button>
+                <button class="tab-btn" onclick="switchTab(event, 'node-linux')">Linux</button>
+              </div>
+              <div class="tab-content active" id="node-mac">
+                <p>方法 A：用 Homebrew 安装（推荐）</p>
+                <div class="code-block">
+                  <div class="code-header"><span class="lang-tag">bash</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
+                  <div class="code-body">brew install node</div>
+                </div>
+                <p>方法 B：去 <a href="https://nodejs.org/zh-cn" style="color:var(--accent)">Node.js 中文官网</a> 下载安装包，双击安装。</p>
+              </div>
+              <div class="tab-content" id="node-win">
+                <p>去 <a href="https://nodejs.org/zh-cn" style="color:var(--accent)">Node.js 中文官网</a> 下载 Windows 安装包（.msi），双击安装即可。安装时记得勾选 "Add to PATH"。</p>
+                <p style="margin-top:8px">另外建议安装 <a href="https://git-scm.com/downloads" style="color:var(--accent)">Git for Windows</a> 或启用 WSL2，Codex 在类 Unix 环境下体验最好。</p>
+              </div>
+              <div class="tab-content" id="node-linux">
+                <div class="code-block">
+                  <div class="code-header"><span class="lang-tag">bash — Ubuntu/Debian</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
+                  <div class="code-body">curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
+sudo apt-get install -y nodejs</div>
+                </div>
+              </div>
+            </div>
+
+            <p style="margin-top:12px">安装好后，验证一下版本：</p>
+            <div class="code-block">
+              <div class="code-header"><span class="lang-tag">bash</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
+              <div class="code-body">node -v   <span class="cm"># 应该显示 v18.x.x 或更高</span>
+npm -v    <span class="cm"># 应该显示 9.x.x 或更高</span></div>
+            </div>
+          </div>
+
+          <div class="step">
+            <h3>用 npm 安装 Codex</h3>
+            <p>这是关键的一步。加上淘宝镜像源来安装，<strong>完全不需要翻墙</strong>：</p>
+            <div class="code-block">
+              <div class="code-header"><span class="lang-tag">bash — 一条命令搞定</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
+              <div class="code-body">npm install -g @openai/codex --registry=https://registry.npmmirror.com</div>
+            </div>
+
+            <div class="card card-info" style="margin-top:12px">
+              <p><strong>这条命令做了什么？</strong></p>
+              <ul>
+                <li><code>npm install -g</code> — 全局安装一个包</li>
+                <li><code>@openai/codex</code> — Codex CLI 的 npm 包名</li>
+                <li><code>--registry=https://registry.npmmirror.com</code> — 使用国内淘宝镜像源，不走国外服务器</li>
+              </ul>
+            </div>
+
+            <div class="card card-tip" style="margin-top:12px">
+              <p><strong>想永久使用国内镜像？</strong>可以把镜像源设为默认，以后装任何 npm 包都走国内：</p>
+              <div class="code-block" style="margin-bottom:0">
+                <div class="code-header"><span class="lang-tag">bash</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
+                <div class="code-body">npm config set registry https://registry.npmmirror.com
+
+<span class="cm"># 设置好之后，以后就可以直接用：</span>
+npm install -g @openai/codex</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="step">
+            <h3>等待安装完成</h3>
+            <p>安装过程可能需要 1-3 分钟（取决于你的网速）。看到类似下面的输出就表示安装成功了：</p>
+            <div class="terminal">
+              <div class="terminal-bar">
+                <div class="terminal-dot r"></div>
+                <div class="terminal-dot y"></div>
+                <div class="terminal-dot g"></div>
+                <span class="terminal-title">Terminal</span>
+              </div>
+              <div class="terminal-body">
+<span class="prompt">$</span> <span class="cmd">npm install -g @openai/codex --registry=https://registry.npmmirror.com</span>
+
+<span class="output">added 1 package in 40s</span>
+
+<span class="prompt">$</span> <span class="cursor"></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 方式二：Homebrew -->
+      <div class="tab-content" id="install-brew">
+        <div class="card card-info">
+          <p>如果你的 Mac 装了 <a href="https://brew.sh" style="color:var(--accent)">Homebrew</a>，可以直接用一条命令安装 Codex。</p>
+        </div>
+        <div class="code-block">
+          <div class="code-header"><span class="lang-tag">bash</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
+          <div class="code-body">brew install codex</div>
+        </div>
+        <div class="card card-tip" style="margin-top:12px">
+          <p>Homebrew 下载有时会走国外服务器、速度较慢。如果卡住，建议改用 <strong>npm 国内镜像</strong> 方式安装。</p>
+        </div>
+      </div>
+
+      <!-- 方式三：GitHub 下载 -->
+      <div class="tab-content" id="install-github">
+        <div class="card card-info">
+          <p>Codex 是开源项目，你也可以直接去 GitHub 下载编译好的二进制文件。</p>
+        </div>
+
+        <div class="steps">
+          <div class="step">
+            <h3>前往 GitHub Releases 页面</h3>
+            <p>在浏览器中打开：<a href="https://github.com/openai/codex/releases" style="color:var(--accent)" target="_blank">https://github.com/openai/codex/releases</a></p>
+            <p>找到最新版本，下载对应你系统的文件：</p>
+            <div class="table-wrap">
+              <table>
+                <tr><th>你的系统</th><th>下载哪个文件（示例）</th></tr>
+                <tr><td>Mac (Apple 芯片 M1/M2/M3/M4)</td><td><code>codex-aarch64-apple-darwin.tar.gz</code></td></tr>
+                <tr><td>Mac (Intel 芯片)</td><td><code>codex-x86_64-apple-darwin.tar.gz</code></td></tr>
+                <tr><td>Linux (x64)</td><td><code>codex-x86_64-unknown-linux-gnu.tar.gz</code></td></tr>
+                <tr><td>Windows (x64)</td><td><code>codex-x86_64-pc-windows-msvc.zip</code></td></tr>
+              </table>
+            </div>
+          </div>
+
+          <div class="step">
+            <h3>安装二进制文件（Mac/Linux）</h3>
+            <div class="code-block">
+              <div class="code-header"><span class="lang-tag">bash</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
+              <div class="code-body"><span class="cm"># 1. 解压下载的文件（文件名换成你实际下载的）</span>
+tar -xzf codex-aarch64-apple-darwin.tar.gz
+
+<span class="cm"># 2. 重命名并移动到系统路径</span>
+sudo mv codex-aarch64-apple-darwin /usr/local/bin/codex
+
+<span class="cm"># 3. 确保可执行权限</span>
+chmod +x /usr/local/bin/codex</div>
+            </div>
+          </div>
+
+          <div class="step">
+            <h3>Windows 用户</h3>
+            <p>解压 <code>.zip</code> 后，把 <code>codex.exe</code> 放到一个方便的位置（如 <code>C:\Program Files\Codex\</code>），然后将该目录添加到系统 PATH 环境变量中。</p>
+          </div>
+        </div>
+
+        <div class="card card-tip">
+          <p><strong>GitHub 访问慢？</strong>可以试试国内的 GitHub 镜像站来加速下载，或者让已经下载好的朋友直接把文件传给你。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 验证安装 -->
+    <h3 style="color:var(--text-bright);margin-top:32px;margin-bottom:16px">验证安装成功</h3>
+    <p>无论用哪种方式安装，安装完成后都运行以下命令验证：</p>
+    <div class="steps">
+      <div class="step">
+        <h3>检查版本号</h3>
+        <div class="code-block">
+          <div class="code-header">
+            <span class="lang-tag">bash</span>
+            <button class="copy-btn" onclick="copyCode(this)">复制</button>
+          </div>
+          <div class="code-body">codex --version</div>
+        </div>
+        <div class="terminal">
+          <div class="terminal-bar">
+            <div class="terminal-dot r"></div>
+            <div class="terminal-dot y"></div>
+            <div class="terminal-dot g"></div>
+            <span class="terminal-title">Terminal</span>
+          </div>
+          <div class="terminal-body">
+<span class="prompt">$</span> <span class="cmd">codex --version</span>
+<span class="output">codex-cli 0.x.x</span>    <span class="cm">← 看到版本号就说明安装成功了！</span></div>
+        </div>
+      </div>
+      <div class="step">
+        <h3>查看帮助（可选）</h3>
+        <div class="code-block">
+          <div class="code-header">
+            <span class="lang-tag">bash</span>
+            <button class="copy-btn" onclick="copyCode(this)">复制</button>
+          </div>
+          <div class="code-body">codex --help</div>
+        </div>
+        <p>这个命令会列出所有可用的子命令和参数。</p>
+      </div>
+    </div>
+
+    <!-- 安装常见问题 -->
+    <div class="card card-warn" style="margin-top:24px">
+      <p><strong>安装遇到问题？</strong></p>
+      <ul>
+        <li><strong>提示 <code>npm: command not found</code></strong> — 说明你还没装 Node.js，先装 Node.js 再来</li>
+        <li><strong>提示 <code>permission denied</code></strong> — 在命令前面加 <code>sudo</code> 重试：<code>sudo npm install -g @openai/codex</code></li>
+        <li><strong>下载速度很慢</strong> — 确认你加了 <code>--registry=https://registry.npmmirror.com</code> 走国内镜像</li>
+        <li><strong><code>codex --version</code> 提示找不到命令</strong> — 关闭终端重新打开试试，或者检查 npm 的全局 bin 路径是否在 PATH 中</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ============ SECTION: 配置 API ============ -->
+  <div class="section" id="config">
+    <div class="section-header">
+      <div class="section-num">3</div>
+      <h2>配置第三方 API（最重要！）</h2>
+    </div>
+
+    <div class="card card-warn">
+      <p>这一步是整个教程<strong>最关键</strong>的一步！因为我们在国内不能直接登录 OpenAI 账号，所以需要把你的<strong>中转站</strong>配置给 Codex。<strong>如果这一步没搞对，后面什么都用不了。</strong></p>
+    </div>
+
+    <p>Codex 的配置写在 <code>~/.codex/config.toml</code>（TOML 格式）里，手动编辑容易出错。所以<strong>强烈推荐用 <a href="https://ccswitch.io" target="_blank" style="color:var(--accent)">CC Switch</a> 这个免费图形化工具</strong>来管理中转站——填一次、点一下就能启用，还能在多个中转站之间一键切换。</p>
+
+    <!-- Tabs: Config Method -->
+    <div class="tabs">
+      <div class="tab-buttons">
+        <button class="tab-btn active" onclick="switchTab(event, 'config-ccswitch')">方式一：CC Switch（推荐）</button>
+        <button class="tab-btn" onclick="switchTab(event, 'config-manual')">方式二：手动改配置（进阶）</button>
+        <button class="tab-btn" onclick="switchTab(event, 'config-login')">方式三：ChatGPT 登录（需翻墙）</button>
+      </div>
+
+      <!-- 方式一：CC Switch -->
+      <div class="tab-content active" id="config-ccswitch">
+        <div class="card card-info">
+          <p><strong>CC Switch 是什么？</strong>它是一个开源免费的桌面小工具，专门用来管理 Claude Code、Codex、Gemini 等 AI 工具的"供应商"。你把中转站的地址和密钥填进去，它会<strong>自动帮你写好 <code>~/.codex/config.toml</code></strong>，你完全不用碰配置文件。</p>
+        </div>
+
+        <div class="steps">
+          <div class="step">
+            <h3>下载安装 CC Switch</h3>
+            <p>去官网 <a href="https://ccswitch.io" target="_blank" style="color:var(--accent)">ccswitch.io</a> 或 <a href="https://github.com/farion1231/cc-switch/releases" target="_blank" style="color:var(--accent)">GitHub Releases</a> 下载对应系统的安装包。</p>
+            <div class="tabs">
+              <div class="tab-buttons">
+                <button class="tab-btn active" onclick="switchTab(event, 'ccs-mac')">Mac</button>
+                <button class="tab-btn" onclick="switchTab(event, 'ccs-win')">Windows</button>
+                <button class="tab-btn" onclick="switchTab(event, 'ccs-linux')">Linux</button>
+              </div>
+              <div class="tab-content active" id="ccs-mac">
+                <p>用 Homebrew 一条命令安装（推荐）：</p>
+                <div class="code-block">
+                  <div class="code-header"><span class="lang-tag">bash</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
+                  <div class="code-body">brew install --cask cc-switch</div>
+                </div>
+                <p>或直接从官网下载 <code>.dmg</code> 拖进"应用程序"（已做苹果签名与公证，可放心打开）。</p>
+              </div>
+              <div class="tab-content" id="ccs-win">
+                <p>从官网或 GitHub 下载 <code>.msi</code> 安装包双击安装；也有免安装的 <code>.zip</code> 绿色版，解压后直接运行。</p>
+              </div>
+              <div class="tab-content" id="ccs-linux">
+                <ul>
+                  <li>Debian / Ubuntu：下载 <code>.deb</code> 安装</li>
+                  <li>Fedora / RHEL：下载 <code>.rpm</code> 安装</li>
+                  <li>Arch：<code>paru -S cc-switch-bin</code></li>
+                  <li>通用：下载 <code>.AppImage</code>，加可执行权限后运行</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="step">
+            <h3>切换到 Codex 标签页</h3>
+            <p>打开 CC Switch，顶部有 Claude Code、Codex、Gemini 等几个标签页。点进 <strong>Codex</strong> 标签页。</p>
+          </div>
+
+          <div class="step">
+            <h3>新建一个中转站供应商</h3>
+            <p>点击右上角橙色的 <strong>「+」</strong> 按钮，配置类型选择 <strong>「自定义配置 / OpenAI 兼容」</strong>。</p>
+          </div>
+
+          <div class="step">
+            <h3>填写你的中转站信息</h3>
+            <p>按下表填写（这些信息来自你自己搭的中转站）：</p>
+            <div class="table-wrap">
+              <table>
+                <tr><th>字段</th><th>填什么</th></tr>
+                <tr><td><strong>名称</strong></td><td>随便起个好认的名字，如 <code>我的中转-Codex</code></td></tr>
+                <tr><td><strong>Base URL</strong></td><td>本站填 <code>http://159.223.78.34:28046/v1</code>（OpenAI 兼容接口填到 <code>/v1</code> 为止）</td></tr>
+                <tr><td><strong>API Key</strong></td><td>中转站给你的密钥（形如 <code>sk-xxxx</code>）</td></tr>
+                <tr><td><strong>模型</strong>（可留空）</td><td>本站转发 Codex 官方模型，<strong>可以不填</strong>，Codex 会用默认官方模型；想锁定某个模型再填真实模型名，如 <code>gpt-5.1-codex</code></td></tr>
+                <tr><td><strong>推理强度</strong>（可选）</td><td>可设为 <code>high</code>，回答更稳更聪明</td></tr>
+              </table>
+            </div>
+            <div class="card card-warn" style="margin-top:12px">
+              <p><strong>最容易踩的坑是 Base URL：</strong>结尾要不要 <code>/v1</code> 按中转站要求来，填错就连不上。<strong>模型可以留空</strong>（本站是官方模型，Codex 会用默认值）；如果你手动填了模型名，一定要是真实存在的，否则会报 <code>model not found</code>。</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <h3>点「启用」，然后重启终端</h3>
+            <p>填好后保存并点 <strong>启用</strong>。CC Switch 会自动把配置写进 <code>~/.codex/config.toml</code>。</p>
+            <div class="card card-warn" style="margin-top:8px;margin-bottom:0">
+              <p><strong>关键：切换供应商后必须重启终端</strong>（关掉再重开，或退出 <code>codex</code> 重进），配置才会生效。Codex 不像 Claude Code 那样支持热切换。</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <h3>验证一下</h3>
+            <p>新开一个终端窗口，进入任意项目目录运行 <code>codex</code>，启动画面里的 Model 应该就是你填的模型。也可以在 Codex 里输入 <code>/status</code> 查看当前连接的供应商和模型。</p>
+          </div>
+        </div>
+
+        <div class="card card-tip">
+          <p><strong>一份中转站，多个工具通用。</strong>CC Switch 也能管 Claude Code、Gemini 等。如果你也在用 <a href="/claude/" style="color:var(--accent)">Claude Code</a>，在对应标签页把同一个中转站再填一次即可（或用"通用供应商"一份配置同步多个工具），以后想切哪个中转站，点一下就行。</p>
+        </div>
+
+        <div class="card card-info">
+          <p>CC Switch 采用"最小侵入"设计：它只会帮你改 <code>~/.codex/config.toml</code> 和 <code>~/.codex/auth.json</code> 这两个 Codex 原生文件，自己的数据放在 <code>~/.cc-switch/</code> 目录，并会自动备份，卸载也不影响 Codex。</p>
+        </div>
+      </div>
+
+      <!-- 方式二：手动改配置 -->
+      <div class="tab-content" id="config-manual">
+        <div class="card card-info">
+          <p>如果你不想装图形工具、喜欢直接改文件，也可以手动编辑 <code>~/.codex/config.toml</code>。原理和 CC Switch 帮你写的内容是一样的。</p>
+        </div>
+
+        <div class="steps">
+          <div class="step">
+            <h3>创建配置文件 config.toml</h3>
+            <p>用终端命令直接创建 <code>~/.codex/config.toml</code>（把地址和密钥换成你中转站的）：</p>
+            <div class="code-block">
+              <div class="code-header"><span class="lang-tag">bash</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
+              <div class="code-body">mkdir -p ~/.codex
+cat > ~/.codex/config.toml << 'EOF'
+<span class="cm"># 模型可留空：中转转发官方模型时，Codex 会用默认官方模型</span>
+<span class="cm"># model = "gpt-5.1-codex"   # 想锁定某个模型时再取消注释</span>
+model_reasoning_effort = "high"
+<span class="cm"># 使用下面自定义的中转站</span>
+model_provider = "relay"
+
+[model_providers.relay]
+name = "我的中转站"
+<span class="cm"># 中转站地址，OpenAI 兼容接口填到 /v1</span>
+base_url = "http://159.223.78.34:28046/v1"
+<span class="cm"># 从哪个环境变量读取 API Key</span>
+env_key = "OPENAI_API_KEY"
+<span class="cm"># 接口协议：中转站一般用 chat；OpenAI 官方用 responses</span>
+wire_api = "chat"
+EOF</div>
+            </div>
+          </div>
+
+          <div class="step">
+            <h3>设置 API Key（环境变量）</h3>
+            <p>上面 <code>env_key</code> 写的是 <code>OPENAI_API_KEY</code>，把密钥存到这个环境变量里，一次设置永久生效：</p>
+            <div class="code-block">
+              <div class="code-header"><span class="lang-tag">bash — Mac 默认 Zsh；Bash 改成 ~/.bashrc</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
+              <div class="code-body">echo 'export OPENAI_API_KEY="把这里替换成你的中转站密钥"' >> ~/.zshrc
+source ~/.zshrc</div>
+            </div>
+          </div>
+
+          <div class="step">
+            <h3>验证配置</h3>
+            <div class="code-block">
+              <div class="code-header"><span class="lang-tag">bash</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
+              <div class="code-body">cat ~/.codex/config.toml   <span class="cm"># 看看配置对不对</span>
+echo $OPENAI_API_KEY       <span class="cm"># 看看密钥有没有设进去</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:12px">
+          <h3 style="color:var(--text-bright);margin-bottom:12px">🔑 各配置项含义</h3>
+          <div class="table-wrap">
+            <table>
+              <tr><th>配置项</th><th>含义</th><th>示例值</th></tr>
+              <tr><td><code>model</code>（可选）</td><td>指定模型名；留空则用 Codex 默认官方模型</td><td><code>gpt-5.1-codex</code></td></tr>
+              <tr><td><code>model_reasoning_effort</code></td><td>推理强度，越高越聪明越慢</td><td><code>high</code></td></tr>
+              <tr><td><code>model_provider</code></td><td>使用哪个供应商（对应下面的定义）</td><td><code>relay</code></td></tr>
+              <tr><td><code>base_url</code></td><td>中转站的 API 地址</td><td><code>http://159.223.78.34:28046/v1</code></td></tr>
+              <tr><td><code>env_key</code></td><td>去哪个环境变量读取 API Key</td><td><code>OPENAI_API_KEY</code></td></tr>
+              <tr><td><code>wire_api</code></td><td>接口协议，中转多用 chat，官方用 responses</td><td><code>chat</code> / <code>responses</code></td></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- 方式三：ChatGPT 登录 -->
+      <div class="tab-content" id="config-login">
+        <div class="card card-warn">
+          <p>如果你有 <strong>ChatGPT Plus / Pro / Team</strong> 订阅，可以直接用账号登录，用量算在订阅里、无需 API Key。但登录要访问 OpenAI 官网，<strong>国内需要全程翻墙</strong>，日常使用也依赖能访问官网。用中转站的话不需要这一步。</p>
+        </div>
+        <div class="steps">
+          <div class="step">
+            <h3>运行登录命令</h3>
+            <div class="code-block">
+              <div class="code-header"><span class="lang-tag">bash</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
+              <div class="code-body">codex login</div>
+            </div>
+            <p>它会自动打开浏览器，让你登录 ChatGPT 账号并授权。授权成功后终端会提示登录完成，信息保存在 <code>~/.codex/auth.json</code>。</p>
+          </div>
+          <div class="step">
+            <h3>用 API Key 登录（也需翻墙）</h3>
+            <p>如果你有 OpenAI 官方 API Key，也可以直接用它登录：</p>
+            <div class="code-block">
+              <div class="code-header"><span class="lang-tag">bash</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
+              <div class="code-body">codex login --api-key "sk-你的官方密钥"</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ SECTION: 第一次运行 ============ -->
+  <div class="section" id="firstrun">
+    <div class="section-header">
+      <div class="section-num">4</div>
+      <h2>第一次运行</h2>
+    </div>
+
+    <div class="steps">
+      <div class="step">
+        <h3>进入你的项目目录</h3>
+        <p>Codex 需要在一个项目目录中运行，这样它才能看到你的代码文件。</p>
+        <div class="code-block">
+          <div class="code-header"><span class="lang-tag">bash</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
+          <div class="code-body"><span class="cm"># 进入你的项目文件夹（换成你自己的路径）</span>
+cd ~/my-project
+
+<span class="cm"># 如果你还没有项目，可以先创建一个测试目录</span>
+mkdir ~/test-project && cd ~/test-project</div>
+        </div>
+      </div>
+
+      <div class="step">
+        <h3>启动 Codex</h3>
+        <div class="code-block">
+          <div class="code-header"><span class="lang-tag">bash</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
+          <div class="code-body">codex</div>
+        </div>
+      </div>
+
+      <div class="step">
+        <h3>看到这个画面说明成功了</h3>
+        <div class="terminal">
+          <div class="terminal-bar">
+            <div class="terminal-dot r"></div>
+            <div class="terminal-dot y"></div>
+            <div class="terminal-dot g"></div>
+            <span class="terminal-title">Terminal — codex</span>
+          </div>
+          <div class="terminal-body">
+<span class="highlight">╭────────────────────────────────────────╮</span>
+<span class="highlight">│</span>     <span class="info">OpenAI Codex</span> <span class="output">v0.x.x</span>                 <span class="highlight">│</span>
+<span class="highlight">│</span>                                        <span class="highlight">│</span>
+<span class="highlight">│</span>  <span class="output">Model:</span> <span class="info">gpt-5.1-codex</span>                  <span class="highlight">│</span>
+<span class="highlight">│</span>  <span class="output">目录:</span> ~/test-project                 <span class="highlight">│</span>
+<span class="highlight">╰────────────────────────────────────────╯</span>
+
+<span class="output">输入</span> <span class="info">/</span> <span class="output">查看可用命令</span>
+
+<span class="prompt">▌</span> <span class="cursor"></span></div>
+        </div>
+        <p>出现 <code>▌</code> 输入框就表示 Codex 已经准备好了，可以开始对话了！</p>
+      </div>
+
+      <div class="step">
+        <h3>试着说句话</h3>
+        <p>在输入框里输入你想问的问题，按回车发送：</p>
+        <div class="terminal">
+          <div class="terminal-bar">
+            <div class="terminal-dot r"></div>
+            <div class="terminal-dot y"></div>
+            <div class="terminal-dot g"></div>
+            <span class="terminal-title">Terminal — codex</span>
+          </div>
+          <div class="terminal-body">
+<span class="prompt">▌</span> <span class="cmd">你好，请用中文介绍一下你自己</span>
+
+<span class="info">codex</span> <span class="output">你好！我是 Codex，一个运行在终端里的 AI 编程助手。
+我可以帮你：
+• 阅读和理解你的代码
+• 编写新的代码文件
+• 修复代码中的 Bug
+• 执行终端命令
+• 管理 Git 版本控制
+
+有什么我可以帮你的吗？</span>
+
+<span class="prompt">▌</span> <span class="cursor"></span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card card-tip">
+      <p>如果启动后报错，请检查：</p>
+      <ul>
+        <li>API Key 是否正确（有没有多余的空格或引号）</li>
+        <li><code>base_url</code> 是否正确（注意 <code>https://</code> 和结尾的 <code>/v1</code>）</li>
+        <li>模型名称你的中转站是否支持（在 CC Switch 里核对）</li>
+        <li>网络是否正常（能否访问你的中转站地址）</li>
+        <li>在 CC Switch 里改完配置后，有没有<strong>重启终端</strong></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ============ SECTION: 基本用法 ============ -->
+  <div class="section" id="basic">
+    <div class="section-header">
+      <div class="section-num">5</div>
+      <h2>基本对话用法</h2>
+    </div>
+
+    <p>Codex 的核心用法非常简单：<strong>你打字说话，它来干活。</strong>下面是一些最常用的场景。</p>
+
+    <!-- 场景1 -->
+    <div class="card">
+      <h3 style="color:var(--text-bright);margin-bottom:12px">📖 场景一：让它看懂你的项目</h3>
+      <div class="terminal">
+        <div class="terminal-bar">
+          <div class="terminal-dot r"></div>
+          <div class="terminal-dot y"></div>
+          <div class="terminal-dot g"></div>
+          <span class="terminal-title">Terminal — codex</span>
+        </div>
+        <div class="terminal-body">
+<span class="prompt">▌</span> <span class="cmd">帮我分析一下这个项目的整体结构和功能</span>
+
+<span class="info">codex</span> <span class="output">我来看一下项目结构...</span>
+
+<span class="output">📁 项目结构分析：</span>
+<span class="output">├── src/          — 源代码目录</span>
+<span class="output">│   ├── App.tsx   — 主入口组件（React）</span>
+<span class="output">│   ├── api/      — 后端 API 接口</span>
+<span class="output">│   └── utils/    — 工具函数</span>
+<span class="output">├── package.json  — 项目依赖配置</span>
+<span class="output">└── README.md     — 项目说明文档</span>
+<span class="output"></span>
+<span class="output">这是一个 React + TypeScript 的前端项目，主要功能是...</span></div>
+      </div>
+    </div>
+
+    <!-- 场景2 -->
+    <div class="card">
+      <h3 style="color:var(--text-bright);margin-bottom:12px">🔍 场景二：问具体的代码问题</h3>
+      <div class="terminal">
+        <div class="terminal-bar">
+          <div class="terminal-dot r"></div>
+          <div class="terminal-dot y"></div>
+          <div class="terminal-dot g"></div>
+          <span class="terminal-title">Terminal — codex</span>
+        </div>
+        <div class="terminal-body">
+<span class="prompt">▌</span> <span class="cmd">src/api/user.ts 这个文件里的 getUserProfile 函数是干嘛的？</span>
+
+<span class="info">codex</span> <span class="output">我来读一下这个文件...</span>
+
+<span class="output">`getUserProfile` 函数的作用是根据用户 ID 从后端获取
+用户的个人资料信息。它接收一个 `userId` 参数，然后向
+`/api/users/:id` 发送 GET 请求，返回包含用户名、邮箱、
+头像等信息的对象。</span></div>
+      </div>
+      <div class="card card-tip" style="margin-top:12px">
+        <p>你可以用 <code>@</code> 符号直接引用文件，例如输入 <code>解释一下 @src/api/user.ts</code>，Codex 会自动读取这个文件（输入 <code>@</code> 时通常还有文件名自动补全）。</p>
+      </div>
+    </div>
+
+    <!-- 场景3 -->
+    <div class="card">
+      <h3 style="color:var(--text-bright);margin-bottom:12px">🐛 场景三：让它修 Bug</h3>
+      <div class="terminal">
+        <div class="terminal-bar">
+          <div class="terminal-dot r"></div>
+          <div class="terminal-dot y"></div>
+          <div class="terminal-dot g"></div>
+          <span class="terminal-title">Terminal — codex</span>
+        </div>
+        <div class="terminal-body">
+<span class="prompt">▌</span> <span class="cmd">登录页面点击登录按钮后没有反应，帮我找一下 Bug</span>
+
+<span class="info">codex</span> <span class="output">让我检查一下登录相关的代码...</span>
+
+<span class="output">找到问题了！在 `src/pages/Login.tsx` 第 42 行：</span>
+
+<span class="output">```tsx
+// 问题：handleSubmit 函数没有 await 异步调用
+const handleSubmit = (e) => {
+  e.preventDefault();
+  loginAPI(username, password);  // ← 缺少 await
+};
+```</span>
+
+<span class="output">应该改为：</span>
+
+<span class="output">```tsx
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  await loginAPI(username, password);  // ← 加上 await
+};
+```</span>
+
+<span class="warn">要我帮你直接修改这个文件吗？</span></div>
+      </div>
+      <p style="margin-top:12px;color:var(--text-dim)">当 Codex 要修改你的文件时，它会先弹出一个审批框问你同意不同意。用方向键选择、回车确认即可。</p>
+    </div>
+  </div>
+
+  <!-- ============ SECTION: 让 AI 写代码 ============ -->
+  <div class="section" id="coding">
+    <div class="section-header">
+      <div class="section-num">6</div>
+      <h2>让 AI 帮你写代码（实战演示）</h2>
+    </div>
+
+    <p>下面是几个完整的实战例子，展示 Codex 有多强大。</p>
+
+    <!-- 例子1 -->
+    <div class="card">
+      <h3 style="color:var(--text-bright);margin-bottom:12px">🌟 实战一：从零创建一个 TODO 应用</h3>
+      <div class="terminal">
+        <div class="terminal-bar">
+          <div class="terminal-dot r"></div>
+          <div class="terminal-dot y"></div>
+          <div class="terminal-dot g"></div>
+          <span class="terminal-title">Terminal — codex</span>
+        </div>
+        <div class="terminal-body">
+<span class="prompt">▌</span> <span class="cmd">帮我用 HTML + CSS + JavaScript 创建一个漂亮的 TODO 待办事项应用，</span>
+  <span class="cmd">要支持添加、删除、标记完成功能，界面要好看一点</span>
+
+<span class="info">codex</span> <span class="output">好的，我来为你创建一个完整的 TODO 应用。</span>
+
+<span class="output">📝 新建  index.html</span>
+<span class="output">📝 新建  style.css</span>
+<span class="output">📝 新建  app.js</span>
+
+<span class="output">✅ 已经创建了 3 个文件：
+• index.html — 页面结构
+• style.css — 样式（渐变背景 + 卡片设计）
+• app.js — 交互逻辑（增删改查 + 本地存储）
+
+你可以用浏览器直接打开 index.html 查看效果。</span></div>
+      </div>
+    </div>
+
+    <!-- 例子2 -->
+    <div class="card">
+      <h3 style="color:var(--text-bright);margin-bottom:12px">🌟 实战二：给现有项目加新功能</h3>
+      <div class="terminal">
+        <div class="terminal-bar">
+          <div class="terminal-dot r"></div>
+          <div class="terminal-dot y"></div>
+          <div class="terminal-dot g"></div>
+          <span class="terminal-title">Terminal — codex</span>
+        </div>
+        <div class="terminal-body">
+<span class="prompt">▌</span> <span class="cmd">给项目加一个暗黑模式切换功能，点击按钮可以在亮色和暗色主题之间切换</span>
+
+<span class="info">codex</span> <span class="output">我来看看项目现有的样式结构...</span>
+
+<span class="output">✏️ 修改  src/App.tsx         (添加了主题切换按钮和逻辑)</span>
+<span class="output">✏️ 修改  src/styles/main.css  (添加了暗色主题 CSS 变量)</span>
+<span class="output">✏️ 修改  src/hooks/index.ts   (新增 useTheme Hook)</span>
+
+<span class="output">✅ 暗黑模式功能已添加！
+• 页面右上角新增了🌙/☀️切换按钮
+• 主题偏好会保存到 localStorage
+• 默认跟随系统主题设置</span></div>
+      </div>
+    </div>
+
+    <!-- 例子3 -->
+    <div class="card">
+      <h3 style="color:var(--text-bright);margin-bottom:12px">🌟 实战三：用自然语言跑命令</h3>
+      <div class="terminal">
+        <div class="terminal-bar">
+          <div class="terminal-dot r"></div>
+          <div class="terminal-dot y"></div>
+          <div class="terminal-dot g"></div>
+          <span class="terminal-title">Terminal — codex</span>
+        </div>
+        <div class="terminal-body">
+<span class="prompt">▌</span> <span class="cmd">帮我安装项目依赖，然后启动开发服务器</span>
+
+<span class="info">codex</span> <span class="output">我来执行安装和启动命令。</span>
+
+<span class="warn">🔧 建议运行: npm install</span>
+<span class="output">是否允许？ (方向键选择 → 允许 / 拒绝)</span>
+
+<span class="output">added 1247 packages in 32s</span>
+
+<span class="warn">🔧 建议运行: npm run dev</span>
+<span class="output">是否允许？ → 允许</span>
+
+<span class="output">  VITE v5.x.x  ready in 420 ms</span>
+<span class="output">  ➜  Local:   http://localhost:5173/</span></div>
+      </div>
+      <p style="margin-top:12px;color:var(--text-dim)">注意：在默认审批模式下，执行命令之前 Codex 会征求你的同意，你能看到它要执行什么命令再决定是否允许。</p>
+    </div>
+  </div>
+
+  <!-- ============ SECTION: 常用命令 ============ -->
+  <div class="section" id="commands">
+    <div class="section-header">
+      <div class="section-num">7</div>
+      <h2>常用命令大全</h2>
+    </div>
+
+    <p>在 Codex 的对话框中，以 <code>/</code> 开头的是<strong>内置命令</strong>，用来控制 Codex 本身的行为。输入 <code>/</code> 会弹出命令列表。</p>
+
+    <div class="table-wrap">
+      <table>
+        <tr><th>命令</th><th>功能</th><th>使用场景</th></tr>
+        <tr>
+          <td><code>/init</code></td>
+          <td>为当前项目生成 AGENTS.md</td>
+          <td>让 Codex 更了解你的项目</td>
+        </tr>
+        <tr>
+          <td><code>/model</code></td>
+          <td>切换模型和推理强度</td>
+          <td>想换用更快或更强的模型</td>
+        </tr>
+        <tr>
+          <td><code>/approvals</code></td>
+          <td>切换审批 / 沙箱模式</td>
+          <td>控制 Codex 能自动做多少事</td>
+        </tr>
+        <tr>
+          <td><code>/new</code></td>
+          <td>开始一段全新的对话</td>
+          <td>想开始新的话题</td>
+        </tr>
+        <tr>
+          <td><code>/compact</code></td>
+          <td>压缩对话历史</td>
+          <td>对话太长、token 用太多时</td>
+        </tr>
+        <tr>
+          <td><code>/diff</code></td>
+          <td>查看本次改动的 Git diff</td>
+          <td>想看看 Codex 改了哪些内容</td>
+        </tr>
+        <tr>
+          <td><code>/status</code></td>
+          <td>查看当前会话状态、模型、用量</td>
+          <td>检查配置是否正常</td>
+        </tr>
+        <tr>
+          <td><code>/mcp</code></td>
+          <td>查看已连接的 MCP 工具</td>
+          <td>接入外部工具（GitHub、数据库等）</td>
+        </tr>
+        <tr>
+          <td><code>/mention</code></td>
+          <td>引用某个文件（也可直接打 <code>@</code>）</td>
+          <td>让 Codex 读取指定文件</td>
+        </tr>
+        <tr>
+          <td><code>/quit</code></td>
+          <td>退出 Codex</td>
+          <td>用完了想退出（也可以按 Ctrl+D）</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="card card-tip" style="margin-top:20px">
+      <p><strong>启动时直接带上任务：</strong>你可以在启动时就把需求作为参数传进去，Codex 会直接开始干活：</p>
+      <div class="code-block" style="margin-bottom:0">
+        <div class="code-header"><span class="lang-tag">bash</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
+        <div class="code-body"><span class="cm"># 启动并直接下达任务</span>
+codex "帮我给这个项目写一个 README"
+
+<span class="cm"># 恢复上一次的会话继续聊</span>
+codex resume --last</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ SECTION: AGENTS.md ============ -->
+  <div class="section" id="agentsmd">
+    <div class="section-header">
+      <div class="section-num">8</div>
+      <h2>项目记忆：AGENTS.md</h2>
+    </div>
+
+    <p>AGENTS.md 是一个特殊的文件，相当于给 Codex 的<strong>"项目说明书"</strong>。把它放在项目根目录，Codex 每次启动时都会自动读取。</p>
+
+    <div class="card card-info">
+      <p><strong>小知识：</strong><code>AGENTS.md</code> 是一个通用约定，不止 Codex，很多 AI 编程工具都会读取它。所以写一份，多个工具通用。（Claude Code 用的是 <code>CLAUDE.md</code>，作用类似。）</p>
+    </div>
+
+    <div class="card">
+      <h3 style="color:var(--text-bright);margin-bottom:12px">📝 怎么创建 AGENTS.md？</h3>
+      <p><strong>最简单的方式 — 让 Codex 帮你创建：</strong></p>
+      <div class="code-block">
+        <div class="code-header"><span class="lang-tag">在 Codex 中输入</span></div>
+        <div class="code-body">/init</div>
+      </div>
+      <p>Codex 会自动扫描你的项目，然后生成一个合适的 AGENTS.md。</p>
+    </div>
+
+    <div class="card">
+      <h3 style="color:var(--text-bright);margin-bottom:12px">📄 AGENTS.md 写什么内容？</h3>
+      <p>下面是一个示例模板：</p>
+      <div class="code-block">
+        <div class="code-header">
+          <span class="lang-tag">markdown — AGENTS.md 示例</span>
+          <button class="copy-btn" onclick="copyCode(this)">复制</button>
+        </div>
+        <div class="code-body"># 我的电商项目
+
+## 项目概述
+这是一个基于 React + Node.js 的电商网站
+
+## 技术栈
+- 前端：React 18 + TypeScript + Tailwind CSS
+- 后端：Node.js + Express + PostgreSQL
+- 测试：Jest + React Testing Library
+
+## 常用命令
+- npm run dev      — 启动前端开发服务器
+- npm run server   — 启动后端服务器
+- npm test         — 运行测试
+- npm run build    — 构建生产版本
+
+## 目录结构
+- src/components/  — React 组件
+- src/pages/       — 页面组件
+- src/api/         — API 调用函数
+- server/routes/   — 后端路由
+- server/models/   — 数据库模型
+
+## 编码规范
+- 使用 TypeScript 严格模式
+- 组件使用函数式写法
+- CSS 使用 Tailwind 类名
+- 变量命名用 camelCase
+- 所有回复请使用中文</div>
+      </div>
+    </div>
+
+    <div class="card card-info">
+      <p><strong>记忆层级</strong>（从高到低，越靠近项目越优先）：</p>
+      <ul>
+        <li><strong>子目录级</strong> <code>子目录/AGENTS.md</code> — 只对该子目录内的代码生效</li>
+        <li><strong>项目级</strong> <code>./AGENTS.md</code> — 整个项目共享的说明（放项目根目录）</li>
+        <li><strong>全局级</strong> <code>~/.codex/AGENTS.md</code> — 你个人的偏好（适用于所有项目）</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ============ SECTION: 切换模型 ============ -->
+  <div class="section" id="models">
+    <div class="section-header">
+      <div class="section-num">9</div>
+      <h2>切换 AI 模型</h2>
+    </div>
+
+    <p>Codex 可以使用多个模型，还能调节"推理强度"（想得多不多）。在对话中输入 <code>/model</code> 即可选择。</p>
+
+    <div class="table-wrap">
+      <table>
+        <tr><th>模型</th><th>特点</th><th>适用场景</th></tr>
+        <tr>
+          <td><strong>gpt-5.1-codex</strong></td>
+          <td>旗舰编码模型，最聪明</td>
+          <td>复杂问题、架构设计、困难 Bug</td>
+        </tr>
+        <tr>
+          <td><strong>gpt-5.1-codex-mini</strong></td>
+          <td>更快更省，能力略弱</td>
+          <td>日常小任务、快速查询</td>
+        </tr>
+        <tr>
+          <td><strong>其它 GPT 模型</strong></td>
+          <td>取决于你中转站支持哪些</td>
+          <td>按需选择</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="card card-info" style="margin-top:16px">
+      <p><strong>什么是"推理强度"（reasoning effort）？</strong></p>
+      <p>Codex 的模型可以设置想问题时"用多大脑力"，一般有 <code>low</code> / <code>medium</code> / <code>high</code> 等档位。<strong>越高越聪明但越慢越贵</strong>，简单任务用低档、难题用高档即可。<code>/model</code> 里可以同时选模型和这个强度。</p>
+    </div>
+
+    <p>你也可以在启动时或配置文件里指定：</p>
+    <div class="code-block">
+      <div class="code-header"><span class="lang-tag">bash</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
+      <div class="code-body"><span class="cm"># 启动时指定模型</span>
+codex --model gpt-5.1-codex
+
+<span class="cm"># 临时覆盖某个配置项（-c 后面跟 key=value）</span>
+codex -c model_reasoning_effort="high"</div>
+    </div>
+
+    <p style="margin-top:16px">或者写进 <code>~/.codex/config.toml</code> 永久生效：</p>
+    <div class="code-block">
+      <div class="code-header"><span class="lang-tag">toml — config.toml</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
+      <div class="code-body">model = "gpt-5.1-codex"
+model_reasoning_effort = "high"</div>
+    </div>
+
+    <div class="card card-warn">
+      <p>请确认你的中转站支持哪些模型，不是所有中转站都支持全部模型。如果切换后报错 <code>model not found</code>，八成是中转站不支持该模型名，在 CC Switch 里换一个即可。</p>
+    </div>
+  </div>
+
+  <!-- ============ SECTION: 审批与沙箱 ============ -->
+  <div class="section" id="permissions">
+    <div class="section-header">
+      <div class="section-num">10</div>
+      <h2>审批与沙箱（权限管理）</h2>
+    </div>
+
+    <p>Codex 有一套完善的"审批 + 沙箱"安全机制，可以控制它能自动做什么、什么操作需要先问你。</p>
+
+    <div class="card">
+      <h3 style="color:var(--text-bright);margin-bottom:12px">🔒 它是怎么工作的？</h3>
+      <p>当 Codex 想要执行某个"有风险"的操作（比如修改文件外的内容、联网、跑命令）时，它会先弹出审批框问你：</p>
+      <div class="terminal">
+        <div class="terminal-bar">
+          <div class="terminal-dot r"></div>
+          <div class="terminal-dot y"></div>
+          <div class="terminal-dot g"></div>
+          <span class="terminal-title">Terminal — codex</span>
+        </div>
+        <div class="terminal-body">
+<span class="warn">🔧 Codex 想运行: npm install axios</span>
+<span class="output">是否允许？</span>
+<span class="output">  ❯ 允许这一次</span>
+<span class="output">    本次会话都允许</span>
+<span class="output">    拒绝并说明原因</span>
+<span class="prompt">▌</span> <span class="cursor"></span></div>
+      </div>
+      <p style="margin-top:12px;color:var(--text-dim)">用方向键选择、回车确认。你可以先看清楚它要执行什么命令，再决定放不放行。</p>
+    </div>
+
+    <div class="card">
+      <h3 style="color:var(--text-bright);margin-bottom:12px">⚡ 三种常用模式</h3>
+      <p>在对话中输入 <code>/approvals</code> 可以随时切换模式：</p>
+      <div class="table-wrap">
+        <table>
+          <tr><th>模式</th><th>说明</th></tr>
+          <tr><td><strong>只读 (Read Only)</strong></td><td>Codex 只能读文件、回答问题，任何改动和命令都要你批准。最安全</td></tr>
+          <tr><td><strong>自动 (Auto)</strong></td><td>在当前项目目录内可自动读写文件、跑命令；越界操作（联网、动目录外文件）才会询问。<strong>日常推荐</strong></td></tr>
+          <tr><td><strong>完全访问 (Full Access)</strong></td><td>可读写、可联网、几乎不询问。方便但有风险，谨慎使用</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="card card-tip">
+      <p>你也可以在 <code>~/.codex/config.toml</code> 中预设默认模式（<code>approval_policy</code> 控制何时询问，<code>sandbox_mode</code> 控制文件读写范围）：</p>
+      <div class="code-block" style="margin-bottom:0">
+        <div class="code-header"><span class="lang-tag">toml — config.toml</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
+        <div class="code-body"><span class="cm"># 何时需要你审批：untrusted / on-failure / on-request / never</span>
+approval_policy = "on-request"
+
+<span class="cm"># 文件沙箱范围：read-only / workspace-write / danger-full-access</span>
+sandbox_mode = "workspace-write"</div>
+      </div>
+    </div>
+
+    <div class="card card-warn">
+      <p>命令行也能快速切换：<code>codex --full-auto</code> 让它在沙箱内全自动跑（少打扰）；生产环境或不信任的代码请优先用<strong>只读</strong>或<strong>自动</strong>模式，别一上来就开完全访问。</p>
+    </div>
+  </div>
+
+  <!-- ============ SECTION: 非交互模式 ============ -->
+  <div class="section" id="headless">
+    <div class="section-header">
+      <div class="section-num">11</div>
+      <h2>非交互模式（脚本化使用）</h2>
+    </div>
+
+    <p>Codex 还可以不进入对话界面，直接用 <code>codex exec</code> 一次性完成任务，适合集成到脚本或自动化流程中。</p>
+
+    <div class="code-block">
+      <div class="code-header"><span class="lang-tag">bash — 一次性执行</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
+      <div class="code-body"><span class="cm"># exec 子命令：执行完就退出，不进入交互界面</span>
+codex exec "这个项目用了什么技术栈？"
+
+<span class="cm"># 管道输入：把文件内容传给 Codex 分析</span>
+cat error.log | codex exec "帮我分析这些错误日志"
+
+<span class="cm"># 让它在沙箱内全自动完成（不逐个询问）</span>
+codex exec --full-auto "给所有函数补上类型注解"
+
+<span class="cm"># 以 JSON 格式输出，方便脚本解析</span>
+codex exec --json "列出所有 API 接口"</div>
+    </div>
+
+    <div class="card card-info">
+      <p><code>codex exec</code> 常用于 CI/CD 或批处理脚本。因为是自动运行、没人盯着审批，建议配合明确的沙箱设置使用，并只在可信代码上运行。</p>
+    </div>
+  </div>
+
+  <!-- ============ SECTION: IDE 集成 ============ -->
+  <div class="section" id="ide">
+    <div class="section-header">
+      <div class="section-num">12</div>
+      <h2>IDE 集成（VS Code）</h2>
+    </div>
+
+    <p>如果你使用 VS Code（或 Cursor、Windsurf 等兼容编辑器），可以安装 Codex 插件，在编辑器内直接使用。</p>
+
+    <div class="steps">
+      <div class="step">
+        <h3>安装 VS Code 插件</h3>
+        <p>打开 VS Code，按 <code>Cmd+Shift+X</code>（Mac）或 <code>Ctrl+Shift+X</code>（Windows），搜索 <strong>"OpenAI Codex"</strong>，点击安装。</p>
+      </div>
+      <div class="step">
+        <h3>打开 Codex 面板</h3>
+        <p>安装后在 VS Code 侧边栏会出现 Codex 的图标，点击即可打开对话面板。</p>
+      </div>
+      <div class="step">
+        <h3>享受图形化体验</h3>
+        <p>在 VS Code 中使用 Codex 有几个额外好处：</p>
+        <ul>
+          <li>文件修改可以用 <strong>并排对比视图</strong> 查看</li>
+          <li>可以直接选中代码片段发给 Codex 提问</li>
+          <li>终端版和插件版<strong>共享同一份配置和会话</strong></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card card-info">
+      <p>VS Code 插件底层还是使用你配置好的 <code>config.toml</code> 和 API Key，所以确保之前的配置已经完成。</p>
+    </div>
+  </div>
+
+  <!-- ============ SECTION: 快捷键 ============ -->
+  <div class="section" id="shortcuts">
+    <div class="section-header">
+      <div class="section-num">13</div>
+      <h2>快捷键速查表</h2>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <tr><th>快捷键</th><th>功能</th></tr>
+        <tr><td><code>Esc</code></td><td>打断 Codex 正在进行的操作</td></tr>
+        <tr><td><code>Ctrl+C</code></td><td>取消当前输入 / 中止</td></tr>
+        <tr><td><code>Ctrl+D</code></td><td>退出 Codex</td></tr>
+        <tr><td><code>/</code></td><td>唤出内置命令菜单</td></tr>
+        <tr><td><code>@</code></td><td>引用文件（带自动补全）</td></tr>
+        <tr><td><code>↑ / ↓</code></td><td>翻看历史输入</td></tr>
+        <tr><td><code>Shift+Enter</code></td><td>输入换行（多行输入）</td></tr>
+      </table>
+    </div>
+    <div class="card card-info" style="margin-top:16px">
+      <p>不同版本的快捷键可能略有差别。在对话中输入 <code>/</code> 或查看界面底部的提示，能看到当前版本支持的操作。</p>
+    </div>
+  </div>
+
+  <!-- ============ SECTION: FAQ ============ -->
+  <div class="section" id="faq">
+    <div class="section-header">
+      <div class="section-num">14</div>
+      <h2>常见问题</h2>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFAQ(this)">
+        <span>Q：启动后提示 "Unauthorized" 或 "Invalid API Key" 怎么办？</span>
+        <span class="arrow">▼</span>
+      </div>
+      <div class="faq-a"><div class="faq-a-inner">
+        <p>这说明你的 API Key 配置有问题。请检查：</p>
+        <ul>
+          <li>API Key 是否完整复制（前后没有多余的空格或换行）</li>
+          <li>环境变量名要和 <code>config.toml</code> 里的 <code>env_key</code> 一致（默认 <code>OPENAI_API_KEY</code>）</li>
+          <li>设置完环境变量后有没有 <code>source</code> 或重开终端让它生效</li>
+          <li>API Key 是否还有效（没有过期或欠费）</li>
+        </ul>
+        <p>运行以下命令检查：</p>
+        <div class="code-block"><div class="code-header"><span class="lang-tag">bash</span></div><div class="code-body">echo $OPENAI_API_KEY
+cat ~/.codex/config.toml</div></div>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFAQ(this)">
+        <span>Q：提示 "Connection refused" 或 "404 / Not Found" 怎么办？</span>
+        <span class="arrow">▼</span>
+      </div>
+      <div class="faq-a"><div class="faq-a-inner">
+        <p>这通常是中转站地址或接口协议不对。请在 CC Switch 的 Codex 供应商里检查：</p>
+        <ul>
+          <li><strong>Base URL</strong> 是否正确（注意 http/https、结尾要不要 <code>/v1</code>）</li>
+          <li><strong>模型名</strong>你的中转站是否真的支持（写错会报 <code>model not found</code>）</li>
+          <li>改完记得<strong>重启终端</strong>再试（Codex 不支持热切换）</li>
+          <li>中转站是否正常运行，用 <code>curl 你的中转站地址</code> 测一下</li>
+          <li>手动配置的用户可试试把 <code>wire_api</code> 在 <code>chat</code> 和 <code>responses</code> 之间切换</li>
+        </ul>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFAQ(this)">
+        <span>Q：怎么减少 Token 消耗（省钱）？</span>
+        <span class="arrow">▼</span>
+      </div>
+      <div class="faq-a"><div class="faq-a-inner">
+        <ul>
+          <li>使用 <code>/compact</code> 命令定期压缩对话历史</li>
+          <li>换个话题时用 <code>/new</code> 开始全新对话，不带旧上下文</li>
+          <li>简单任务把推理强度调到 <code>low</code>，或换用 mini 模型</li>
+          <li>用 <code>/status</code> 查看当前会话的用量</li>
+          <li>尽量一次把需求说清楚，减少来回对话次数</li>
+        </ul>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFAQ(this)">
+        <span>Q：Codex 修改了我的文件，怎么撤回？</span>
+        <span class="arrow">▼</span>
+      </div>
+      <div class="faq-a"><div class="faq-a-inner">
+        <ul>
+          <li>用 <code>/diff</code> 先看看它到底改了什么</li>
+          <li>如果你的项目用了 Git，可以用 <code>git checkout -- 文件名</code> 恢复单个文件，或 <code>git restore .</code> 撤销全部改动</li>
+          <li>也可以直接告诉 Codex "撤回你刚才的修改"</li>
+        </ul>
+        <div class="card card-tip" style="margin-top:8px;margin-bottom:0"><p>强烈建议在 Git 项目里使用 Codex，这样任何改动都能一键回退，最安全。</p></div>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFAQ(this)">
+        <span>Q：一定要翻墙才能用吗？</span>
+        <span class="arrow">▼</span>
+      </div>
+      <div class="faq-a"><div class="faq-a-inner">
+        <p>不一定。如果你用 <strong>CC Switch + 中转站</strong>（本教程方式一），日常使用连接的是你中转站的地址，通常<strong>不需要翻墙</strong>。只有当你选择用 ChatGPT 账号登录（方式三）时，才需要全程翻墙访问 OpenAI 官网。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFAQ(this)">
+        <span>Q：如何让 Codex 用中文回复？</span>
+        <span class="arrow">▼</span>
+      </div>
+      <div class="faq-a"><div class="faq-a-inner">
+        <p>Codex 会自动根据你的输入语言来回复。如果你用中文提问，它通常会用中文回答。你也可以在 AGENTS.md 中加一行规则：</p>
+        <div class="code-block"><div class="code-header"><span class="lang-tag">AGENTS.md</span></div><div class="code-body">## 语言偏好
+- 所有回复请使用中文</div></div>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFAQ(this)">
+        <span>Q：如何更新 Codex？</span>
+        <span class="arrow">▼</span>
+      </div>
+      <div class="faq-a"><div class="faq-a-inner">
+        <p>用哪种方式装的就用对应方式更新：</p>
+        <div class="code-block"><div class="code-header"><span class="lang-tag">bash</span></div><div class="code-body"><span class="cm"># npm 安装的：</span>
+npm install -g @openai/codex@latest --registry=https://registry.npmmirror.com
+
+<span class="cm"># Homebrew 安装的：</span>
+brew upgrade codex</div></div>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFAQ(this)">
+        <span>Q：Codex 和 Claude Code 有什么区别？</span>
+        <span class="arrow">▼</span>
+      </div>
+      <div class="faq-a"><div class="faq-a-inner">
+        <p>两者都是命令行 AI 编程助手，用法非常相似。主要区别：Codex 是 <strong>OpenAI</strong> 出的、用 <strong>GPT</strong> 模型、配置文件是 <code>~/.codex/config.toml</code>、项目记忆用 <code>AGENTS.md</code>；Claude Code 是 <strong>Anthropic</strong> 出的、用 <strong>Claude</strong> 模型、配置是 <code>settings.json</code>、记忆用 <code>CLAUDE.md</code>。会用一个，另一个上手很快。</p>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- ============ SECTION: 术语表 ============ -->
+  <div class="section" id="glossary">
+    <div class="section-header">
+      <div class="section-num">15</div>
+      <h2>术语表（看不懂的词看这里）</h2>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <tr><th>术语</th><th>白话解释</th></tr>
+        <tr><td><strong>终端 / Terminal</strong></td><td>就是那个黑色的命令行窗口，用来打字执行命令的地方</td></tr>
+        <tr><td><strong>API</strong></td><td>Application Programming Interface，程序之间沟通的"接口"。这里指调用 GPT 模型的通道</td></tr>
+        <tr><td><strong>API Key</strong></td><td>一串密码字符串，证明"你有权使用这个 API"</td></tr>
+        <tr><td><strong>Base URL</strong></td><td>API 的服务器地址，就像网站的网址一样</td></tr>
+        <tr><td><strong>TOML</strong></td><td>一种简单易读的配置文件格式，Codex 的 config.toml 就用它</td></tr>
+        <tr><td><strong>Token</strong></td><td>AI 处理文本的单位。大约 1 个中文字 ≈ 2-3 个 Token。Token 越多，费用越高</td></tr>
+        <tr><td><strong>模型 / Model</strong></td><td>AI 的"大脑"。不同模型有不同的能力和速度</td></tr>
+        <tr><td><strong>推理强度 / Reasoning Effort</strong></td><td>模型"想问题用多大脑力"的档位，越高越聪明但越慢越贵</td></tr>
+        <tr><td><strong>沙箱 / Sandbox</strong></td><td>一个受限的安全环境，限制 Codex 只能在允许的范围内改文件、跑命令</td></tr>
+        <tr><td><strong>审批 / Approval</strong></td><td>Codex 做有风险的操作前先问你同不同意的机制</td></tr>
+        <tr><td><strong>中转站 / 代理 / Proxy</strong></td><td>中间人服务，帮你转发请求到 OpenAI 的服务器（因为国内直接访问不了）。三个词基本是一个意思</td></tr>
+        <tr><td><strong>CC Switch</strong></td><td>一个图形化小工具，用来管理各家中转站配置，一键切换供应商，免去手动改配置文件</td></tr>
+        <tr><td><strong>环境变量</strong></td><td>操作系统里的一种全局设置，程序可以读取它（如 OPENAI_API_KEY）</td></tr>
+        <tr><td><strong>AGENTS.md</strong></td><td>项目的"说明书"文件，让 Codex 了解你的项目</td></tr>
+        <tr><td><strong>MCP</strong></td><td>Model Context Protocol，让 Codex 可以连接外部工具（如 GitHub、数据库等）</td></tr>
+        <tr><td><strong>Git</strong></td><td>代码版本管理工具，记录代码的每一次修改，可随时回退</td></tr>
+        <tr><td><strong>npm</strong></td><td>Node.js 的包管理器，用来安装 JavaScript 项目的依赖</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <p>Codex 小白教程 · 从零到一 · 中文版</p>
+    <p style="margin-top:8px;font-size:12px;color:var(--text-dim)">本教程内容基于 OpenAI Codex 官方文档整理，仅供学习参考</p>
+  </div>
+
+</main>
+
+<!-- Back to Top -->
+<button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<!-- ===== JavaScript ===== -->
+<script>
+// Sidebar toggle (mobile)
+function toggleSidebar() {
+  document.getElementById('sidebar').classList.toggle('open');
+  document.getElementById('sidebarOverlay').classList.toggle('open');
+}
+
+// Close sidebar on link click (mobile)
+document.querySelectorAll('.nav-link').forEach(link => {
+  link.addEventListener('click', () => {
+    if (window.innerWidth <= 900) toggleSidebar();
+  });
+});
+
+// Tab switching
+function switchTab(e, tabId) {
+  const container = e.target.closest('.tabs');
+  container.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  container.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+  e.target.classList.add('active');
+  document.getElementById(tabId).classList.add('active');
+}
+
+// Copy code
+function copyCode(btn) {
+  const code = btn.closest('.code-block').querySelector('.code-body').textContent;
+  navigator.clipboard.writeText(code).then(() => {
+    btn.textContent = '已复制!';
+    btn.classList.add('copied');
+    setTimeout(() => { btn.textContent = '复制'; btn.classList.remove('copied'); }, 2000);
+  });
+}
+
+// FAQ accordion
+function toggleFAQ(el) {
+  el.closest('.faq-item').classList.toggle('open');
+}
+
+// Scroll progress
+window.addEventListener('scroll', () => {
+  const h = document.documentElement;
+  const pct = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
+  document.getElementById('progressFill').style.width = pct + '%';
+
+  // Back to top
+  const btn = document.getElementById('backTop');
+  btn.classList.toggle('show', h.scrollTop > 400);
+});
+
+// Active nav link on scroll
+const sections = document.querySelectorAll('.section, .hero');
+const navLinks = document.querySelectorAll('.nav-link');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const id = entry.target.id;
+      navLinks.forEach(link => {
+        link.classList.toggle('active', link.getAttribute('href') === '#' + id);
+      });
+    }
+  });
+}, { rootMargin: '-20% 0px -60% 0px' });
+
+sections.forEach(s => { if (s.id) observer.observe(s); });
+</script>
+
+</body>
+</html>
