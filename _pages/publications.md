@@ -144,7 +144,7 @@ author_profile: true
 1.  <a id="pub-dasfaa19-mathgraph"></a>*Mathgraph: A knowledge graph for automatically solving mathematical exercises.* <br>Tianyu Zhao, Yan Huang, Songfan Yang, Yuyu Luo, Jianhua Feng, Yong Wang, **Haitao Yuan**, Kang Pan, Kaiyu Li, Haoda Li, Fu Zhu. <br>***DASFAA 2019, CCF-B***.  <span style="color:red; font-weight:bold;">🏆 Best Student Paper Award [[link](https://www.dasfaa.net/awards.htm)] </span>
 <br>
 
-1.  <a id="pub-sigmod19-mathdemo"></a>*Towards Automatic Mathematical Exercise Solving.* (Demo) <br>Haoda Li, Guoliang Li, Jiayang Liu, **Haitao Yuan**, Haiquan Wang. <br>***SIGMOD 2019 CCF-A***. 
+1.  <a id="pub-sigmod19-ratel"></a>*Ratel: Interactive Analytics for Large Scale Trajectories.* (Demo) <br>Haoda Li, Guoliang Li, Jiayang Liu, **Haitao Yuan**, Haiquan Wang. <br>***SIGMOD 2019 (Demo), CCF-A***. 
 
 <!-- 4.  *Towards Automatic Mathematical Exercise Solving.* <br>
 Tianyu Zhao, Chengliang Chai, Yuyu Luo, Jianhua Feng, Yan Huang, Songfan Yang, **Haitao Yuan**, Haoda Li, Kaiyu Li, Fu Zhu, Kang Pan. <br>
