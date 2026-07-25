@@ -42,6 +42,9 @@ author_profile: true
 1. <a id="pub-tois26-r2gcurl"></a>*R2GCurL: Reinforced Robust Knowledge Tracing via Dynamic Graph Curriculum Learning.*  <br> Tianhao Peng, Ynajun Pu, Y Zhang, Y Li, Jian Ren, Jie Luo<sup>#</sup>, K. Zhang,  **Haitao Yuan**<sup>#</sup>, et al.<br> ***TOIS 2026, CCF-A***. 
 <br>
 
+1. <a id="pub-acl26-graphdx"></a>*GraphDx: A Cost-Aware Knowledge-Enhanced Multi-Agent Framework for Sequential Diagnosis.* [[Paper](https://aclanthology.org/2026.findings-acl.1092.pdf)] <br> Shaoting Tan, Ning Liu, Yuntao Du, Shuyue Wei, Shuai Wu, Qian Li, Yanyu Xu, Wei Zhang, Lizhen Cui, **Haitao Yuan**<br> ***ACL 2026 (Findings), CCF-A***. 
+<br>
+
 1. <a id="pub-icde25-hib"></a>*Having It Both Ways: Single Trajectory Embedding for Similarity Computation with Pairwise Learning.* [[Paper](https://www.computer.org/csdl/proceedings-article/icde/2025/360300a474/26FZzfvpygg)] <br> Jianing Si<sup>\*</sup>, **Haitao Yuan**<sup>\*</sup><sup>#</sup>, Xiang Li, Nan Jiang, Xiao Ma, Guoliang Li, Shangguang Wang<br> ***ICDE 2025, CCF-A***. 
 <br>
 
@@ -58,6 +61,9 @@ author_profile: true
 <br>
 
 1. <a id="pub-kdd25-parcel"></a>*Effective AOI-level Parcel Volume Prediction: When Lookahead Parcels Matter.* [[Paper](https://dl.acm.org/doi/10.1145/3690624.3709441)] <br> Yingfeng Xiang, Jiangyi Fang, Chao Li<sup>#</sup>, **Haitao Yuan<sup>#</sup>**, Yiwei Song, Jiming Chen <br> ***KDD 2025, CCF-A, ADS Track***.
+<br>
+
+1. <a id="pub-kdd25-drugrec"></a>*Incomplete Multi-View Drug Recommendation via Multi-Level Representation Learning and Curriculum Learning.* <br> Ning Liu, Yunsen Tang, **Haitao Yuan**, Hongtao Lv, Lili Jiang, Zhen Li, Wei Zhang, Jianyong Wang<br> ***KDD 2025, CCF-A, ADS Track***. 
 <br>
 
 1. <a id="pub-sigmod25-rlertte"></a>*RLER-TTE: An Efficient and Effective Framework for En Route Travel Time Estimation with Reinforcement Learning.* [[Paper](https://dl.acm.org/doi/pdf/10.1145/3709721)] <br> Zhihan Zheng<sup>\*</sup>, **Haitao Yuan**<sup>\*</sup><sup>#</sup>, Minxiao Chen, Shangguang Wang<br> ***SIGMOD 2025, CCF-A***. 
@@ -89,6 +95,9 @@ author_profile: true
 <br>
 
 1.  <a id="pub-dasfaa24-stmgf"></a>*STMGF: An Effective Spatial-Temporal Multi-granularity Framework for Traffic Forecasting.* <br>Zhengyang Zhao, **Haitao Yuan<sup>#</sup>**, Nan Jiang, Minxiao Chen, Ning Liu<sup>#</sup>, Zengxiang Li. <br>***DASFAA 2024, CCF-B***. 
+<br>
+
+1.  <a id="pub-bibm24-ipm"></a>*IPM: Information Lossless Pre-training Strategy for Molecular Property Prediction.* <br>Ruomei Liu, Shangzhe Li, He Zhu, Yue Hou, Xingyu Peng, **Haitao Yuan**, Junran Wu, Ke Xu. <br>***IEEE BIBM 2024, CCF-B***. 
 <br>
 
 1.  <a id="pub-vldb23-roadext"></a>*Automatic Road Extraction with Multi-Source Data Revisited: Completeness, Smoothness and Discrimination.* [[Paper](https://www.vldb.org/pvldb/vol16/p3004-yuan.pdf)][[Code](https://github.com/BubbleSai/DICN)] <br>**Haitao Yuan**, Sai Wang, Zhifeng Bao, Shangguang Wang. <br>***VLDB 2023, CCF-A***. 
@@ -124,6 +133,9 @@ author_profile: true
 
 
 1.  <a id="pub-icde20-viewgen"></a>*Automatic View Generation with Deep Learning and Reinforcement Learning.* <br>**Haitao Yuan**, Guoliang Li, Ling Feng, Ji Sun, Yue Han. <br>***ICDE 2020, CCF-A***. <span style="color:red; font-weight:bold;">🏆 ICDE 2019-2024 Highly-Cited Papers [[link](https://scholar.google.com/citations?hl=en&view_op=list_hcore&venue=HdCtgB7kxZAJ.2024&vq=eng_databasesinformationsystems&cstart=60)] </span>
+<br>
+
+1.  <a id="pub-dasfaa20-clindx"></a>*Coupled Graph Convolutional Neural Networks for Text-Oriented Clinical Diagnosis Inference.* <br>Ning Liu, Wei Zhang, Xiuxing Li, **Haitao Yuan**, Jianyong Wang. <br>***DASFAA 2020, CCF-B***. 
 <br>
 
 1.  <a id="pub-icde19-trajsim"></a>*Distributed in-memory trajectory similarity search and join on road network.* <br>**Haitao Yuan**, Guoliang Li. <br>***ICDE 2019, CCF-A***. <span style="color:red; font-weight:bold;">🏆 ICDE 2019-2024 Highly-Cited Papers [[link](https://scholar.google.com/citations?hl=en&view_op=list_hcore&venue=HdCtgB7kxZAJ.2024&vq=eng_databasesinformationsystems&cstart=20)] </span>
